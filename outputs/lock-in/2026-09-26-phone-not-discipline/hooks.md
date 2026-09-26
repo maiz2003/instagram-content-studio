@@ -38,7 +38,7 @@ Three hooks tie at 11. All three end with the same honest call to action, pointi
 
 Runner-up: #7 "You'll quit Wednesday" (10). Save it for a follow-up Reel, since it pairs with the book's "rule for the day you do nothing".
 
-**Your pick:** choose a number (or ask for edits) and I'll write the script, caption and scorecard.
+**Chosen by owner: #10 "Four doors"** (2026-09-26). Script, caption and scorecard are in this folder.
 
 ## Open items
 - New account handle
