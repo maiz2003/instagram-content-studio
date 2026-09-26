@@ -44,5 +44,8 @@
   7. #15 "you're not tired…" (with sound added)
 - Every caption: keyword in the first 5 words, one CTA (comment LOCK), 0–3 hashtags.
 
-## Open question
-- What's the audio on clips 01–10 and 19–28: music, voice, or both? If the music was added outside Instagram, swap it for a track from Instagram's library when posting.
+## Audio (answered 2026-09-26)
+Clips 01–10 and 19–28 carry **music only**, no voiceover.
+- If that music was added outside Instagram, remove it before upload and re-add a track from Instagram's own library in the editor. This avoids copyright muting and keeps the audio "native" [U.5].
+- Music-only is fine for text Reels because the text carries the message muted. Add one SFX hit where the amber word lands, so the sound has a beat and isn't just background [F2.23].
+- Clips 11–18 still need a music bed added (currently silent).

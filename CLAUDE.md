@@ -60,7 +60,9 @@ If exact Arabic page traceability for F or H ever matters, that is a re-extracti
   - can film inside its bathroom-units factory
   - agency is Attract
 
-## Build phases — Phase 1 ONLY until the owner approves
+## Build phases
+
+**Status (2026-09-26): Phase 1 APPROVED.** The owner reviewed the LOCK IN "Four doors" package (`outputs/lock-in/2026-09-26-phone-not-discipline/`) and said "I'd post it". Phase 2 may start, in the order the owner chooses.
 **Phase 1 (current):**
 - `knowledge/_sources/`
 - `knowledge/hook-formulas.md`, `knowledge/ranking-signals.md`, `knowledge/conflicts-and-exclusions.md`
