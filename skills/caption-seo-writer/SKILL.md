@@ -15,7 +15,7 @@ All paths are relative to the repo root.
 3. **The script** (`script.md`) or, for non-Reel posts, the slide/visual plan. Its voiceover and on-screen text are needed for the consistency check. If there is no script, write the caption from the brief and mark the consistency check "not run".
 
 ## Read first
-- `references/seo-zones.md` (in this skill): keyword zones, alt text, hashtags, location. **Required.**
+- `knowledge/visual-seo.md`: keyword zones, alt text, hashtags, location, tagging. **Required.**
 - `knowledge/conflicts-and-exclusions.md`: C-2 (hashtags), C-9 (commercial intent), E-2/E-3/E-4/E-5. **Required.**
 - `knowledge/hook-formulas.md` §5: send, save and keyword prompt wording.
 

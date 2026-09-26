@@ -18,7 +18,7 @@ All paths are relative to the repo root.
 - `knowledge/ranking-signals.md`: §5 length bands, §3 levers, §6 timing, §7 scorecard items. **Required.**
 - `knowledge/hook-formulas.md` §5: re-hooks, endings, send/save/keyword prompts. **Required.**
 - `knowledge/conflicts-and-exclusions.md`: the E-codes and the self-check. **Required.**
-- `references/production-cues.md` (in this skill): editing, text, sound, cover and export cues, with citations.
+- `knowledge/reel-production.md`: structure, editing, text, sound, people, cover, specs, formats and series. **Required.**
 
 ## Process
 1. **Set the length** from the goal band (`ranking-signals.md` §5). State the target duration.

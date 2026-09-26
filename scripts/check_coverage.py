@@ -91,7 +91,7 @@ def main():
             print("  not yet cited:", ", ".join(missing))
     print()
     print(f"Overall: {covered_all}/{total_all} source items cited.")
-    print("Gaps are expected until Phase 2 builds the remaining domain files; this check never fails.")
+    print("This check reports gaps only and never fails.")
     return 0
 
 
