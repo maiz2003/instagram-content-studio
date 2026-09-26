@@ -1,0 +1,37 @@
+/* Brand-agnostic carousel layouts. Colours and fonts come from the brand theme
+   (CSS variables: --bg --panel --cream --amber --grey --rule --head --serif --mono). */
+body { display: flex; flex-direction: column; gap: 40px; padding: 40px; }
+.slide { width: 1080px; height: 1350px; padding: 150px 96px 120px; display: flex; flex-direction: column; }
+.slide .top { position: absolute; top: 72px; left: 96px; right: 96px; display: flex; justify-content: space-between; font-size: 24px; }
+.slide .top .count { color: var(--grey); }
+.slide .foot { bottom: 64px; left: 96px; font-size: 22px; }
+.slide .swipe { position: absolute; bottom: 60px; right: 96px; font-family: var(--head); font-size: 64px; color: var(--amber); }
+
+/* Cover: huge headline, sub-line below */
+.cover .head { font-size: 168px; margin-top: 150px; }
+.cover .serif { font-size: 48px; margin-top: 44px; max-width: 820px; }
+
+/* Point: one idea per slide */
+.point .kicker { font-size: 26px; margin-top: 60px; }
+.point .head { font-size: 132px; margin-top: 28px; }
+.point .serif { font-size: 44px; margin-top: 44px; max-width: 860px; }
+.point .visual { margin-top: auto; display: flex; justify-content: flex-start; }
+
+/* Ladder / list: stacked rows, one highlighted */
+.ladder { display: flex; flex-direction: column; gap: 22px; margin-top: 64px; }
+.ladder .row { display: flex; align-items: center; gap: 36px; padding: 26px 32px; }
+.ladder .row .n { font-family: var(--mono); font-size: 26px; color: var(--grey); width: 56px; }
+.ladder .row .t { font-family: var(--head); font-size: 64px; text-transform: uppercase; }
+.ladder .row .s { font-family: var(--serif); font-size: 32px; color: var(--grey); margin-left: auto; text-align: right; }
+.ladder .row.on { background: var(--amber); }
+.ladder .row.on .t, .ladder .row.on .n, .ladder .row.on .s { color: var(--bg); }
+
+/* Icon tile */
+.tile { width: 260px; height: 260px; display: flex; align-items: center; justify-content: center; }
+.tile.on { background: var(--amber); border-color: var(--amber); }
+.tile svg { width: 130px; height: 130px; }
+
+/* CTA slide */
+.cta .head { font-size: 150px; margin-top: 160px; }
+.cta .serif { font-size: 46px; margin-top: 48px; }
+.cta .send { font-family: var(--serif); font-style: italic; font-size: 40px; color: var(--grey); margin-top: auto; margin-bottom: 40px; }
