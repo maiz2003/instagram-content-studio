@@ -5,7 +5,7 @@ description: The Content Studio orchestrator. It takes any brand (B2B or B2C) fr
 
 # Content Studio (orchestrator)
 
-Runs the Phase 1 pipeline end to end and writes one package folder per post. It stays thin on purpose: the craft lives in the sub-skills and in `knowledge/`. This skill handles ordering, hand-offs, the human checkpoint, the scorecard and the agency brief.
+Runs the post pipeline end to end and writes one package folder per post. It stays thin on purpose: the craft lives in the sub-skills and in `knowledge/`. This skill handles ordering, hand-offs, the human checkpoint, the scorecard and the agency brief.
 
 **Scope: plan + produce + score. It never publishes.** No Instagram/Meta publishing connector is available. The human posts or schedules in the Instagram app.
 
@@ -21,7 +21,9 @@ All paths are relative to the repo root.
 4. **Checkpoint: the human picks the hook.** Show the top 3 (with English glosses) and ask which one to use. They may pick another row or ask for edits. Don't continue until a hook is chosen.
    - Exception: if the user explicitly said to run everything without stopping, pick the top-scored hook and say so in the package.
 5. **Script.** Follow `skills/reel-scriptwriter/SKILL.md` → `script.md`.
-   - For a non-Reel format (carousel/static) in Phase 1, say that a dedicated skill comes in Phase 2, and produce a slide-by-slide plan in `script.md` using the same hook and CTA rules.
+   - **Carousel or static post:** follow `skills/carousel-builder/SKILL.md` instead, using the chosen hook as the cover.
+   - **Stories:** follow `skills/story-sequencer/SKILL.md`.
+   - **Finished video:** once the script is approved, hand the package to the `video-producer` agent (`agents/video-producer.md`).
 6. **Caption.** Follow `skills/caption-seo-writer/SKILL.md` → `caption.md`, including the keyword consistency check against the script.
 7. **Scorecard.** Write `scorecard.md` using `knowledge/ranking-signals.md` §7.
    - Include the mandatory disclaimer verbatim: the weights are the book's figures, unverified, and this is a checklist, not a reach prediction.
@@ -45,6 +47,12 @@ outputs/<brand>/<date>-<slug>/
   scorecard.md      book-weighted pre-publish checklist (with disclaimer)
   agency-brief.md   one page for the production agency
 ```
+
+## Other entry points
+- Profile setup or audit → `skills/profile-auditor`
+- Reach dropped / account diagnosis → `skills/growth-recovery-doctor` (or the `growth-recovery-doctor` agent for a hands-off audit)
+- "Who has done this well?" / choosing a model → `skills/case-study-matcher`
+- Story plans → `skills/story-sequencer`
 
 ## Principles
 - **The brand profile is the only source of brand facts.** Never carry facts from one brand into another's package. If a needed fact is missing, ask for it or leave a visible placeholder. Don't invent it (E-5).
