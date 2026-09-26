@@ -27,6 +27,8 @@ products:
     proof_points:
       - "61 pages · 13 diagrams · 7 parts · 4 trigger types · 30-day challenge (product facts)"
       - "Price: $15 one-time"
+      - "Free quiz, 'Which door is yours?' (lockin-quiz.netlify.app): 4 questions → one of four doors + a fix. Quiz copy: 'You never reach for your phone at random. It is one of four doors, every time. Four questions. One of them will be uncomfortable.'"
+      - "Four doors by pattern: (1) work goes flat/slow, ~20 min in, restless; (2) STUCK: hit something you can't do, 'I'll ask someone tomorrow'; (3) feeling behind, before you've started, anxious; (4) late and fading, after 10pm, 'I'll do it properly in the morning'. Only STUCK's name is confirmed; TODO: names of the other three doors."
       # No sales, reviews or member results yet (0 members, 0 reviews on 2026-09-26).
       # Do NOT imply testimonials or results until real ones exist.
     b2b_terms: ""
@@ -69,8 +71,9 @@ visual_identity:
 
 cta_mechanism:
   type: comment_keyword
-  value: "TODO: Whop product link (store route: lock-in-e3). Confirm the exact URL."
-  keyword: "LOCK"                     # confirmed: comment LOCK → DM with the Whop link (auto-reply tool or manual replies)
+  value: "https://lockin-quiz.netlify.app"   # quiz funnel that redirects to the Whop checkout ($15)
+  keyword: "LOCK"                     # confirmed: comment LOCK → DM with the quiz link (auto-reply tool or manual replies)
+  funnel: "Comment LOCK → DM with quiz link → 'Which door is yours?' trigger diagnostic (4 questions) → result card (your door + one practical fix) → GET LOCK IN button → Whop checkout ($15). Offer the quiz honestly as the free 4-question diagnostic; the DM carries the link, captions never say 'link in bio' (E-3)."
 
 goals_allowed: [reach, trust, sale, lead]
 
@@ -86,6 +89,7 @@ assets_available:
     - "Desk setup, phone going into another room, timer starting"
     - "Screen recordings: screen time, timer"
     - "Pages and diagrams from the playbook (13 diagrams available)"
+    - "Screen recording of the quiz and its result card"
   constraints: "TODO"
 
 agency:

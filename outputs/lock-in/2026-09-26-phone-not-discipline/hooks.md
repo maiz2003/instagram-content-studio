@@ -12,7 +12,7 @@ Goal: reach · Buyer: B2C (16–26, doom-scrollers) · Format: Reel, faceless ·
 | 7 | H.19 Predicting Disaster | "You're going to quit on Wednesday. Here's why — and the one rule for the day you do nothing." | You'll quit Wednesday. Here's why. | A hand crosses off Mon, Tue… the pen stops at Wed | W, S | 10 |
 | 8 | H.12 High Focus | "The setup that works on days you don't feel like it. The last step is the one everyone skips." | For days you don't feel like it | A timer starts, fast push-in | W | 8 |
 | 9 | H.fomo | "Nobody tells you the truth about locking in: it makes your life more boring." | Locking in is boring. That's the point. | A timer ticking beside a closed notebook, quick zoom | W, C | 9 |
-| 10 | H.17 Precise Inspection | "Four things make you pick up your phone. Which one owns you?" | Which of 4 triggers owns you? | Four fast cuts of the book's trigger diagrams | C, V | 8 |
+| 10 | H.1 Precise Diagnosis + H.17 | "You never doom-scroll at random. It's one of four doors — every time. Which one's yours?" | 4 doors. Which one's yours? | Phone lights up; four fast cuts: work going flat · a problem you can't solve · a to-do list you're behind on · 11pm fading | C, S, P | **11** |
 
 Rubric detail (stop · clarity · specific · keyword · send · safe):
 - 1: 2·2·2·2·1·2
@@ -24,18 +24,22 @@ Rubric detail (stop · clarity · specific · keyword · send · safe):
 - 7: 2·2·2·0·2·2
 - 8: 1·2·1·1·1·2
 - 9: 1·2·1·2·1·2
-- 10: 2·1·2·0·1·2 (needs the four trigger names from the book)
+- 10: 2·2·2·2·1·2. Uses the quiz's own framing ("four doors"); leads straight into the comment-LOCK quiz
 
 Keywords used: "discipline", "lock in / locking in", "doom scrolling". These are the words this audience actually types [U.40].
 
 ## Top 3
-1. **#1 H.1 Precise Diagnosis (11).** Reframes their self-blame in one line, uses the search keyword "discipline", and the buzzing phone stops the scroll. Ending: loop back to the buzzing phone + "Comment LOCK and I'll send you the setup."
-2. **#3 H.10 Hidden Shares (11).** Built to be sent. It rides the "lock in" trend word and fits the product perfectly. Ending: "Send it to them before Friday" + comment LOCK.
-3. **#7 H.19 Predicting Disaster (10).** The strongest open loop: "the rule for the day you do nothing" comes straight from the book, and viewers stay to hear it. Ending: reveal the rule, then comment LOCK for the full system.
+Three hooks tie at 11. All three end with the same honest call to action, pointing at the free quiz:
+**"Comment LOCK — I'll send you the 4-question quiz. One of the questions will be uncomfortable."** (The DM carries the link to lockin-quiz.netlify.app, which leads to checkout.)
 
-**Your pick:** choose a number (or ask for edits) and I'll write the script, caption, scorecard and brief.
+1. **#10 "Four doors" (11). My pick for this account.** The hook, the comments ("which door is yours?") and the quiz are one loop: the viewer is curious about their door, comments LOCK, gets the quiz, sees their door, then the Lock In offer. Faceless-friendly (four quick scenes).
+2. **#1 "Not a discipline problem" (11).** The strongest single line and scroll-stopper; uses the search word "discipline". Ending: loop back to the buzzing phone + the LOCK/quiz CTA.
+3. **#3 "Locking in since Monday. It's Thursday." (11).** The most sendable one; rides the "lock in" trend word. Ending: "Send it to them before Friday" + the LOCK/quiz CTA.
+
+Runner-up: #7 "You'll quit Wednesday" (10). Save it for a follow-up Reel, since it pairs with the book's "rule for the day you do nothing".
+
+**Your pick:** choose a number (or ask for edits) and I'll write the script, caption and scorecard.
 
 ## Open items
-- Whop link for the LOCK DM reply: `whop.com/lock-in-e3`? Confirm it.
 - New account handle
-- #10 needs the four trigger names from the playbook
+- Names of the three doors other than STUCK (only needed if a Reel names them)
