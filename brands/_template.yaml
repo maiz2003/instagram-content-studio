@@ -1,0 +1,67 @@
+# Brand profile template. Copy it to brands/<slug>.yaml and fill it in.
+# Every skill reads this file; nothing brand-specific lives in skills or knowledge.
+# Leave unknown values as TODO. Skills ask about TODOs that matter for the
+# current post and never invent them (see knowledge/conflicts-and-exclusions.md E-5).
+
+brand_name: TODO
+handle: "@TODO"
+niche: TODO                      # e.g. "sanitaryware & porcelain wholesale", "specialty coffee café"
+
+buyer_type: B2C                  # B2B | B2C | both. Changes who hooks speak to (knowledge/hook-formulas.md §1)
+
+content_pillars:                 # max 3 related topics [U.4]; posts outside these are off-niche
+  - TODO
+  - TODO
+
+products:                        # add one entry per product line the content may feature
+  - name: TODO
+    key_attributes: [TODO]       # materials, finishes, sizes, what makes it better
+    price_tier: TODO             # budget | mid | premium | luxury
+    proof_points: []             # REAL numbers, tests, certifications, client results. Hooks may only use numbers listed here
+    b2b_terms: ""                # MOQ, lead time, delivery, warranty (B2B only)
+
+audience:
+  who: TODO                      # B2B: the role (e.g. "showroom owner"); B2C: the person
+  role_context: ""               # what their day or business looks like
+  pains: [TODO]                  # specific, observable problems (H.1: precise diagnosis)
+  desires: [TODO]
+  buying_triggers: [TODO]        # what makes them act now (season, new showroom, complaint, project)
+  occasions: []                  # seasonal or cultural moments that matter to them
+
+tone: TODO                       # e.g. "confident, practical, no hype; talks like an experienced factory owner"
+
+language_mix:
+  lead: TODO                     # language for voiceover + on-screen text (e.g. Arabic, English)
+  dialect: ""                    # e.g. Egyptian, Gulf, Levantine; the book says local dialect helps local reach [F1.37], [F3.41]
+  secondary: ""                  # optional second language (a caption line for search/reach), or ""
+  mix_rule: "Voiceover and on-screen text in the lead language; caption opens in the lead language, then one short secondary-language line with the main keyword."
+
+geo:
+  country: TODO
+  cities: []
+  location_tag: ""               # exact place name to geotag (precise tags beat city names [U.27], [F3.22])
+
+visual_identity:
+  colors: []
+  fonts: []
+  look: ""                       # e.g. "clean, bright, industrial-premium"
+
+cta_mechanism:
+  type: dm_keyword               # dm_keyword | whatsapp | comment_keyword | shop | website
+  value: TODO                    # the keyword, WhatsApp number, or URL
+  keyword: ""                    # word the viewer sends/comments (for dm_keyword, comment_keyword, whatsapp)
+
+goals_allowed: [reach, trust, sale, lead]
+
+banned_words_claims: []          # words, claims or competitor mentions the brand must never use
+
+assets_available:
+  on_camera_person: ""           # who can appear, or "none"
+  locations: []                  # where filming can happen
+  footage_types: []              # e.g. process shots, product close-ups, testing, packing
+  constraints: ""                # anything that can't be filmed
+
+agency:
+  name: ""                       # production agency that receives agency-brief.md, or "" for in-house
+  contact: ""
+  approver: ""                   # who signs off before posting

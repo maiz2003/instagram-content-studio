@@ -1,0 +1,87 @@
+# Beroia Home: TRIAL profile for Phase 1.
+# Fields marked TODO are unconfirmed. Skills must ask about the ones that
+# matter for a post and must not invent them (E-5).
+
+brand_name: Beroia Home
+handle: "@TODO"
+niche: "Wholesale porcelain, sanitaryware and bathroom units, factory-made, sold to showrooms"
+
+buyer_type: B2B
+
+content_pillars:
+  - "Factory proof: how our bathroom units and porcelain are made and tested"
+  - "Showroom profit: what sells, what gets returned, margin vs price"
+  - "Product spotlights: new collections and specs for showroom buyers"
+
+products:
+  - name: "Bathroom units"            # TODO: confirm product names / collections
+    key_attributes: [TODO]
+    price_tier: TODO
+    proof_points: []                  # TODO: real tests, certifications, defect/return rates, delivery times
+    b2b_terms: "TODO: MOQ, lead time, delivery coverage, warranty"
+  - name: "Porcelain"                 # TODO: tiles? sanitary porcelain? decor? confirm
+    key_attributes: [TODO]
+    price_tier: TODO
+    proof_points: []
+    b2b_terms: "TODO"
+
+audience:
+  who: "Showroom owners and purchasing managers"
+  role_context: "Run a bathroom/home showroom; choose which suppliers and ranges to stock; deal with end-customer complaints, returns and installers."
+  pains:
+    - "End customers comparing prices line by line and haggling"
+    - "Returns, breakage and complaints after installation that land on the showroom"
+    - "Inconsistent finish or colour between batches"
+    - "Suppliers who miss delivery dates or can't restock best-sellers"
+    - "Dead stock of ranges that don't sell"
+  desires:
+    - "Healthy margin without competing on the cheapest price"
+    - "A supplier they can rely on for consistent quality and restocks"
+    - "Ranges that make the showroom look premium"
+  buying_triggers:
+    - "New season / new collection"
+    - "A competing supplier failing on quality or delivery"
+    - "Opening or refreshing a showroom"
+  occasions: []                       # TODO: e.g. trade fairs, Ramadan/Eid refresh season if relevant
+
+tone: "Confident, practical, factory-owner-to-business-owner; shows proof instead of claiming it; no hype."
+
+language_mix:
+  lead: Arabic
+  dialect: Egyptian
+  secondary: English
+  mix_rule: "Voiceover and on-screen text in Egyptian Arabic; caption opens in Egyptian Arabic, then one short English line carrying the main product keyword for search."
+
+geo:
+  country: "TODO (assumed Egypt from the dialect; confirm)"
+  cities: []
+  location_tag: "TODO: exact factory or showroom name"
+
+visual_identity:
+  colors: []                          # TODO
+  fonts: []                           # TODO
+  look: "TODO: e.g. clean industrial-premium"
+
+cta_mechanism:
+  type: whatsapp
+  value: "TODO: WhatsApp business number"
+  keyword: "TODO: e.g. a word showroom owners send to get the trade price list"
+
+goals_allowed: [reach, trust, sale, lead]
+
+banned_words_claims: []               # TODO: e.g. competitor names, retail prices in public posts?
+
+assets_available:
+  on_camera_person: "TODO: owner / factory manager / none"
+  locations:
+    - "Bathroom-units factory (production floor, QC/testing area, packing, warehouse)"
+  footage_types:
+    - "Production process"
+    - "Quality checks and tests"
+    - "Packing and loading"
+  constraints: "TODO"
+
+agency:
+  name: Attract
+  contact: "TODO"
+  approver: "TODO"
