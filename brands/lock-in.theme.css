@@ -26,6 +26,7 @@ body { background: #000; }
 .cream { color: var(--cream); }
 .serif { font-family: var(--serif); color: var(--grey); line-height: 1.35; }
 .serif.cream { color: var(--cream); }
+.serif.amber { color: var(--amber); }
 .foot { position: absolute; font-family: var(--mono); color: var(--grey); letter-spacing: .28em; text-transform: uppercase; }
 .rule { height: 2px; background: var(--amber); opacity: .6; }
 .panel { background: var(--panel); border: 1px solid var(--rule); }

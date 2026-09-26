@@ -2,6 +2,7 @@
 Goal: reach (new account) · Buyer: B2C, 16–26 · Target length: **~25 s** (reach band 7–30 s) · Language: English · Faceless · Hook: #10 "Four doors" (H.1 + H.17)
 
 ## ★ Recommended: type-only version (matches your existing Lock In clip style, no filming)
+**Rendered:** `video/four-doors.mp4` (21 s, 1080×1920, SFX + drone bed) · cover `video/cover.png` · spec `video/reel-spec.json`. When posting, add a track from Instagram's music library at low volume.
 Rebuild of clip28 "Four doors" in the house style: dark background, cream/amber condensed headline font, serif sub-lines, small "LOCK IN" label. **Every card builds in** (word by word or line by line) with a 3% punch-in when the amber word lands, and a soft "knock" SFX on each door. Low music bed throughout; never silent. Length ~21 s.
 
 | Time | Card (full-screen, upper-middle) | Build / motion | Sound |

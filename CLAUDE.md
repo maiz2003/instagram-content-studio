@@ -75,25 +75,28 @@ Phase 1 runs end-to-end on one real upcoming post. The output is shown to the ow
 
 **Gate:** nothing in Phase 2 starts until the owner says Phase 1 output is something they'd actually post ("I'd post this"). Full knowledge coverage also waits until then.
 
-**Phase 2 (not yet):**
-- knowledge: algorithm-mechanics, reel-production, visual-seo, profile-architecture, stories-playbook, recovery-protocol, case-studies
-- skills: carousel-builder, story-sequencer, profile-auditor, growth-recovery-doctor, case-study-matcher
-- `agents/`: `video-producer` (Higgsfield) and `growth-recovery-doctor`
-- until then, knowledge not yet distilled is read directly from `knowledge/_sources/`
+**Phase 2 (in progress; built in the order the owner chose):**
+- ✅ Profile: `knowledge/profile-architecture.md` + `skills/profile-auditor`
+- ✅ Carousels: `skills/carousel-builder` (renders slides via `scripts/render/render.js`)
+- ✅ Video: `agents/video-producer` (type mode renders locally via `scripts/render/reel.js` + `sfx.py`; AI-visual mode uses Higgsfield only after the user OKs the credit spend)
+- ⏳ Not yet: knowledge algorithm-mechanics, reel-production, visual-seo, stories-playbook, recovery-protocol, case-studies; skills story-sequencer, growth-recovery-doctor, case-study-matcher; `growth-recovery-doctor` agent
+- Knowledge not yet distilled is read directly from `knowledge/_sources/`
 
-Don't scaffold Phase 2 pieces early. Don't install packages without asking; scripts use the Python standard library only.
+Build remaining Phase 2 pieces only when the owner asks. Python scripts use the standard library only. Rendering needs the global Playwright + Chromium already in the environment and a session-only ffmpeg (`pip install --target /tmp/ffmpeg-lib imageio-ffmpeg`; see `agents/video-producer.md`). Nothing gets added to the repo as a dependency.
 
 ## Repo layout
 ```
 CLAUDE.md
 README.md
 knowledge/            distilled domain files + _sources/ (verbatim translations; repo is private, books are "All Rights Reserved")
-brands/               _template.yaml + one YAML per brand
-skills/<name>/        canonical skill folders (SKILL.md + references/), scaffolded with the skill-creator skill
+brands/               _template.yaml + one YAML per brand; optional <slug>.theme.css (house style for rendering)
+skills/<name>/        canonical skill folders (SKILL.md + references/ + assets/), scaffolded with the skill-creator skill
 .claude/skills/<name> symlinks → ../../skills/<name> so Claude Code auto-loads them
-outputs/<brand>/<YYYY-MM-DD>-<slug>/   hooks.md, script.md, caption.md, scorecard.md, agency-brief.md
-scripts/              check_coverage.py
-agents/               Phase 2
+agents/<name>.md      subagents; symlinked from .claude/agents/
+outputs/<brand>/<YYYY-MM-DD>-<slug>/   brief, hooks, script, caption, scorecard, agency-brief; carousel/, video/
+outputs/<brand>/profile-kit.md (+ profile/png/)
+scripts/              check_coverage.py · render/render.js (HTML → PNG) · render/reel.js (spec → MP4) · render/sfx.py (sound layer)
+assets/fonts/         OFL fonts used by brand themes (licences alongside)
 ```
 
 ## Working conventions

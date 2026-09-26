@@ -6,7 +6,7 @@ A reusable **Instagram content system built as Claude Code skills**. You give it
 
 The method comes from three books by Ahmed Shoman: *Instagram Secrets — Foundational*, *Instagram Secrets — 2026 Update* and *Hook Engineering 2026*. They were translated to English and restructured by domain. Every rule the skills apply cites its source item, e.g. `[H.31]`, `[U.36]`, `[F2.25]`.
 
-**Status: Phase 1.** Only the hook → script → caption pipeline is built. Phase 2 (below) starts after Phase 1 output is approved on a real post.
+**Status: Phase 1 approved (2026-09-26); Phase 2 in progress.** Built so far: the hook → script → caption pipeline, profile setup, the carousel builder, and the video producer, which renders finished text Reels to MP4.
 
 ## How to use it
 
@@ -66,8 +66,19 @@ python3 scripts/check_coverage.py --quiet  # summary only
 ```
 Phase 1 cites all 48 Hook Engineering items and part of the other two books on purpose. Phase 2 fills in the rest.
 
-## Roadmap
-**Phase 2** starts only after the Phase 1 output is approved ("I'd post this"):
-- **Knowledge files:** algorithm mechanics, reel production, visual SEO, profile architecture, Stories playbook, recovery protocol, case studies.
-- **Skills:** carousel builder, story sequencer, profile auditor, growth-recovery doctor, case-study matcher.
-- **Agents:** `video-producer` (drafts visuals and video with Higgsfield from a script) and `growth-recovery-doctor` (audits a real account against the suppression checklist).
+## Phase 2 tools
+
+| Piece | What it does | How to use it |
+|---|---|---|
+| `skills/profile-auditor` | Designs or audits a profile: name field, 3 bios with character counts, link, highlights with covers, 3 pins, first 9 grid tiles | "Set up the profile for <brand>" → `outputs/<brand>/profile-kit.md` |
+| `skills/carousel-builder` | Slide plan → rendered 1080×1350 PNG slides in the brand's style → caption and alt text | "Make a carousel about <idea>" → `outputs/<brand>/<pkg>/carousel/png/` |
+| `agents/video-producer` | Type mode: renders a script's text-card version to MP4 (text builds, punch zooms, synthesized SFX, loop), then checks frames and audio. AI-visual mode: Higgsfield footage, only after you OK the credits | "Render the video for <package>" → `outputs/<brand>/<pkg>/video/` |
+
+**Render tools** (`scripts/render/`): `render.js` (HTML `.frame` elements → PNG), `reel.js` (JSON spec → MP4), `sfx.py` (synthesized sound layer; add licensed music in Instagram's editor). They need the Playwright + Chromium already in the environment and a session-only ffmpeg; setup is in `agents/video-producer.md`.
+
+**Brand themes:** `brands/<slug>.theme.css` holds a brand's rendering style. LOCK IN's colours were sampled from its existing clips, with OFL fonts in `assets/fonts/`.
+
+## Roadmap (remaining)
+- **Knowledge files:** algorithm mechanics, reel production, visual SEO, Stories playbook, recovery protocol, case studies.
+- **Skills:** story sequencer, growth-recovery doctor, case-study matcher.
+- **Agent:** `growth-recovery-doctor` (audits a real account against the suppression checklist).
