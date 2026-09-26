@@ -19,4 +19,4 @@
 **Checked outside the score:**
 - **Rule safety (E-codes): pass.** No "link in bio", no testimonials or numbers, no fake scarcity, no tag-bait. The quiz is described honestly as a 4-question quiz.
 - **Keyword consistency: pass** after changing the on-screen hook card.
-- **Still open:** the account handle; your own voice or text-only; door names other than STUCK (optional).
+- **Still open:** the account handle; your own voice or text-only.

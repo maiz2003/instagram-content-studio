@@ -42,4 +42,4 @@ Runner-up: #7 "You'll quit Wednesday" (10). Save it for a follow-up Reel, since 
 
 ## Open items
 - New account handle
-- Names of the three doors other than STUCK (only needed if a Reel names them)
+- Door names confirmed: Bored · Stuck · Anxious · Tired

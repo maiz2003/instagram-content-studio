@@ -3,11 +3,11 @@ Primary keyword: **doom scrolling** · Supporting: discipline, lock in, study fo
 
 ## Caption (ready to paste)
 Doom scrolling isn't random. You walk through one of four doors, every time:
-1. The work goes flat
-2. You hit something you can't do
-3. You remember how behind you are
-4. It's late and you're fading
-Door 2? The step is too big, not beyond you. Come back with the next line, not the whole problem.
+Bored: the work goes flat
+Stuck: you hit something you can't do
+Anxious: you remember how behind you are
+Tired: it's late and you're fading
+Stuck? The step is too big, not beyond you. Come back with the next line, not the whole problem.
 Save this for the next time your hand goes for the phone. Send it to the friend who's always "so behind."
 Comment LOCK and I'll DM you the 4-question quiz. One of the questions will be uncomfortable.
 #doomscrolling #discipline #lockin
@@ -19,7 +19,7 @@ Phone lighting up on a dark study desk and four scenes showing why people start 
 None (digital product, global English audience).
 
 ## Pinned first comment
-"Mine's door 2. Which door is yours — and what were you doing the last time you walked through it?"
+"Mine's Stuck. Which door is yours — and what were you doing the last time you walked through it?"
 This is a genuine prompt from the account, asking for a sentence rather than a number (conversation depth). It is not a planted comment (E-6).
 
 ## Keyword consistency check
