@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../../brands/lock-in.theme.css">
+<style>
+  body { display:flex; flex-direction:column; gap:40px; padding:40px; }
+  /* Profile photo: Instagram crops to a circle; content stays in the centre ~70%. */
+  .avatar { width:1080px; height:1080px; display:flex; align-items:center; justify-content:center; }
+  .avatar .mark { text-align:center; }
+  .avatar .mark .head { font-size:300px; line-height:.86; }
+  .avatar .bar { width:220px; height:18px; background:var(--amber); margin:34px auto 0; }
+  /* Highlight covers: 1080x1920, shown as a small circle, so one big centred glyph. */
+  .cover { width:1080px; height:1920px; display:flex; align-items:center; justify-content:center; }
+  .ring { width:640px; height:640px; border-radius:50%; border:14px solid var(--amber);
+          display:flex; align-items:center; justify-content:center; }
+  .ring .head { font-size:230px; }
+</style></head>
+<body>
+  <div class="frame avatar" data-name="avatar">
+    <div class="mark"><div class="head cream">LOCK</div><div class="head amber">IN</div><div class="bar"></div></div>
+  </div>
+  <div class="frame cover" data-name="highlight-1-start-here"><div class="ring"><div class="head cream">GO</div></div></div>
+  <div class="frame cover" data-name="highlight-2-the-system"><div class="ring"><div class="head amber">4</div></div></div>
+  <div class="frame cover" data-name="highlight-3-the-book"><div class="ring"><div class="head cream">61</div></div></div>
+  <div class="frame cover" data-name="highlight-4-30-days"><div class="ring"><div class="head amber">30</div></div></div>
+</body></html>

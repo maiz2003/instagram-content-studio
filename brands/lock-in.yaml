@@ -65,9 +65,10 @@ geo:
   location_tag: ""                    # usually none for a digital product
 
 visual_identity:
-  colors: []                          # TODO: take from the Whop logo/banner
-  fonts: []
-  look: "TODO: e.g. minimal desk setups, dark room + one lamp, timer on screen"
+  colors: {bg: "#111216", cream: "#E6E1D5", amber: "#DA9D55", grey: "#8f949c"}   # sampled from the owner's clips
+  fonts: ["Anton (headlines)", "Spectral (serif lines)", "JetBrains Mono (labels)"]   # OFL, in assets/fonts/
+  look: "Dark background, cream condensed headlines with one amber key word, lowercase serif call-outs, small spaced 'LOCK IN' label"
+  theme_css: brands/lock-in.theme.css
 
 cta_mechanism:
   type: comment_keyword
