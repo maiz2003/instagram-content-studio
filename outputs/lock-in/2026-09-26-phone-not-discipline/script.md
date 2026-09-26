@@ -1,6 +1,30 @@
 # Reel script: lock-in · phone-not-discipline
 Goal: reach (new account) · Buyer: B2C, 16–26 · Target length: **~25 s** (reach band 7–30 s) · Language: English · Faceless · Hook: #10 "Four doors" (H.1 + H.17)
 
+## ★ Recommended: type-only version (matches your existing Lock In clip style, no filming)
+Rebuild of clip28 "Four doors" in the house style: dark background, cream/amber condensed headline font, serif sub-lines, small "LOCK IN" label. **Every card builds in** (word by word or line by line) with a 3% punch-in when the amber word lands, and a soft "knock" SFX on each door. Low music bed throughout; never silent. Length ~21 s.
+
+| Time | Card (full-screen, upper-middle) | Build / motion | Sound |
+|---|---|---|---|
+| 0.0–1.5 | **YOU NEVER DOOM-SCROLL** (cream) | Words slam in one by one from frame 1 | Phone buzz on frame 1 |
+| 1.5–2.5 | + **AT RANDOM.** (amber) | Punch-in 3% | Hit |
+| 2.5–4.0 | *It's one of four doors.* (serif) | Fade up | Knock ×1 |
+| 4.0–6.0 | **BORED.** (amber) · *the work went flat.* | Headline slams, serif types on | Knock |
+| 6.0–8.0 | **STUCK.** · *you hit something you cannot do.* | Same | Knock |
+| 8.0–9.2 | *door three is the one nobody admits.* | Serif only, small (re-hook) | Music dips |
+| 9.2–11.2 | **ANXIOUS.** · *you remembered how far behind you are.* | Slam + type | Knock |
+| 11.2–13.2 | **TIRED.** · *you are solving sleep with a screen.* | Slam + type | Knock, music drops |
+| 13.2–17.0 | **IF YOU'RE STUCK:** · *the step is too big, not beyond you. come back with the next line, not the whole problem.* | Line by line | Music lifts |
+| 17.0–20.0 | **WHICH DOOR IS YOURS?** · *Comment LOCK → the 4-question quiz* · small: *send it to whoever's always "so behind"* | Headline + two lines | — |
+| 20.0–21.0 | **YOU NEVER DOOM-SCROLL** (same as frame 1) | Hard cut → loop | Buzz |
+
+The door lines use the book's own wording from clip28 ("you are solving sleep with a screen"). Cover: the 0.0 s card with **AT RANDOM.** already visible, so the grid tile reads fully.
+The filmed version below is still valid if you ever want live footage; the caption, CTA and scorecard apply to both.
+
+---
+
+## Filmed version (alternative)
+
 ## Shot list
 | Time | Shot / visual (faceless) | On-screen text | Voiceover | Music / SFX | Edit note |
 |---|---|---|---|---|---|
