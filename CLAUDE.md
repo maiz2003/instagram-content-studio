@@ -93,7 +93,7 @@ skills/<name>/        canonical skill folders (SKILL.md + references/ + assets/)
 agents/<name>.md      subagents; symlinked from .claude/agents/
 outputs/<brand>/<YYYY-MM-DD>-<slug>/   brief, hooks, script, caption, scorecard, agency-brief; carousel/, video/
 outputs/<brand>/profile-kit.md (+ profile/png/)
-scripts/              check_coverage.py · render/render.js (HTML → PNG) · render/reel.js (spec → MP4) · render/sound.py (soundtrack + sound design)
+scripts/              check_coverage.py · render/render.js (HTML → PNG) · render/reel.js (spec → MP4) · render/sound.py (soundtrack + sound design) · render/beat.py (sync to a supplied track)
 assets/fonts/         OFL fonts used by brand themes (licences alongside)
 ```
 

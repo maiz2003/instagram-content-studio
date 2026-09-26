@@ -11,7 +11,7 @@ Writes <out-dir>/music.wav and <out-dir>/sfx.wav (mono, 44.1 kHz).
 Spec keys used:
   "duration": seconds
   "music": {                      # optional; no music key -> sfx only
-     "bpm": 120, "mood": "dark" | "warm" | "tense",
+     "bpm": 120, "mood": "dark" | "warm" | "tense", "groove": "halftime" | "straight",
      "sections": [[t, "intro"|"drop"|"break"|"thin"|"tension"|"build"|"stop"|"stutter"|"outro"], ...]
   }
   "sfx": [{"t": s, "type": name, "gain": 0-1, "dur": s, "rate": x}, ...]
@@ -328,8 +328,10 @@ MOODS = {
     "tense": [[57, 60, 64], [58, 62, 65], [57, 60, 64], [58, 62, 65]],
 }
 ARP = [0, 1, 2, 1, 2, 3, 2, 1, 0, 2, 1, 3, 2, 1, 2, 0]         # index into chord (3 = root + octave)
-KICK_STEPS = {0, 7, 10}
-SNARE_STEPS = {8}
+GROOVES = {  # step (of 16) positions per bar
+    "halftime": ({0, 7, 10}, {8}),          # dark trap feel: snare on beat 3
+    "straight": ({0, 6, 8}, {4, 12}),       # kick on 1 & 3 (+ push), snare on 2 & 4
+}
 HAT_VEL = [1, .35, .7, .35, 1, .35, .7, .5, 1, .35, .7, .35, 1, .5, .8, .6]
 
 SECTION = {  # pad_cut, pad_gain, kick, snare, hats, bass, arp
@@ -360,6 +362,7 @@ def render_music(m, n):
     bar = beat * 4
     prog = MOODS[m.get("mood", "dark")]
     secs = sorted([tuple(s) for s in m.get("sections", [[0, "drop"]])])
+    kick_steps, snare_steps = GROOVES[m.get("groove", "halftime")]
     buf = [0.0] * n
     dur = n / SR
 
@@ -399,17 +402,17 @@ def render_music(m, n):
         sec = SECTION[section_at(secs, t)]
         s16 = st % 16
         chord = prog[int(t / bar) % len(prog)]
-        if sec[2] and s16 in KICK_STEPS:
+        if sec[2] and s16 in kick_steps:
             add(buf, kick_s, t, 0.9)
             j0 = int(t * SR)
             for i in range(int(0.22 * SR)):              # sidechain-style duck of pad/bass
                 if j0 + i < n:
                     duck[j0 + i] = min(duck[j0 + i], 0.55 + 0.45 * (i / (0.22 * SR)))
-        if sec[3] and s16 in SNARE_STEPS:
+        if sec[3] and s16 in snare_steps:
             add(buf, snare_s, t, 0.55)
         if sec[4]:
             add(buf, hat_s, t, 0.22 * sec[4] * HAT_VEL[s16])
-        if sec[5] and (s16 in KICK_STEPS or (section_at(secs, t) in ("break", "tension") and s16 % 8 == 0)):
+        if sec[5] and (s16 in kick_steps or (section_at(secs, t) in ("break", "tension") and s16 % 8 == 0)):
             root = chord[0] - 24
             add(buf, bass_note(root, step * 3), t, 0.55)
         if sec[6] and s16 % 2 == 0:
@@ -458,7 +461,8 @@ def main():
     n = int(spec["duration"] * SR)
     sfx, _ = render_sfx(spec, n)
     write_wav(os.path.join(out_dir, "sfx.wav"), sfx)
-    music = render_music(spec["music"], n) if spec.get("music") else [0.0] * n
+    m = spec.get("music")
+    music = render_music(m, n) if (m and not m.get("file")) else [0.0] * n   # a supplied track is mixed in reel.js
     write_wav(os.path.join(out_dir, "music.wav"), music)
     print(out_dir)
 

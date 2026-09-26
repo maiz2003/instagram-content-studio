@@ -34,13 +34,19 @@ You are the Content Studio **video producer**. You turn an approved script into 
    - **Scene sound design (`sfx`):** sounds that *mean* something on screen: `vibrate` (phone), `knock2` (doors), `door_close` ("another room"), `clock` (time passing; raise `rate` to speed it up), `heartbeat` (anxiety), `scratch` (something breaks), `riser` → `impact` (payoff), `subdrop`. Typing clicks under `type` builds and impacts under `slam` are added automatically [F2.23], [U.78]. Generic hits alone read as boring; that was the owner's feedback on the first version.
    - **Last card = first card** so the video loops [U.121].
    - Keep text in the upper-middle and left, clear of Instagram's bottom ~25% (caption and buttons) and right edge (action icons).
-3. **Render:** `node scripts/render/reel.js <spec> outputs/<brand>/<pkg>/video/<slug>.mp4` (~30 s for a 20 s Reel).
-4. **QA. Always look before delivering:**
+3. **Using the owner's own music track (preferred when they supply one):**
+   - Download it from wherever they put it (e.g. the brand's Drive folder).
+   - Run `python3 scripts/render/beat.py sync <spec> <track> <spec-synced.json>`. It detects BPM and the downbeat, then stretches every card, punch, SFX and typing timing from the spec's 120 BPM grid onto the track's beat grid (folded to 90–180 BPM). The spec then plays the track instead of the generated score.
+   - If the first cut feels early or late, re-run with `--offset <seconds>`, or with `--start <s>` to use a later section of the song (e.g. the drop).
+   - Render the synced spec as below; the scene SFX stay on top of the track.
+   - Check the track's licence covers commercial social media use.
+4. **Render:** `node scripts/render/reel.js <spec> outputs/<brand>/<pkg>/video/<slug>.mp4` (~30 s for a 20 s Reel).
+5. **QA. Always look before delivering:**
    - Build a contact sheet of about 12 frames with `$FFMPEG … select=…,tile=6x2` and **view it**. Check: frame 1 isn't blank; nothing overflows or wraps badly; exactly one accent word per card; the CTA is readable; the last frame matches the first.
    - Loudness: `ebur128` integrated about −13 to −17 LUFS. `silencedetect=n=-45dB:d=0.4` must find **no** gaps. You can't listen, so also draw `showwavespic` + `showspectrumpic` and check that each section and SFX sits where the spec puts it. Say plainly in the report that you checked the audio visually, not by ear.
    - Duration inside the goal's length band (`knowledge/ranking-signals.md` §5).
    - Fix and re-render until clean. Don't deliver a known-broken frame.
-5. **Cover:** export the frame where the key word has fully landed as `video/cover.png` [F4.17].
+6. **Cover:** export the frame where the key word has fully landed as `video/cover.png` [F4.17].
 
 ## Deliver
 In `outputs/<brand>/<pkg>/video/`:

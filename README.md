@@ -66,7 +66,7 @@ Copy `brands/_template.yaml` to `brands/<your-brand>.yaml` and fill it in. Unkno
 | `CLAUDE.md` | Project rules that every Claude session loads automatically |
 | `brands/` | `_template.yaml` + one profile per brand (`lock-in.yaml`, `beroia-home.yaml`) + optional `<slug>.theme.css` for rendering |
 | `outputs/` | One folder per package: brief, hooks, script, caption, scorecard, `carousel/`, `stories/`, `video/` |
-| `scripts/render/` | `render.js` (HTML → PNG), `reel.js` (spec → MP4), `sound.py` (composed soundtrack + scene sound design; outputs a full mix and an SFX-only version) |
+| `scripts/render/` | `render.js` (HTML → PNG), `reel.js` (spec → MP4), `sound.py` (composed soundtrack + scene sound design; outputs a full mix and an SFX-only version) · `beat.py` (detects a supplied track's BPM and downbeat, and re-times a Reel to it) |
 | `scripts/check_coverage.py` | Reports which book items are cited in `knowledge/`; never fails |
 | `assets/fonts/` | OFL fonts used by brand themes, with their licences |
 

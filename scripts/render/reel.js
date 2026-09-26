@@ -151,7 +151,16 @@ async function main() {
     "[m][s1]sidechaincompress=threshold=0.04:ratio=5:attack=5:release=200[md];" +
     "[md][s2]amix=inputs=2:weights=0.8 1.0:normalize=0,loudnorm=I=-13:TP=-1.2:LRA=11[a]";
   const mixWav = path.join(tmp, "mix.wav"), sfxWav = path.join(tmp, "sfx-only.wav");
-  execFileSync(ff, ["-loglevel", "error", "-y", "-i", music, "-i", sfx, "-filter_complex", full, "-map", "[a]", "-ar", "44100", mixWav]);
+  // A supplied track (spec.music.file, e.g. from beat.py sync) replaces the generated score.
+  const track = spec.music && spec.music.file;
+  const musicIn = track
+    ? ["-ss", String(spec.music.offset || 0), "-t", String(spec.duration), "-i", track]
+    : ["-i", music];
+  const fullMix = track
+    ? full.replace("[0:a]aecho=0.8:0.6:45|90:0.18|0.10,highpass=f=30[m]",
+        `[0:a]aformat=channel_layouts=mono,afade=t=in:d=0.05,afade=t=out:st=${Math.max(0, spec.duration - 0.6)}:d=0.6[m]`)
+    : full;
+  execFileSync(ff, ["-loglevel", "error", "-y", ...musicIn, "-i", sfx, "-filter_complex", fullMix, "-map", "[a]", "-ar", "44100", mixWav]);
   // SFX-only: for pairing with a trending Instagram sound added in the app.
   execFileSync(ff, ["-loglevel", "error", "-y", "-i", sfx, "-af", "loudnorm=I=-18:TP=-1.5", "-ar", "44100", sfxWav]);
   const mux = (wav, out) => execFileSync(ff, ["-loglevel", "error", "-y", "-i", silent, "-i", wav, "-c:v", "copy",
