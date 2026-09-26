@@ -1,0 +1,99 @@
+# LOCK IN: discipline playbook sold on Whop (account "LOCKING 101", biz_mZWif3gl8Pw3u3).
+# Facts below come from the live Whop product and account pages (read 2026-09-26).
+# TODO = unconfirmed. Skills must ask about the ones that matter for a post, never invent them (E-5).
+
+brand_name: LOCK IN
+handle: "@TODO (new account, not created yet)"
+niche: "Discipline and focus for people who doom-scroll: a no-motivation setup for studying, training and building"
+
+buyer_type: B2C
+
+content_pillars:
+  - "Phone and doom-scroll setup: triggers, phone in another room, one desk, one task, one tab"
+  - "Lock-in sessions: 20-minute timers, three blocks a day, boring work done anyway"
+  - "The 30-day lock-in: day counts, accountability, the rule for the day you do nothing"
+
+products:
+  - name: "LOCK IN (discipline playbook, ebook)"
+    key_attributes:
+      - "61 pages, seven-part system"
+      - "13 diagrams that carry the method"
+      - "Scored diagnostic: which of four triggers owns your phone habit"
+      - "If-then plans filled in with your own times and room"
+      - "Printables: daily sheet, weekly plan, trigger tracker, 30-day checklist"
+      - "30-day challenge staged so you don't quit in week one"
+      - "The Lock In chat: post your day count; someone notices when you stop"
+    price_tier: budget                # $15 one-time on Whop
+    proof_points:
+      - "61 pages · 13 diagrams · 7 parts · 4 trigger types · 30-day challenge (product facts)"
+      - "Price: $15 one-time"
+      # No sales, reviews or member results yet (0 members, 0 reviews on 2026-09-26).
+      # Do NOT imply testimonials or results until real ones exist.
+    b2b_terms: ""
+
+audience:
+  who: "People aged 16–26 who doom-scroll and struggle with discipline"
+  role_context: "Students, people training, people trying to build something. They've tried to 'lock in' many times and quit by Wednesday."
+  pains:
+    - "Phone habit eats the day; face-down phone doesn't work"
+    - "Waiting to feel motivated, then not starting"
+    - "Restarting every Monday and stopping by Wednesday"
+    - "Knowing exactly what to do and still not doing it"
+  desires:
+    - "A setup that works on days they don't feel like it"
+    - "Proof to themselves that they can keep a streak"
+    - "Getting real study/training/building hours done"
+  buying_triggers:
+    - "Exam season / new semester"
+    - "Start of a month or year; 'this time for real' moments"
+    - "Seeing their screen-time report"
+  occasions: ["exam seasons", "New Year", "back-to-school", "Ramadan (if audience is Egypt/MENA)"]
+
+tone: "Blunt, second person, no motivation and no hype. Calm, slightly dry. Tells the truth about the cost ('it will make your life more boring'). Never preachy, never guru."
+
+language_mix:
+  lead: "TODO: English assumed (the product is written in English); confirm"
+  dialect: ""
+  secondary: ""                       # e.g. Egyptian Arabic if targeting Egypt; TODO
+  mix_rule: "Voiceover, on-screen text and caption in the lead language."
+
+geo:
+  country: "TODO: store is registered in Egypt; target market not confirmed (global English? Egypt/MENA?)"
+  cities: []
+  location_tag: ""                    # usually none for a digital product
+
+visual_identity:
+  colors: []                          # TODO: take from the Whop logo/banner
+  fonts: []
+  look: "TODO: e.g. minimal desk setups, dark room + one lamp, timer on screen"
+
+cta_mechanism:
+  type: comment_keyword
+  value: "TODO: Whop product link (store route: lock-in-e3). Confirm the exact URL."
+  keyword: "LOCK"                     # suggested: comment 'LOCK' → DM with the Whop link. Needs a DM auto-reply tool or manual replies; TODO confirm
+
+goals_allowed: [reach, trust, sale, lead]
+
+banned_words_claims:
+  - "Invented testimonials, results or member counts (none exist yet)"
+  - "Fake scarcity (unlimited stock; no real deadline)"
+  - "Motivation-speak and hype ('grind', 'unstoppable', 'change your life forever')"
+
+assets_available:
+  on_camera_person: "TODO: face on camera, or faceless (hands, desk, phone, timer)?"
+  locations: ["TODO: desk / room"]
+  footage_types:
+    - "Desk setup, phone going into another room, timer starting"
+    - "Screen recordings: screen time, timer"
+    - "Pages and diagrams from the playbook (13 diagrams available)"
+  constraints: "TODO"
+
+agency:
+  name: ""                            # in-house unless you say otherwise
+  contact: ""
+  approver: "Owner"
+
+notes_new_account:
+  - "Brand-new account: the book claims new accounts get a short test boost; don't delete or re-edit posts, post a consistent pattern from day one [F3.16]."
+  - "Small accounts (under 10k) reportedly get higher reach rates [U.31]; lean on short reach Reels + Trial Reels [U.3]."
+  - "Profile setup (name-field keyword, bio, highlights, pinned posts) is Phase 2 (profile-auditor); see knowledge/_sources until then."
