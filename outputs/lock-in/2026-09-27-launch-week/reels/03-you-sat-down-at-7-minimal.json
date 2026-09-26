@@ -1,0 +1,109 @@
+{
+ "duration": 9.0,
+ "label": "LOCK IN",
+ "cards": [
+  {
+   "start": 0,
+   "end": 9.0,
+   "top": 620,
+   "elements": [
+    {
+     "text": "you sat down at 7.",
+     "style": "serif cream",
+     "size": 70,
+     "build": "type",
+     "at": -0.65,
+     "dur": 0.6
+    },
+    {
+     "text": "it's 11:40.",
+     "style": "serif cream",
+     "size": 70,
+     "build": "type",
+     "at": 1.0,
+     "dur": 0.5
+    },
+    {
+     "text": "you did nothing.",
+     "style": "serif cream",
+     "size": 70,
+     "build": "type",
+     "at": 2.0,
+     "dur": 0.6
+    },
+    {
+     "text": "you are not lazy.",
+     "style": "serif amber",
+     "size": 70,
+     "gap": 60,
+     "build": "slam",
+     "at": 4.0
+    },
+    {
+     "text": "Comment LOCK → find out what you are",
+     "style": "serif cream",
+     "size": 44,
+     "gap": 40,
+     "build": "fade",
+     "at": 6.0
+    }
+   ],
+   "punch": [
+    {
+     "at": 4.0,
+     "scale": 1.03
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 0.0,
+   "type": "clock",
+   "gain": 0.25,
+   "dur": 1.0,
+   "rate": 2
+  },
+  {
+   "t": 1.0,
+   "type": "clock",
+   "gain": 0.25,
+   "dur": 1.0,
+   "rate": 4
+  },
+  {
+   "t": 2.0,
+   "type": "clock",
+   "gain": 0.25,
+   "dur": 2.0,
+   "rate": 9
+  },
+  {
+   "t": 4.0,
+   "type": "air",
+   "gain": 0.45
+  }
+ ],
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ],
+   [
+    4.0,
+    "ambient_arp"
+   ]
+  ]
+ },
+ "sound_style": "minimal"
+}

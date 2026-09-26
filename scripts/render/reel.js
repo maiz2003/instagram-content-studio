@@ -149,7 +149,7 @@ async function main() {
   // Full mix: music with a little room, ducked under every SFX hit, loudness-normalised for Instagram.
   const full = "[0:a]aecho=0.8:0.6:45|90:0.18|0.10,highpass=f=30[m];[1:a]asplit=2[s1][s2];" +
     "[m][s1]sidechaincompress=threshold=0.04:ratio=5:attack=5:release=200[md];" +
-    "[md][s2]amix=inputs=2:weights=0.8 1.0:normalize=0,loudnorm=I=-13:TP=-1.2:LRA=11[a]";
+    "[md][s2]amix=inputs=2:weights=0.8 1.0:normalize=0,loudnorm=I=-13:TP=-1.2:LRA=11,alimiter=limit=0.85:level=disabled[a]";
   const mixWav = path.join(tmp, "mix.wav"), sfxWav = path.join(tmp, "sfx-only.wav");
   // A supplied track (spec.music.file, e.g. from beat.py sync) replaces the generated score.
   const track = spec.music && spec.music.file;
@@ -162,7 +162,7 @@ async function main() {
     : full;
   execFileSync(ff, ["-loglevel", "error", "-y", ...musicIn, "-i", sfx, "-filter_complex", fullMix, "-map", "[a]", "-ar", "44100", mixWav]);
   // SFX-only: for pairing with a trending Instagram sound added in the app.
-  execFileSync(ff, ["-loglevel", "error", "-y", "-i", sfx, "-af", "loudnorm=I=-18:TP=-1.5", "-ar", "44100", sfxWav]);
+  execFileSync(ff, ["-loglevel", "error", "-y", "-i", sfx, "-af", "loudnorm=I=-18:TP=-1.5,alimiter=limit=0.85:level=disabled", "-ar", "44100", sfxWav]);
   const mux = (wav, out) => execFileSync(ff, ["-loglevel", "error", "-y", "-i", silent, "-i", wav, "-c:v", "copy",
     "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out], { stdio: "inherit" });
   mux(mixWav, outPath);

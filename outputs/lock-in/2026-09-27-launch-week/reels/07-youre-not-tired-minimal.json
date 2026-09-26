@@ -1,0 +1,86 @@
+{
+ "duration": 8.0,
+ "label": "LOCK IN",
+ "cards": [
+  {
+   "start": 0,
+   "end": 8.0,
+   "top": 620,
+   "elements": [
+    {
+     "text": "you're not tired.",
+     "style": "serif cream",
+     "size": 72,
+     "build": "type",
+     "at": -0.65,
+     "dur": 0.6
+    },
+    {
+     "text": "you've been on your phone\nfor four hours.",
+     "style": "serif cream",
+     "size": 72,
+     "gap": 40,
+     "build": "type",
+     "at": 1.5,
+     "dur": 1.0
+    },
+    {
+     "text": "TIRED IS DOOR 4.",
+     "style": "head amber",
+     "size": 120,
+     "gap": 60,
+     "build": "slam",
+     "at": 4.0
+    },
+    {
+     "text": "Comment LOCK → find your door",
+     "style": "serif cream",
+     "size": 44,
+     "gap": 40,
+     "build": "fade",
+     "at": 5.5
+    }
+   ],
+   "punch": [
+    {
+     "at": 4.0,
+     "scale": 1.03
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 1.5,
+   "type": "tap2",
+   "gain": 0.5
+  },
+  {
+   "t": 4.0,
+   "type": "tap2",
+   "gain": 0.8
+  }
+ ],
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ],
+   [
+    4.0,
+    "ambient_arp"
+   ]
+  ]
+ },
+ "sound_style": "minimal"
+}

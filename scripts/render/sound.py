@@ -19,6 +19,9 @@ Spec keys used:
                                  # an impact under every "slam" (unless an sfx is within 0.1 s)
 SFX types: vibrate, knock2, door_close, impact, subdrop, riser, whoosh, clock,
            heartbeat, typing, scratch, tick
+Minimal "focus" set (original sounds in a clean UI style): pop, tink, tap, tap2, air, lock, chime.
+  "sound_style": "minimal" switches the automatic layer to pops per word, a tink per slam,
+  taps per line and soft typing. Pair it with "mood": "focus" and "ambient"/"ambient_arp" sections.
 """
 
 import json
@@ -282,10 +285,90 @@ def sfx_tick(dur=None):
     return [math.sin(TAU * 2400 * i / SR) * math.exp(-(i / SR) / 0.008) * 0.6 for i in range(int(0.05 * SR))]
 
 
+# ---------------------------------------------------------------- minimal "focus" UI sounds (original, Apple-style aesthetic)
+def ui_pop(dur=0.09, pitch=1.0):
+    out, ph = [], 0.0
+    for i in range(int(dur * SR)):
+        t = i / SR
+        f = (320 + 700 * math.exp(-t / 0.012)) * pitch
+        ph += f / SR
+        out.append(math.sin(TAU * ph) * math.exp(-t / 0.028) * min(1.0, t / 0.0015))
+    return out
+
+
+def ui_tink(dur=0.6, pitch=1.0):
+    f0 = 1760 * pitch
+    parts = ((1.0, 1.0, 0.35), (2.76, 0.45, 0.18), (5.40, 0.22, 0.09), (8.93, 0.10, 0.05))
+    return [sum(a * math.sin(TAU * f0 * r * (i / SR)) * math.exp(-(i / SR) / d) for r, a, d in parts)
+            * min(1.0, (i / SR) / 0.001) * 0.5 for i in range(int(dur * SR))]
+
+
+def ui_tap(dur=0.07):
+    rng = random.Random(91)
+    out, lp = [], 0.0
+    for i in range(int(dur * SR)):
+        t = i / SR
+        n = rng.random() * 2 - 1
+        lp += 0.3 * (n - lp)
+        out.append(0.55 * math.sin(TAU * 190 * t) * math.exp(-t / 0.018) + 0.35 * lp * math.exp(-t / 0.003))
+    return out
+
+
+def ui_tap2(dur=None):
+    a = ui_tap()
+    out = [0.0] * int(0.26 * SR)
+    for i, v in enumerate(a):
+        out[i] += v
+        out[int(0.13 * SR) + i] += 0.8 * v
+    return out
+
+
+def ui_whoosh(dur=0.35):
+    rng = random.Random(95)
+    out, lp, lp2 = [], 0.0, 0.0
+    n = int(dur * SR)
+    for i in range(n):
+        x = i / n
+        noise = rng.random() * 2 - 1
+        c = lp_coef(900 + 2200 * math.sin(math.pi * x))
+        lp += c * (noise - lp)
+        lp2 += 0.02 * (lp - lp2)
+        out.append((lp - lp2) * math.sin(math.pi * x) ** 2 * 0.5)
+    return out
+
+
+def ui_lock(dur=None):
+    rng = random.Random(97)
+    out = [0.0] * int(0.2 * SR)
+    for off, f, g, d in ((0.0, 3800, 0.6, 0.0025), (0.055, 1300, 0.9, 0.006)):
+        s0 = int(off * SR)
+        for i in range(int(0.05 * SR)):
+            t = i / SR
+            click = (math.sin(TAU * f * t) * 0.6 + (rng.random() * 2 - 1) * 0.4) * math.exp(-t / d)
+            body = math.sin(TAU * 220 * t) * math.exp(-t / 0.012) * 0.4 if off else 0.0
+            out[s0 + i] += g * (click + body)
+    return out
+
+
+def ui_chime(dur=0.9):
+    out = [0.0] * int(dur * SR)
+    for off, m in ((0.0, 76), (0.12, 80)):                 # E5 -> G#5, soft major third
+        f = mtof(m)
+        s0 = int(off * SR)
+        for i in range(int((dur - off) * SR)):
+            t = i / SR
+            v = (math.sin(TAU * f * t) + 0.25 * math.sin(TAU * 2 * f * t)) * math.exp(-t / 0.28) * min(1.0, t / 0.004)
+            if s0 + i < len(out):
+                out[s0 + i] += 0.45 * v
+    return out
+
+
 SFX = {
     "vibrate": sfx_vibrate, "knock2": sfx_knock2, "door_close": sfx_door_close, "impact": sfx_impact,
     "subdrop": sfx_subdrop, "riser": sfx_riser, "whoosh": sfx_whoosh, "clock": sfx_clock,
     "heartbeat": sfx_heartbeat, "typing": sfx_typing, "scratch": sfx_scratch, "tick": sfx_tick,
+    # minimal focus set
+    "pop": ui_pop, "tink": ui_tink, "tap": ui_tap, "tap2": ui_tap2, "air": ui_whoosh, "lock": ui_lock, "chime": ui_chime,
     # aliases for older specs
     "buzz": sfx_vibrate, "knock": sfx_knock2, "hit": sfx_impact,
 }
@@ -295,14 +378,29 @@ def render_sfx(spec, n):
     buf = [0.0] * n
     events = list(spec.get("sfx", []))
     if spec.get("auto_sfx", True):
+        minimal = spec.get("sound_style") == "minimal"
         explicit = [e["t"] for e in events]
         for c in spec.get("cards", []):
             for e in c.get("elements", []):
                 at = e.get("at", c["start"])
-                if e.get("build") == "type":
-                    events.append({"t": max(0.0, at), "type": "typing", "dur": max(0.2, e.get("dur", 0.6) + min(0, at)), "gain": 0.35})
-                if e.get("build") == "slam" and not any(abs(t - at) < 0.1 for t in explicit):
-                    events.append({"t": at, "type": "impact", "gain": 0.7})
+                b = e.get("build")
+                if b == "type":
+                    events.append({"t": max(0.0, at), "type": "typing", "dur": max(0.2, e.get("dur", 0.6) + min(0, at)),
+                                   "gain": 0.12 if minimal else 0.35})
+                if b == "slam" and not any(abs(t - at) < 0.1 for t in explicit):
+                    events.append({"t": at, "type": "tink" if minimal else "impact", "gain": 0.22 if minimal else 0.7})
+                if minimal and b == "words":
+                    words = str(e["text"]).replace("\n", " ").split()
+                    for k in range(len(words)):
+                        wt = at + k * e.get("dur", 0.6) / max(1, len(words))
+                        if wt >= 0:
+                            events.append({"t": wt, "type": "pop", "gain": 0.45, "pitch": 1.0 + 0.06 * k})
+                if minimal and b == "lines":
+                    lines = str(e["text"]).split("\n")
+                    for k in range(len(lines)):
+                        events.append({"t": at + k * e.get("dur", 0.6) / max(1, len(lines)), "type": "tap", "gain": 0.4})
+                if minimal and b == "fade" and at > 0.5:
+                    events.append({"t": at, "type": "pop", "gain": 0.3, "pitch": 1.3})
     for ev in events:
         fn = SFX[ev["type"]]
         kwargs = {}
@@ -310,6 +408,8 @@ def render_sfx(spec, n):
             kwargs["dur"] = ev["dur"]
         if "rate" in ev:
             kwargs["rate"] = ev["rate"]
+        if "pitch" in ev:
+            kwargs["pitch"] = ev["pitch"]
         try:
             smp = fn(**kwargs)
         except TypeError:
@@ -324,6 +424,8 @@ MOODS = {
     "dark": [[57, 60, 64], [53, 57, 60], [50, 53, 57], [52, 56, 59]],
     # i–VI–III–VII (warmer, resolving)
     "warm": [[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]],
+    # focus: Cmaj7 – Am9 – Fmaj7 – G6sus (soft, open)
+    "focus": [[60, 64, 71], [57, 64, 71], [53, 60, 64], [55, 62, 64]],
     # phrygian i–bII (tense)
     "tense": [[57, 60, 64], [58, 62, 65], [57, 60, 64], [58, 62, 65]],
 }
@@ -342,6 +444,8 @@ SECTION = {  # pad_cut, pad_gain, kick, snare, hats, bass, arp
     "build":   (1400, 0.5, 0, 1, 1,   1, 1),
     "drop":    (2200, 0.5, 1, 1, 1,   1, 1),
     "outro":   (1600, 0.45, 1, 1, 0.7, 1, 1),
+    "ambient": (800, 0.30, 0, 0, 0,   0, 0),   # focus bed: soft pad only
+    "ambient_arp": (900, 0.30, 0, 0, 0, 0, 1),  # focus bed + gentle pluck pattern
     "stop":    (2200, 0.5, 1, 1, 1,   1, 1),   # tape-stop applied afterwards; follow it with a "thin" section so it is never silent
     "stutter": (2200, 0.5, 1, 1, 1,   1, 1),   # slice-repeat applied afterwards
 }
