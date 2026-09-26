@@ -7,8 +7,9 @@
 //
 // Pipeline: the spec's cards become one HTML page (brand theme + layout); a
 // deterministic seek(t) sets every element's state for time t; Playwright
-// screenshots each frame and pipes JPEGs into ffmpeg; scripts/render/sfx.py
-// synthesises the sound layer; ffmpeg muxes both into 1080x1920 H.264/AAC.
+// screenshots each frame and pipes JPEGs into ffmpeg; scripts/render/sound.py
+// composes the soundtrack (music + context SFX); ffmpeg mixes, normalises and
+// muxes into <out>.mp4 (full mix) and <out>-sfx-only.mp4 (for a trending IG sound).
 //
 // Spec (paths relative to the repo root):
 // {
@@ -18,7 +19,8 @@
 //                "elements": [ { "text": "YOU NEVER DOOM-SCROLL", "style": "head cream",
 //                                "size": 150, "build": "words", "at": 0, "dur": 1.0 } ],
 //                "punch": [ { "at": 1.5, "scale": 1.04 } ] } ],
-//   "sfx": [ { "t": 0, "type": "buzz" } ], "bed": { "type": "drone", "gain": 0.07 }
+//   "music": { "bpm": 120, "mood": "dark", "sections": [[0, "intro"], [1.5, "drop"]] },
+//   "sfx": [ { "t": 0, "type": "vibrate" } ]   // see scripts/render/sound.py for all types
 // }
 // build: words | lines | type | slam | fade (default fade). "\n" in text = line break.
 
@@ -121,8 +123,9 @@ async function main() {
   const htmlPath = path.join(tmp, "reel.html");
   fs.writeFileSync(htmlPath, buildHtml(spec));
 
-  const wav = path.join(tmp, "sound.wav");
-  execFileSync("python3", [path.join(__dirname, "sfx.py"), specPath, wav], { stdio: "inherit" });
+  // soundtrack stems: music.wav (beat-synced score) + sfx.wav (context sound design)
+  execFileSync("python3", [path.join(__dirname, "sound.py"), specPath, tmp], { stdio: "inherit" });
+  const music = path.join(tmp, "music.wav"), sfx = path.join(tmp, "sfx.wav");
 
   const silent = path.join(tmp, "video.mp4");
   const enc = spawn(ff, ["-loglevel", "error", "-y", "-f", "image2pipe", "-vcodec", "mjpeg", "-r", String(fps), "-i", "-",
@@ -143,9 +146,21 @@ async function main() {
   enc.stdin.end();
   await new Promise((r, j) => enc.on("close", (c) => (c === 0 ? r() : j(new Error("ffmpeg exit " + c)))));
 
-  execFileSync(ff, ["-loglevel", "error", "-y", "-i", silent, "-i", wav, "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
-    "-shortest", "-movflags", "+faststart", outPath], { stdio: "inherit" });
+  // Full mix: music with a little room, ducked under every SFX hit, loudness-normalised for Instagram.
+  const full = "[0:a]aecho=0.8:0.6:45|90:0.18|0.10,highpass=f=30[m];[1:a]asplit=2[s1][s2];" +
+    "[m][s1]sidechaincompress=threshold=0.04:ratio=5:attack=5:release=200[md];" +
+    "[md][s2]amix=inputs=2:weights=0.8 1.0:normalize=0,loudnorm=I=-13:TP=-1.2:LRA=11[a]";
+  const mixWav = path.join(tmp, "mix.wav"), sfxWav = path.join(tmp, "sfx-only.wav");
+  execFileSync(ff, ["-loglevel", "error", "-y", "-i", music, "-i", sfx, "-filter_complex", full, "-map", "[a]", "-ar", "44100", mixWav]);
+  // SFX-only: for pairing with a trending Instagram sound added in the app.
+  execFileSync(ff, ["-loglevel", "error", "-y", "-i", sfx, "-af", "loudnorm=I=-18:TP=-1.5", "-ar", "44100", sfxWav]);
+  const mux = (wav, out) => execFileSync(ff, ["-loglevel", "error", "-y", "-i", silent, "-i", wav, "-c:v", "copy",
+    "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out], { stdio: "inherit" });
+  mux(mixWav, outPath);
+  const sfxOut = outPath.replace(/\.mp4$/, "-sfx-only.mp4");
+  mux(sfxWav, sfxOut);
   console.log(outPath);
+  console.log(sfxOut);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

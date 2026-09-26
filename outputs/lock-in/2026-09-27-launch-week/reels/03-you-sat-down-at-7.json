@@ -20,7 +20,7 @@
      "style": "serif cream",
      "size": 70,
      "build": "type",
-     "at": 1.2,
+     "at": 1.0,
      "dur": 0.5
     },
     {
@@ -28,7 +28,7 @@
      "style": "serif cream",
      "size": 70,
      "build": "type",
-     "at": 2.4,
+     "at": 2.0,
      "dur": 0.6
     },
     {
@@ -45,7 +45,7 @@
      "size": 44,
      "gap": 40,
      "build": "fade",
-     "at": 5.8
+     "at": 6.0
     }
    ],
    "punch": [
@@ -59,34 +59,55 @@
  "sfx": [
   {
    "t": 0.0,
-   "type": "tick",
+   "type": "clock",
+   "dur": 1.0,
+   "rate": 2,
    "gain": 0.5
   },
   {
-   "t": 1.2,
-   "type": "tick",
+   "t": 1.0,
+   "type": "clock",
+   "dur": 1.0,
+   "rate": 4,
    "gain": 0.5
   },
   {
-   "t": 2.4,
-   "type": "tick",
+   "t": 2.0,
+   "type": "clock",
+   "dur": 2.0,
+   "rate": 9,
    "gain": 0.5
   },
   {
    "t": 4.0,
-   "type": "knock",
-   "gain": 0.9
+   "type": "subdrop",
+   "gain": 0.6
   },
   {
-   "t": 5.8,
-   "type": "tick",
+   "t": 4.0,
+   "type": "whoosh",
+   "dur": 0.4,
    "gain": 0.3
   }
  ],
  "fps": 30,
  "theme": "brands/lock-in.theme.css",
- "bed": {
-  "type": "drone",
-  "gain": 0.06
+ "music": {
+  "bpm": 120,
+  "mood": "warm",
+  "sections": [
+   [
+    0,
+    "thin"
+   ],
+   [
+    4.0,
+    "break"
+   ],
+   [
+    6.0,
+    "drop"
+   ]
+  ]
  }
 }

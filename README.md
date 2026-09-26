@@ -66,7 +66,7 @@ Copy `brands/_template.yaml` to `brands/<your-brand>.yaml` and fill it in. Unkno
 | `CLAUDE.md` | Project rules that every Claude session loads automatically |
 | `brands/` | `_template.yaml` + one profile per brand (`lock-in.yaml`, `beroia-home.yaml`) + optional `<slug>.theme.css` for rendering |
 | `outputs/` | One folder per package: brief, hooks, script, caption, scorecard, `carousel/`, `stories/`, `video/` |
-| `scripts/render/` | `render.js` (HTML → PNG), `reel.js` (spec → MP4), `sfx.py` (synthesized sound layer) |
+| `scripts/render/` | `render.js` (HTML → PNG), `reel.js` (spec → MP4), `sound.py` (composed soundtrack + scene sound design; outputs a full mix and an SFX-only version) |
 | `scripts/check_coverage.py` | Reports which book items are cited in `knowledge/`; never fails |
 | `assets/fonts/` | OFL fonts used by brand themes, with their licences |
 
@@ -83,7 +83,7 @@ python3 scripts/check_coverage.py --quiet  # summary only
 Phase 1 cites all 48 Hook Engineering items and part of the other two books on purpose. Phase 2 fills in the rest.
 
 ## Rendering
-`scripts/render/` needs the Playwright + Chromium already in the environment, plus a session-only ffmpeg (`pip install --target /tmp/ffmpeg-lib imageio-ffmpeg`; details in `agents/video-producer.md`). Videos carry synthesized SFX + a drone bed only; add a licensed track from Instagram's music library when posting. Brand styles live in `brands/<slug>.theme.css` (LOCK IN's colours were sampled from its own clips).
+`scripts/render/` needs the Playwright + Chromium already in the environment, plus a session-only ffmpeg (`pip install --target /tmp/ffmpeg-lib imageio-ffmpeg`; details in `agents/video-producer.md`). Videos get a composed, beat-synced soundtrack with scene sound design (`sound.py`), plus an SFX-only version for pairing with a trending Instagram sound. Brand styles live in `brands/<slug>.theme.css` (LOCK IN's colours were sampled from its own clips).
 
 ## Current brand work
 - **LOCK IN** (`outputs/lock-in/`):

@@ -43,19 +43,41 @@
  "sfx": [
   {
    "t": 0.0,
-   "type": "buzz",
-   "gain": 0.5
+   "type": "heartbeat",
+   "dur": 2.0,
+   "rate": 1.9,
+   "gain": 0.9
+  },
+  {
+   "t": 0.0,
+   "type": "vibrate",
+   "gain": 0.35
   },
   {
    "t": 2.0,
-   "type": "hit",
-   "gain": 0.8
+   "type": "impact",
+   "gain": 0.9
+  },
+  {
+   "t": 2.0,
+   "type": "subdrop",
+   "gain": 0.5
   }
  ],
  "fps": 30,
  "theme": "brands/lock-in.theme.css",
- "bed": {
-  "type": "drone",
-  "gain": 0.06
+ "music": {
+  "bpm": 120,
+  "mood": "tense",
+  "sections": [
+   [
+    0,
+    "tension"
+   ],
+   [
+    2.0,
+    "drop"
+   ]
+  ]
  }
 }

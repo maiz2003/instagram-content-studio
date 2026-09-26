@@ -3,7 +3,7 @@
 **Before Day 1:** do the pre-launch to-do in `../profile-kit.md` first (quiz link without a VPN, handle, bio, avatar, Creator account, LOCK auto-reply, START HERE highlight).
 **Rhythm:** one feed post a day [C-4]; daily Stories (6–8 frames, one sticker) [U.11], [U.ch6]; 10 minutes of genuine engagement before each post [U.124]; stay 60 minutes after [F2.25]. Don't edit or delete after posting [F3.16].
 **Time:** evenings, about 15 minutes before your audience's peak, at an odd minute (e.g. **7:05 pm** or **9:05 pm** in your target market's time zone). Check Insights after week 1 and move it [U.157], [U.21]. The target country isn't confirmed yet, so pick one time zone and stay with it.
-**Music:** each video carries synthesized SFX + a low drone only. In the Instagram editor, add a library track at low volume (music only, as you prefer).
+**Sound:** each video has **two versions**. `…mp4` has its own composed soundtrack: a beat-synced score plus scene sounds (phone vibration, door knocks, clock, heartbeat, record scratch). Post it as-is. `…-sfx-only.mp4` keeps just the scene sounds, so you can add a **trending Instagram sound** in the editor instead; the book says trending audio reaches people who follow that sound [F1.3].
 
 | Day | Post | File | Cover |
 |---|---|---|---|

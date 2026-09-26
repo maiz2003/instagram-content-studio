@@ -21,7 +21,7 @@
      "size": 130,
      "gap": 30,
      "build": "slam",
-     "at": 2.2
+     "at": 2.0
     },
     {
      "text": "Comment LOCK → find your door",
@@ -29,12 +29,12 @@
      "size": 44,
      "gap": 40,
      "build": "fade",
-     "at": 4.4
+     "at": 4.5
     }
    ],
    "punch": [
     {
-     "at": 2.2,
+     "at": 2.0,
      "scale": 1.04
     }
    ]
@@ -43,24 +43,39 @@
  "sfx": [
   {
    "t": 0.0,
-   "type": "buzz",
-   "gain": 0.5
-  },
-  {
-   "t": 2.2,
-   "type": "hit",
+   "type": "vibrate",
    "gain": 0.8
   },
   {
-   "t": 4.4,
+   "t": 2.0,
+   "type": "door_close",
+   "gain": 1.0
+  },
+  {
+   "t": 2.0,
+   "type": "subdrop",
+   "gain": 0.5
+  },
+  {
+   "t": 4.5,
    "type": "tick",
-   "gain": 0.4
+   "gain": 0.3
   }
  ],
  "fps": 30,
  "theme": "brands/lock-in.theme.css",
- "bed": {
-  "type": "drone",
-  "gain": 0.06
+ "music": {
+  "bpm": 120,
+  "mood": "dark",
+  "sections": [
+   [
+    0,
+    "intro"
+   ],
+   [
+    2.0,
+    "drop"
+   ]
+  ]
  }
 }
