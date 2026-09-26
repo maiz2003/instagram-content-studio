@@ -52,9 +52,9 @@ audience:
 tone: "Blunt, second person, no motivation and no hype. Calm, slightly dry. Tells the truth about the cost ('it will make your life more boring'). Never preachy, never guru."
 
 language_mix:
-  lead: "TODO: English assumed (the product is written in English); confirm"
+  lead: English
   dialect: ""
-  secondary: ""                       # e.g. Egyptian Arabic if targeting Egypt; TODO
+  secondary: ""
   mix_rule: "Voiceover, on-screen text and caption in the lead language."
 
 geo:
@@ -70,7 +70,7 @@ visual_identity:
 cta_mechanism:
   type: comment_keyword
   value: "TODO: Whop product link (store route: lock-in-e3). Confirm the exact URL."
-  keyword: "LOCK"                     # suggested: comment 'LOCK' → DM with the Whop link. Needs a DM auto-reply tool or manual replies; TODO confirm
+  keyword: "LOCK"                     # confirmed: comment LOCK → DM with the Whop link (auto-reply tool or manual replies)
 
 goals_allowed: [reach, trust, sale, lead]
 
@@ -80,7 +80,7 @@ banned_words_claims:
   - "Motivation-speak and hype ('grind', 'unstoppable', 'change your life forever')"
 
 assets_available:
-  on_camera_person: "TODO: face on camera, or faceless (hands, desk, phone, timer)?"
+  on_camera_person: "none: faceless (hands, desk, phone, timer, screen recordings, voiceover or text-only)"
   locations: ["TODO: desk / room"]
   footage_types:
     - "Desk setup, phone going into another room, timer starting"
