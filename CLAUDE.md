@@ -75,14 +75,12 @@ Phase 1 runs end-to-end on one real upcoming post. The output is shown to the ow
 
 **Gate:** nothing in Phase 2 starts until the owner says Phase 1 output is something they'd actually post ("I'd post this"). Full knowledge coverage also waits until then.
 
-**Phase 2 (in progress; built in the order the owner chose):**
-- ✅ Profile: `knowledge/profile-architecture.md` + `skills/profile-auditor`
-- ✅ Carousels: `skills/carousel-builder` (renders slides via `scripts/render/render.js`)
-- ✅ Video: `agents/video-producer` (type mode renders locally via `scripts/render/reel.js` + `sfx.py`; AI-visual mode uses Higgsfield only after the user OKs the credit spend)
-- ⏳ Not yet: knowledge algorithm-mechanics, reel-production, visual-seo, stories-playbook, recovery-protocol, case-studies; skills story-sequencer, growth-recovery-doctor, case-study-matcher; `growth-recovery-doctor` agent
-- Knowledge not yet distilled is read directly from `knowledge/_sources/`
+**Phase 2: built (2026-09-27).**
+- Knowledge: all 10 domain files; `check_coverage.py` reports 384/384 source items cited
+- Skills: content-studio, hook-writer, reel-scriptwriter, caption-seo-writer, carousel-builder, story-sequencer, profile-auditor, growth-recovery-doctor, case-study-matcher
+- Agents: `video-producer` (type mode local; Higgsfield only after an explicit credit OK), `growth-recovery-doctor` (read-only data gathering)
 
-Build remaining Phase 2 pieces only when the owner asks. Python scripts use the standard library only. Rendering needs the global Playwright + Chromium already in the environment and a session-only ffmpeg (`pip install --target /tmp/ffmpeg-lib imageio-ffmpeg`; see `agents/video-producer.md`). Nothing gets added to the repo as a dependency.
+New skills or agents only when the owner asks. Beroia Home is on hold until the owner brings it up. Python scripts use the standard library only. Rendering needs the global Playwright + Chromium already in the environment and a session-only ffmpeg (`pip install --target /tmp/ffmpeg-lib imageio-ffmpeg`; see `agents/video-producer.md`). Nothing gets added to the repo as a dependency.
 
 ## Repo layout
 ```

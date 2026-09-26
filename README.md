@@ -6,7 +6,7 @@ A reusable **Instagram content system built as Claude Code skills**. You give it
 
 The method comes from three books by Ahmed Shoman: *Instagram Secrets — Foundational*, *Instagram Secrets — 2026 Update* and *Hook Engineering 2026*. They were translated to English and restructured by domain. Every rule the skills apply cites its source item, e.g. `[H.31]`, `[U.36]`, `[F2.25]`.
 
-**Status: Phase 1 approved (2026-09-26); Phase 2 in progress.** Built so far: the hook → script → caption pipeline, profile setup, the carousel builder, and the video producer, which renders finished text Reels to MP4.
+**Status: Phase 1 approved (2026-09-26); Phase 2 built.** All planned skills, both agents and the full knowledge base exist. New work is driven by brand needs.
 
 ## How to use it
 
@@ -38,21 +38,37 @@ Copy `brands/_template.yaml` to `brands/<your-brand>.yaml` and fill it in. Unkno
 
 ## What's in the repo
 
+### Skills (`skills/`, auto-loaded via `.claude/skills/`)
+| Skill | What it does |
+|---|---|
+| `content-studio` | Orchestrator: brief → hooks → **you pick** → script / carousel / Stories → caption → scorecard → agency brief; routes to every other skill |
+| `hook-writer` | 10 hooks from the 45 formulas, scored on a 12-point rubric, top 3 recommended |
+| `reel-scriptwriter` | Timestamped shot list, re-hook, pattern interrupts, loop ending, CTA layer, cover, specs, 60-minute post-publish checklist |
+| `caption-seo-writer` | Keyword-first caption (bilingual when set), alt text, 0–3 hashtags, location, pinned comment, keyword consistency check |
+| `carousel-builder` | Slide plan → rendered 1080×1350 slides in the brand's style → caption and alt text |
+| `story-sequencer` | Daily / launch / Reel-support / highlight-intro Story sets on the 4-linked-Stories arc, rendered with sticker zones |
+| `profile-auditor` | Profile setup or audit: name field, bios, link, highlights + covers, pins, first 9 tiles, 15-item score |
+| `growth-recovery-doctor` | Reach-drop diagnosis (Account Status → baseline vs recent → cause) and a dated 14-day recovery plan |
+| `case-study-matcher` | Closest precedents among the 11 documented cases, with an honest "what transfers" |
+
+### Agents (`agents/`, auto-loaded via `.claude/agents/`)
+| Agent | What it does |
+|---|---|
+| `video-producer` | Renders a script to a finished MP4 (type mode, local), or drafts footage with Higgsfield (only after you OK the credits); checks every render |
+| `growth-recovery-doctor` | Hands-off account audit: gathers data read-only (a connected account's post list, or your Insights screenshots) and writes the recovery plan |
+
+### Knowledge (`knowledge/`: all 384 book items cited)
+`hook-formulas` · `ranking-signals` · `conflicts-and-exclusions` · `algorithm-mechanics` · `reel-production` · `visual-seo` · `profile-architecture` · `stories-playbook` · `recovery-protocol` · `case-studies` · `_sources/` (the three translations, unchanged; the repo is private and the books are "All Rights Reserved")
+
+### Everything else
 | Path | What it is |
 |---|---|
 | `CLAUDE.md` | Project rules that every Claude session loads automatically |
-| `skills/content-studio/` | Orchestrator: brief → hooks → **you pick** → script → caption → scorecard → agency brief |
-| `skills/hook-writer/` | 10 hooks from the 45 formulas, scored on a 12-point rubric, top 3 recommended |
-| `skills/reel-scriptwriter/` | Timestamped shot list, re-hook, pattern interrupts, loop ending, CTA layer, cover, specs, 60-minute post-publish checklist |
-| `skills/caption-seo-writer/` | Keyword-first bilingual caption, alt text, 0–3 hashtags, location tag, pinned comment, keyword consistency check |
-| `.claude/skills/` | Symlinks to `skills/` so Claude Code auto-loads them |
-| `knowledge/hook-formulas.md` | All 45 hook formulas + 3 collections, goal and buyer-type selection, opening mechanics, scoring rubric |
-| `knowledge/ranking-signals.md` | The book's signal weights (labelled as unverified), positive and negative signals, length bands, timing, scorecard |
-| `knowledge/conflicts-and-exclusions.md` | Rulings where the books disagree (the 2026 Update wins) and tactics that are never recommended |
-| `knowledge/_sources/` | The three English translations, unchanged (private repo; the books are "All Rights Reserved") |
-| `brands/` | `_template.yaml` + one profile per brand (`beroia-home.yaml` is the Phase 1 trial) |
-| `outputs/` | One folder per post package |
+| `brands/` | `_template.yaml` + one profile per brand (`lock-in.yaml`, `beroia-home.yaml`) + optional `<slug>.theme.css` for rendering |
+| `outputs/` | One folder per package: brief, hooks, script, caption, scorecard, `carousel/`, `stories/`, `video/` |
+| `scripts/render/` | `render.js` (HTML → PNG), `reel.js` (spec → MP4), `sfx.py` (synthesized sound layer) |
 | `scripts/check_coverage.py` | Reports which book items are cited in `knowledge/`; never fails |
+| `assets/fonts/` | OFL fonts used by brand themes, with their licences |
 
 ## Ground rules the skills follow
 - **Confidence.** Claims are `book-claim` unless an outside Instagram/Meta source is cited (`platform-confirmed`). None are confirmed yet. The scorecard's weights (Watch time 35 / Sends 20 / Saves 15 / Conversation 15 / Likes 5) are **the book's figures**, and the scorecard says so. It is a checklist, not a reach prediction.
@@ -66,19 +82,14 @@ python3 scripts/check_coverage.py --quiet  # summary only
 ```
 Phase 1 cites all 48 Hook Engineering items and part of the other two books on purpose. Phase 2 fills in the rest.
 
-## Phase 2 tools
+## Rendering
+`scripts/render/` needs the Playwright + Chromium already in the environment, plus a session-only ffmpeg (`pip install --target /tmp/ffmpeg-lib imageio-ffmpeg`; details in `agents/video-producer.md`). Videos carry synthesized SFX + a drone bed only; add a licensed track from Instagram's music library when posting. Brand styles live in `brands/<slug>.theme.css` (LOCK IN's colours were sampled from its own clips).
 
-| Piece | What it does | How to use it |
-|---|---|---|
-| `skills/profile-auditor` | Designs or audits a profile: name field, 3 bios with character counts, link, highlights with covers, 3 pins, first 9 grid tiles | "Set up the profile for <brand>" → `outputs/<brand>/profile-kit.md` |
-| `skills/carousel-builder` | Slide plan → rendered 1080×1350 PNG slides in the brand's style → caption and alt text | "Make a carousel about <idea>" → `outputs/<brand>/<pkg>/carousel/png/` |
-| `agents/video-producer` | Type mode: renders a script's text-card version to MP4 (text builds, punch zooms, synthesized SFX, loop), then checks frames and audio. AI-visual mode: Higgsfield footage, only after you OK the credits | "Render the video for <package>" → `outputs/<brand>/<pkg>/video/` |
-
-**Render tools** (`scripts/render/`): `render.js` (HTML `.frame` elements → PNG), `reel.js` (JSON spec → MP4), `sfx.py` (synthesized sound layer; add licensed music in Instagram's editor). They need the Playwright + Chromium already in the environment and a session-only ffmpeg; setup is in `agents/video-producer.md`.
-
-**Brand themes:** `brands/<slug>.theme.css` holds a brand's rendering style. LOCK IN's colours were sampled from its existing clips, with OFL fonts in `assets/fonts/`.
-
-## Roadmap (remaining)
-- **Knowledge files:** algorithm mechanics, reel production, visual SEO, Stories playbook, recovery protocol, case studies.
-- **Skills:** story sequencer, growth-recovery doctor, case-study matcher.
-- **Agent:** `growth-recovery-doctor` (audits a real account against the suppression checklist).
+## Current brand work
+- **LOCK IN** (`outputs/lock-in/`):
+  - profile kit + rendered avatar and highlight covers
+  - Four Doors package + MP4
+  - launch week: 5 more MP4s, Stories, `week-plan.md` with every caption
+  - 3 carousels: Phone Exile, What's Inside, The 3 Ugly Minutes
+  - clip review and case matches
+- **Beroia Home**: on hold (the trial profile and TEST DATA smoke test are kept).
