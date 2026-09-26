@@ -1,0 +1,92 @@
+{
+ "duration": 9.0,
+ "label": "LOCK IN",
+ "cards": [
+  {
+   "start": 0,
+   "end": 9.0,
+   "top": 620,
+   "elements": [
+    {
+     "text": "you sat down at 7.",
+     "style": "serif cream",
+     "size": 70,
+     "build": "type",
+     "at": -0.65,
+     "dur": 0.6
+    },
+    {
+     "text": "it's 11:40.",
+     "style": "serif cream",
+     "size": 70,
+     "build": "type",
+     "at": 1.2,
+     "dur": 0.5
+    },
+    {
+     "text": "you did nothing.",
+     "style": "serif cream",
+     "size": 70,
+     "build": "type",
+     "at": 2.4,
+     "dur": 0.6
+    },
+    {
+     "text": "you are not lazy.",
+     "style": "serif amber",
+     "size": 70,
+     "gap": 60,
+     "build": "slam",
+     "at": 4.0
+    },
+    {
+     "text": "Comment LOCK → find out what you are",
+     "style": "serif cream",
+     "size": 44,
+     "gap": 40,
+     "build": "fade",
+     "at": 5.8
+    }
+   ],
+   "punch": [
+    {
+     "at": 4.0,
+     "scale": 1.03
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 1.2,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 2.4,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 4.0,
+   "type": "knock",
+   "gain": 0.9
+  },
+  {
+   "t": 5.8,
+   "type": "tick",
+   "gain": 0.3
+  }
+ ],
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "bed": {
+  "type": "drone",
+  "gain": 0.06
+ }
+}

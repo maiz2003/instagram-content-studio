@@ -1,0 +1,75 @@
+{
+ "duration": 8.0,
+ "label": "LOCK IN",
+ "cards": [
+  {
+   "start": 0,
+   "end": 8.0,
+   "top": 620,
+   "elements": [
+    {
+     "text": "you're not tired.",
+     "style": "serif cream",
+     "size": 72,
+     "build": "type",
+     "at": -0.65,
+     "dur": 0.6
+    },
+    {
+     "text": "you've been on your phone\nfor four hours.",
+     "style": "serif cream",
+     "size": 72,
+     "gap": 40,
+     "build": "type",
+     "at": 1.6,
+     "dur": 1.0
+    },
+    {
+     "text": "TIRED IS DOOR 4.",
+     "style": "head amber",
+     "size": 120,
+     "gap": 60,
+     "build": "slam",
+     "at": 3.8
+    },
+    {
+     "text": "Comment LOCK → find your door",
+     "style": "serif cream",
+     "size": 44,
+     "gap": 40,
+     "build": "fade",
+     "at": 5.4
+    }
+   ],
+   "punch": [
+    {
+     "at": 3.8,
+     "scale": 1.03
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 1.6,
+   "type": "tick",
+   "gain": 0.5
+  },
+  {
+   "t": 3.8,
+   "type": "knock",
+   "gain": 0.9
+  }
+ ],
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "bed": {
+  "type": "drone",
+  "gain": 0.06
+ }
+}
