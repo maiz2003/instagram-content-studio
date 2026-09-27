@@ -103,3 +103,11 @@ notes_new_account:
   - "Brand-new account: the book claims new accounts get a short test boost; don't delete or re-edit posts, post a consistent pattern from day one [F3.16]."
   - "Small accounts (under 10k) reportedly get higher reach rates [U.31]; lean on short reach Reels + Trial Reels [U.3]."
   - "Profile setup (name-field keyword, bio, highlights, pinned posts) is Phase 2 (profile-auditor); see knowledge/_sources until then."
+
+workflow:                             # used by the weekly-cycle skill and its agents
+  tracker_url: "https://claude.ai/artifact/ELpGTnN5BdEksgu9QQSoLY"
+  objectives: "outputs/lock-in/objectives-30d.md"
+  drive_folder_id: "1fisrKvLQlmEJiZnBW5lGU6rG3uUxg7vH"   # footage uploads (e.g. clips-week2), shared by link
+  whop_company: "biz_mZWif3gl8Pw3u3"
+  whop_product: "prod_7BAVlob3INIFe"
+  review_day: "Sunday"

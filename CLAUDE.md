@@ -79,6 +79,7 @@ Phase 1 runs end-to-end on one real upcoming post. The output is shown to the ow
 - Knowledge: all 10 domain files; `check_coverage.py` reports 384/384 source items cited
 - Skills: content-studio, hook-writer, reel-scriptwriter, caption-seo-writer, carousel-builder, story-sequencer, profile-auditor, growth-recovery-doctor, case-study-matcher
 - Agents: `video-producer` (type mode local; Higgsfield only after an explicit credit OK), `growth-recovery-doctor` (read-only data gathering)
+- **Agent team (2026-09-27, owner request):** the `weekly-cycle` skill coordinates `performance-analyst` → `content-strategist` → **owner approval** → `footage-reviewer` → `post-writer` → `video-producer` → `brand-guardian`. The main session runs the skill, because subagents can't start other subagents. Brand links (tracker, objectives, Drive, Whop ids) live in the profile's `workflow:` block.
 
 New skills or agents only when the owner asks. Beroia Home is on hold until the owner brings it up. Python scripts use the standard library only. Rendering needs the global Playwright + Chromium already in the environment and a session-only ffmpeg (`pip install --target /tmp/ffmpeg-lib imageio-ffmpeg`; see `agents/video-producer.md`). Nothing gets added to the repo as a dependency.
 

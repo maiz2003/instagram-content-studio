@@ -1,0 +1,224 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 13.5,
+ "cards": [
+  {
+   "start": 0,
+   "end": 2.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "YOU DIDN'T GET",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "DISTRACTED.",
+     "style": "head amber",
+     "size": 130,
+     "build": "slam",
+     "at": 1.2,
+     "dur": 0.5,
+     "gap": 10
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.2,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/02_stuck.mov",
+    "in": 0,
+    "audio": 0.3
+   }
+  },
+  {
+   "start": 2.5,
+   "end": 4.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "YOU GOT",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 2.5,
+     "dur": 0.5
+    },
+    {
+     "text": "STUCK.",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 3.1,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "punch": [
+    {
+     "at": 3.1,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/02_stuck.mov",
+    "in": 3.0,
+    "audio": 0.5
+   }
+  },
+  {
+   "start": 4.5,
+   "end": 7.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "you hit something\nyou can't do.",
+     "style": "serif cream",
+     "size": 66,
+     "build": "type",
+     "at": 4.5,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "text": "\"i'll ask someone tomorrow.\"",
+     "style": "serif cream",
+     "size": 66,
+     "build": "type",
+     "at": 5.9,
+     "dur": 0.9,
+     "gap": 40
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/02_stuck.mov",
+    "in": 5.5,
+    "rate": 0.9,
+    "audio": 0.3
+   }
+  },
+  {
+   "start": 7.5,
+   "end": 10.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "THE FIX:",
+     "style": "head amber",
+     "size": 110,
+     "build": "words",
+     "at": 7.5,
+     "dur": 0.5
+    },
+    {
+     "text": "the step is too big,\nnot beyond you.\ncome back with the next line,\nnot the whole problem.",
+     "style": "serif cream",
+     "size": 62,
+     "build": "lines",
+     "at": 8.0,
+     "dur": 1.6,
+     "gap": 40
+    }
+   ]
+  },
+  {
+   "start": 10.5,
+   "end": 12.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "WHICH DOOR\nIS YOURS?",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 10.5,
+     "dur": 0.5
+    },
+    {
+     "text": "Comment LOCK → the 4-question quiz",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 11.5,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "text": "part 2 of 4",
+     "style": "serif cream",
+     "size": 40,
+     "build": "fade",
+     "at": 12.1,
+     "dur": 1.0,
+     "gap": 24
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/05_lockin_day.mov",
+    "in": 0,
+    "audio": 0.8
+   }
+  },
+  {
+   "start": 12.5,
+   "end": 13.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "YOU DIDN'T GET",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 11.5,
+     "dur": 0.5
+    },
+    {
+     "text": "DISTRACTED.",
+     "style": "head amber",
+     "size": 130,
+     "build": "slam",
+     "at": 11.5,
+     "dur": 0.5,
+     "gap": 10
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/02_stuck.mov",
+    "in": 0,
+    "audio": 0.3
+   }
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 12.5,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}

@@ -50,12 +50,20 @@ Copy `brands/_template.yaml` to `brands/<your-brand>.yaml` and fill it in. Unkno
 | `profile-auditor` | Profile setup or audit: name field, bios, link, highlights + covers, pins, first 9 tiles, 15-item score |
 | `growth-recovery-doctor` | Reach-drop diagnosis (Account Status → baseline vs recent → cause) and a dated 14-day recovery plan |
 | `case-study-matcher` | Closest precedents among the 11 documented cases, with an honest "what transfers" |
+| `weekly-cycle` | Coordinates the agent team through one week: review → plan → approval → footage → write → render → gate → deliver |
 
 ### Agents (`agents/`, auto-loaded via `.claude/agents/`)
 | Agent | What it does |
 |---|---|
 | `video-producer` | Renders a script to a finished MP4 (type mode, local), or drafts footage with Higgsfield (only after you OK the credits); checks every render |
 | `growth-recovery-doctor` | Hands-off account audit: gathers data read-only (a connected account's post list, or your Insights screenshots) and writes the recovery plan |
+| `performance-analyst` | Weekly review: reads the tracker, Whop sales and (if connected) posts, all read-only, and scores the objectives |
+| `content-strategist` | Plans next week (days, formats, hook families, Trial Reels, Stories, filming) from the review; the owner approves it |
+| `footage-reviewer` | Checks your filmed clips against the shot list, files the usable takes, lists reshoots |
+| `post-writer` | Writes the approved week with the skills: hooks, Reel specs, carousels, captions, Stories |
+| `brand-guardian` | Quality/compliance gate before delivery: brand facts, CTA and exclusions, spec rules, render loudness and frames |
+
+**Weekly workflow:** say *"run the week for LOCK IN"*. The `weekly-cycle` skill runs the team in order (review → plan → **your approval** → footage → write → render → gate → deliver) and stops for your OK before anything is written.
 
 ### Knowledge (`knowledge/`: all 384 book items cited)
 `hook-formulas` · `ranking-signals` · `conflicts-and-exclusions` · `algorithm-mechanics` · `reel-production` · `visual-seo` · `profile-architecture` · `stories-playbook` · `recovery-protocol` · `case-studies` · `_sources/` (the three translations, unchanged; the repo is private and the books are "All Rights Reserved")

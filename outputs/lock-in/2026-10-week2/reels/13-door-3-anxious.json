@@ -1,0 +1,230 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 12.5,
+ "cards": [
+  {
+   "start": 0,
+   "end": 2.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "CHECKING ISN'T",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "RELIEF.",
+     "style": "head amber",
+     "size": 160,
+     "build": "slam",
+     "at": 1.3,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.3,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/03_anxious.mov",
+    "in": 0,
+    "audio": 0.7
+   }
+  },
+  {
+   "start": 2.5,
+   "end": 4.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "IT'S THE",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 2.5,
+     "dur": 0.5
+    },
+    {
+     "text": "LOOP.",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 3.1,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "punch": [
+    {
+     "at": 3.1,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/03_anxious.mov",
+    "in": 2.5,
+    "audio": 0.7
+   }
+  },
+  {
+   "start": 4.5,
+   "end": 7.0,
+   "top": 620,
+   "elements": [
+    {
+     "text": "you feel behind\nbefore you've even started.",
+     "style": "serif cream",
+     "size": 68,
+     "build": "type",
+     "at": 4.5,
+     "dur": 1.2,
+     "gap": 40
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/03_anxious.mov",
+    "in": 5.0,
+    "rate": 0.9,
+    "audio": 0.5
+   }
+  },
+  {
+   "start": 7.0,
+   "end": 9.0,
+   "top": 620,
+   "elements": [
+    {
+     "text": "DOOR 3:",
+     "style": "head cream",
+     "size": 110,
+     "build": "words",
+     "at": 7.0,
+     "dur": 0.5
+    },
+    {
+     "text": "ANXIOUS.",
+     "style": "head amber",
+     "size": 160,
+     "build": "slam",
+     "at": 7.6,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "the one nobody admits.",
+     "style": "serif cream",
+     "size": 52,
+     "build": "fade",
+     "at": 8.2,
+     "dur": 1.0,
+     "gap": 40
+    }
+   ],
+   "punch": [
+    {
+     "at": 7.6,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 9.0,
+   "end": 11.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "WHICH DOOR\nIS YOURS?",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 9.0,
+     "dur": 0.5
+    },
+    {
+     "text": "Comment LOCK → the 4-question quiz",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 10.0,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "text": "send this to whoever's always \"so behind\"",
+     "style": "serif cream",
+     "size": 40,
+     "build": "fade",
+     "at": 10.6,
+     "dur": 1.0,
+     "gap": 24
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/05_lockin_day.mov",
+    "in": 0,
+    "audio": 0.8
+   }
+  },
+  {
+   "start": 11.5,
+   "end": 12.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "CHECKING ISN'T",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 10.5,
+     "dur": 0.5
+    },
+    {
+     "text": "RELIEF.",
+     "style": "head amber",
+     "size": 160,
+     "build": "slam",
+     "at": 10.5,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/03_anxious.mov",
+    "in": 0,
+    "audio": 0.7
+   }
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 11.5,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}

@@ -65,3 +65,11 @@ agency:
   name: ""                       # production agency that receives agency-brief.md, or "" for in-house
   contact: ""
   approver: ""                   # who signs off before posting
+
+workflow:                             # optional; used by the weekly-cycle skill and its agents
+  tracker_url: ""                     # claude.ai tracker page (db-backed) where the owner logs Insights
+  objectives: ""                      # outputs/<brand>/objectives-*.md
+  drive_folder_id: ""                 # where the owner uploads footage
+  whop_company: ""
+  whop_product: ""
+  review_day: "Sunday"
