@@ -108,6 +108,8 @@ workflow:                             # used by the weekly-cycle skill and its a
   tracker_url: "https://claude.ai/artifact/ELpGTnN5BdEksgu9QQSoLY"
   objectives: "outputs/lock-in/objectives-30d.md"
   drive_folder_id: "1fisrKvLQlmEJiZnBW5lGU6rG3uUxg7vH"   # footage uploads (e.g. clips-week2), shared by link
+  posting_queue_folder_id: "1aymnlDOmVajd6opoJArAWJ14VzP_SFnr"   # Drive: "LOCK IN posting queue (weeks 1-2)" (Clips/ + posting-order doc); the owner uploads finished files here
+  posting_queue_page: "https://claude.ai/artifact/M5LcUCfMyBPWQwYfG9Ynig"
   whop_company: "biz_mZWif3gl8Pw3u3"
   whop_product: "prod_7BAVlob3INIFe"
   review_day: "Sunday"
