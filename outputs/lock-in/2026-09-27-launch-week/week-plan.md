@@ -93,6 +93,7 @@ Rendered frames are in `stories/png/`. Stickers are added in the app, inside the
 Reply to every sticker response and DM within the hour. DMs started from Stories are the strongest closeness signal [U.ch6].
 
 ## After week 1
+Log every post in the tracker (https://claude.ai/artifact/ELpGTnN5BdEksgu9QQSoLY, source in `../tracker/`), about 48 hours after it goes live. The month's targets are in `../objectives-30d.md`.
 - Note each post's views, % non-followers, average watch time, sends, saves and LOCK comments.
 - Repeat the top format [U.43]. Pin the best performer in slot 1 [F4.7].
 - Run the growth-recovery-doctor skill only if reach falls. For a new account it produces a clean-start checklist instead.

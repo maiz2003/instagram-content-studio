@@ -93,4 +93,5 @@ Phase 1 cites all 48 Hook Engineering items and part of the other two books on p
   - launch week: 5 more MP4s, Stories, `week-plan.md` with every caption
   - 3 carousels: Phone Exile, What's Inside, The 3 Ugly Minutes
   - clip review and case matches
+  - 30-day objectives (`objectives-30d.md`) + tracker page (`tracker/`, published privately on claude.ai)
 - **Beroia Home**: on hold (the trial profile and TEST DATA smoke test are kept).

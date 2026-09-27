@@ -1,0 +1,345 @@
+<title>LOCK IN Launch Month</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #111216; --panel: #181a1f; --line: #2a2d34; --ink: #e6e1d5; --muted: #8f949c;
+    --amber: #da9d55; --good: #7fb58a; --warn: #d8b25a; --bad: #d97a6c;
+    --display: "Anton", Impact, "Arial Narrow", sans-serif;
+    --serif: "Spectral", Georgia, serif;
+    --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+  body { background: var(--bg); color: var(--ink); font: 16px/1.5 var(--serif); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 64px; display: grid; gap: 36px; }
+  h1, h2 { font-family: var(--display); font-weight: 400; letter-spacing: .01em; text-transform: uppercase; margin: 0; text-wrap: balance; }
+  h1 { font-size: clamp(40px, 8vw, 72px); line-height: .95; }
+  h1 .amber { color: var(--amber); }
+  h2 { font-size: 26px; }
+  .label { font: 600 11px/1.2 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .lede { color: var(--muted); max-width: 62ch; margin: 10px 0 0; }
+  header { display: grid; gap: 18px; }
+  .runbar { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: end; }
+  .runbar .day { font: 600 15px var(--mono); }
+  .runbar .day b { color: var(--amber); font-size: 22px; }
+  input, select, textarea, button { font: inherit; color: var(--ink); }
+  input[type=date], input[type=number], input[type=text], select, textarea {
+    background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 6px 8px; font: 14px var(--mono); width: 100%;
+  }
+  input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid var(--amber); outline-offset: 1px; }
+  button { background: transparent; border: 1px solid var(--line); border-radius: 4px; padding: 7px 14px; font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+  button.primary { background: var(--amber); border-color: var(--amber); color: #111216; }
+  button:disabled { opacity: .5; cursor: default; }
+  .notice { border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; color: var(--muted); }
+
+  /* objectives */
+  .objs { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+  .obj { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 14px; display: grid; gap: 8px; align-content: start; }
+  .obj .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .obj .name { font-weight: 600; }
+  .obj .val { font: 600 24px var(--mono); font-variant-numeric: tabular-nums; }
+  .obj .target { font-size: 13px; color: var(--muted); }
+  .pill { font: 600 10px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; padding: 5px 7px; border-radius: 99px; border: 1px solid currentColor; white-space: nowrap; }
+  .pill.good { color: var(--good); } .pill.warn { color: var(--warn); } .pill.bad { color: var(--bad); } .pill.none { color: var(--muted); }
+
+  /* weekly table */
+  .scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
+  table { border-collapse: collapse; width: 100%; min-width: 720px; font: 13px var(--mono); font-variant-numeric: tabular-nums; }
+  th, td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  thead th { color: var(--muted); font-weight: 600; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  tr.target td { color: var(--amber); }
+  tbody tr:last-child td { border-bottom: 0; }
+  .up { color: var(--good); } .down { color: var(--bad); }
+
+  /* posts */
+  .posts { display: grid; gap: 10px; }
+  details.post { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; }
+  details.post > summary { list-style: none; cursor: pointer; padding: 12px 14px; display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center; }
+  details.post > summary::-webkit-details-marker { display: none; }
+  .dayno { font: 600 12px var(--mono); color: var(--muted); }
+  .ptitle { font-weight: 600; }
+  .pmeta { font: 12px var(--mono); color: var(--muted); }
+  .tag { font: 600 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--amber); }
+  .quick { font: 600 13px var(--mono); text-align: right; font-variant-numeric: tabular-nums; }
+  .quick small { display: block; color: var(--muted); font-weight: 400; }
+  .pbody { padding: 4px 14px 16px; display: grid; gap: 14px; border-top: 1px solid var(--line); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px 12px; padding-top: 12px; }
+  .field { display: grid; gap: 4px; }
+  .field span { font: 11px var(--mono); color: var(--muted); }
+  .rates { display: flex; flex-wrap: wrap; gap: 8px 18px; font: 13px var(--mono); color: var(--muted); }
+  .rates b { color: var(--ink); font-weight: 600; }
+  .actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .status { font: 12px var(--mono); color: var(--muted); }
+  .check { display: flex; gap: 8px; align-items: center; font: 13px var(--mono); color: var(--muted); }
+
+  /* weeks */
+  .weeks { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+  .week { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 14px; display: grid; gap: 10px; }
+  .week .grid { padding-top: 0; grid-template-columns: 1fr 1fr; }
+
+  section { display: grid; gap: 14px; }
+  .sechead { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap; }
+  footer { color: var(--muted); font-size: 13px; max-width: 70ch; }
+  @media (max-width: 480px) { details.post > summary { grid-template-columns: 44px 1fr; } .quick { grid-column: 2; text-align: left; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="label">LOCK IN · Instagram · Europe + US · 18:05 UK</div>
+    <h1>Launch <span class="amber">month</span></h1>
+    <p class="lede">Audience first: reach new people who watch to the end, then send or save. Log each post about 48 hours after it goes live, straight from Instagram Insights. Fill in the week box on Sundays. Claude reads this page to plan the next week and adds Whop sales.</p>
+    <div class="runbar">
+      <label class="field" style="max-width:200px"><span>Day 1 (Four Doors goes live)</span><input type="date" id="startDate"></label>
+      <div class="day" id="dayCounter">Set Day 1 to start the clock</div>
+      <span class="status" id="startStatus"></span>
+    </div>
+  </header>
+
+  <div class="notice" id="dbNotice" hidden>Saving isn't available in this view, so the tracker is read-only here. Open it from claude.ai while signed in.</div>
+
+  <section>
+    <div class="sechead"><h2>Objectives</h2><span class="label">Latest week vs week 1</span></div>
+    <div class="objs" id="objs"></div>
+  </section>
+
+  <section>
+    <div class="sechead"><h2>Week by week</h2><span class="label">Medians per Reel · rates per 1,000 views</span></div>
+    <div class="scroll"><table>
+      <thead><tr><th>Week</th><th>Posts</th><th>Views</th><th>Non-follower</th><th>Skip rate</th><th>Watched</th><th>Shares/1k</th><th>Saves/1k</th><th>Follows</th><th>Eng. rate</th><th>LOCK</th></tr></thead>
+      <tbody id="weekRows"></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <div class="sechead"><h2>Posts</h2><button id="addBtn">Add a post</button></div>
+    <form id="addForm" class="week" hidden>
+      <div class="grid">
+        <label class="field"><span>Title</span><input type="text" id="newTitle" required></label>
+        <label class="field"><span>Format</span><select id="newFormat"><option>Reel</option><option>Carousel</option><option>Photo</option></select></label>
+        <label class="field"><span>Length (s, Reels)</span><input type="number" id="newLen" min="0" step="1"></label>
+        <label class="check"><input type="checkbox" id="newTrial"> Trial Reel</label>
+      </div>
+      <div class="actions"><button class="primary" type="submit">Add</button><button type="button" id="cancelAdd">Cancel</button><span class="status" id="addStatus"></span></div>
+    </form>
+    <div class="posts" id="posts"><div class="notice">Loading posts…</div></div>
+  </section>
+
+  <section>
+    <div class="sechead"><h2>Sundays</h2><span class="label">Account totals from Insights</span></div>
+    <div class="weeks" id="weeks"></div>
+  </section>
+
+  <footer>Thresholds marked "book" are the book's figures, not platform data. Everything else is compared with your own week 1. The objectives are written out in full in <span style="font-family:var(--mono)">outputs/lock-in/objectives-30d.md</span>.</footer>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const METRICS = [
+  ["date", "Posted on", "date"], ["views", "Views"], ["nonFollowerPct", "% non-followers"], ["skipPct", "Skip rate %"],
+  ["avgWatchS", "Avg watch (s)"], ["lengthS", "Length (s)"], ["likes", "Likes"], ["comments", "Comments"],
+  ["shares", "Shares (sends)"], ["saves", "Saves"], ["follows", "Follows"], ["lockComments", "LOCK comments"],
+];
+const WEEK_FIELDS = [["followers", "Followers (Sunday)"], ["profileVisits", "Profile visits"], ["linkTaps", "Link taps (quiz)"], ["lockDms", "LOCK DMs sent"], ["sales", "Whop sales"]];
+let db = null, plan = { startDate: "" }, posts = [], weeks = {}, readOnly = false;
+const drafts = {};   // unsaved edits per post id, kept across live refreshes
+
+const num = (v) => (v === "" || v == null || isNaN(+v) ? null : +v);
+const median = (a) => { const x = a.filter((v) => v != null).sort((p, q) => p - q); if (!x.length) return null; const m = x.length >> 1; return x.length % 2 ? x[m] : (x[m - 1] + x[m]) / 2; };
+const sum = (a) => a.reduce((s, v) => s + (v || 0), 0);
+const fmt = (v, d = 0, suf = "") => (v == null || !isFinite(v) ? "–" : v.toLocaleString("en-GB", { maximumFractionDigits: d, minimumFractionDigits: d }) + suf);
+const dayOf = (iso) => (plan.startDate && iso ? Math.floor((Date.parse(iso) - Date.parse(plan.startDate)) / 864e5) + 1 : null);
+const weekOf = (p) => { const d = dayOf(p.date); return d == null || d < 1 ? null : Math.min(4, Math.ceil(d / 7)); };
+const isReel = (p) => (p.format || "Reel") === "Reel";
+const rates = (p) => {
+  const v = num(p.views);
+  return {
+    watchPct: num(p.avgWatchS) != null && num(p.lengthS) ? (100 * p.avgWatchS) / p.lengthS : null,
+    sharesK: v ? (1000 * (num(p.shares) || 0)) / v : null,
+    savesK: v ? (1000 * (num(p.saves) || 0)) / v : null,
+    er: v ? (100 * sum([num(p.likes), num(p.comments), num(p.shares), num(p.saves)])) / v : null,
+  };
+};
+
+function weekStats(w) {
+  const ps = posts.filter((p) => weekOf(p) === w && num(p.views) != null);
+  const reels = ps.filter(isReel);
+  const r = ps.map(rates);
+  return {
+    n: posts.filter((p) => weekOf(p) === w).length,
+    logged: ps.length,
+    views: median(ps.map((p) => num(p.views))),
+    nonf: median(ps.map((p) => num(p.nonFollowerPct))),
+    skip: median(reels.map((p) => num(p.skipPct))),
+    watch: median(reels.map((p) => rates(p).watchPct)),
+    sharesK: median(r.map((x) => x.sharesK)),
+    savesK: median(r.map((x) => x.savesK)),
+    sendSaveK: median(r.map((x) => (x.sharesK == null ? null : x.sharesK + x.savesK))),
+    follows: ps.length ? sum(ps.map((p) => num(p.follows))) : null,
+    er: median(r.map((x) => x.er)),
+    lock: ps.length ? sum(ps.map((p) => num(p.lockComments))) : null,
+  };
+}
+
+function today() { return new Date().toISOString().slice(0, 10); }
+function currentDay() { return plan.startDate ? dayOf(today()) : null; }
+
+function renderRun() {
+  $("startDate").value = plan.startDate || "";
+  const d = currentDay();
+  $("dayCounter").innerHTML = d == null ? "Set Day 1 to start the clock"
+    : d < 1 ? `Starts in <b>${1 - d}</b> day${1 - d === 1 ? "" : "s"}`
+    : d > 30 ? `Month complete · <b>${d - 1}</b> days since Day 1`
+    : `Day <b>${d}</b> of 30 · week ${Math.ceil(d / 7) > 4 ? 4 : Math.ceil(d / 7)}`;
+}
+
+function pill(state, text) { return `<span class="pill ${state}">${text}</span>`; }
+
+function renderObjectives() {
+  const W = [1, 2, 3, 4].map(weekStats);
+  const withData = W.map((s, i) => (s.logged ? i : -1)).filter((i) => i >= 0);
+  const last = withData.length ? withData[withData.length - 1] : -1;
+  const prev = withData.length > 1 ? withData[withData.length - 2] : -1;
+  const L = last >= 0 ? W[last] : null, B = W[0], P = prev >= 0 ? W[prev] : null;
+  const d = currentDay();
+  const elapsed = d == null ? 0 : Math.max(0, Math.min(30, d));
+  const postedDays = new Set(posts.filter((p) => p.date && dayOf(p.date) >= 1 && dayOf(p.date) <= 30).map((p) => p.date)).size;
+  const trials = posts.filter((p) => p.trial && p.date).length;
+  const weeksIn = elapsed ? Math.ceil(elapsed / 7) : 0;
+  const cmp = (a, b, k = 1, lowerBetter = false) => (a == null || b == null ? "none" : (lowerBetter ? a <= b * k : a > b * k) ? "good" : "bad");
+  const onlyW1 = last === 0;
+  const items = [
+    ["Show up every day", `${postedDays}/${elapsed || 0}`, "28 of 30 days, max 1 Reel a day", !elapsed ? pill("none", "not started") : postedDays >= Math.floor((elapsed * 28) / 30) ? pill("good", "on track") : pill("bad", "behind")],
+    ["Stop the scroll", fmt(L && L.skip, 0, "%"), "Median skip rate ≤ 40% (book: 60% held past 3 s)", !L || L.skip == null ? pill("none", "no data") : L.skip <= 40 ? pill("good", "on track") : pill("warn", "above 40%")],
+    ["Hold to the end", fmt(L && L.watch, 0, "%"), "Watch time ÷ length above week 1", onlyW1 ? pill("none", "baseline") : pill(cmp(L && L.watch, B.watch), cmp(L && L.watch, B.watch) === "good" ? "above wk 1" : cmp(L && L.watch, B.watch) === "bad" ? "below wk 1" : "no data")],
+    ["Get sent and saved", fmt(L && L.sendSaveK, 1), "Shares + saves per 1k views ≥ 1.5× week 1", onlyW1 ? pill("none", "baseline") : pill(cmp(L && L.sendSaveK, B.sendSaveK, 1.5), cmp(L && L.sendSaveK, B.sendSaveK, 1.5) === "good" ? "on track" : cmp(L && L.sendSaveK, B.sendSaveK, 1.5) === "bad" ? "below 1.5×" : "no data")],
+    ["Reach new people", fmt(L && L.views), "Median views rising week on week", !P ? pill("none", L ? "baseline" : "no data") : pill(cmp(L.views, P.views), cmp(L.views, P.views) === "good" ? "rising" : "flat/down")],
+    ["Turn viewers into followers", fmt(L && L.follows), "Follows per week rising", !P ? pill("none", L ? "baseline" : "no data") : pill(cmp(L.follows, P.follows), cmp(L.follows, P.follows) === "good" ? "rising" : "flat/down")],
+    ["Keep the funnel working", `${fmt(sum(W.map((w) => w.lock || 0)))} LOCK`, `Quiz taps ${fmt(sum(Object.values(weeks).map((w) => num(w.linkTaps))))} · sales ${fmt(sum(Object.values(weeks).map((w) => num(w.sales))))}`, pill("none", "tracking")],
+    ["Learn what works", `${trials} trial`, "2 Trial Reels a week, top 2 formats by week 3", !weeksIn ? pill("none", "not started") : trials >= 2 * weeksIn ? pill("good", "on track") : pill("warn", `${2 * weeksIn - trials} to go`)],
+  ];
+  $("objs").innerHTML = items.map(([n, v, t, p]) => `<div class="obj"><div class="top"><span class="name">${n}</span>${p}</div><div class="val">${v}</div><div class="target">${t}</div></div>`).join("");
+}
+
+function renderWeeks() {
+  const W = [1, 2, 3, 4].map(weekStats), B = W[0];
+  const delta = (v, b, lowerBetter) => (v == null || b == null || v === b ? "" : (lowerBetter ? v < b : v > b) ? "up" : "down");
+  const row = (label, s, i) => `<tr><td>${label}</td><td>${s.n}</td>
+    <td class="${i ? delta(s.views, B.views) : ""}">${fmt(s.views)}</td><td>${fmt(s.nonf, 0, "%")}</td>
+    <td class="${i ? delta(s.skip, B.skip, true) : ""}">${fmt(s.skip, 0, "%")}</td><td class="${i ? delta(s.watch, B.watch) : ""}">${fmt(s.watch, 0, "%")}</td>
+    <td class="${i ? delta(s.sharesK, B.sharesK) : ""}">${fmt(s.sharesK, 1)}</td><td class="${i ? delta(s.savesK, B.savesK) : ""}">${fmt(s.savesK, 1)}</td>
+    <td>${fmt(s.follows)}</td><td>${fmt(s.er, 1, "%")}</td><td>${fmt(s.lock)}</td></tr>`;
+  const t = `<tr class="target"><td>Week-4 target</td><td>7</td><td>rising</td><td>&gt;50%</td><td>≤40%</td><td>&gt;wk 1</td><td colspan="2">×1.5 wk 1 combined</td><td>rising</td><td>4–6% (book)</td><td>–</td></tr>`;
+  $("weekRows").innerHTML = W.map((s, i) => row(`Week ${i + 1}${i === 0 ? " · baseline" : ""}`, s, i)).join("") + t;
+}
+
+function postCard(p) {
+  const r = rates(p), d = dayOf(p.date);
+  const fields = METRICS.filter(([k]) => isReel(p) || !["skipPct", "avgWatchS", "lengthS"].includes(k))
+    .map(([k, l, type]) => `<label class="field"><span>${l}</span><input ${readOnly ? "disabled" : ""} data-k="${k}" type="${type || "number"}" ${type ? "" : 'min="0" step="any" inputmode="decimal"'} value="${p[k] ?? ""}"></label>`).join("");
+  return `<details class="post" data-id="${p.id}"><summary>
+      <span class="dayno">${d != null && d >= 1 ? "DAY " + d : p.plannedDay ? "PLAN " + p.plannedDay : "–"}</span>
+      <span><span class="ptitle"></span><br><span class="tag">${p.format || "Reel"}${p.trial ? " · trial" : ""}</span> <span class="pmeta">${p.date || "not posted yet"}</span></span>
+      <span class="quick">${num(p.views) != null ? fmt(num(p.views)) + " views" : "–"}<small>${r.sharesK != null ? fmt(r.sharesK, 1) + " shares/1k" : ""}</small></span>
+    </summary><div class="pbody">
+      <div class="grid">${fields}
+        <label class="field" style="grid-column:1/-1"><span>Notes (hook, what you noticed)</span><textarea rows="2" data-k="notes" ${readOnly ? "disabled" : ""}></textarea></label>
+      </div>
+      <div class="rates"><span>Watched <b>${fmt(r.watchPct, 0, "%")}</b></span><span>Shares/1k <b>${fmt(r.sharesK, 1)}</b></span><span>Saves/1k <b>${fmt(r.savesK, 1)}</b></span><span>Eng. rate <b>${fmt(r.er, 1, "%")}</b></span></div>
+      <div class="actions"><button class="primary save" ${readOnly ? "disabled" : ""}>Save</button><label class="check"><input type="checkbox" data-k="trial" ${p.trial ? "checked" : ""} ${readOnly ? "disabled" : ""}> Trial Reel</label><span class="status"></span></div>
+    </div></details>`;
+}
+
+function renderPosts() {
+  const open = new Set([...document.querySelectorAll("details.post[open]")].map((e) => e.dataset.id));
+  const sorted = [...posts].sort((a, b) => (a.date || "9999") < (b.date || "9999") ? -1 : (a.date || "9999") > (b.date || "9999") ? 1 : (a.plannedDay || 99) - (b.plannedDay || 99));
+  if (!sorted.length) { $("posts").innerHTML = `<div class="notice">No posts yet. Add the first one, or ask Claude to load the week's plan.</div>`; return; }
+  $("posts").innerHTML = sorted.map(postCard).join("");
+  for (const el of document.querySelectorAll("details.post")) {
+    const p = posts.find((x) => x.id === el.dataset.id);
+    el.querySelector(".ptitle").textContent = p.title || "Untitled";
+    el.querySelector("textarea").value = p.notes || "";
+    for (const [k, v] of Object.entries(drafts[p.id] || {})) {
+      const inp = el.querySelector(`[data-k="${k}"]`);
+      if (inp) inp.type === "checkbox" ? (inp.checked = v) : (inp.value = v);
+    }
+    el.addEventListener("input", (e) => {
+      const k = e.target.dataset && e.target.dataset.k;
+      if (k) (drafts[p.id] = drafts[p.id] || {})[k] = e.target.type === "checkbox" ? e.target.checked : e.target.value;
+    });
+    if (open.has(p.id)) el.open = true;
+    el.querySelector(".save").addEventListener("click", () => savePost(el, p));
+  }
+}
+
+async function savePost(el, p) {
+  const st = el.querySelector(".status"), btn = el.querySelector(".save");
+  const body = { ...p }; delete body.id;
+  for (const inp of el.querySelectorAll("[data-k]")) {
+    const k = inp.dataset.k;
+    body[k] = inp.type === "checkbox" ? inp.checked : inp.type === "number" ? num(inp.value) : inp.value.trim();
+  }
+  btn.disabled = true; st.textContent = "Saving…";
+  try { await db.doc("posts/" + p.id).set(body); delete drafts[p.id]; st.textContent = "Saved"; }
+  catch (e) { st.textContent = e && e.code === "invalid_argument" ? "You can view this tracker but not edit it." : "Couldn't save. Try again."; }
+  btn.disabled = false;
+}
+
+function renderWeekBoxes() {
+  $("weeks").innerHTML = [1, 2, 3, 4].map((w) => {
+    const v = weeks["w" + w] || {};
+    return `<form class="week" data-w="${w}"><div class="top" style="display:flex;justify-content:space-between"><span class="label">Week ${w} · Sunday</span></div>
+      <div class="grid">${WEEK_FIELDS.map(([k, l]) => `<label class="field"><span>${l}</span><input data-k="${k}" type="number" min="0" step="1" inputmode="numeric" value="${v[k] ?? ""}" ${readOnly ? "disabled" : ""}></label>`).join("")}</div>
+      <div class="actions"><button class="primary" type="submit" ${readOnly ? "disabled" : ""}>Save week ${w}</button><span class="status"></span></div></form>`;
+  }).join("");
+  for (const f of document.querySelectorAll("form.week[data-w]")) f.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const w = f.dataset.w, st = f.querySelector(".status"), body = { ...(weeks["w" + w] || {}) };
+    delete body.id;
+    for (const inp of f.querySelectorAll("[data-k]")) body[inp.dataset.k] = num(inp.value);
+    st.textContent = "Saving…";
+    try { await db.doc("weeks/w" + w).set(body); st.textContent = "Saved"; } catch (err) { st.textContent = "Couldn't save. Try again."; }
+  });
+}
+
+function renderAll() { renderRun(); renderObjectives(); renderWeeks(); renderPosts(); }
+
+$("startDate").addEventListener("change", async () => {
+  if (!db) return;
+  plan = { ...plan, startDate: $("startDate").value };
+  renderAll();
+  $("startStatus").textContent = "Saving…";
+  try { await db.doc("meta/plan").set({ ...plan }); $("startStatus").textContent = "Saved"; } catch (e) { $("startStatus").textContent = "Couldn't save."; }
+});
+$("addBtn").addEventListener("click", () => { $("addForm").hidden = false; $("newTitle").focus(); });
+$("cancelAdd").addEventListener("click", () => { $("addForm").hidden = true; });
+$("addForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (!db) return;
+  const body = { title: $("newTitle").value.trim(), format: $("newFormat").value, lengthS: num($("newLen").value), trial: $("newTrial").checked, date: "" };
+  $("addStatus").textContent = "Adding…";
+  try { await db.collection("posts").add(body); $("addForm").reset(); $("addForm").hidden = true; $("addStatus").textContent = ""; }
+  catch (err) { $("addStatus").textContent = err && err.code === "quota_exceeded" ? "The tracker is full. Delete old posts first." : "Couldn't add. Try again."; }
+});
+
+renderAll();
+renderWeekBoxes();
+
+(async () => {
+  db = window.claude ? await window.claude.use("db") : null;
+  if (!db) {
+    readOnly = true; $("dbNotice").hidden = false; $("startDate").disabled = true; $("addBtn").disabled = true;
+    $("posts").innerHTML = `<div class="notice">Posts load from the tracker's storage, which isn't available in this view.</div>`;
+    renderWeekBoxes(); return;
+  }
+  db.doc("meta/plan").onSnapshot((s) => { plan = s.exists ? { startDate: "", ...s.data() } : { startDate: "" }; renderAll(); });
+  db.collection("posts").onSnapshot((s) => { posts = s.docs.map((d) => ({ id: d.id, ...d.data() })); renderAll(); },
+    () => { $("posts").innerHTML = `<div class="notice">Couldn't load posts. Reload the page.</div>`; });
+  db.collection("weeks").onSnapshot((s) => {
+    const fresh = {}; for (const d of s.docs) fresh[d.id] = d.data();
+    const focused = document.activeElement && document.activeElement.closest && document.activeElement.closest("form.week");
+    weeks = fresh; renderObjectives(); if (!focused) renderWeekBoxes();
+  });
+})();
+</script>
