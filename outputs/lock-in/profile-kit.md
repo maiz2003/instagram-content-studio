@@ -36,8 +36,8 @@ Phone in another room. 20 minutes. Start tonight.
 
 ## Link
 - **Bio link: the quiz** (`lockin-quiz.netlify.app`). It's the free, low-effort first step, and it already leads to checkout.
-- **⚠ It must open without a VPN first.** Move it to your own domain (e.g. `lockinquiz.com`) before you post. Test on mobile data, VPN off.
-- **Fallback until then:** the Whop product link, if it opens without a VPN.
+- **Target market is Europe + US** (owner, 2026-09-27). The VPN problem only affects the owner's own region, so no domain move is needed now. Before Day 1, confirm it opens from the target market: a friend in the EU/US, or a VPN set to the US/UK.
+- A custom domain (e.g. `lockinquiz.com`) is optional later: it looks more trustworthy in a bio.
 
 ## Profile photo
 `outputs/lock-in/profile/png/avatar.png`: "LOCK / IN" stacked (cream + amber) on the house dark background, circle-safe, legible at 110 px. Faceless brands use a mark instead of a face (§3).
@@ -86,7 +86,7 @@ The mix (Reel types + 2 carousels) keeps the grid from becoming nine identical t
 | 3 | Bio line 1 = value + who | ready (bio A) |
 | 4 | Proof/how line | ready ("a setup that works…") |
 | 5 | One tap trigger | ready (quiz ↓) |
-| 6 | Link works for everyone | **blocked: VPN issue** |
+| 6 | Link works for everyone | ok for the EU/US audience (confirm once from there) |
 | 7 | Highlights 3–5, ordered, unified covers | ready (covers rendered) |
 | 8 | ≤15 s first-highlight intro | script ready; post it as Stories, then save to highlight |
 | 9 | 3 pins | slot 2 needs the carousel |
@@ -97,7 +97,7 @@ The mix (Reel types + 2 carousels) keeps the grid from becoming nine identical t
 | 15 | No excluded tactics | ✓ (no fake scarcity, no fake testimonials, no hidden text) |
 
 ## Before you post the first Reel
-1. Fix the quiz link (own domain) and test it without a VPN.
+1. Confirm the quiz link opens from the EU/US (friend there, or a US/UK VPN).
 2. Create the account: handle, name field (option 1), bio A, link, avatar, switch to a Creator account.
 3. Set up the LOCK auto-reply (DM text is in `2026-09-26-phone-not-discipline/script.md`).
 4. Post the 4 intro Stories and save them to the **START HERE** highlight with the GO cover. Create the other 3 highlights once there's something to put in them.

@@ -1,8 +1,8 @@
 # LOCK IN launch week: posts, captions, Stories
 
-**Before Day 1:** do the pre-launch to-do in `../profile-kit.md` first (quiz link without a VPN, handle, bio, avatar, Creator account, LOCK auto-reply, START HERE highlight).
+**Before Day 1:** do the pre-launch to-do in `../profile-kit.md` first (confirm the quiz opens from the EU/US, handle, bio, avatar, Creator account, LOCK auto-reply, START HERE highlight).
 **Rhythm:** one feed post a day [C-4]; daily Stories (6–8 frames, one sticker) [U.11], [U.ch6]; 10 minutes of genuine engagement before each post [U.124]; stay 60 minutes after [F2.25]. Don't edit or delete after posting [F3.16].
-**Time:** evenings, about 15 minutes before your audience's peak, at an odd minute (e.g. **7:05 pm** or **9:05 pm** in your target market's time zone). Check Insights after week 1 and move it [U.157], [U.21]. The target country isn't confirmed yet, so pick one time zone and stay with it.
+**Time:** about 15 minutes before your audience's peak, at an odd minute [U.157], [U.21]. The audience is Europe + US, so start at **18:05 UK / 19:05 CET / 13:05 ET** (European evening, US East lunch). After week 1, check Insights → Most active times and move it.
 **Sound:** every Reel has three versions. **`…-minimal.mp4` (recommended, the brand sound):** your own sound kit (`assets/sounds/lock-in`): a rising pop per word, a glass tink on the key word, soft taps, a two-note chime and your focus pad, with the lock click as the signature. `….mp4`: the beat-driven cinematic mix. `…-sfx-only.mp4`: scene sounds only, for pairing with a trending Instagram sound. Post the minimal version unless you want to ride a trend. (Owner approved this sound on 2026-09-27.)
 
 | Day | Post | File | Cover |
