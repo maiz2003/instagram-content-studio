@@ -1,7 +1,7 @@
 // LOCK IN 30 service worker: makes the app open offline once it has been visited.
 // Progress is NOT stored here (it lives in localStorage); this only caches the app's files.
 // Bump VERSION after changing any file so phones pick up the new copy.
-const VERSION = "lockin30-v1";
+const VERSION = "lockin30-v2";
 const SHELL = [
   "./", "index.html", "manifest.webmanifest",
   "fonts/Anton-Regular.ttf", "fonts/Spectral-Regular.ttf", "fonts/Spectral-Italic.ttf", "fonts/JetBrainsMono-Variable.ttf",

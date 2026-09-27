@@ -11,6 +11,9 @@ A small web app that ships with the LOCK IN book. It turns the book's 30-day cha
 
 It is one static folder with no server and no accounts. It works offline after the first visit and can be added to the home screen like an app.
 
+## Live site
+First deployed on 2026-09-27 as an anonymous Netlify deploy (`musical-conkies-8f7274.netlify.app`). Until it is claimed on the owner's Netlify account, it sits behind Netlify's temporary drop password. After claiming, rename the site and turn off password protection if it is still on (Site configuration → Access & security).
+
 ## Deploy (5 minutes, free)
 1. Go to **app.netlify.com/drop**, the same Netlify account as the quiz.
 2. Drag the whole `lock-in-30` folder onto the page.
@@ -29,7 +32,7 @@ Everything is in the `CONFIG` block at the top of the script in `index.html`:
 
 | Setting | What it does |
 |---|---|
-| `unlockCode` | The code buyers type. Case, spaces and dashes are ignored. **Change it from the default `LOCKIN30` before launch.** |
+| `unlockCode` | The code buyers type. Case, spaces and dashes are ignored. To change it later, edit it and redeploy; everyone already unlocked stays unlocked. |
 | `bookUrl` | The "Get the book" button on the lock screen (currently the Whop checkout). |
 | `quizUrl` | The "Take the free quiz" link. |
 | `fixes` | The fix shown for each door. Only Stuck is filled in. Paste the quiz's result text for Bored, Anxious and Tired. |
@@ -56,6 +59,7 @@ Backups live in **Me**:
 ## Files
 - `index.html`: the whole app
 - `manifest.webmanifest`, `sw.js`: install to home screen and offline support
+- `_headers`: Netlify headers (manifest type; the service worker is never cached)
 - `fonts/`: Anton, Spectral and JetBrains Mono, under the SIL Open Font License (licences included)
 - `sounds/`: the LOCK IN sound kit (lock, chime, pop)
 - `icons/`: made from the profile avatar
