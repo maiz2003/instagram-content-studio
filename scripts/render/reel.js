@@ -23,6 +23,17 @@
 //   "sfx": [ { "t": 0, "type": "vibrate" } ]   // see scripts/render/sound.py for all types
 // }
 // build: words | lines | type | slam | fade (default fade). "\n" in text = line break.
+//
+// Footage (optional, per card): put a filmed clip behind the card's text.
+//   "bg": { "file": "path/to/clip.mov",   // repo-relative or absolute; landscape or portrait, cropped to fill 9:16
+//           "in": 2.0,                    // start point in the clip (s), default 0
+//           "rate": 0.9,                  // playback speed, <1 = slow motion, default 1
+//           "dim": 0.45,                  // darken 0-1 so the type stays readable, default 0.45
+//           "push": 0.03,                 // slow zoom-in across the card, default 0.03 (0 = none)
+//           "audio": 0.6 }                // mix the clip's own sound in at this gain, default 0 (muted)
+//   Cards without "bg" keep a flat background ("bg_color", default #111216). A clip shorter than its
+//   card loops. When any card has footage, text frames are captured with transparency and composited
+//   over the footage track; specs without footage render exactly as before.
 
 const fs = require("fs");
 const path = require("path");
@@ -36,7 +47,7 @@ function esc(s) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function buildHtml(spec) {
+function buildHtml(spec, footage) {
   const theme = path.join(ROOT, spec.theme);
   const cards = spec.cards.map((c, ci) => {
     const els = c.elements.map((e, ei) => {
@@ -57,7 +68,7 @@ function buildHtml(spec) {
       return `<div class="el ${e.style || ""}" id="c${ci}e${ei}" style="${size}${mt}">${inner}</div>`;
     }).join("");
     const label = spec.label ? `<div class="label clabel">${esc(spec.label)}</div>` : "";
-    return `<div class="card" id="c${ci}" style="top:${c.top || 620}px">${label}${els}</div>`;
+    return `<div class="card${c.bg ? " onfoot" : ""}" id="c${ci}" style="top:${c.top || 620}px">${label}${els}</div>`;
   }).join("");
   const foot = spec.label ? `<div class="foot" style="left:90px;top:1740px;font-size:24px">${esc(spec.label)}</div>` : "";
   return `<!doctype html><html><head><meta charset="utf-8">
@@ -72,6 +83,8 @@ function buildHtml(spec) {
   .u{display:inline-block;opacity:0}
   .ln{display:block}
   .typed{white-space:pre-wrap}
+  ${footage ? `html,body,#stage.frame{background:transparent !important}
+  .card.onfoot .el,.card.onfoot .clabel{text-shadow:0 2px 18px rgba(0,0,0,.6),0 0 2px rgba(0,0,0,.5)}` : ""}
 </style></head><body><div id="stage" class="frame">${cards}${foot}</div>
 <script>
 const SPEC = ${JSON.stringify(spec)};
@@ -113,6 +126,66 @@ function seek(t) {
 </script></body></html>`;
 }
 
+// Footage track: one segment per card (its clip, or a flat colour), frame-exact, concatenated.
+// Returns {video: bg.mp4, audio: clips.wav | null}.
+function buildFootage(spec, fps, frames, ff, tmp) {
+  const color = spec.bg_color || "#111216";
+  const cards = [...spec.cards].sort((a, b) => a.start - b.start);
+  const spans = [];                                    // [startFrame, endFrame, card|null]
+  let cursor = 0;
+  for (const c of cards) {
+    const a = Math.max(cursor, Math.round(c.start * fps)), b = Math.min(frames, Math.round(c.end * fps));
+    if (a > cursor) spans.push([cursor, a, null]);
+    if (b > a) spans.push([a, b, c]);
+    cursor = Math.max(cursor, b);
+  }
+  if (cursor < frames) spans.push([cursor, frames, null]);
+
+  const vList = [], aList = [];
+  let anyAudio = false;
+  spans.forEach(([a, b, c], i) => {
+    const n = b - a, len = n / fps;
+    const v = path.join(tmp, `bg${i}.mp4`), w = path.join(tmp, `bg${i}.wav`);
+    const bg = c && c.bg;
+    const out = ["-an", "-frames:v", String(n), "-r", String(fps), "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-pix_fmt", "yuv420p", v];
+    if (bg) {
+      const file = path.isAbsolute(bg.file) ? bg.file : path.join(ROOT, bg.file);
+      if (!fs.existsSync(file)) throw new Error(`footage not found: ${bg.file}`);
+      const rate = bg.rate || 1, dim = bg.dim == null ? 0.45 : bg.dim, push = bg.push == null ? 0.03 : bg.push;
+      const k = (1 - dim).toFixed(3);
+      // slow push-in: zoompan on a 2x upscale so the sub-pixel steps don't jitter
+      const zoom = push ? `,scale=${2 * W}:${2 * H},zoompan=z='1+${push}*on/${n}':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=${W}x${H}:fps=${fps}` : "";
+      const vf = `setpts=(PTS-STARTPTS)/${rate},fps=${fps},scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H}` +
+        `${zoom},colorchannelmixer=rr=${k}:gg=${k}:bb=${k},setsar=1`;
+      execFileSync(ff, ["-loglevel", "error", "-y", "-stream_loop", "-1", "-ss", String(bg.in || 0), "-i", file, "-vf", vf, ...out]);
+      if (bg.audio) {
+        anyAudio = true;
+        execFileSync(ff, ["-loglevel", "error", "-y", "-stream_loop", "-1", "-ss", String(bg.in || 0), "-i", file,
+          "-af", `atempo=${Math.min(2, Math.max(0.5, rate))},volume=${bg.audio},afade=t=in:d=0.02,afade=t=out:st=${Math.max(0, len - 0.04)}:d=0.04`,
+          "-t", len.toFixed(4), "-ac", "1", "-ar", "44100", w]);
+      }
+    } else {
+      execFileSync(ff, ["-loglevel", "error", "-y", "-f", "lavfi", "-i", `color=c=${color}:s=${W}x${H}:r=${fps}`, ...out]);
+    }
+    if (!fs.existsSync(w)) {
+      execFileSync(ff, ["-loglevel", "error", "-y", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", len.toFixed(4), w]);
+    }
+    vList.push(`file '${v}'`);
+    aList.push(`file '${w}'`);
+  });
+  const vTxt = path.join(tmp, "bg.txt"), aTxt = path.join(tmp, "bga.txt");
+  fs.writeFileSync(vTxt, vList.join("\n"));
+  fs.writeFileSync(aTxt, aList.join("\n"));
+  const video = path.join(tmp, "bg.mp4");
+  execFileSync(ff, ["-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", vTxt, "-c", "copy", video]);
+  let audio = null;
+  if (anyAudio) {
+    audio = path.join(tmp, "clips.wav");
+    execFileSync(ff, ["-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", aTxt, "-ac", "1", "-ar", "44100", audio]);
+  }
+  return { video, audio };
+}
+
 async function main() {
   const [specPath, outPath] = process.argv.slice(2);
   if (!specPath || !outPath) { console.error("usage: reel.js <spec.json> <out.mp4>"); process.exit(2); }
@@ -120,17 +193,35 @@ async function main() {
   const fps = spec.fps || 30, frames = Math.round(spec.duration * fps);
   const ff = process.env.FFMPEG || "ffmpeg";
   const tmp = fs.mkdtempSync(path.join(require("os").tmpdir(), "reel-"));
+  const footage = spec.cards.some((c) => c.bg);
   const htmlPath = path.join(tmp, "reel.html");
-  fs.writeFileSync(htmlPath, buildHtml(spec));
+  fs.writeFileSync(htmlPath, buildHtml(spec, footage));
 
   // soundtrack stems: music.wav (beat-synced score) + sfx.wav (context sound design)
   execFileSync("python3", [path.join(__dirname, "sound.py"), specPath, tmp], { stdio: "inherit" });
-  const music = path.join(tmp, "music.wav"), sfx = path.join(tmp, "sfx.wav");
+  const music = path.join(tmp, "music.wav");
+  let sfx = path.join(tmp, "sfx.wav");
+
+  let bgVideo = null;
+  if (footage) {
+    const bg = buildFootage(spec, fps, frames, ff, tmp);
+    bgVideo = bg.video;
+    if (bg.audio) {   // clips' own sound joins the SFX layer, so the music ducks under it too
+      const mixed = path.join(tmp, "sfx-clips.wav");
+      execFileSync(ff, ["-loglevel", "error", "-y", "-i", sfx, "-i", bg.audio, "-filter_complex",
+        "[0:a][1:a]amix=inputs=2:normalize=0:duration=first", "-ac", "1", "-ar", "44100", mixed]);
+      sfx = mixed;
+    }
+  }
 
   const silent = path.join(tmp, "video.mp4");
-  const enc = spawn(ff, ["-loglevel", "error", "-y", "-f", "image2pipe", "-vcodec", "mjpeg", "-r", String(fps), "-i", "-",
-    "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "medium", "-crf", "18", "-r", String(fps), silent],
-    { stdio: ["pipe", "inherit", "inherit"] });
+  const encArgs = footage
+    ? ["-loglevel", "error", "-y", "-i", bgVideo, "-f", "image2pipe", "-vcodec", "png", "-framerate", String(fps), "-i", "-",
+       "-filter_complex", "[0:v][1:v]overlay=0:0:format=auto:shortest=1,format=yuv420p[v]", "-map", "[v]",
+       "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "medium", "-crf", "18", "-r", String(fps), silent]
+    : ["-loglevel", "error", "-y", "-f", "image2pipe", "-vcodec", "mjpeg", "-r", String(fps), "-i", "-",
+       "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "medium", "-crf", "18", "-r", String(fps), silent];
+  const enc = spawn(ff, encArgs, { stdio: ["pipe", "inherit", "inherit"] });
 
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
@@ -138,7 +229,9 @@ async function main() {
   await page.evaluate(() => document.fonts.ready);
   for (let f = 0; f < frames; f++) {
     await page.evaluate((t) => seek(t), f / fps);
-    const buf = await page.screenshot({ type: "jpeg", quality: 93, clip: { x: 0, y: 0, width: W, height: H } });
+    const buf = footage
+      ? await page.screenshot({ type: "png", omitBackground: true, clip: { x: 0, y: 0, width: W, height: H } })
+      : await page.screenshot({ type: "jpeg", quality: 93, clip: { x: 0, y: 0, width: W, height: H } });
     if (!enc.stdin.write(buf)) await new Promise((r) => enc.stdin.once("drain", r));
     if (f % (fps * 5) === 0) process.stderr.write(`frame ${f}/${frames}\n`);
   }
