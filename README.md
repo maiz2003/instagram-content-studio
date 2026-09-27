@@ -75,6 +75,7 @@ Copy `brands/_template.yaml` to `brands/<your-brand>.yaml` and fill it in. Unkno
 | `brands/` | `_template.yaml` + one profile per brand (`lock-in.yaml`, `beroia-home.yaml`) + optional `<slug>.theme.css` for rendering |
 | `outputs/` | One folder per package: brief, hooks, script, caption, scorecard, `carousel/`, `stories/`, `video/` |
 | `scripts/render/` | `render.js` (HTML → PNG), `reel.js` (spec → MP4; text-only, or kinetic text over the owner's filmed clips via a card's `bg`), `sound.py` (composed soundtrack + scene sound design; outputs a full mix and an SFX-only version) · `beat.py` (detects a supplied track's BPM and downbeat, and re-times a Reel to it) |
+| `products/lock-in-30/` | The buyers' game for the LOCK IN book: a static web app (30-day campaign, lock-in timer, XP, badges, door tracking) with its own README for deploying and settings |
 | `scripts/check_coverage.py` | Reports which book items are cited in `knowledge/`; never fails |
 | `assets/fonts/` | OFL fonts used by brand themes, with their licences |
 | `assets/sounds/<brand>/` | A brand's own sound kit (WAVs + `kit.json`), used instead of the synthesized sounds when a Reel spec sets `sound_kit` |
@@ -102,4 +103,5 @@ Phase 1 cites all 48 Hook Engineering items and part of the other two books on p
   - 3 carousels: Phone Exile, What's Inside, The 3 Ugly Minutes
   - clip review and case matches
   - 30-day objectives (`objectives-30d.md`) + tracker page (`tracker/`, published privately on claude.ai)
+  - LOCK IN 30, the buyers' game (`products/lock-in-30/`): ready to deploy on Netlify Drop
 - **Beroia Home**: on hold (the trial profile and TEST DATA smoke test are kept).

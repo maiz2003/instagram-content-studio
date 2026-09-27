@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111216">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="LOCK IN">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<title>LOCK IN 30</title>
+<style>
+  /* LOCK IN house style: near-black, cream, amber. Fonts are bundled so it works offline. */
+  @font-face { font-family: "Anton"; src: url(fonts/Anton-Regular.ttf) format("truetype"); font-display: swap; }
+  @font-face { font-family: "Spectral"; src: url(fonts/Spectral-Regular.ttf) format("truetype"); font-display: swap; }
+  @font-face { font-family: "Spectral"; font-style: italic; src: url(fonts/Spectral-Italic.ttf) format("truetype"); font-display: swap; }
+  @font-face { font-family: "JetBrains Mono"; src: url(fonts/JetBrainsMono-Variable.ttf) format("truetype"); font-weight: 100 800; font-display: swap; }
+  :root {
+    color-scheme: dark;
+    --bg: #111216; --panel: #181a1f; --panel2: #1f2127; --line: #2a2d34; --ink: #e6e1d5; --muted: #8f949c;
+    --amber: #da9d55; --good: #7fb58a; --bad: #d97a6c;
+    --display: "Anton", Impact, "Arial Narrow", sans-serif;
+    --serif: "Spectral", Georgia, serif;
+    --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 var(--serif); -webkit-tap-highlight-color: transparent;
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); }
+  .app > * { min-width: 0; }
+  .app { max-width: 520px; margin: 0 auto; padding-inline: 18px; padding-block: 18px 96px; display: grid; gap: 20px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: .01em; margin: 0; line-height: 1; text-wrap: balance; }
+  h1 { font-size: 44px; } h2 { font-size: 30px; } h3 { font-size: 20px; }
+  .amber { color: var(--amber); }
+  .label { font: 600 11px/1.2 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .muted { color: var(--muted); }
+  p { margin: 0; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 12px; }
+  button, input, select, textarea { font: inherit; color: var(--ink); }
+  button { cursor: pointer; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line); background: transparent; border-radius: 8px;
+    padding: 12px 16px; font: 600 13px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; min-height: 46px; }
+  .btn.primary { background: var(--amber); border-color: var(--amber); color: #111216; }
+  .btn.big { width: 100%; min-height: 64px; font-size: 16px; }
+  .btn.ghost { border-color: transparent; color: var(--muted); }
+  .btn:disabled { opacity: .45; cursor: default; }
+  button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+  input[type=text], select, textarea { width: 100%; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px; font: 16px var(--mono); }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .between { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .stack { display: grid; gap: 10px; }
+
+  /* header */
+  .top { display: flex; justify-content: space-between; align-items: center; }
+  .brand { font: 600 12px var(--mono); letter-spacing: .2em; color: var(--amber); }
+  .iconbtn { border: 0; background: none; color: var(--muted); font: 600 12px var(--mono); letter-spacing: .1em; padding: 8px; }
+
+  /* level + xp */
+  .xpbar { height: 8px; background: var(--panel2); border-radius: 99px; overflow: hidden; }
+  .xpbar > i { display: block; height: 100%; background: var(--amber); width: 0; transition: width .6s ease; }
+  .stat { font: 600 13px var(--mono); font-variant-numeric: tabular-nums; }
+
+  /* campaign path */
+  .path { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px; }
+  .tile { aspect-ratio: 1; border-radius: 5px; background: var(--panel2); border: 1px solid var(--line); display: grid; place-items: center;
+    font: 600 10px var(--mono); color: var(--muted); }
+  .tile.done { background: var(--amber); border-color: var(--amber); color: #111216; }
+  .tile.perfect { background: var(--ink); border-color: var(--ink); color: #111216; }
+  .tile.next { border-color: var(--amber); color: var(--amber); }
+  .tile.wk { box-shadow: inset 0 -3px 0 rgba(255,255,255,.18); }
+
+  /* week strip */
+  .week { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; text-align: center; }
+  .wd { display: grid; gap: 4px; justify-items: center; font: 11px var(--mono); color: var(--muted); }
+  .dot { width: 26px; height: 26px; border-radius: 99px; border: 1px solid var(--line); display: grid; place-items: center; font: 600 11px var(--mono); }
+  .dot.done { background: var(--good); border-color: var(--good); color: #111216; }
+  .dot.miss { border-color: var(--bad); color: var(--bad); }
+  .dot.today { border-color: var(--amber); color: var(--amber); }
+
+  /* blocks today */
+  .blocks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .block { border: 1px dashed var(--line); border-radius: 8px; padding: 10px; text-align: center; font: 600 11px var(--mono); color: var(--muted); letter-spacing: .08em; }
+  .block.done { border: 1px solid var(--amber); color: var(--amber); }
+
+  /* badges */
+  .badges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .badge { border: 1px solid var(--line); border-radius: 8px; padding: 10px 8px; text-align: center; display: grid; gap: 4px; }
+  .badge .b-name { font: 600 11px/1.2 var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+  .badge .b-desc { font-size: 12px; line-height: 1.3; color: var(--muted); }
+  .badge.locked { opacity: .38; }
+  .badge.got { border-color: var(--amber); }
+  .badge.got .b-name { color: var(--amber); }
+
+  /* doors */
+  .doorbar { display: grid; grid-template-columns: 80px 1fr 28px; gap: 10px; align-items: center; font: 13px var(--mono); }
+  .doorbar .bar { height: 10px; background: var(--panel2); border-radius: 99px; overflow: hidden; }
+  .doorbar .bar > i { display: block; height: 100%; background: var(--amber); }
+  .doorgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .doorbtn { border: 1px solid var(--line); background: var(--panel2); border-radius: 10px; padding: 16px 12px; text-align: left; display: grid; gap: 4px; }
+  .doorbtn b { font-family: var(--display); font-weight: 400; font-size: 24px; text-transform: uppercase; }
+  .doorbtn span { font-size: 13px; color: var(--muted); line-height: 1.3; }
+  .doorbtn[aria-pressed="true"] { border-color: var(--amber); }
+  .doorbtn[aria-pressed="true"] b { color: var(--amber); }
+
+  /* session */
+  .session { min-height: calc(100vh - 60px); display: grid; align-content: center; gap: 22px; text-align: center; }
+  .ring { width: min(78vw, 320px); aspect-ratio: 1; margin: 0 auto; position: relative; }
+  .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+  .ring .time { position: absolute; inset: 0; display: grid; place-items: center; align-content: center; gap: 6px; }
+  .ring .time b { font: 400 64px/1 var(--display); letter-spacing: .02em; font-variant-numeric: tabular-nums; }
+  .phase { font: italic 22px/1.3 var(--serif); min-height: 2.6em; }
+  .phase.amber { font-style: normal; font-family: var(--display); text-transform: uppercase; font-size: 30px; }
+
+  /* toggles */
+  .toggle { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel2); }
+  .toggle input { width: 26px; height: 26px; accent-color: var(--amber); }
+
+  /* reward */
+  .reward { text-align: center; display: grid; gap: 16px; justify-items: center; padding-top: 30px; }
+  .xpgain { font: 400 72px/1 var(--display); color: var(--amber); }
+  .pop { animation: pop .5s cubic-bezier(.2,1.6,.4,1) both; }
+  @keyframes pop { from { transform: scale(.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+  /* tabs */
+  .tabs { position: fixed; left: 0; right: 0; bottom: 0; background: rgba(17,18,22,.96); border-top: 1px solid var(--line);
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px)); display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; backdrop-filter: blur(8px); }
+  .tab { border: 0; background: none; color: var(--muted); font: 600 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; padding: 10px 4px; border-radius: 8px; }
+  .tab[aria-current="page"] { color: var(--amber); background: var(--panel); }
+  [hidden] { display: none !important; }
+  .toast { position: fixed; left: 50%; bottom: 90px; transform: translateX(-50%); background: var(--ink); color: #111216; font: 600 13px var(--mono);
+    padding: 10px 14px; border-radius: 8px; z-index: 9; }
+  .hr { height: 1px; background: var(--line); }
+  small { font-size: 13px; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<main class="app" id="app" aria-live="polite"></main>
+<nav class="tabs" id="tabs" hidden>
+  <button class="tab" data-tab="today">Today</button>
+  <button class="tab" data-tab="map">Map</button>
+  <button class="tab" data-tab="doors">Doors</button>
+  <button class="tab" data-tab="me">Me</button>
+</nav>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+/* ============================ OWNER SETTINGS ============================
+   Change these, then re-upload the folder. Nothing else needs editing.     */
+const CONFIG = {
+  // Unlock code printed in the book / shown after purchase. Case, spaces and dashes are ignored.
+  unlockCode: "LOCKIN30",
+  quizUrl: "https://lockin-quiz.netlify.app",
+  bookUrl: "https://whop.com/checkout/plan_NZkzvqwMgKl2f",   // shown to people without a code (leave "" to hide)
+  sessionMinutes: 20,           // the book's lock-in session
+  blocksPerDay: 3,              // the book's three blocks a day (also the maximum it allows)
+  campaignDays: 30,
+  // The fix for each door, as written on the quiz result cards. Leave "" to show "the fix is on your quiz result".
+  fixes: {
+    Bored: "",
+    Stuck: "The step is too big, not beyond you. Come back with the next line, not the whole problem.",
+    Anxious: "",
+    Tired: "",
+  },
+  // Optional: one mission per campaign day from the book's 30-day challenge (index 0 = day 1). Empty = no mission line.
+  missions: [],
+};
+/* ======================================================================= */
+
+const DOORS = {
+  Bored:   "The work went flat. Restless.",
+  Stuck:   "Hit something I can't do.",
+  Anxious: "Felt behind before I started.",
+  Tired:   "Late, fading, 'I'll do it tomorrow'.",
+};
+const LEVELS = ["Scrolling", "Starting", "Showing up", "Focused", "Locked in", "Deep work", "Unshakeable", "Machine", "Monk", "Legend"];
+const KEY = "lockin30:v1";
+
+/* ---------- storage: this phone, kept permanently, with backup codes ---------- */
+function blankState() {
+  return { v: 1, unlocked: false, name: "", door: "", start: "", target: CONFIG.blocksPerDay, len: CONFIG.sessionMinutes,
+           sound: true, sessions: [], active: null, seenBadges: [], seenLevel: 1, lastBackup: 0 };
+}
+let S = load();
+function load() {
+  try { const raw = localStorage.getItem(KEY); if (raw) return Object.assign(blankState(), JSON.parse(raw)); } catch (e) {}
+  return blankState();
+}
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { toast("Couldn't save on this phone. Make a backup code in Me."); }
+}
+if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
+
+/* ---------- dates ---------- */
+const pad = (n) => String(n).padStart(2, "0");
+const iso = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const today = () => iso(new Date());
+const addDays = (s, n) => { const d = new Date(s + "T12:00:00"); d.setDate(d.getDate() + n); return iso(d); };
+const daysBetween = (a, b) => Math.round((new Date(b + "T12:00:00") - new Date(a + "T12:00:00")) / 864e5);
+
+/* ---------- everything else is derived from the session log ---------- */
+function derive() {
+  const done = S.sessions.filter((s) => s.done);
+  const slips = S.sessions.filter((s) => !s.done && s.door);
+  const byDay = {};
+  for (const s of done) byDay[s.d] = (byDay[s.d] || 0) + 1;
+  const t = today();
+  const days = [];
+  if (S.start) for (let d = S.start; d <= t; d = addDays(d, 1)) days.push(d);
+  // Never miss twice: one missed day is a day, two in a row breaks the chain. The campaign itself can't be failed.
+  let chain = 0, best = 0, prevMiss = false, comebacks = 0, broken = 0;
+  const status = {};
+  for (const d of days) {
+    const n = byDay[d] || 0;
+    if (n > 0) {
+      if (prevMiss) comebacks++;
+      chain++; prevMiss = false; status[d] = n >= S.target ? "perfect" : "done";
+    } else if (d === t) {
+      status[d] = "today";
+    } else {
+      status[d] = "miss";
+      if (prevMiss) { if (chain) broken++; chain = 0; }
+      prevMiss = true;
+    }
+    best = Math.max(best, chain);
+  }
+  const doneDays = days.filter((d) => byDay[d] > 0);
+  const perfectDays = days.filter((d) => byDay[d] >= S.target).length;
+  const phoneOut = done.filter((s) => s.phoneOut).length;
+  const xp = done.reduce((a, s) => a + 20 + (s.phoneOut ? 5 : 0), 0) + perfectDays * 10 + comebacks * 15 + slips.length * 2;
+  // level n needs 100 + 50*(n-2) more XP than level n-1
+  let level = 1, need = 100, floor = 0;
+  while (xp >= floor + need) { floor += need; level++; need += 50; }
+  const doorCount = { Bored: 0, Stuck: 0, Anxious: 0, Tired: 0 };
+  for (const s of slips) doorCount[s.door]++;
+  const counts = Object.values(byDay);
+  const b = {
+    first:    done.length >= 1,
+    triple:   counts.some((n) => n >= 3),
+    exile:    phoneOut >= 10,
+    comeback: comebacks >= 1,
+    week1: doneDays.length >= 7, week2: doneDays.length >= 14, week3: doneDays.length >= 21,
+    detective: slips.length >= 5,
+    fifty:    done.length >= 50,
+    finisher: doneDays.length >= CONFIG.campaignDays,
+  };
+  return { done, slips, byDay, days, status, chain, best, prevMiss, comebacks, broken, doneDays: doneDays.length, perfectDays,
+           phoneOut, xp, level, levelFloor: floor, levelNeed: need, doorCount, badges: b, todayCount: byDay[t] || 0,
+           missedYesterday: status[addDays(t, -1)] === "miss" };
+}
+const BADGES = [
+  ["first", "First lock", "Finish one session"],
+  ["triple", "Three blocks", "Three sessions in one day"],
+  ["exile", "Phone exile", "10 sessions, phone in another room"],
+  ["comeback", "Never twice", "Come back the day after a miss"],
+  ["week1", "Week one", "7 days locked in"],
+  ["week2", "Week two", "14 days locked in"],
+  ["week3", "Week three", "21 days locked in"],
+  ["detective", "Door detective", "Name the door 5 times"],
+  ["fifty", "Fifty blocks", "50 sessions finished"],
+  ["finisher", "30 of 30", "Finish the campaign"],
+];
+const levelName = (n) => LEVELS[Math.min(n, LEVELS.length) - 1] + (n > LEVELS.length ? " " + (n - LEVELS.length + 1) : "");
+
+/* ---------- sound ---------- */
+const SND = {};
+function play(name) {
+  if (!S.sound) return;
+  try { SND[name] = SND[name] || new Audio("sounds/" + name + ".wav"); SND[name].currentTime = 0; SND[name].play().catch(() => {}); } catch (e) {}
+}
+
+/* ---------- small helpers ---------- */
+const $ = (sel, root = document) => root.querySelector(sel);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => (t.hidden = true), 2600); }
+const norm = (c) => String(c).toUpperCase().replace(/[^A-Z0-9]/g, "");
+let tab = "today", timer = null;
+
+/* ---------- screens ---------- */
+function render() {
+  clearInterval(timer);
+  $("#tabs").hidden = !(S.unlocked && S.start) || !!S.active;
+  document.querySelectorAll(".tab").forEach((b) => b.setAttribute("aria-current", b.dataset.tab === tab ? "page" : "false"));
+  if (!S.unlocked) return unlockScreen();
+  if (!S.start) return onboardScreen();
+  if (S.active) return sessionScreen();
+  ({ today: todayScreen, map: mapScreen, doors: doorsScreen, me: meScreen })[tab]();
+}
+
+function unlockScreen() {
+  $("#app").innerHTML = `
+    <div class="top"><span class="brand">LOCK IN</span></div>
+    <div class="stack" style="padding-top:8vh">
+      <span class="label">The 30-day game</span>
+      <h1>Lock in.<br><span class="amber">Thirty days.</span></h1>
+      <p class="muted">Twenty-minute sessions. Phone in another room. Never miss twice. The code is in your copy of LOCK IN.</p>
+    </div>
+    <form class="card" id="f">
+      <label class="stack"><span class="label">Unlock code</span>
+        <input type="text" id="code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="From the book"></label>
+      <button class="btn primary big">Unlock</button>
+      <p class="muted" id="err" hidden>That code doesn't match. Check your copy of LOCK IN. Case and spaces don't matter.</p>
+    </form>
+    <div class="row">
+      ${CONFIG.bookUrl ? `<a class="btn" href="${esc(CONFIG.bookUrl)}">Get the book</a>` : ""}
+      <a class="btn ghost" href="${esc(CONFIG.quizUrl)}">Take the free quiz</a>
+    </div>`;
+  $("#f").addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (norm($("#code").value) === norm(CONFIG.unlockCode)) { S.unlocked = true; save(); play("lock"); render(); }
+    else $("#err").hidden = false;
+  });
+}
+
+function onboardScreen() {
+  let door = S.door || "";
+  $("#app").innerHTML = `
+    <div class="top"><span class="brand">LOCK IN</span></div>
+    <div class="stack"><span class="label">Before day 1</span><h2>Which door is <span class="amber">yours?</span></h2>
+      <p class="muted">Use your quiz result. If you haven't taken it, pick the one that sounds most like you. You can change it later.</p></div>
+    <div class="doorgrid">${Object.entries(DOORS).map(([k, v], i) => `<button class="doorbtn" data-door="${k}" aria-pressed="${k === door}"><span class="label">Door ${i + 1}</span><b>${k}</b><span>${v}</span></button>`).join("")}</div>
+    <label class="stack"><span class="label">Your name (optional)</span><input type="text" id="name" maxlength="24" value="${esc(S.name)}"></label>
+    <div class="card"><p><b>How it works.</b> Every day, lock in for ${S.len}-minute sessions with your phone in another room. Aim for ${S.target} blocks. Each session earns XP. Miss a day and nothing breaks. Miss two in a row and your chain resets. The campaign ends when you've locked in on ${CONFIG.campaignDays} days, however long that takes.</p></div>
+    <button class="btn primary big" id="go" ${door ? "" : "disabled"}>Start day 1</button>`;
+  document.querySelectorAll(".doorbtn").forEach((b) => b.addEventListener("click", () => {
+    door = b.dataset.door; document.querySelectorAll(".doorbtn").forEach((x) => x.setAttribute("aria-pressed", x === b)); $("#go").disabled = false;
+  }));
+  $("#go").addEventListener("click", () => { S.door = door; S.name = $("#name").value.trim(); S.start = today(); save(); play("lock"); render(); });
+}
+
+function header(D) {
+  const into = D.xp - D.levelFloor;
+  return `<div class="top"><span class="brand">LOCK IN</span><span class="stat">${D.xp} XP</span></div>
+    <div class="stack">
+      <div class="between"><span class="label">Level ${D.level}</span><span class="label">${into}/${D.levelNeed} to level ${D.level + 1}</span></div>
+      <div class="between"><h2>${esc(levelName(D.level))}</h2></div>
+      <div class="xpbar" role="progressbar" aria-valuemin="0" aria-valuemax="${D.levelNeed}" aria-valuenow="${into}"><i style="width:${(100 * into) / D.levelNeed}%"></i></div>
+    </div>`;
+}
+
+function todayScreen() {
+  const D = derive();
+  const day = Math.min(D.doneDays + (D.todayCount ? 0 : 1), CONFIG.campaignDays);
+  const campaignDone = D.doneDays >= CONFIG.campaignDays;
+  const mission = CONFIG.missions[Math.min(D.doneDays, CONFIG.missions.length - 1)] || "";
+  let nudge;
+  if (D.todayCount >= S.target) nudge = "All blocks done today. That's the whole job.";
+  else if (D.missedYesterday && !D.todayCount) nudge = "You missed yesterday. One missed day is a day. Two is the start of quitting. Never miss twice.";
+  else if (D.missedYesterday) nudge = "Comeback logged. That's the whole rule: never miss twice.";
+  else if (D.todayCount) nudge = `${S.target - D.todayCount} block${S.target - D.todayCount === 1 ? "" : "s"} to go today.`;
+  else nudge = "Start before you feel ready. The first three minutes are the ugly ones.";
+  $("#app").innerHTML = `${header(D)}
+    <div class="card">
+      <div class="between"><span class="label">${campaignDone ? "Campaign complete" : `Day ${day} of ${CONFIG.campaignDays}`}</span><span class="label">Chain ${D.chain} · best ${D.best}</span></div>
+      ${mission && !campaignDone ? `<p><b>Mission:</b> ${esc(mission)}</p>` : ""}
+      <div class="blocks">${Array.from({ length: S.target }, (_, i) => `<div class="block ${i < D.todayCount ? "done" : ""}">${i < D.todayCount ? "✓ Block " : "Block "}${i + 1}</div>`).join("")}</div>
+      <p class="muted">${esc(nudge)}</p>
+      <button class="btn primary big" id="start">Lock in · ${S.len} min</button>
+    </div>
+    <div class="card">
+      <div class="between"><span class="label">This week</span><span class="label">${D.doneDays} days locked in</span></div>
+      ${weekStrip(D)}
+      <button class="btn" id="share">Copy my day count for the chat</button>
+    </div>
+    ${D.slips.length ? `<div class="card"><span class="label">Your most common door</span>${topDoor(D)}</div>` : ""}`;
+  $("#start").addEventListener("click", preSession);
+  $("#share").addEventListener("click", async () => {
+    const hrs = (D.done.reduce((a, s) => a + s.mins, 0) / 60).toFixed(1);
+    const msg = `LOCK IN · day ${Math.min(D.doneDays, CONFIG.campaignDays)}/${CONFIG.campaignDays} · chain ${D.chain} · ${hrs} h locked in · level ${D.level} ${levelName(D.level)}`;
+    try { await navigator.clipboard.writeText(msg); toast("Copied. Post it in the Lock In chat."); } catch (e) { toast(msg); }
+  });
+}
+
+function weekStrip(D) {
+  const t = today(), dow = (new Date(t + "T12:00:00").getDay() + 6) % 7, mon = addDays(t, -dow);
+  return `<div class="week">${["M", "T", "W", "T", "F", "S", "S"].map((l, i) => {
+    const d = addDays(mon, i), st = D.status[d];
+    const cls = st === "done" || st === "perfect" ? "done" : st === "miss" ? "miss" : d === t ? "today" : "";
+    const sym = st === "done" || st === "perfect" ? "✓" : st === "miss" ? "·" : new Date(d + "T12:00:00").getDate();
+    return `<div class="wd"><span>${l}</span><span class="dot ${cls}">${sym}</span></div>`;
+  }).join("")}</div>`;
+}
+
+function topDoor(D) {
+  const [door, n] = Object.entries(D.doorCount).sort((a, b) => b[1] - a[1])[0];
+  const fix = CONFIG.fixes[door];
+  return `<h3>${door} <span class="muted">· ${n}×</span></h3><p>${fix ? `<b>The fix:</b> ${esc(fix)}` : "The fix for this door is on your quiz result card."}</p>`;
+}
+
+function preSession() {
+  $("#tabs").hidden = true;
+  $("#app").innerHTML = `
+    <div class="top"><button class="iconbtn" id="back">← Back</button><span class="brand">LOCK IN</span></div>
+    <div class="stack" style="padding-top:4vh"><span class="label">Before you start</span><h2>Set it up.<br><span class="amber">Then start.</span></h2></div>
+    <label class="toggle"><span><b>Phone is in another room</b><br><small class="muted">Face down doesn't count. +5 XP.</small></span><input type="checkbox" id="phone"></label>
+    <label class="stack"><span class="label">What are you working on? (optional)</span><input type="text" id="note" maxlength="60" placeholder="e.g. chapter 4 notes"></label>
+    <p><b>One desk. One task. One tab.</b></p>
+    <p class="muted">Keep this screen, or close the app and walk away. The timer keeps counting either way. Come back when it's done.</p>
+    <button class="btn primary big" id="go">Start ${S.len}:00</button>`;
+  $("#back").addEventListener("click", render);
+  $("#go").addEventListener("click", () => {
+    S.active = { startedAt: Date.now(), len: S.len, phoneOut: $("#phone").checked, note: $("#note").value.trim() };
+    save(); play("lock"); render();
+  });
+}
+
+function phaseFor(sec) {
+  const m = sec / 60;
+  if (m < 1) return ["It feels wrong. Stay.", false];          // the 3 ugly minutes, from the book
+  if (m < 2) return ["That is minute two.", true];
+  if (m < 3) return ["Then it goes quiet.", false];
+  return ["You are working.", false];
+}
+
+function sessionScreen() {
+  const a = S.active, total = a.len * 60, R = 140, C = 2 * Math.PI * R;
+  if (Date.now() - a.startedAt >= total * 1000) return finish(true);   // it ended while the app was closed
+  $("#app").innerHTML = `
+    <div class="session">
+      <span class="label">${a.phoneOut ? "Phone in another room" : "Locked in"}${a.note ? " · " + esc(a.note) : ""}</span>
+      <div class="ring">
+        <svg viewBox="0 0 320 320" aria-hidden="true">
+          <circle cx="160" cy="160" r="${R}" fill="none" stroke="#1f2127" stroke-width="14"/>
+          <circle cx="160" cy="160" r="${R}" fill="none" stroke="#2c2418" stroke-width="14" stroke-dasharray="${(C * 180) / total} ${C}"/>
+          <circle id="arc" cx="160" cy="160" r="${R}" fill="none" stroke="#da9d55" stroke-width="14" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C}"/>
+        </svg>
+        <div class="time"><b id="clock">${a.len}:00</b><span class="label" id="sub">remaining</span></div>
+      </div>
+      <p class="phase" id="phase"></p>
+      <button class="btn ghost" id="stop">I stopped early</button>
+    </div>`;
+  const tick = () => {
+    if (S.active !== a) return clearInterval(timer);
+    const el = Math.floor((Date.now() - a.startedAt) / 1000);
+    if (el >= total) return finish(true);
+    const left = total - el;
+    $("#clock").textContent = `${Math.floor(left / 60)}:${pad(left % 60)}`;
+    $("#arc").setAttribute("stroke-dashoffset", String(C * (1 - el / total)));
+    const [txt, loud] = phaseFor(el);
+    const p = $("#phase"); if (p.textContent !== txt) { p.textContent = txt; p.className = "phase" + (loud ? " amber" : ""); }
+  };
+  tick(); timer = setInterval(tick, 500);
+  $("#stop").addEventListener("click", slipScreen);
+}
+
+function slipScreen() {
+  clearInterval(timer);
+  $("#app").innerHTML = `
+    <div class="stack" style="padding-top:6vh"><span class="label">No shame. Just notice.</span><h2>Which door<br><span class="amber">did you use?</span></h2>
+      <p class="muted">Naming it is the skill. You still get +2 XP.</p></div>
+    <div class="doorgrid">${Object.entries(DOORS).map(([k, v], i) => `<button class="doorbtn" data-door="${k}"><span class="label">Door ${i + 1}</span><b>${k}</b><span>${v}</span></button>`).join("")}</div>
+    <button class="btn ghost" id="resume">Actually, keep going</button>`;
+  document.querySelectorAll(".doorbtn").forEach((b) => b.addEventListener("click", () => finish(false, b.dataset.door)));
+  $("#resume").addEventListener("click", render);
+}
+
+function finish(ok, door) {
+  clearInterval(timer);
+  const before = derive(), a = S.active;
+  const d = iso(new Date(ok ? a.startedAt + a.len * 60000 : Date.now()));
+  S.sessions.push({ d, t: a.startedAt, mins: a.len, phoneOut: a.phoneOut, done: ok, door: ok ? null : door, note: a.note || "" });
+  S.active = null;
+  const after = derive();
+  const gained = after.xp - before.xp;
+  const newBadges = BADGES.filter(([id]) => after.badges[id] && !S.seenBadges.includes(id));
+  S.seenBadges.push(...newBadges.map(([id]) => id));
+  const levelUp = after.level > S.seenLevel; S.seenLevel = after.level;
+  save();
+  play(ok ? (levelUp || newBadges.length ? "chime" : "lock") : "pop");
+  $("#tabs").hidden = true;
+  const fix = !ok && CONFIG.fixes[door];
+  $("#app").innerHTML = `
+    <div class="reward">
+      <span class="label">${ok ? "Session complete" : "Noticed"}</span>
+      <div class="xpgain pop">+${gained} XP</div>
+      ${ok ? `<h2>${after.todayCount >= S.target ? "All blocks <span class='amber'>done.</span>" : `Block ${after.todayCount} <span class="amber">done.</span>`}</h2>`
+           : `<h2>That was <span class="amber">${esc(door)}.</span></h2><p>${fix ? `<b>The fix:</b> ${esc(fix)}` : "The fix for this door is on your quiz result card."}</p>`}
+      ${levelUp ? `<div class="card pop" style="width:100%"><span class="label">Level up</span><h2>Level ${after.level} · <span class="amber">${esc(levelName(after.level))}</span></h2></div>` : ""}
+      ${newBadges.map(([, n, dsc]) => `<div class="card pop" style="width:100%"><span class="label">Badge unlocked</span><h3 class="amber">${esc(n)}</h3><p class="muted">${esc(dsc)}</p></div>`).join("")}
+      ${after.badges.finisher && newBadges.some(([id]) => id === "finisher") ? `<p>Thirty days locked in. Screenshot this. The game keeps going: every session still counts.</p>` : ""}
+      <button class="btn primary big" id="ok">Continue</button>
+    </div>`;
+  $("#ok").addEventListener("click", () => { tab = "today"; render(); });
+}
+
+function mapScreen() {
+  const D = derive();
+  const n = CONFIG.campaignDays;
+  const doneList = D.days.filter((d) => D.byDay[d] > 0);
+  $("#app").innerHTML = `${header(D)}
+    <div class="card">
+      <div class="between"><span class="label">The campaign</span><span class="label">${Math.min(D.doneDays, n)}/${n}</span></div>
+      <div class="path">${Array.from({ length: n }, (_, i) => {
+        const d = doneList[i]; const cls = d ? (D.byDay[d] >= S.target ? "perfect" : "done") : i === D.doneDays ? "next" : "";
+        return `<div class="tile ${cls} ${(i + 1) % 7 === 0 ? "wk" : ""}" title="${d || ""}">${i + 1}</div>`; }).join("")}</div>
+      <p class="muted"><small>Amber = a day locked in. Cream = all ${S.target} blocks. Missed days don't cost you a tile. They only reset your chain if you miss two in a row.</small></p>
+    </div>
+    <div class="card">
+      <span class="label">Stats</span>
+      <div class="between"><span>Sessions finished</span><span class="stat">${D.done.length}</span></div>
+      <div class="between"><span>Hours locked in</span><span class="stat">${(D.done.reduce((a, s) => a + s.mins, 0) / 60).toFixed(1)}</span></div>
+      <div class="between"><span>Phone in another room</span><span class="stat">${D.done.length ? Math.round((100 * D.phoneOut) / D.done.length) : 0}%</span></div>
+      <div class="between"><span>Chain · best</span><span class="stat">${D.chain} · ${D.best}</span></div>
+      <div class="between"><span>Comebacks after a miss</span><span class="stat">${D.comebacks}</span></div>
+    </div>
+    <div class="card"><span class="label">Badges · ${Object.values(D.badges).filter(Boolean).length}/${BADGES.length}</span>
+      <div class="badges">${BADGES.map(([id, nm, dsc]) => `<div class="badge ${D.badges[id] ? "got" : "locked"}"><span class="b-name">${esc(nm)}</span><span class="b-desc">${esc(dsc)}</span></div>`).join("")}</div>
+    </div>`;
+}
+
+function doorsScreen() {
+  const D = derive(), max = Math.max(1, ...Object.values(D.doorCount));
+  $("#app").innerHTML = `${header(D)}
+    <div class="card">
+      <span class="label">Where your sessions leak</span>
+      ${Object.keys(DOORS).map((k) => `<div class="doorbar"><span>${k}</span><span class="bar"><i style="width:${(100 * D.doorCount[k]) / max}%"></i></span><span class="stat">${D.doorCount[k]}</span></div>`).join("")}
+      <p class="muted"><small>Every time you stop early, you name the door. After a few, the pattern shows. Quiz result: <b>${esc(S.door || "not set")}</b>.</small></p>
+    </div>
+    ${D.slips.length ? `<div class="card">${topDoor(D)}</div>` : `<div class="card"><p>No slips logged yet. When you stop early, tap "I stopped early" and name the door.</p></div>`}
+    <div class="card"><span class="label">Change your quiz door</span>
+      <div class="doorgrid">${Object.keys(DOORS).map((k) => `<button class="doorbtn" data-door="${k}" aria-pressed="${k === S.door}"><b>${k}</b></button>`).join("")}</div>
+    </div>`;
+  document.querySelectorAll(".doorbtn").forEach((b) => b.addEventListener("click", () => { S.door = b.dataset.door; save(); render(); }));
+}
+
+function meScreen() {
+  const D = derive();
+  const code = () => "LOCKIN1:" + btoa(unescape(encodeURIComponent(JSON.stringify({ ...S, active: null }))));
+  $("#app").innerHTML = `${header(D)}
+    <div class="card">
+      <span class="label">Your progress is saved on this phone</span>
+      <p class="muted"><small>It stays when you close the app or turn the phone off. It's lost only if you clear your browser data, use a private tab, or change phones. Add the app to your home screen, and copy a backup code now and then.</small></p>
+      <div class="row"><button class="btn primary" id="copy">Copy backup code</button><button class="btn" id="dl">Save backup file</button></div>
+      <details><summary class="label" style="cursor:pointer">Restore from a backup</summary>
+        <div class="stack" style="margin-top:10px">
+          <textarea id="restore" rows="3" placeholder="Paste your LOCKIN1: code"></textarea>
+          <div class="row"><button class="btn" id="doRestore">Restore code</button><label class="btn">Open backup file<input type="file" id="file" accept=".json,application/json" hidden></label></div>
+        </div>
+      </details>
+    </div>
+    <div class="card">
+      <span class="label">Add to home screen</span>
+      <p class="muted"><small><b>iPhone:</b> Share → Add to Home Screen. <b>Android:</b> ⋮ menu → Add to Home screen / Install app.</small></p>
+    </div>
+    <div class="card">
+      <span class="label">Settings</span>
+      <label class="toggle"><span>Sounds</span><input type="checkbox" id="snd" ${S.sound ? "checked" : ""}></label>
+      <label class="stack"><span class="label">Blocks per day (the book says three, maximum)</span><select id="target">${[1, 2, 3].map((n) => `<option ${n === S.target ? "selected" : ""}>${n}</option>`).join("")}</select></label>
+      <label class="stack"><span class="label">Session length</span><select id="len">${[10, 20, 25, 30, 45].map((n) => `<option value="${n}" ${n === S.len ? "selected" : ""}>${n} minutes${n === CONFIG.sessionMinutes ? " (the book's)" : ""}</option>`).join("")}</select></label>
+    </div>
+    <div class="card">
+      <span class="label">Start over</span>
+      <p class="muted"><small>Deletes every session on this phone. Copy a backup code first if you might want it back.</small></p>
+      <button class="btn" id="reset">Reset progress</button>
+      <div class="row" id="confirmRow" hidden><span>Delete everything?</span><button class="btn" id="yes">Yes, reset</button><button class="btn ghost" id="no">Keep it</button></div>
+    </div>
+    <p class="muted" style="text-align:center"><small>LOCK IN · the 30-day game</small></p>`;
+  $("#copy").addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(code()); S.lastBackup = Date.now(); save(); toast("Backup code copied. Paste it in your notes."); }
+    catch (e) { $("#restore").value = code(); $("details").open = true; $("#restore").select(); toast("Select the code and copy it."); }
+  });
+  $("#dl").addEventListener("click", () => {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([JSON.stringify({ ...S, active: null })], { type: "application/json" }));
+    a.download = `lockin-backup-${today()}.json`; document.body.appendChild(a); a.click(); a.remove();
+    S.lastBackup = Date.now(); save();
+  });
+  const restore = (obj) => {
+    if (!obj || !Array.isArray(obj.sessions)) return toast("That backup doesn't look right.");
+    S = Object.assign(blankState(), obj, { active: null, unlocked: true }); save(); toast("Progress restored."); render();
+  };
+  $("#doRestore").addEventListener("click", () => {
+    const v = $("#restore").value.trim();
+    try { restore(JSON.parse(decodeURIComponent(escape(atob(v.replace(/^LOCKIN1:/, "")))))); } catch (e) { toast("That code didn't work. Copy it again in full."); }
+  });
+  $("#file").addEventListener("change", async (e) => {
+    try { restore(JSON.parse(await e.target.files[0].text())); } catch (err) { toast("That file didn't work."); }
+  });
+  $("#snd").addEventListener("change", (e) => { S.sound = e.target.checked; save(); });
+  $("#target").addEventListener("change", (e) => { S.target = +e.target.value; save(); toast("Saved."); });
+  $("#len").addEventListener("change", (e) => { S.len = +e.target.value; save(); toast("Saved."); });
+  $("#reset").addEventListener("click", () => { $("#confirmRow").hidden = false; });
+  $("#no").addEventListener("click", () => { $("#confirmRow").hidden = true; });
+  $("#yes").addEventListener("click", () => { S = Object.assign(blankState(), { unlocked: true }); save(); tab = "today"; render(); });
+}
+
+document.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () => { tab = b.dataset.tab; render(); window.scrollTo(0, 0); }));
+// Coming back to the app (e.g. after leaving the phone in another room) re-checks a running session.
+document.addEventListener("visibilitychange", () => { if (!document.hidden && S.active && $("#clock")) render(); });
+render();
+</script>
+</body>
+</html>
