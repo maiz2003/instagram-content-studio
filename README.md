@@ -69,6 +69,7 @@ Copy `brands/_template.yaml` to `brands/<your-brand>.yaml` and fill it in. Unkno
 | `scripts/render/` | `render.js` (HTML → PNG), `reel.js` (spec → MP4), `sound.py` (composed soundtrack + scene sound design; outputs a full mix and an SFX-only version) · `beat.py` (detects a supplied track's BPM and downbeat, and re-times a Reel to it) |
 | `scripts/check_coverage.py` | Reports which book items are cited in `knowledge/`; never fails |
 | `assets/fonts/` | OFL fonts used by brand themes, with their licences |
+| `assets/sounds/<brand>/` | A brand's own sound kit (WAVs + `kit.json`), used instead of the synthesized sounds when a Reel spec sets `sound_kit` |
 
 ## Ground rules the skills follow
 - **Confidence.** Claims are `book-claim` unless an outside Instagram/Meta source is cited (`platform-confirmed`). None are confirmed yet. The scorecard's weights (Watch time 35 / Sends 20 / Saves 15 / Conversation 15 / Likes 5) are **the book's figures**, and the scorecard says so. It is a checklist, not a reach prediction.

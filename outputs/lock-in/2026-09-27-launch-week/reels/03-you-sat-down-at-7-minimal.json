@@ -105,5 +105,6 @@
    ]
   ]
  },
+ "sound_kit": "assets/sounds/lock-in",
  "sound_style": "minimal"
 }

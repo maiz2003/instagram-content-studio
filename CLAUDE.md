@@ -95,6 +95,7 @@ outputs/<brand>/<YYYY-MM-DD>-<slug>/   brief, hooks, script, caption, scorecard,
 outputs/<brand>/profile-kit.md (+ profile/png/)
 scripts/              check_coverage.py · render/render.js (HTML → PNG) · render/reel.js (spec → MP4) · render/sound.py (soundtrack + sound design) · render/beat.py (sync to a supplied track)
 assets/fonts/         OFL fonts used by brand themes (licences alongside)
+assets/sounds/<brand>/ brand-supplied sound kit (WAVs + kit.json) for sound.py
 ```
 
 ## Working conventions

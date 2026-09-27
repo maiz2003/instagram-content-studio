@@ -2,7 +2,7 @@
 """Compose a Reel's soundtrack: beat-synced music + context sound design.
 
 Standard library only (ffmpeg does the reverb/ducking/loudness in reel.js).
-Everything is synthesized, so there is nothing to license.
+Everything is synthesized, so there is nothing to license, unless the spec names a sound kit.
 
 Usage:
     python3 scripts/render/sound.py <reel-spec.json> <out-dir>
@@ -22,6 +22,11 @@ SFX types: vibrate, knock2, door_close, impact, subdrop, riser, whoosh, clock,
 Minimal "focus" set (original sounds in a clean UI style): pop, tink, tap, tap2, air, lock, chime.
   "sound_style": "minimal" switches the automatic layer to pops per word, a tink per slam,
   taps per line and soft typing. Pair it with "mood": "focus" and "ambient"/"ambient_arp" sections.
+  "sound_kit": "assets/sounds/<brand>"  (optional, relative to the repo root) swaps in the brand's own
+  recorded sounds. <kit>/kit.json maps SFX types to 16-bit WAVs; a list is a set of variants (pops step
+  through it word by word), {"file", "end"} trims. Each sample is scaled to the peak of the synthesized
+  sound it replaces, so the mix balance stays the same. A "pad" entry replaces the synthesized focus bed.
+  Types the kit doesn't cover stay synthesized.
 """
 
 import json
@@ -374,7 +379,46 @@ SFX = {
 }
 
 
-def render_sfx(spec, n):
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
+def read_wav(path, end=None):
+    with wave.open(path) as w:
+        if w.getsampwidth() != 2 or w.getframerate() != SR:
+            sys.exit(f"sound kit: {path} must be 16-bit {SR} Hz")
+        ch = w.getnchannels()
+        frames = w.getnframes() if end is None else min(w.getnframes(), int(end * SR))
+        d = w.readframes(frames)
+    s = struct.unpack("<%dh" % (len(d) // 2), d)
+    return [sum(s[i:i + ch]) / ch / 32768.0 for i in range(0, len(s), ch)]   # mono
+
+
+def load_kit(spec):
+    """{type: [samples, ...]} from spec["sound_kit"]; {} when the spec has no kit."""
+    if not spec.get("sound_kit"):
+        return {}
+    kdir = os.path.join(ROOT, spec["sound_kit"])
+    kit = {}
+    for typ, entry in json.load(open(os.path.join(kdir, "kit.json"))).items():
+        if typ.startswith("_"):
+            continue
+        variants = []
+        for e in (entry if isinstance(entry, list) else [entry]):
+            e = {"file": e} if isinstance(e, str) else e
+            variants.append(read_wav(os.path.join(kdir, e["file"]), e.get("end")))
+        if typ != "pad" and typ in SFX:                  # match the synthesized sound's peak
+            ref = max(abs(v) for v in SFX[typ]())
+            scaled = []
+            for x in variants:
+                g = ref / max(1e-9, max(map(abs, x)))
+                scaled.append([v * g for v in x])
+            variants = scaled
+        kit[typ] = variants
+    return kit
+
+
+def render_sfx(spec, n, kit=None):
+    kit = kit or {}
     buf = [0.0] * n
     events = list(spec.get("sfx", []))
     if spec.get("auto_sfx", True):
@@ -394,14 +438,18 @@ def render_sfx(spec, n):
                     for k in range(len(words)):
                         wt = at + k * e.get("dur", 0.6) / max(1, len(words))
                         if wt >= 0:
-                            events.append({"t": wt, "type": "pop", "gain": 0.45, "pitch": 1.0 + 0.06 * k})
+                            events.append({"t": wt, "type": "pop", "gain": 0.45, "pitch": 1.0 + 0.06 * k, "variant": k})
                 if minimal and b == "lines":
                     lines = str(e["text"]).split("\n")
                     for k in range(len(lines)):
                         events.append({"t": at + k * e.get("dur", 0.6) / max(1, len(lines)), "type": "tap", "gain": 0.4})
                 if minimal and b == "fade" and at > 0.5:
-                    events.append({"t": at, "type": "pop", "gain": 0.3, "pitch": 1.3})
+                    events.append({"t": at, "type": "pop", "gain": 0.3, "pitch": 1.3, "variant": 5})
     for ev in events:
+        if ev["type"] in kit:
+            variants = kit[ev["type"]]
+            add(buf, variants[ev.get("variant", 0) % len(variants)], ev["t"], ev.get("gain", 0.8))
+            continue
         fn = SFX[ev["type"]]
         kwargs = {}
         if "dur" in ev:
@@ -558,15 +606,43 @@ def render_music(m, n):
     return buf
 
 
+PAD_RMS = 10 ** (-22 / 20)   # level of the synthesized focus bed, so a kit pad sits the same under the SFX
+
+
+def kit_pad(src, n, gain=1.0):
+    """Loop the kit's pad to length n (0.5 s crossfade at each wrap) at the synthesized bed's level."""
+    xf = int(0.5 * SR)
+    out = list(src[:n])
+    while len(out) < n:
+        k = min(xf, len(out))
+        for i in range(k):
+            a = i / k
+            out[len(out) - k + i] = out[len(out) - k + i] * (1 - a) + src[i] * a
+        out += src[k:k + n - len(out)]
+    rms = math.sqrt(sum(v * v for v in out) / max(1, n)) or 1.0
+    g = PAD_RMS * gain / rms
+    fade = int(0.03 * SR)
+    for i in range(n):
+        e = min(1.0, i / fade, (n - 1 - i) / fade)
+        out[i] *= g * e
+    return out
+
+
 def main():
     spec_path, out_dir = sys.argv[1], sys.argv[2]
     spec = json.load(open(spec_path))
     os.makedirs(out_dir, exist_ok=True)
     n = int(spec["duration"] * SR)
-    sfx, _ = render_sfx(spec, n)
+    kit = load_kit(spec)
+    sfx, _ = render_sfx(spec, n, kit)
     write_wav(os.path.join(out_dir, "sfx.wav"), sfx)
     m = spec.get("music")
-    music = render_music(m, n) if (m and not m.get("file")) else [0.0] * n   # a supplied track is mixed in reel.js
+    if m and m.get("file"):
+        music = [0.0] * n                                   # a supplied track is mixed in reel.js
+    elif m and "pad" in kit:
+        music = kit_pad(kit["pad"][0], n, m.get("pad_gain", 1.0))
+    else:
+        music = render_music(m, n) if m else [0.0] * n
     write_wav(os.path.join(out_dir, "music.wav"), music)
     print(out_dir)
 

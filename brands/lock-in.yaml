@@ -69,7 +69,7 @@ visual_identity:
   fonts: ["Anton (headlines)", "Spectral (serif lines)", "JetBrains Mono (labels)"]   # OFL, in assets/fonts/
   look: "Dark background, cream condensed headlines with one amber key word, lowercase serif call-outs, small spaced 'LOCK IN' label"
   theme_css: brands/lock-in.theme.css
-  sound: "minimal focus: original clean UI-style sounds (pop per word, glass tink on the amber word, soft double tap, chime on the CTA, air whooshes) over a soft focus pad; a lock click is the brand's signature sound (first frame + loop). Render with sound_style: minimal, mood: focus. Owner prefers this to beats."
+  sound: "minimal focus: original clean UI-style sounds (pop per word, glass tink on the amber word, soft double tap, chime on the CTA, air whooshes) over a soft focus pad; a lock click is the brand's signature sound (first frame + loop). Render with sound_style: minimal, mood: focus, sound_kit: assets/sounds/lock-in (the owner's own kit, uploaded 2026-09-27: lock click, 8-step pop ladder, glass tink, double tap, air whoosh, two-note chime, 24 s focus pad). Owner prefers this to beats."
 
 cta_mechanism:
   type: comment_keyword
