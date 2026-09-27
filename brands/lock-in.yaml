@@ -107,6 +107,7 @@ notes_new_account:
 workflow:                             # used by the weekly-cycle skill and its agents
   tracker_url: "https://claude.ai/artifact/ELpGTnN5BdEksgu9QQSoLY"
   objectives: "outputs/lock-in/objectives-30d.md"
+  game_url: "https://lockin-30.netlify.app"   # LOCK IN 30 buyers' game (products/lock-in-30/); Netlify site id f33d47c7-13e3-47f5-a40d-09f80a96b16e
   drive_folder_id: "1fisrKvLQlmEJiZnBW5lGU6rG3uUxg7vH"   # footage uploads (e.g. clips-week2), shared by link
   posting_queue_folder_id: "1aymnlDOmVajd6opoJArAWJ14VzP_SFnr"   # Drive: "LOCK IN posting queue (weeks 1-2)" (Clips/ + posting-order doc); the owner uploads finished files here
   posting_queue_page: "https://claude.ai/artifact/M5LcUCfMyBPWQwYfG9Ynig"

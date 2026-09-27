@@ -12,7 +12,7 @@ A small web app that ships with the LOCK IN book. It turns the book's 30-day cha
 It is one static folder with no server and no accounts. It works offline after the first visit and can be added to the home screen like an app.
 
 ## Live site
-First deployed on 2026-09-27 as an anonymous Netlify deploy (`musical-conkies-8f7274.netlify.app`). Until it is claimed on the owner's Netlify account, it sits behind Netlify's temporary drop password. After claiming, rename the site and turn off password protection if it is still on (Site configuration → Access & security).
+**https://lockin-30.netlify.app**: on the owner's Netlify team, site id `f33d47c7-13e3-47f5-a40d-09f80a96b16e`, deployed 2026-09-27. Visitor protection (Netlify team login) is switched off so buyers can open it. If a redeploy ever shows a Netlify login page, check Site configuration → Access & security → Visitor access.
 
 ## Deploy (5 minutes, free)
 1. Go to **app.netlify.com/drop**, the same Netlify account as the quiz.
