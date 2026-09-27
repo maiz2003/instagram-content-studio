@@ -9,6 +9,7 @@
 | | Do | Why |
 |---|---|---|
 | Frame | **Vertical 9:16**, normal camera app, 4K or 1080p at 30 fps, **no filters**, not the Instagram camera | Native full-screen quality; original footage [F2.9], [U.5] |
+| HDR off | iPhone: Settings → Camera → Record Video → **HDR Video off**. Android: turn off HDR10+/HDR video | HDR clips look washed out once posted |
 | Hold it still | Phone on a tripod or a stack of books. Tap and hold to **lock focus and exposure** | Stable framing signals quality [U.141] |
 | Handles | **3 seconds of stillness before and after** each action, and **3 takes** of each clip | Room to cut on the beat |
 | Surface | Dark, plain desk (black, walnut, dark grey). Clear everything else off | Matches the brand's near-black #111216 |

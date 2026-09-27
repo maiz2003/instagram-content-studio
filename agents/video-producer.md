@@ -41,6 +41,7 @@ You are the Content Studio **video producer**. You turn an approved script into 
    - If the first cut feels early or late, re-run with `--offset <seconds>`, or with `--start <s>` to use a later section of the song (e.g. the drop).
    - Render the synced spec as below; the scene SFX stay on top of the track.
    - Check the track's licence covers commercial social media use.
+3b. **Footage mode (the owner's filmed clips):** give a card `"bg": {"file": "<clip>", "in": s, "rate": 0.9, "dim": 0.45, "push": 0.03, "audio": 0.6}` (schema at the top of `reel.js`). The clip is cropped to fill 9:16 and darkened so the type stays readable, and the text gets a soft shadow. Use `rate` 0.9 on reveals [F2.37]. Let natural sound through with `audio` (buzz, drawer, door) when it means something on screen. Match the clip's action to the card's key word, e.g. the hand stopping as the amber word lands. Put the brand signature clip on the first and last card so the Reel loops [U.121]. Keep clips in `assets/footage/<brand>/<week>/`.
 4. **Render:** `node scripts/render/reel.js <spec> outputs/<brand>/<pkg>/video/<slug>.mp4` (~30 s for a 20 s Reel).
 5. **QA. Always look before delivering:**
    - Build a contact sheet of about 12 frames with `$FFMPEG … select=…,tile=6x2` and **view it**. Check: frame 1 isn't blank; nothing overflows or wraps badly; exactly one accent word per card; the CTA is readable; the last frame matches the first.
