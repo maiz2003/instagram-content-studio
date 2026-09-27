@@ -1,0 +1,110 @@
+<title>LOCK IN Posting Queue</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;600&family=Spectral:wght@400;600&display=swap">
+<style>
+  :root { color-scheme: dark; --bg:#111216; --panel:#181a1f; --line:#2a2d34; --ink:#e6e1d5; --muted:#8f949c; --amber:#da9d55;
+    --display:"Anton",Impact,"Arial Narrow",sans-serif; --serif:"Spectral",Georgia,serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace; }
+  body { background:var(--bg); color:var(--ink); font:16px/1.5 var(--serif); }
+  .wrap { max-width:1100px; margin:0 auto; padding-inline:16px; padding-block:28px 64px; display:grid; gap:28px; }
+  h1,h2 { font-family:var(--display); font-weight:400; text-transform:uppercase; margin:0; letter-spacing:.01em; text-wrap:balance; }
+  h1 { font-size:clamp(40px,8vw,68px); line-height:.95; } h1 span { color:var(--amber); }
+  h2 { font-size:24px; }
+  .label { font:600 11px/1.2 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+  .lede { color:var(--muted); max-width:64ch; margin:10px 0 0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:16px; }
+  .clip { background:var(--panel); border:1px solid var(--line); border-radius:6px; overflow:hidden; display:grid; grid-template-rows:auto 1fr; }
+  video { width:100%; aspect-ratio:9/16; display:block; background:#000; max-width:100%; }
+  .body { padding:12px 14px 14px; display:grid; gap:10px; align-content:start; }
+  .top { display:flex; justify-content:space-between; gap:8px; align-items:baseline; }
+  .num { font:600 13px var(--mono); color:var(--amber); }
+  .kind { font:600 10px var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+  .title { font-weight:600; }
+  .fname { font:12px var(--mono); color:var(--muted); word-break:break-all; }
+  details summary { cursor:pointer; font:600 12px var(--mono); color:var(--muted); }
+  pre { white-space:pre-wrap; font:13px/1.5 var(--mono); background:var(--bg); border:1px solid var(--line); border-radius:4px; padding:10px; margin:8px 0 0; }
+  .actions { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  button { font:600 12px var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--ink); background:transparent; border:1px solid var(--line); border-radius:4px; padding:8px 12px; cursor:pointer; }
+  button.primary { background:var(--amber); border-color:var(--amber); color:#111216; }
+  button:disabled { opacity:.5; cursor:default; }
+  button:focus-visible { outline:2px solid var(--amber); outline-offset:1px; }
+  .status { font:12px var(--mono); color:var(--muted); }
+  .cover { width:100%; aspect-ratio:4/5; object-fit:cover; display:block; background:#000; }
+  .strip { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; }
+  .strip button { padding:0; border:1px solid var(--line); background:none; border-radius:3px; overflow:hidden; }
+  .strip img { width:100%; aspect-ratio:4/5; object-fit:cover; display:block; }
+  .note { border:1px solid var(--line); border-radius:6px; padding:12px 14px; color:var(--muted); font-size:14px; }
+</style>
+<div class="wrap">
+  <header>
+    <div class="label">LOCK IN · Weeks 1–2 · post at 18:05 UK</div>
+    <h1>Posting <span>queue</span></h1>
+    <p class="lede">All 15 posts from weeks 1 and 2, numbered in posting order: 12 Reels and 3 carousels. <b>Save</b> puts the video on your phone. On iPhone the share sheet opens: choose Save Video, or Save to Files → Google Drive to drop it straight into your Drive. <b>Copy caption</b> copies the ready-to-paste caption. For a carousel, <b>Save all slides</b> gives you one .zip file. To save a single slide as a photo (easiest for posting), tap it. Post the slides in number order.</p>
+  </header>
+  <div class="note" id="dlNote" hidden>Saving isn't available in this view. Open the page in the Claude app or on claude.ai, or long-press a video to save it.</div>
+  <section><h2>Week 1</h2><div class="grid" id="w1"></div></section>
+  <section><h2>Week 2</h2><p class="lede" style="margin-top:4px">Day 12 has two posts: the carousel, then the Trial Reel. The four door Reels are the text versions. Once your week-2 clips are in, the footage versions replace them here.</p><div class="grid" id="w2"></div></section>
+</div>
+<script>
+const CLIPS = [{"n": 1, "day": 1, "week": 1, "title": "Four Doors", "kind": "Reel", "type": "reel", "caption": "Doom scrolling isn't random. You walk through one of four doors, every time:\nBored: the work goes flat\nStuck: you hit something you can't do\nAnxious: you remember how behind you are\nTired: it's late and you're fading\nStuck? The step is too big, not beyond you. Come back with the next line, not the whole problem.\nSave this for the next time your hand goes for the phone. Send it to the friend who's always \"so behind.\"\nComment LOCK and I'll DM you the 4-question quiz. One of the questions will be uncomfortable.\n#doomscrolling #discipline #lockin", "file": "clips/01_day01_four-doors.mp4"}, {"n": 2, "day": 2, "week": 1, "title": "You don't need discipline", "kind": "Reel", "type": "reel", "caption": "Discipline isn't your problem. Your phone being in the room is.\nFace down doesn't count. Across the desk doesn't count. Another room does.\nTonight: phone out, 20 minutes, start before you feel ready.\nSend this to the friend who says they have \"no discipline\".\nComment LOCK and I'll DM you the 4-question quiz.\n#discipline #studytips #doomscrolling", "file": "clips/02_day02_you-dont-need-discipline.mp4"}, {"n": 3, "day": 3, "week": 1, "title": "you sat down at 7", "kind": "Reel", "type": "reel", "caption": "Doom scrolling from 7 to 11:40 isn't laziness.\nYou sat down. You meant it. Then four hours went somewhere.\nIt isn't a character flaw. It's a setup problem, and it always comes through one of four doors.\nSave this for the next night it happens.\nComment LOCK and find out which door you walked through.\n#doomscrolling #procrastination #studytips", "file": "clips/03_day03_you-sat-down-at-7.mp4"}, {"n": 4, "day": 4, "week": 1, "title": "Phone Exile", "kind": "Carousel · 8 slides", "type": "carousel", "caption": "Studying with your phone face down isn't discipline. It's still one reach away.\nThere are four places your phone can be while you work:\nIn your hand. Face down. Across the desk. Another room.\nOnly the last one works. Face-down is not distance. Walking is.\nSave this and check it before your next study session. Send it to the friend who \"locks in\" with their phone face down.\nComment LOCK and I'll DM you the 4-question quiz. It shows what's actually pulling you to your phone.\n#discipline #studytips #doomscrolling", "slides": ["carousels/04_day04_phone-exile/04_day04_phone-exile_slide-01.png", "carousels/04_day04_phone-exile/04_day04_phone-exile_slide-02.png", "carousels/04_day04_phone-exile/04_day04_phone-exile_slide-03.png", "carousels/04_day04_phone-exile/04_day04_phone-exile_slide-04.png", "carousels/04_day04_phone-exile/04_day04_phone-exile_slide-05.png", "carousels/04_day04_phone-exile/04_day04_phone-exile_slide-06.png", "carousels/04_day04_phone-exile/04_day04_phone-exile_slide-07.png", "carousels/04_day04_phone-exile/04_day04_phone-exile_slide-08.png"], "zip": "carousels/04_day04_phone-exile.zip"}, {"n": 5, "day": 5, "week": 1, "title": "You are in withdrawal", "kind": "Reel", "type": "reel", "caption": "Not lazy. In withdrawal from your phone.\nThat's why the first minutes of boring work feel unbearable. It peaks at minute two, then it goes quiet, if you stay.\nSave this for minute two.\nSend it to the friend who calls themselves lazy.\nComment LOCK and I'll DM you the 4-question quiz.\n#discipline #doomscrolling #studytips", "file": "clips/05_day05_you-are-in-withdrawal.mp4"}, {"n": 6, "day": 6, "week": 1, "title": "Streaks are why you quit", "kind": "Reel", "type": "reel", "caption": "Discipline streaks are why you quit.\nThe streak broke, so you stopped completely. That's the trap.\nOne missed day is a day. Two is the start of quitting. Never miss twice.\nWhat made your last streak break? Tell me in one line.\nComment LOCK for the full system.\n#discipline #habits #lockin", "file": "clips/06_day06_streaks-are-why-you-quit.mp4"}, {"n": 7, "day": 7, "week": 1, "title": "you're not tired", "kind": "Reel", "type": "reel", "caption": "Not tired. Doom scrolling for four hours.\nTired is door 4: you're solving sleep with a screen.\nPut the phone in another room at night and see what \"tired\" turns into.\nSend this to the friend who's \"too tired\" every evening.\nComment LOCK and find your door.\n#doomscrolling #sleep #discipline", "file": "clips/07_day07_youre-not-tired.mp4"}, {"n": 8, "day": 8, "week": 2, "title": "What's inside LOCK IN", "kind": "Carousel · 8 slides · pin it", "type": "carousel", "caption": "Discipline playbook: what's actually inside LOCK IN.\n61 pages, seven parts, 13 diagrams. A scored diagnostic for your phone trigger. If-then plans with your own times. Printables. A 30-day challenge and a chat where someone notices when you stop.\nWhat it costs: $15, once, and a more boring life.\nSave this if you're starting Monday. Better: start tonight.\nComment LOCK and I'll DM you the free 4-question quiz first.\n#discipline #studytips #lockin", "slides": ["carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-01.png", "carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-02.png", "carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-03.png", "carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-04.png", "carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-05.png", "carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-06.png", "carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-07.png", "carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-08.png"], "zip": "carousels/08_day08_whats-inside-lock-in.zip"}, {"n": 9, "day": 9, "week": 2, "title": "Door 1: BORED", "kind": "Reel · text version", "type": "reel", "caption": "Doom scrolling 20 minutes into studying isn't random.\nThe work goes flat, and your hand is on the phone before you decide.\nThat's door 1: bored. There are four.\nWhich door got you today? Comment the number.\nComment LOCK and I'll DM you the 4-question quiz. It ends with the fix for your door.\n#doomscrolling #studytips #discipline", "file": "clips/09_day09_door-1-bored.mp4"}, {"n": 10, "day": 10, "week": 2, "title": "Don't wait for Monday", "kind": "Trial Reel", "type": "reel", "caption": "Discipline doesn't start on Monday. It starts tonight.\nYou said \"Monday\" last Monday.\nTonight: 20 minutes, phone in another room, start before you feel ready.\nSend this to the friend who's starting Monday. Again.\nComment LOCK and find your door.\n#discipline #procrastination #studytips", "file": "clips/10_day10_dont-wait-for-monday.mp4"}, {"n": 11, "day": 11, "week": 2, "title": "Door 2: STUCK", "kind": "Reel · text version", "type": "reel", "caption": "Studying stops when you get stuck, not when you get distracted.\nYou hit something you can't do. \"I'll ask someone tomorrow.\" Then the phone.\nDoor 2: stuck. The fix: the step is too big, not beyond you. Come back with the next line, not the whole problem.\nSave this for the next time you hit the wall.\nComment LOCK and I'll DM you the 4-question quiz.\n#studytips #doomscrolling #discipline", "file": "clips/11_day11_door-2-stuck.mp4"}, {"n": 12, "day": 12, "week": 2, "title": "The 3 Ugly Minutes", "kind": "Carousel · 7 slides", "type": "carousel", "caption": "Studying feels unbearable for about three minutes. Then it doesn't.\nThe urge to quit peaks at minute two. Then it goes quiet.\nMost people never find out, because they leave in minute one.\nNext time it hits, say it out loud: \"that is minute two.\"\nSave this for your next study session. Send it to the friend who quits in the first five minutes.\nComment LOCK and I'll DM you the 4-question quiz.\n#studytips #discipline #doomscrolling", "slides": ["carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-01.png", "carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-02.png", "carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-03.png", "carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-04.png", "carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-05.png", "carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-06.png", "carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-07.png"], "zip": "carousels/12_day12_the-3-ugly-minutes.zip"}, {"n": 13, "day": 12, "week": 2, "title": "Fake work", "kind": "Trial Reel", "type": "reel", "caption": "Fake work feels like studying. It isn't.\nRewriting the same notes. A timetable instead of starting. 14 tabs of \"research\".\nWhich one is yours? Be honest in the comments.\nComment LOCK and find your door.\n#studytips #procrastination #discipline", "file": "clips/13_day12_fake-work.mp4"}, {"n": 14, "day": 13, "week": 2, "title": "Door 3: ANXIOUS", "kind": "Reel · text version", "type": "reel", "caption": "Doom scrolling when you feel behind is door 3, the one nobody admits.\nYou feel behind before you've even started, so you check. Checking isn't relief. It's the loop.\nSend this to whoever's always \"so behind\".\nComment LOCK and I'll DM you the 4-question quiz. It ends with the fix for your door.\n#doomscrolling #studytips #discipline", "file": "clips/14_day13_door-3-anxious.mp4"}, {"n": 15, "day": 14, "week": 2, "title": "Door 4: TIRED", "kind": "Reel · text version", "type": "reel", "caption": "Doom scrolling after 10pm isn't rest. It's door 4.\n\"I'll do it properly in the morning.\" You're fading, so you open the phone.\nYou are solving sleep with a screen. Tonight: phone outside the bedroom.\nThat's all four doors. Which one is yours? Comment LOCK and find out.\n#doomscrolling #sleep #discipline", "file": "clips/15_day14_door-4-tired.mp4"}];
+let downloads = null;
+async function saveFile(path, st, btn) {
+  if (!downloads) { st.textContent = "Saving isn't available here"; return; }
+  if (btn) btn.disabled = true; st.textContent = "Preparing…";
+  try {
+    const blob = await (await fetch(path)).blob();
+    await downloads.save({ filename: path.split("/").pop(), data: blob });
+    st.textContent = "Saved";
+  } catch (e) {
+    st.textContent = e && e.code === "declined" ? "Cancelled" : e && e.code === "rate_limited" ? "Finish the open save first" : "Couldn't save. Try again.";
+  }
+  if (btn) btn.disabled = false;
+}
+async function saveZip(c, st, btn) {
+  if (!downloads || !window.JSZip) { st.textContent = "Saving isn't available here: tap each slide instead"; return; }
+  btn.disabled = true; st.textContent = "Zipping slides…";
+  try {
+    const zip = new JSZip();
+    for (const s of c.slides) zip.file(s.split("/").pop(), await (await fetch(s)).blob());
+    const blob = await zip.generateAsync({ type: "blob" });
+    await downloads.save({ filename: c.zip.split("/").pop(), data: blob });
+    st.textContent = "Saved";
+  } catch (e) {
+    st.textContent = e && e.code === "declined" ? "Cancelled" : e && e.code === "rate_limited" ? "Finish the open save first" : "Couldn't save. Tap each slide instead.";
+  }
+  btn.disabled = false;
+}
+function card(c) {
+  const el = document.createElement("article");
+  el.className = "clip";
+  const media = c.type === "carousel"
+    ? `<img class="cover" alt="" src="${c.slides[0]}">`
+    : `<video controls playsinline muted preload="metadata" src="${c.file}#t=2.4"></video>`;
+  el.innerHTML = `${media}
+    <div class="body">
+      <div class="top"><span class="num">#${String(c.n).padStart(2,"0")} · DAY ${c.day}</span><span class="kind"></span></div>
+      <div class="title"></div>
+      <div class="fname"></div>
+      ${c.type === "carousel" ? `<div class="strip">${c.slides.map((s, i) => `<button class="slide" data-s="${s}" aria-label="Save slide ${i + 1}"><img alt="" loading="lazy" src="${s}"></button>`).join("")}</div>` : ""}
+      <div class="actions"><button class="primary save">${c.type === "carousel" ? "Save all slides" : "Save"}</button><button class="copy">Copy caption</button><span class="status"></span></div>
+      <details><summary>Caption</summary><pre></pre></details>
+    </div>`;
+  el.querySelector(".kind").textContent = c.kind;
+  el.querySelector(".title").textContent = c.title;
+  el.querySelector(".fname").textContent = (c.file || c.zip).split("/").pop();
+  el.querySelector("pre").textContent = c.caption;
+  const st = el.querySelector(".status");
+  el.querySelector(".copy").addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(c.caption); st.textContent = "Caption copied"; }
+    catch (e) { el.querySelector("details").open = true; const r = document.createRange(); r.selectNodeContents(el.querySelector("pre")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); st.textContent = "Selected: copy it"; }
+  });
+  const btn = el.querySelector(".save");
+  btn.addEventListener("click", () => (c.type === "carousel" ? saveZip(c, st, btn) : saveFile(c.file, st, btn)));
+  el.querySelectorAll(".slide").forEach((b) => b.addEventListener("click", () => saveFile(b.dataset.s, st, null)));
+  return el;
+}
+for (const c of CLIPS) document.getElementById(c.week === 1 ? "w1" : "w2").appendChild(card(c));
+(async () => {
+  downloads = window.claude ? await window.claude.use("downloads") : null;
+  if (!downloads) { document.getElementById("dlNote").hidden = false; document.querySelectorAll(".save,.slide").forEach((b) => (b.disabled = true)); }
+})();
+</script>

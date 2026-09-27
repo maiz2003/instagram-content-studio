@@ -1,5 +1,7 @@
 # Content Studio — project context
 
+> **Start here:** `HANDOFF.md` has the current state, live links, IDs, open items and the owner's standing rules.
+
 ## Mission
 A permanent, reusable **Instagram growth system built as Claude Code skills**. It turns a brand profile plus a post brief into ready-to-shoot content: hooks, Reel scripts, captions, scorecards and agency briefs. It is **brand-agnostic**: it serves any account, any niche, B2B or B2C, and every format (Reels, carousels, Stories, static posts). Beroia Home is only the first trial profile, not the target.
 
