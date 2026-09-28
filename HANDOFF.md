@@ -5,7 +5,7 @@ This file brings a new session up to date: links, IDs, open items and standing r
 ## Standing rules from the owner
 - **LOCK IN** is the active brand. **Beroia Home is on hold** until the owner brings it up.
 - **No auto-publish.** The owner posts by hand.
-- **No Higgsfield credits** without an explicit OK for that specific generation.
+- **No Higgsfield credits** without an explicit OK for that specific generation. The one standing exception is the **daily footage mission** (owner, 2026-09-28): 2-3 library clips a day, capped at 40 credits a day, following `skills/daily-footage/SKILL.md`.
 - Whop, Drive and Instagram are **read-only for the agents**. Only write there when the owner asks for that specific change.
 - Never start account connections on the owner's behalf.
 - Target market: Europe + US. Post at **18:05 UK / 19:05 CET / 13:05 ET**. The account is faceless.
@@ -58,6 +58,15 @@ These IDs also live in `brands/lock-in.yaml` → `workflow:`.
 - **Python 3** (standard library only for `sound.py` and `beat.py`).
 - **Netlify CLI** (`npm i -g netlify-cli`), for the game.
 - Full render instructions: `agents/video-producer.md` and `scripts/render/reel.js`.
+
+## Daily footage mission
+A routine named "LOCK IN daily footage" runs every day at 08:52 UK. It follows `skills/daily-footage/SKILL.md`:
+- takes the next shots from `assets/footage/lock-in/library/backlog.md`
+- generates, reviews and grades 2-3 POV clips
+- files them in `assets/footage/lock-in/library/` and logs them in `catalog.md`
+- pushes, then sends the clips to the owner
+
+It stops by itself when fewer than 23 credits are left.
 
 ## Scheduled check-in
 A routine named "PR #1 + Drive check-in" (`trig_018MjPdCRRBSr1oLsoe2Ud7M`) wakes the **cloud** session about hourly. It checks PR #1 and looks in Drive for `clips-week2`. It doesn't follow the work to a local session. Delete it once the local session is the main one, or leave it running as a watcher.
