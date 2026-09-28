@@ -57,6 +57,7 @@ All generations go in the Higgsfield project "LOCK IN week 2 footage":
    ```
    To find ffmpeg: `$FFMPEG`, then `which ffmpeg`. Otherwise run `pip install --target <scratchpad>/pylib imageio-ffmpeg` and use the binary under `imageio_ffmpeg/binaries/`.
 6. **File it** as `assets/footage/lock-in/library/<YYYY-MM-DD>_<slug>.mov`, plus a small `…_thumb.jpg` taken 1 s in.
+7. **Clip card.** Run `skills/daily-footage/clip-card-prompt.md` on the graded clip. Use its contact sheet, its frames and the job ids. Save the card as `…/<YYYY-MM-DD>_<slug>.md`. If the card's verdict is **reject**, delete the file and set the backlog row to `rejected (reason)`.
 
 ### Identity block (paste into every still prompt)
 > Use the FIRST reference image as the identity and set reference: the exact same person's hands (same light olive skin tone, same short natural nails, same hand shape), the exact same charcoal-black hoodie sleeves, the exact same dark near-black wooden desk with the same worn edge, the exact same cream lamp, the exact same white spiral notebook with the same handwriting, and the same black smartphone in a plain matte black case with no visible logo. Keep the same warm evening colour grade and the same camera (iPhone main lens, same slight grain).
@@ -67,7 +68,7 @@ For daytime or other-room rows, keep the hands, hoodie, phone and notebook, and 
 > Handheld first-person phone footage with very subtle natural camera sway, real-time speed, natural physics, hands keep correct anatomy with five fingers throughout, the phone keeps the same plain matte black case and never changes model, no morphing, no new objects or people appearing, light stays constant.
 
 ## Record and report
-- **`library/catalog.md`**: add one row per clip:
+- **`library/catalog.md`**: paste the card's section 11 row for each clip:
   - file, date, length, what it shows
   - **best uses**: which door, fix or CTA, and suggested post types
   - Higgsfield job ids (still and video)
@@ -76,7 +77,7 @@ For daytime or other-room rows, keep the hands, hoodie, phone and notebook, and 
 - **Commit** with a message like "Footage library: <date>, N clips". Push to the working branch. Use the attribution lines from the session.
 - **Tell the owner** in one short message:
   - the clips, sent with `SendUserFile` (display `render`)
-  - one line per clip on what it shows and where it fits
+  - one line per clip: what it shows, its reuse score and its best use, taken from the card
   - credits spent today and left
   - the reminder that these clips need Instagram's **AI label** when posted
 - **Backlog.** If it has fewer than 6 `todo` rows, add new ones that fit the next week's plan (`outputs/lock-in/*/week-plan.md`). Base them on the book's ideas: the four doors, phone in another room, the three ugly minutes, never miss twice, Sunday planning.
