@@ -66,7 +66,7 @@ A routine named "LOCK IN daily footage" runs every day at 08:52 UK. It follows `
 - files them in `assets/footage/lock-in/library/` and logs them in `catalog.md`
 - pushes, then sends the clips to the owner
 
-It spends the whole balance each run (clips first, then photos), and just reports "nothing to spend" when the balance is empty.
+It spends the whole balance each run: AI clips first, then photos. With **no credits** it switches to "moving photos" instead: free clips made from approved photos with `scripts/render/living_still.py`, which adds camera motion, sway, grade and grain (in `assets/footage/lock-in/library/moving/`). A pay-per-clip video API (fal.ai or Replicate, key in the environment settings) is the option we discussed for real AI motion without Higgsfield credits.
 
 ## Scheduled check-in
 A routine named "PR #1 + Drive check-in" (`trig_018MjPdCRRBSr1oLsoe2Ud7M`) wakes the **cloud** session about hourly. It checks PR #1 and looks in Drive for `clips-week2`. It doesn't follow the work to a local session. Delete it once the local session is the main one, or leave it running as a watcher.

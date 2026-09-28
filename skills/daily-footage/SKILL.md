@@ -16,9 +16,29 @@ The owner set this up on 2026-09-28: "generate 2-3 clips every day with the most
      - start frames for backlog rows that don't have one
      - carousel covers (4:5) and Story backgrounds (9:16) with space for text
      - brand-message notebook shots (see `photos.md`)
-- If the balance is under 7.5, make photos only. Under 2, generate nothing: tell the owner the balance is empty and that it resumes when credits are added or the plan refills.
+- If the balance is under 7.5, make photos only.
+- Under 2, spend nothing and switch to **no-credit mode** (below). Tell the owner the balance is empty and that AI video resumes when credits are added or the plan refills.
 - Credits don't refill daily; the Pro plan refills monthly. On most days after a big spend, the balance will be near 0, and the run is just a short "nothing to spend" note.
 - A failed or rejected generation is not retried beyond the balance. Note it in the backlog.
+
+## No-credit mode: moving photos (free, no AI video)
+When there are no credits, turn approved photos into short "moving photo" clips with `scripts/render/living_still.py`. It adds:
+- a slow push, pull or drift toward the subject
+- a slight handheld sway and roll
+- the week-2 grade with film grain
+
+**Steps:**
+1. Setup: `pip install --target <scratchpad>/pylib pillow numpy`, then `export PYTHONPATH=<scratchpad>/pylib FFMPEG=<ffmpeg>`.
+2. Take every approved photo in `library/photos.md` that has no clip yet in `library/moving/` (including alternates).
+3. Pick a motion for each:
+   - `push` toward the subject: hands, phone, page
+   - `pull` to reveal a scene or a cover with empty space
+   - `drift-left` / `drift-right` for rooms and Story backgrounds
+   - Set `focus` to the subject's position as x,y fractions.
+4. Render 5 s clips with `--batch plan.json` (about 30 s each). Check a 2-fps contact sheet of each. Log it in `library/moving/README.md`.
+5. When every photo has a clip, make a second version of the ★ ones: the opposite motion, 8 s, for loop endings.
+
+Moving photos are still AI imagery, so they need the AI label too.
 
 ## Pick the shots
 1. Open `assets/footage/lock-in/library/backlog.md`.
