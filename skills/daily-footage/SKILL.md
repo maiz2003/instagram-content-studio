@@ -5,13 +5,20 @@ description: The LOCK IN daily footage mission. Each day it generates 2-3 new fa
 
 # Daily footage mission (LOCK IN)
 
-The owner set this up on 2026-09-28: "generate 2-3 clips every day with the most usage possible". That is a **standing credit OK for this mission only**, within the caps below. It is not a general OK for other Higgsfield spending. The mission never posts anything.
+The owner set this up on 2026-09-28: "generate 2-3 clips every day with the most usage possible". The same day they added: "every day use all credit on Higgsfield". That is a **standing credit OK for this mission only**: spend the whole balance each day on this backlog. It is not an OK for any other Higgsfield spending. The mission never posts anything.
 
 ## Budget (check first, every run)
-- Call `mcp__Higgsfield__balance`.
-- One clip costs about **11.5 credits**: 2 Nano Banana Pro 2K stills (2 each), then 1 Kling 3.0 pro 5 s video (7.5).
-- **3 clips** if the balance is 35 or more. **2 clips** if it is 23–34. Under 23, generate nothing: tell the owner the credits have run out and how to top up. Don't try again until the balance goes back up.
-- Hard cap: **40 credits per day.** Preflight every batch with `get_cost: true`. No retakes beyond the cap. A failed shot goes back to the backlog with a note.
+- Call `mcp__Higgsfield__balance`. **Spend all of it today, in this order:**
+  1. **Clips first: 3 clips, or 2 if the balance is short.**
+     - Each costs **7.5 credits** (Kling 3.0 pro, 5 s) when the backlog row already has an approved start frame, which is the `Still` column in `backlog.md`.
+     - Without one, it costs **11.5**: 2 Nano Banana Pro 2K stills at 2 each, plus the video.
+  2. **Then photos with everything left, at 2 credits each** (Nano Banana Pro 2K), until less than 2 remains:
+     - start frames for backlog rows that don't have one
+     - carousel covers (4:5) and Story backgrounds (9:16) with space for text
+     - brand-message notebook shots (see `photos.md`)
+- If the balance is under 7.5, make photos only. Under 2, generate nothing: tell the owner the balance is empty and that it resumes when credits are added or the plan refills.
+- Credits don't refill daily; the Pro plan refills monthly. On most days after a big spend, the balance will be near 0, and the run is just a short "nothing to spend" note.
+- A failed or rejected generation is not retried beyond the balance. Note it in the backlog.
 
 ## Pick the shots
 1. Open `assets/footage/lock-in/library/backlog.md`.
@@ -31,7 +38,7 @@ All generations go in the Higgsfield project "LOCK IN week 2 footage":
    - Prompt: `Scene: <row's scene>.` + the identity block below.
      - If there's a second reference, add: "Use the SECOND reference image only for the camera angle and composition."
      - End with: "First-person POV, no faces, no logos, no brand marks, no watermark, anatomically correct hands."
-2. **Pick a still.** Download both with `show_generation_by_ids` and curl, and look at them. Reject any still with:
+2. **Pick a still** (skip steps 1–2 if the row already has an approved start frame). Download both with `show_generation_by_ids` and curl, and look at them. Reject any still with:
    - odd or extra hands, claw-like fingers
    - logos, including Apple logos
    - duplicated objects (two timers, a doubled laptop lid)
@@ -68,6 +75,7 @@ For daytime or other-room rows, keep the hands, hoodie, phone and notebook, and 
 > Handheld first-person phone footage with very subtle natural camera sway, real-time speed, natural physics, hands keep correct anatomy with five fingers throughout, the phone keeps the same plain matte black case and never changes model, no morphing, no new objects or people appearing, light stays constant.
 
 ## Record and report
+- **Photos:** save approved photos as `assets/footage/lock-in/library/photos/<YYYY-MM-DD>_<slug>.jpg` (JPEG at Instagram size: 1080×1920 for 9:16, 1080×1350 for 4:5). Log them in `photos.md` with: file, what it shows, best use (cover, Story background, start frame for row N) and job id. Rejected ones get one line with the reason.
 - **`library/catalog.md`**: paste the card's section 11 row for each clip:
   - file, date, length, what it shows
   - **best uses**: which door, fix or CTA, and suggested post types
@@ -84,7 +92,7 @@ For daytime or other-room rows, keep the hands, hoodie, phone and notebook, and 
 
 ## Never
 - Publish or schedule posts.
-- Spend over the daily cap, or spend on anything besides this backlog.
+- Spend on anything besides this backlog, the photo list and their start frames.
 - Show a face, a real person, a real result or a testimonial (E-5).
 - Show readable app UI, notifications or brand logos.
 - Write to Whop, Drive or Instagram.
