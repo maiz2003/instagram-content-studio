@@ -1,0 +1,222 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 12.5,
+ "cards": [
+  {
+   "start": 0,
+   "end": 2.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "YOU DON'T NEED",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "A STUDY BUDDY.",
+     "style": "head amber",
+     "size": 120,
+     "build": "slam",
+     "at": 1.2,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.2,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_laptop-closed-handwriting.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 2.5,
+   "end": 5.0,
+   "top": 430,
+   "elements": [
+    {
+     "text": "you need someone",
+     "style": "serif cream",
+     "size": 66,
+     "build": "type",
+     "at": 2.5,
+     "dur": 0.6,
+     "gap": 40
+    },
+    {
+     "text": "who notices when you stop.",
+     "style": "serif amber",
+     "size": 66,
+     "build": "type",
+     "at": 3.3,
+     "dur": 0.9,
+     "gap": 10
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_r15_tear-page.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 5.0,
+   "end": 7.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "\"DAY 4.",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 5.0,
+     "dur": 0.5
+    },
+    {
+     "text": "YOU IN?\"",
+     "style": "head amber",
+     "size": 150,
+     "build": "slam",
+     "at": 5.6,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "one message. every day.",
+     "style": "serif cream",
+     "size": 52,
+     "build": "fade",
+     "at": 6.3,
+     "dur": 1.0,
+     "gap": 40
+    }
+   ],
+   "punch": [
+    {
+     "at": 5.6,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_r13_library-highlighter.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 7.5,
+   "end": 11.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "SEND",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 7.5,
+     "dur": 0.5
+    },
+    {
+     "text": "THIS",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 7.9,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "send this to the one who'd notice",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 8.4,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "text": "then comment LOCK → find your door",
+     "style": "serif cream",
+     "size": 40,
+     "build": "fade",
+     "at": 9.0,
+     "dur": 1.0,
+     "gap": 24
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_r01_phone-face-down.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 11.5,
+   "end": 12.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "YOU DON'T NEED",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 10.5,
+     "dur": 0.5
+    },
+    {
+     "text": "A STUDY BUDDY.",
+     "style": "head amber",
+     "size": 120,
+     "build": "slam",
+     "at": 10.5,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_laptop-closed-handwriting.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 11.5,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}

@@ -38,3 +38,22 @@ These are 5 s, 1080×1920, 30 fps clips with no audio. Each is made from an appr
 | 2026-09-28_phone-into-drawer.mp4 | push | Hand lowering the phone into the drawer: CTA/fix slide |
 | 2026-09-28_laptop-closed-handwriting.mp4 | push | Laptop closed, writing by hand: one task, one tab |
 | 2026-09-28_never-miss-twice-page.mp4 | push | 'never miss twice' handwritten page: streak/30-day carousel cover |
+
+**Spare versions.** These use the second photo of each backlog shot. Most use a different motion from the main clip, so two angles of the same moment can be cut together.
+
+| Clip | Motion | Best use |
+|---|---|---|
+| 2026-09-28_r02_timer-dial-alt.mp4 | pull | Timer dial, second angle: 20-minute block |
+| 2026-09-28_r04_tick-list-alt.mp4 | drift-right | Tick-list with life-admin items (groceries, bills): "life admin" angles only |
+| 2026-09-28_r06_restless-hands-clock-alt.mp4 | push | Restless hands under the clock: door 1, "minute two" |
+| 2026-09-28_r07_sunday-this-week-alt.mp4 | drift-left | Sunday "this week" page: door 3 fix |
+| 2026-09-28_r08_next-line-only-alt.mp4 | pull | "next line only" sticky note: door 2 fix |
+| 2026-09-28_r09_kitchen-mug-alt.mp4 | push | Morning mug, phone ignored: morning routine |
+| 2026-09-28_r10_phone-in-box-alt.mp4 | pull | Phone in the wooden box: phone exile |
+| 2026-09-28_r11_bed-book-alt.mp4 | push | Reading in bed, phone charging away: door 4 fix |
+| 2026-09-28_r13_library-highlighter-alt.mp4 | drift-right | Library highlighting: deep work, "fake work" contrast |
+| 2026-09-28_r14_scroll-box-alt.mp4 | pull | Scrolling beside the box: doom-scroll hook ⚠️ iPhone-style front |
+| 2026-09-28_r15_tear-page-alt.mp4 | drift-left | Crossed-out page: stuck, restart |
+| 2026-09-28_r16_hallway-shelf-alt.mp4 | push | Phone charging on the hallway shelf: phone in another room, CTA background |
+| 2026-09-28_r17_calendar-x-alt.mp4 | pull | 30-day calendar, days crossed: 30-day challenge, game promo |
+| 2026-09-28_r18_bench-bag-alt.mp4 | push | Zipping the gym bag: discipline beyond study |
