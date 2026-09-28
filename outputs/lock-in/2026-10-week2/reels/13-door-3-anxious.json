@@ -47,8 +47,7 @@
    ],
    "bg": {
     "file": "assets/footage/lock-in/week2/03_anxious.mov",
-    "in": 0,
-    "audio": 0.7
+    "in": 0
    }
   },
   {
@@ -83,7 +82,7 @@
    "bg": {
     "file": "assets/footage/lock-in/week2/03_anxious.mov",
     "in": 2.5,
-    "audio": 0.7
+    "rate": 0.85
    }
   },
   {
@@ -103,9 +102,8 @@
    ],
    "bg": {
     "file": "assets/footage/lock-in/week2/03_anxious.mov",
-    "in": 5.0,
-    "rate": 0.9,
-    "audio": 0.5
+    "in": 0,
+    "rate": 0.9
    }
   },
   {
@@ -180,9 +178,9 @@
     }
    ],
    "bg": {
-    "file": "assets/footage/lock-in/week2/05_lockin_day.mov",
+    "file": "assets/footage/lock-in/week2/05_lockin_night.mov",
     "in": 0,
-    "audio": 0.8
+    "rate": 0.9
    }
   },
   {
@@ -210,8 +208,7 @@
    ],
    "bg": {
     "file": "assets/footage/lock-in/week2/03_anxious.mov",
-    "in": 0,
-    "audio": 0.7
+    "in": 0
    }
   }
  ],

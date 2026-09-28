@@ -7,18 +7,18 @@
 | Day | Post | Hook family | File | Status |
 |---|---|---|---|---|
 | 8 | **What's inside LOCK IN** (carousel) → **pin it** | H.17 | `../2026-09-26-whats-inside-carousel/carousel/png/` | ready (from launch week) |
-| 9 | **Door 1: BORED** (Reel, 10.5 s) | H.1 Precise Diagnosis | `reels/09-door-1-bored.mp4` (footage) · backup `reels/09-door-1-bored-text.mp4` | backup ready · footage version when clips 01 + 05 arrive |
+| 9 | **Door 1: BORED** (Reel, 10.5 s) | H.1 Precise Diagnosis | `reels/09-door-1-bored.mp4` (POV footage) · backup `reels/09-door-1-bored-text.mp4` | ready · AI label on |
 | 10 | **Don't wait for Monday** (**Trial Reel**, 8 s) | H.16 Cognitive Contradiction | `reels/10-trial-dont-wait-for-monday.mp4` | ready |
-| 11 | **Door 2: STUCK** (Reel, 13.5 s) | H.3 + the quiz's STUCK fix | `reels/11-door-2-stuck.mp4` · backup `…-text.mp4` | backup ready · needs clips 02 + 05 |
+| 11 | **Door 2: STUCK** (Reel, 13.5 s) | H.3 + the quiz's STUCK fix | `reels/11-door-2-stuck.mp4` (POV footage) · backup `…-text.mp4` | ready · AI label on |
 | 12 | **The 3 Ugly Minutes** (carousel, 7 slides) + **Fake work** (**Trial Reel**, 10 s) | H.12 / H.fomo + H.6 | `../2026-10-week2-three-ugly-minutes-carousel/carousel/png/` · `reels/12-trial-fake-work.mp4` | ready |
-| 13 | **Door 3: ANXIOUS** (Reel, 12.5 s) | H.1 + open loop | `reels/13-door-3-anxious.mp4` · backup `…-text.mp4` | backup ready · needs clips 03 + 05 |
-| 14 | **Door 4: TIRED** (Reel, 11 s) | H.1 (quoted excuse) | `reels/14-door-4-tired.mp4` · backup `…-text.mp4` | backup ready · needs clips 04 + 05 (night) |
+| 13 | **Door 3: ANXIOUS** (Reel, 12.5 s) | H.1 + open loop | `reels/13-door-3-anxious.mp4` (POV footage) · backup `…-text.mp4` | ready · AI label on |
+| 14 | **Door 4: TIRED** (Reel, 11 s) | H.1 (quoted excuse) | `reels/14-door-4-tired.mp4` (POV footage) · backup `…-text.mp4` | ready · AI label on |
 
-**Footage vs backup:** post the footage version when it exists. The `-text` backups are the same copy on the flat brand background, so the week can still go out if filming slips. **Covers:** in the Instagram editor, pick the frame where the amber word has landed (about 2 s in).
+**Footage vs backup:** post the footage versions. Their clips are AI-generated POV footage (Higgsfield: Nano Banana Pro stills from one master reference, animated with Kling 3.0; see `assets/footage/lock-in/week2/README.md`). When you post them, switch on Instagram's **AI label** (Advanced settings → Add AI label). The `-text` backups have the same copy on the flat brand background. **Covers:** in the Instagram editor, pick the frame where the amber word has landed (about 2 s in).
 
 **How to post a Trial Reel:** when sharing, switch on **Trial**. It's shown to non-followers first. After about 24 hours, check its views against your week-1 median in the tracker. If it beats the median, share it to your followers. Either way, log it in the tracker and tick "Trial Reel".
 
-**Only one fix is in my materials:** the quiz's STUCK fix. Bored, Anxious and Tired end on "the fix is in the quiz", which also gives people a reason to take it. If you want those Reels to show their fixes too, paste me the quiz's result text for those three doors.
+**Fixes in the captions:** STUCK, BORED and ANXIOUS now carry their fix line in the caption (the Bored and Anxious lines were added on the posting-queue page). TIRED ends on "phone outside the bedroom". The on-screen text of the Reels is unchanged.
 
 ## Captions (ready to paste)
 
@@ -27,8 +27,9 @@
 Doom scrolling 20 minutes into studying isn't random.
 The work goes flat, and your hand is on the phone before you decide.
 That's door 1: bored. There are four.
+The fix: it's withdrawal. It passes in about ninety seconds. Look at the clock and keep writing.
 Which door got you today? Comment the number.
-Comment LOCK and I'll DM you the 4-question quiz. It ends with the fix for your door.
+Comment LOCK and I'll DM you the 4-question quiz.
 #doomscrolling #studytips #discipline
 ```
 
@@ -67,8 +68,9 @@ Comment LOCK and find your door.
 ```
 Doom scrolling when you feel behind is door 3, the one nobody admits.
 You feel behind before you've even started, so you check. Checking isn't relief. It's the loop.
+The fix: fifteen minutes on Sunday, three priorities, then start.
 Send this to whoever's always "so behind".
-Comment LOCK and I'll DM you the 4-question quiz. It ends with the fix for your door.
+Comment LOCK and I'll DM you the 4-question quiz.
 #doomscrolling #studytips #discipline
 ```
 

@@ -47,8 +47,7 @@
    ],
    "bg": {
     "file": "assets/footage/lock-in/week2/04_tired.mov",
-    "in": 0,
-    "audio": 0.4
+    "in": 0
    }
   },
   {
@@ -68,8 +67,7 @@
    ],
    "bg": {
     "file": "assets/footage/lock-in/week2/04_tired.mov",
-    "in": 2.5,
-    "audio": 0.4
+    "in": 2.5
    }
   },
   {
@@ -112,9 +110,8 @@
    ],
    "bg": {
     "file": "assets/footage/lock-in/week2/04_tired.mov",
-    "in": 6.0,
-    "rate": 0.9,
-    "audio": 0.8
+    "in": 5.0,
+    "rate": 1.0
    }
   },
   {
@@ -152,7 +149,7 @@
    "bg": {
     "file": "assets/footage/lock-in/week2/05_lockin_night.mov",
     "in": 0,
-    "audio": 0.8
+    "rate": 0.9
    }
   },
   {
@@ -180,8 +177,7 @@
    ],
    "bg": {
     "file": "assets/footage/lock-in/week2/04_tired.mov",
-    "in": 0,
-    "audio": 0.4
+    "in": 0
    }
   }
  ],

@@ -44,62 +44,65 @@ def save(slug, spec):
         json.dump(spec, f, indent=1, ensure_ascii=False)
         f.write("\n")
 
-# ---- Door 1 · BORED (clip 01 "the reach" + 05 signature)
+# Footage: AI-generated faceless POV clips (Higgsfield: Nano Banana Pro stills -> Kling 3.0), one consistent
+# person/desk/phone, graded together; see assets/footage/lock-in/week2/README.md. Clip lengths: 01 5.0 s, 02 5.0 s,
+# 03 4.2 s, 04 8.1 s (bed 0-5.0, hallway 5.0-8.1), 05_night 3.2 s. "in"/"rate" are set so no clip loops.
+NIGHT = clip("05_lockin_night.mov", 0, rate=0.9)
+
+# ---- Door 1 · BORED (writing -> the hand drifts to the phone)
 c0 = card(0, 2.5, [head("20 MINUTES IN,", at=-0.12), head("IT GOES FLAT.", "amber", 1.3, "slam", gap=10)], 1.3,
-          clip("01_bored.mov", 0, audio=0.4))
+          clip("01_bored.mov", 0))
 save("09-door-1-bored", {"duration": 10.5, "cards": [
     c0,
     card(2.5, 5.0, [serif("your hand goes to the phone\nbefore you decide to.", 2.5, dur=1.2, size=68)],
-         bg=clip("01_bored.mov", 2.5, rate=0.9, audio=0.4)),
-    card(5.0, 7.0, [head("DOOR 1:", at=5.0, size=110), head("BORED.", "amber", 5.6, "slam", size=170, gap=6)], 5.6,
-         clip("01_bored.mov", 5.0, rate=0.9, audio=0.4)),
-    cta(7.0, 9.5, clip("05_lockin_day.mov", 0, audio=0.8), "part 1 of 4 · the fix is in the quiz"),
+         bg=clip("01_bored.mov", 2.5, rate=0.9)),
+    card(5.0, 7.0, [head("DOOR 1:", at=5.0, size=110), head("BORED.", "amber", 5.6, "slam", size=170, gap=6)], 5.6),
+    cta(7.0, 9.5, NIGHT, "part 1 of 4 · the fix is in the quiz"),
     loop_card(c0, 9.5, 10.5)],
     "sfx": [{"t": 0.0, "type": "lock", "gain": 0.9}, {"t": 9.5, "type": "lock", "gain": 0.9}]})
 
-# ---- Door 2 · STUCK (clip 02 "the blank page"); the fix is the quiz's own STUCK result
+# ---- Door 2 · STUCK (blank page -> reaching to shut the laptop); the fix is the quiz's own STUCK result
 c0 = card(0, 2.5, [head("YOU DIDN'T GET", at=-0.12), head("DISTRACTED.", "amber", 1.2, "slam", gap=10)], 1.2,
-          clip("02_stuck.mov", 0, audio=0.3))
+          clip("02_stuck.mov", 0, rate=0.9))
 save("11-door-2-stuck", {"duration": 13.5, "cards": [
     c0,
-    card(2.5, 4.5, [head("YOU GOT", at=2.5), head("STUCK.", "amber", 3.1, "slam", size=170, gap=6)], 3.1,
-         clip("02_stuck.mov", 3.0, audio=0.5)),
+    card(2.5, 4.5, [head("YOU GOT", at=2.5), head("STUCK.", "amber", 3.1, "slam", size=170, gap=6)], 3.1),
     card(4.5, 7.5, [serif("you hit something\nyou can't do.", 4.5, dur=1.0, size=66),
                     serif("\"i'll ask someone tomorrow.\"", 5.9, dur=0.9, size=66)],
-         bg=clip("02_stuck.mov", 5.5, rate=0.9, audio=0.3)),
+         bg=clip("02_stuck.mov", 2.25, rate=0.9)),
     card(7.5, 10.5, [head("THE FIX:", "amber", 7.5, size=110),
                      serif("the step is too big,\nnot beyond you.\ncome back with the next line,\nnot the whole problem.",
                            8.0, build="lines", dur=1.6, size=62)]),
-    cta(10.5, 12.5, clip("05_lockin_day.mov", 0, audio=0.8), "part 2 of 4"),
+    cta(10.5, 12.5, NIGHT, "part 2 of 4"),
     loop_card(c0, 12.5, 13.5)],
     "sfx": [{"t": 0.0, "type": "lock", "gain": 0.9}, {"t": 12.5, "type": "lock", "gain": 0.9}]})
 
-# ---- Door 3 · ANXIOUS (clip 03 "the check")
+# ---- Door 3 · ANXIOUS (restless scrolling; the repeat on card 3 is the loop)
 c0 = card(0, 2.5, [head("CHECKING ISN'T", at=-0.12), head("RELIEF.", "amber", 1.3, "slam", size=160, gap=6)], 1.3,
-          clip("03_anxious.mov", 0, audio=0.7))
+          clip("03_anxious.mov", 0))
 save("13-door-3-anxious", {"duration": 12.5, "cards": [
     c0,
     card(2.5, 4.5, [head("IT'S THE", at=2.5), head("LOOP.", "amber", 3.1, "slam", size=170, gap=6)], 3.1,
-         clip("03_anxious.mov", 2.5, audio=0.7)),
+         clip("03_anxious.mov", 2.5, rate=0.85)),
     card(4.5, 7.0, [serif("you feel behind\nbefore you've even started.", 4.5, dur=1.2, size=68)],
-         bg=clip("03_anxious.mov", 5.0, rate=0.9, audio=0.5)),
+         bg=clip("03_anxious.mov", 0, rate=0.9)),
     card(7.0, 9.0, [head("DOOR 3:", at=7.0, size=110), head("ANXIOUS.", "amber", 7.6, "slam", size=160, gap=6),
                     serif("the one nobody admits.", 8.2, build="fade", size=52)], 7.6),
-    cta(9.0, 11.5, clip("05_lockin_day.mov", 0, audio=0.8), "send this to whoever's always \"so behind\""),
+    cta(9.0, 11.5, NIGHT, "send this to whoever's always \"so behind\""),
     loop_card(c0, 11.5, 12.5)],
     "sfx": [{"t": 0.0, "type": "lock", "gain": 0.9}, {"t": 11.5, "type": "lock", "gain": 0.9}]})
 
-# ---- Door 4 · TIRED (clip 04 "23:40", night signature)
+# ---- Door 4 · TIRED (23:40 in bed -> the phone left outside the bedroom)
 c0 = card(0, 2.5, [head("\"I'LL DO IT PROPERLY", at=-0.12, size=110), head("IN THE MORNING.\"", "amber", 1.4, "slam", size=110, gap=6)], 1.4,
-          clip("04_tired.mov", 0, audio=0.4))
+          clip("04_tired.mov", 0))
 save("14-door-4-tired", {"duration": 11.0, "cards": [
     c0,
     card(2.5, 5.0, [serif("it's after 10.\nyou're fading.\nso you open the phone.", 2.5, build="lines", dur=1.5, size=68)],
-         bg=clip("04_tired.mov", 2.5, audio=0.4)),
+         bg=clip("04_tired.mov", 2.5)),
     card(5.0, 7.5, [head("DOOR 4:", at=5.0, size=110), head("TIRED.", "amber", 5.6, "slam", size=170, gap=6),
                     serif("you are solving sleep with a screen.", 6.3, build="fade", size=50)], 5.6,
-         clip("04_tired.mov", 6.0, rate=0.9, audio=0.8)),
-    cta(7.5, 10.0, clip("05_lockin_night.mov", 0, audio=0.8), "part 4 of 4"),
+         clip("04_tired.mov", 5.0, rate=1.0)),
+    cta(7.5, 10.0, NIGHT, "part 4 of 4"),
     loop_card(c0, 10.0, 11.0)],
     "sfx": [{"t": 0.0, "type": "lock", "gain": 0.9}, {"t": 10.0, "type": "lock", "gain": 0.9}]})
 
