@@ -57,3 +57,15 @@ These are 5 s, 1080×1920, 30 fps clips with no audio. Each is made from an appr
 | 2026-09-28_r16_hallway-shelf-alt.mp4 | push | Phone charging on the hallway shelf: phone in another room, CTA background |
 | 2026-09-28_r17_calendar-x-alt.mp4 | pull | 30-day calendar, days crossed: 30-day challenge, game promo |
 | 2026-09-28_r18_bench-bag-alt.mp4 | push | Zipping the gym bag: discipline beyond study |
+
+**Loop-ending versions (2026-09-29, no-credit day).** These are 8 s clips of the ★ shots, each with the opposite camera move to its main clip. Use them as the last card or background of a Reel, so the ending flows back into the opening [U.121], [U.114].
+
+| Clip | Motion | Best use |
+|---|---|---|
+| 2026-09-29_r01_phone-face-down_loop8.mp4 | pull | Longer CTA background: hand on the face-down phone |
+| 2026-09-29_r02_timer-dial_loop8.mp4 | pull | 20-minute block ending / CTA |
+| 2026-09-29_r03_doorway-phone-to-shelf_loop8.mp4 | drift-left | Phone in another room: fix or CTA |
+| 2026-09-29_r04_study-tick-list_loop8.mp4 | pull | Three blocks, wins: ending card |
+| 2026-09-29_r05_phone-glow-hover_loop8.mp4 | pull | Urge moment, "minute two" ⚠️ Apple-style wallpaper |
+| 2026-09-29_r06_restless-hands-clock_loop8.mp4 | push | Door 1 / "3 ugly minutes" re-hook |
+| 2026-09-29_r11_bed-book-phone-charging_loop8.mp4 | drift-left | Door 4 fix: night CTA |
