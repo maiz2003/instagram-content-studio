@@ -41,10 +41,7 @@ These IDs also live in `brands/lock-in.yaml` → `workflow:`.
 
 ## Open items
 1. **Drive copies of #09, #11, #14, #15** in the posting-queue folder are the old text versions. The owner replaces them with the footage versions from the posting-queue page (agents can't upload video to Drive).
-2. **Game door fixes: deploy pending.**
-   - All four fixes are now in `CONFIG.fixes`: Bored and Anxious from the owner's captions, Tired from the Door 4 Reel.
-   - The walkthrough test passes.
-   - The production deploy was blocked by the session's permission check. The owner runs it: `netlify deploy --dir products/lock-in-30 --prod --site f33d47c7-13e3-47f5-a40d-09f80a96b16e`, or drags the folder onto the site's Deploys page.
+2. **Game door fixes: live** (deployed 2026-09-29). All four doors show their fix on https://lockin-30.netlify.app.
 3. **Optional daily missions.** The book's 30-day challenge, one line per day, would go into `CONFIG.missions`.
 4. **Whop product welcome message.** The owner pastes the game link and code in the Whop dashboard. The API can't edit that text.
 5. **Week-1 numbers.** Enter them in the tracker, then run the Sunday review (week 3 planning).
