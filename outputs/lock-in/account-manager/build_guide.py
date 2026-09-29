@@ -12,7 +12,7 @@ QUIZ = "https://lockin-quiz.netlify.app"
 GAME = "https://lockin-30.netlify.app"
 DM_TEXT = "Here's the quiz → https://lockin-quiz.netlify.app. Four questions, about a minute. Tell me which door you got."
 
-clips = [c for c in json.load(open("outputs/lock-in/posting-queue/clips.json")) if c.get("week") != "setup"]
+clips = [c for c in json.load(open("outputs/lock-in/posting-queue/clips.json")) if isinstance(c.get("week"), int)]
 AI = {9, 11, 14, 15} | {c["n"] for c in clips if c["week"] == 3}      # posts with AI-generated footage or photos
 TRIAL = {10, 13, 17, 20}
 NEW_DOOR = {9, 11, 14, 15}                                              # Drive copies are the old text versions
