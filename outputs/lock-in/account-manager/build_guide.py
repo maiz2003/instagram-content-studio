@@ -136,6 +136,7 @@ ol([
     "Best: set up a keyword auto-DM tool that connects to Instagram (for example ManyChat) with the keyword LOCK and the message above. Test it from a second phone before Day 1.",
     "Also save the message as a Saved reply (Settings → Business tools / Creator tools → Saved replies, shortcut: lock), so you can send it by hand in seconds if the tool fails.",
     "Reply to the comment itself too, for example: \"Sent, check your DMs.\"",
+    "The full step-by-step setup, every message and the test checklist are in the Doc \"02 · LOCK auto-reply setup (LOCK IN)\" in the same Drive folder.",
 ])
 h("h3", "Highlights", "###")
 ol([

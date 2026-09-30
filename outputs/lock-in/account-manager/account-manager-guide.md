@@ -55,6 +55,7 @@ Here's the quiz → https://lockin-quiz.netlify.app. Four questions, about a min
 1. Best: set up a keyword auto-DM tool that connects to Instagram (for example ManyChat) with the keyword LOCK and the message above. Test it from a second phone before Day 1.
 2. Also save the message as a Saved reply (Settings → Business tools / Creator tools → Saved replies, shortcut: lock), so you can send it by hand in seconds if the tool fails.
 3. Reply to the comment itself too, for example: "Sent, check your DMs."
+4. The full step-by-step setup, every message and the test checklist are in the Doc "02 · LOCK auto-reply setup (LOCK IN)" in the same Drive folder.
 
 ### Highlights
 
