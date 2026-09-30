@@ -71,7 +71,7 @@ All generations go in the Higgsfield project "LOCK IN week 2 footage":
    - Prompt: the row's **one** action + the motion block below.
    - If a preset recommendation blocks the call, retry with `declined_preset_id: "24bae836-2c4a-48e0-89b6-49fcc0b21612"`.
    - Use `jobs_wait`, then `show_generation_by_ids`, then download.
-4. **Review.** Make a 1-fps contact sheet plus 8 frames around any motion, and **look at every frame**. Check for:
+4. **Review.** Make a 1-fps contact sheet plus 8 frames around any motion, and **look at every frame**. Also tile the **left and right 240 px edge strips** every 0.1 s and look at them: generated clips can put a head or a spare hand right at the frame edge, where a full-frame sheet hides it. That's what happened with `05_lockin_night`. Check for:
    - hands morphing or gaining or losing fingers
    - the phone changing model or case
    - people or heads appearing
