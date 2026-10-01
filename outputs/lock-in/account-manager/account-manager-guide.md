@@ -10,7 +10,7 @@ Your job: post one thing a day at 18:05 UK time, post Stories every day, answer 
 
 The four links you'll use:
 
-- Posting-queue page: https://claude.ai/artifact/M5LcUCfMyBPWQwYfG9Ynig
+- Posting-queue page: https://lockin-queue-fabacc3e.netlify.app
 - Drive posting-queue folder: https://drive.google.com/drive/folders/1aymnlDOmVajd6opoJArAWJ14VzP_SFnr
 - Tracker: https://claude.ai/artifact/ELpGTnN5BdEksgu9QQSoLY
 - The quiz: https://lockin-quiz.netlify.app
@@ -72,7 +72,7 @@ After Day 8, pin three posts (open the post → … → Pin to your profile): Wh
 
 ### A Reel
 
-1. On the posting-queue page, find the post and tap Save. On iPhone choose Save Video. Then tap Copy caption.
+1. On the posting-queue page, find the post and tap Save. On iPhone the share sheet opens: choose Save Video. On Android and on a computer the file goes to your Downloads folder. Then tap Copy caption.
 2. In Instagram tap + → Reel, and pick the video from your gallery.
 3. Don't add filters, text, stickers or music. The video already has its text and sound. Tap Next.
 4. Paste the caption. Check it's complete, with the hashtags at the end.
@@ -123,7 +123,7 @@ A Trial Reel is shown to non-followers first, so you can test an idea without it
 
 ## Tracking
 
-1. Ask the owner for edit access to the tracker if the link doesn't let you type in it.
+1. If the tracker link asks you to sign in and you can't get in, you don't have access yet. Ask the owner to invite you. Until then, send the owner the numbers in a message each week and they will enter them.
 2. When Day 1 (Four Doors) goes live, enter that date in the tracker as the start date.
 3. About 48 hours after each post, open Insights on the post and log: views, % of views from non-followers, average watch time, shares, saves, LOCK comments and follows.
 4. Every Sunday, fill in the weekly row: followers, profile visits and link taps.
@@ -607,7 +607,7 @@ Stories today: Question box "Your 3 priorities for this week. Go." on a still fr
 
 | What | Where |
 |---|---|
-| Every post (Save + Copy caption), Page setup kit | https://claude.ai/artifact/M5LcUCfMyBPWQwYfG9Ynig |
+| Every post (Save + Copy caption), Page setup kit | https://lockin-queue-fabacc3e.netlify.app |
 | Weeks 1 and 2 files | https://drive.google.com/drive/folders/1aymnlDOmVajd6opoJArAWJ14VzP_SFnr → Clips |
 | This guide | https://drive.google.com/drive/folders/1aymnlDOmVajd6opoJArAWJ14VzP_SFnr → 01 · Account manager guide (LOCK IN) |
 | Tracker | https://claude.ai/artifact/ELpGTnN5BdEksgu9QQSoLY |

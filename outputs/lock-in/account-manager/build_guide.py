@@ -5,7 +5,7 @@ Run from the repo root: python3 outputs/lock-in/account-manager/build_guide.py""
 import html, json, os
 
 OUT = "outputs/lock-in/account-manager"
-PAGE = "https://claude.ai/artifact/M5LcUCfMyBPWQwYfG9Ynig"
+PAGE = "https://lockin-queue-fabacc3e.netlify.app"
 DRIVE = "https://drive.google.com/drive/folders/1aymnlDOmVajd6opoJArAWJ14VzP_SFnr"
 TRACKER = "https://claude.ai/artifact/ELpGTnN5BdEksgu9QQSoLY"
 QUIZ = "https://lockin-quiz.netlify.app"
@@ -97,9 +97,9 @@ p("LOCK IN is a faceless Instagram account for people aged about 16 to 26 in Eur
 p("Your job: post one thing a day at 18:05 UK time, post Stories every day, answer every comment and LOCK message within the hour, and log the numbers.")
 p("The four links you'll use:")
 H.append("<ul>"
-         f"<li>{link('Posting-queue page', PAGE)}: every post with one-tap Save and Copy caption, plus the Page setup kit.</li>"
+         f"<li>{link('Posting-queue page', PAGE)}: every post with one-tap Save and Copy caption, plus the Page setup kit and Story backgrounds. It opens for anyone: no account or sign-in needed.</li>"
          f"<li>{link('Drive posting-queue folder', DRIVE)}: this guide, plus the weeks 1 and 2 files in the Clips folder.</li>"
-         f"<li>{link('Tracker', TRACKER)}: where you log each post's numbers.</li>"
+         f"<li>{link('Tracker', TRACKER)}: where you log each post's numbers. It only opens for people the owner has invited. If it asks you to sign in and you can't get in, see the Tracking section.</li>"
          f"<li>{link('The quiz', QUIZ)}: the link you send to everyone who comments LOCK.</li></ul>")
 M.append(f"- Posting-queue page: {PAGE}\n- Drive posting-queue folder: {DRIVE}\n- Tracker: {TRACKER}\n- The quiz: {QUIZ}\n")
 
@@ -152,7 +152,7 @@ p("After Day 8, pin three posts (open the post → … → Pin to your profile):
 h("h2", "How to post", "##")
 h("h3", "A Reel", "###")
 ol([
-    "On the posting-queue page, find the post and tap Save. On iPhone choose Save Video. Then tap Copy caption.",
+    "On the posting-queue page, find the post and tap Save. On iPhone the share sheet opens: choose Save Video. On Android and on a computer the file goes to your Downloads folder. Then tap Copy caption.",
     "In Instagram tap + → Reel, and pick the video from your gallery.",
     "Don't add filters, text, stickers or music. The video already has its text and sound. Tap Next.",
     "Paste the caption. Check it's complete, with the hashtags at the end.",
@@ -207,7 +207,7 @@ ul([
 # ---------------------------------------------------------------- 7
 h("h2", "Tracking", "##")
 ol([
-    "Ask the owner for edit access to the tracker if the link doesn't let you type in it.",
+    "If the tracker link asks you to sign in and you can't get in, you don't have access yet. Ask the owner to invite you. Until then, send the owner the numbers in a message each week and they will enter them.",
     "When Day 1 (Four Doors) goes live, enter that date in the tracker as the start date.",
     "About 48 hours after each post, open Insights on the post and log: views, % of views from non-followers, average watch time, shares, saves, LOCK comments and follows.",
     "Every Sunday, fill in the weekly row: followers, profile visits and link taps.",

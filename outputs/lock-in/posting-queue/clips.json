@@ -257,5 +257,210 @@
   "type": "reel",
   "caption": "Feeling behind on studying? Behind on what, exactly?\nIf you can't say it, that's the problem.\n15 minutes before the week starts. 3 priorities, written down. Then start. The list does the worrying for you.\nSave this for Sunday.\nComment LOCK and I'll DM you the 4-question quiz. Door 3 people, this one's yours.\n#studytips #procrastination #discipline",
   "file": "clips/22_day21_so-behind.mp4"
+ },
+ {
+  "n": 0,
+  "day": 0,
+  "week": "setup",
+  "title": "Profile photo + highlight covers",
+  "kind": "Setup · 5 images",
+  "type": "carousel",
+  "caption": "Name field: LOCK IN | Discipline System\n\nBio:\nDiscipline for people who doom-scroll.\nNot motivation. A setup that works when you don't feel like it.\nWhich door is yours? Free quiz ↓\n\nLink: https://lockin-quiz.netlify.app\n\nImage 1 = profile photo. Images 2-5 = highlight covers, in this order: START HERE, THE SYSTEM, THE BOOK, 30 DAYS.",
+  "slides": [
+   "setup/00_setup_profile/00_setup_profile_01.png",
+   "setup/00_setup_profile/00_setup_profile_02.png",
+   "setup/00_setup_profile/00_setup_profile_03.png",
+   "setup/00_setup_profile/00_setup_profile_04.png",
+   "setup/00_setup_profile/00_setup_profile_05.png"
+  ],
+  "zip": "setup/00_setup_profile.zip"
+ },
+ {
+  "n": 0,
+  "day": 0,
+  "week": "setup",
+  "title": "START HERE intro Stories",
+  "kind": "Setup · 4 Stories",
+  "type": "carousel",
+  "caption": "Post these 4 as Stories, in order, before Day 1. On Story 4 add a Link sticker → https://lockin-quiz.netlify.app (inside the dashed box). Then save all 4 to a new highlight called START HERE, with cover image 2 from the Profile kit.",
+  "slides": [
+   "setup/00_setup_intro-stories/00_setup_intro-stories_01.png",
+   "setup/00_setup_intro-stories/00_setup_intro-stories_02.png",
+   "setup/00_setup_intro-stories/00_setup_intro-stories_03.png",
+   "setup/00_setup_intro-stories/00_setup_intro-stories_04.png"
+  ],
+  "zip": "setup/00_setup_intro-stories.zip"
+ },
+ {
+  "n": 0,
+  "day": 1,
+  "week": "setup",
+  "title": "Day 1 Stories",
+  "kind": "Day 1 · 6 Stories",
+  "type": "carousel",
+  "caption": "Day 1 Stories, in order. Add the stickers in the app inside the dashed boxes: Story 1 Poll \"Where is your phone?\" · Story 3 Emoji slider · Story 4 reshare the Four Doors Reel · Story 5 Quiz sticker (Door 1 / 2 / 3 / 4) · Story 6 Link sticker → https://lockin-quiz.netlify.app",
+  "slides": [
+   "setup/00_day01_stories/00_day01_stories_01.png",
+   "setup/00_day01_stories/00_day01_stories_02.png",
+   "setup/00_day01_stories/00_day01_stories_03.png",
+   "setup/00_day01_stories/00_day01_stories_04.png",
+   "setup/00_day01_stories/00_day01_stories_05.png",
+   "setup/00_day01_stories/00_day01_stories_06.png"
+  ],
+  "zip": "setup/00_day01_stories.zip"
+ },
+ {
+  "n": 1,
+  "day": 9,
+  "week": "stories",
+  "title": "Door 1 · Bored (Higgsfield)",
+  "type": "reel",
+  "file": "stories/bg01_door-1-bored.mp4",
+  "kind": "Story background · AI video",
+  "label": "DAY 9 · STORY BG",
+  "caption": "Writing, then the hand drifts to the phone. Use on Day 9 behind the poll \"20 minutes in. Where's your hand?\". AI-generated video: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 2,
+  "day": 11,
+  "week": "stories",
+  "title": "Door 2 · Stuck (Higgsfield)",
+  "type": "reel",
+  "file": "stories/bg02_door-2-stuck.mp4",
+  "kind": "Story background · AI video",
+  "label": "DAY 11 · STORY BG",
+  "caption": "Hands frozen over a blank page, then the laptop is shut. Use on Day 11 behind the quiz sticker \"What makes you stuck most?\". AI-generated video: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 3,
+  "day": 13,
+  "week": "stories",
+  "title": "Door 3 · Anxious (Higgsfield)",
+  "type": "reel",
+  "file": "stories/bg03_door-3-anxious.mp4",
+  "kind": "Story background · AI video",
+  "label": "DAY 13 · STORY BG",
+  "caption": "Restless scrolling over the notebook. Use on Day 13 behind \"Door 3 people, this one's for you\" or the question box. AI-generated video: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 4,
+  "day": 14,
+  "week": "stories",
+  "title": "Door 4 · Tired (Higgsfield)",
+  "type": "reel",
+  "file": "stories/bg04_door-4-tired.mp4",
+  "kind": "Story background · AI video",
+  "label": "DAY 14 · STORY BG",
+  "caption": "23:40 in bed, then the phone left on the hallway shelf. Use on Day 14 night: \"Phone going outside the bedroom now. Who's in?\". AI-generated video: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 5,
+  "day": 0,
+  "week": "stories",
+  "title": "Lock in: phone leaves the desk (Higgsfield)",
+  "type": "reel",
+  "file": "stories/bg05_lock-in-night.mp4",
+  "kind": "Story background · AI video",
+  "label": "STORY BG",
+  "caption": "The phone is carried off the desk. Use behind any \"phone in another room\" Story (Days 7, 10, 14) or a link sticker to the quiz. AI-generated video: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 6,
+  "day": 0,
+  "week": "stories",
+  "title": "Lock in: phone into the drawer, by day (Higgsfield)",
+  "type": "reel",
+  "file": "stories/bg06_lock-in-day.mp4",
+  "kind": "Story background · AI video",
+  "label": "STORY BG",
+  "caption": "Daytime version: the phone goes into the drawer. Use for morning Stories (Days 2, 10, 20). AI-generated video: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 7,
+  "day": 0,
+  "week": "stories",
+  "title": "Night desk, space for text",
+  "type": "reel",
+  "file": "stories/bg07_night-desk-text-space.mp4",
+  "kind": "Story background · moving photo",
+  "label": "STORY BG",
+  "caption": "Calm night desk with empty space at the top for your text. The default background for any evening text Story. Made from an AI photo: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 8,
+  "day": 0,
+  "week": "stories",
+  "title": "Morning desk, space for text",
+  "type": "reel",
+  "file": "stories/bg08_morning-desk-text-space.mp4",
+  "kind": "Story background · moving photo",
+  "label": "STORY BG",
+  "caption": "Morning desk with coffee and empty space at the top. Use for morning question boxes (Days 2, 10, 20). Made from an AI photo: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 9,
+  "day": 0,
+  "week": "stories",
+  "title": "Bedroom door, phone charging outside",
+  "type": "reel",
+  "file": "stories/bg09_door-phone-outside.mp4",
+  "kind": "Story background · moving photo",
+  "label": "STORY BG",
+  "caption": "The phone charging outside the bedroom. Use on Days 7 and 14 at night. Made from an AI photo: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 10,
+  "day": 0,
+  "week": "stories",
+  "title": "Phone alone on the hallway shelf",
+  "type": "reel",
+  "file": "stories/bg10_hallway-shelf.mp4",
+  "kind": "Story background · moving photo",
+  "label": "STORY BG",
+  "caption": "Phone in another room. Good behind a link sticker to the quiz. Made from an AI photo: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 11,
+  "day": 0,
+  "week": "stories",
+  "title": "Phone in the drawer",
+  "type": "reel",
+  "file": "stories/bg11_phone-in-drawer.mp4",
+  "kind": "Story background · moving photo",
+  "label": "STORY BG",
+  "caption": "Phone put away in the drawer. Use behind \"Block 1 tonight. Who's in?\" (Day 15). Made from an AI photo: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 12,
+  "day": 0,
+  "week": "stories",
+  "title": "Kitchen timer close-up",
+  "type": "reel",
+  "file": "stories/bg12_timer.mp4",
+  "kind": "Story background · moving photo",
+  "label": "STORY BG",
+  "caption": "The 20-minute timer. Use behind the Day 5 countdown sticker \"Minute two\". Made from an AI photo: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 13,
+  "day": 0,
+  "week": "stories",
+  "title": "Late night by the window",
+  "type": "reel",
+  "file": "stories/bg13_late-night-window.mp4",
+  "kind": "Story background · moving photo",
+  "label": "STORY BG",
+  "caption": "City lights at night. Use for the Day 3 11:40 pm poll \"Still on it?\". Made from an AI photo: if Instagram offers an AI label when you post the Story, switch it on."
+ },
+ {
+  "n": 14,
+  "day": 0,
+  "week": "stories",
+  "title": "Reading in bed, phone charging away",
+  "type": "reel",
+  "file": "stories/bg14_bed-book.mp4",
+  "kind": "Story background · moving photo",
+  "label": "STORY BG",
+  "caption": "Door 4's fix in one picture. Use on Day 14 night, or any \"phone outside the bedroom\" Story. Made from an AI photo: if Instagram offers an AI label when you post the Story, switch it on."
  }
 ]
