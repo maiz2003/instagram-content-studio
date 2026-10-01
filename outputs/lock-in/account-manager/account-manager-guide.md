@@ -10,7 +10,7 @@ Your job: post one thing a day at 18:05 UK time, post Stories every day, answer 
 
 The four links you'll use:
 
-- Posting-queue page: https://lockin-queue-fabacc3e.netlify.app
+- Posting-queue page: https://lockin-guide-92d3ef56.netlify.app
 - Drive posting-queue folder: https://drive.google.com/drive/folders/1aymnlDOmVajd6opoJArAWJ14VzP_SFnr
 - Tracker: https://claude.ai/artifact/ELpGTnN5BdEksgu9QQSoLY
 - The quiz: https://lockin-quiz.netlify.app
@@ -31,7 +31,7 @@ Post time is 18:05 UK (19:05 Central Europe, 13:05 US Eastern). Don't post more 
 
 ## One-time page setup
 
-Do all of this before posting Day 1. The images are on the posting-queue page, in the Page setup kit at the top. Copy caption on the first card copies the name, bio and link below.
+Do all of this before posting Day 1. The images are on the posting-queue page, under Setup (or the Page setup files section). Copy text on the first card copies the name, bio and link below.
 
 ### Account
 
@@ -59,7 +59,7 @@ Here's the quiz → https://lockin-quiz.netlify.app. Four questions, about a min
 
 ### Highlights
 
-1. Post the 4 START HERE intro Stories (Page setup kit), in order. Add a Link sticker to the quiz on Story 4, inside the dashed box.
+1. Post the 4 START HERE intro Stories (Page setup files), in order. Add a Link sticker to the quiz on Story 4, inside the dashed box.
 2. On your profile, tap New (the + under the bio), select those 4 Stories, name the highlight START HERE, and set the cover to image 2 of the Profile kit (GO).
 3. Create the other highlights once there's something to put in them, in this order: THE SYSTEM (cover 4: reshare every how-it-works Reel and carousel), THE BOOK (cover 61: What's Inside slides, price $15 one time, link sticker), 30 DAYS (cover 30: how the 30-day challenge works). Covers are images 3, 4 and 5 of the Profile kit.
 4. Add the Day 17 carousel and The 3 Ugly Minutes to THE SYSTEM when they go out.
@@ -162,7 +162,7 @@ Days count from the day Four Doors goes live. Day 12 has two posts: the carousel
 
 The captions below are final. Paste them exactly; the posting-queue page's Copy caption button gives you the same text.
 
-Day 0 (before launch). Stories: Before Day 1: post the 4 START HERE intro Stories (Page setup kit), add a Link sticker to the quiz on Story 4, then save all 4 to the START HERE highlight.
+Day 0 (before launch). Stories: Before Day 1: post the 4 START HERE intro Stories (Page setup files), add a Link sticker to the quiz on Story 4, then save all 4 to the START HERE highlight.
 
 ### Day 1 · #01 · Four Doors
 
@@ -185,7 +185,7 @@ Comment LOCK and I'll DM you the 4-question quiz. One of the questions will be u
 #doomscrolling #discipline #lockin
 ```
 
-Stories today: Post the 6 Day 1 Stories (Page setup kit), in order. Stickers: Poll on Story 1 ("Where is your phone?"), Emoji slider on Story 3, reshare the Four Doors Reel on Story 4, Quiz sticker (Door 1 / 2 / 3 / 4) on Story 5, Link sticker to the quiz on Story 6.
+Stories today: Post the 6 Day 1 Stories (Page setup files), in order. Stickers: Poll on Story 1 ("Where is your phone?"), Emoji slider on Story 3, reshare the Four Doors Reel on Story 4, Quiz sticker (Door 1 / 2 / 3 / 4) on Story 5, Link sticker to the quiz on Story 6.
 
 ### Day 2 · #02 · You don't need discipline
 
@@ -607,7 +607,8 @@ Stories today: Question box "Your 3 priorities for this week. Go." on a still fr
 
 | What | Where |
 |---|---|
-| Every post (Save + Copy caption), Page setup kit | https://lockin-queue-fabacc3e.netlify.app |
+| Every post, step by step (Save + Copy caption), setup files | https://lockin-guide-92d3ef56.netlify.app |
+| The original one-page list of every post (optional) | https://lockin-queue-fabacc3e.netlify.app |
 | Weeks 1 and 2 files | https://drive.google.com/drive/folders/1aymnlDOmVajd6opoJArAWJ14VzP_SFnr → Clips |
 | This guide | https://drive.google.com/drive/folders/1aymnlDOmVajd6opoJArAWJ14VzP_SFnr → 01 · Account manager guide (LOCK IN) |
 | Tracker | https://claude.ai/artifact/ELpGTnN5BdEksgu9QQSoLY |

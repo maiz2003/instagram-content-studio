@@ -6,8 +6,8 @@ import html, os, re
 
 OUT = "outputs/lock-in/auto-reply"
 QUIZ = "https://lockin-quiz.netlify.app"
-GUIDE = "https://docs.google.com/document/d/1K_aSaWkQAkXMPNxMRpaBRj2TAKQNq1bLMM9eb8JPi5U/edit"
-PAGE = "https://lockin-queue-fabacc3e.netlify.app"
+GUIDE = "https://docs.google.com/document/d/1Dk7WqcwMGSSPJrATmopEXcxecg76WZZcXH-ct4teGZY/edit"
+PAGE = "https://lockin-guide-92d3ef56.netlify.app"
 TRACKER = "https://claude.ai/artifact/ELpGTnN5BdEksgu9QQSoLY"
 
 script = open("outputs/lock-in/2026-09-26-phone-not-discipline/script.md").read()
