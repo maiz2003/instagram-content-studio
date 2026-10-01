@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>LOCK IN Daily Posting Guide</title>
+<style>
+  :root { --bg:#111216; --panel:#1a1c22; --line:#2f333b; --ink:#f0ece2; --muted:#a3a8b0; --amber:#e8a85c; --ok:#6fcf97; --warn:#f2c94c; --bad:#eb6b6b;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; --mono:ui-monospace,Menlo,Consolas,monospace; }
+  * { box-sizing:border-box; }
+  html { color-scheme:dark; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:18px/1.55 var(--sans); }
+  .wrap { max-width:760px; margin:0 auto; padding:20px 16px 90px; display:grid; grid-template-columns:minmax(0,1fr); gap:22px; }
+  .wrap > * { min-width:0; }
+  h1 { margin:0; font-size:clamp(30px,7vw,44px); line-height:1.05; letter-spacing:-.01em; } h1 span { color:var(--amber); }
+  h2 { margin:0; font-size:24px; line-height:1.2; }
+  h3 { margin:0; font-size:19px; }
+  p { margin:0; } a { color:var(--amber); }
+  .muted { color:var(--muted); }
+  .label { font:700 12px var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+  .box { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px; display:grid; gap:12px; }
+  .how { counter-reset:h; display:grid; gap:8px; margin:0; padding:0; list-style:none; }
+  .how li { counter-increment:h; display:grid; grid-template-columns:34px 1fr; gap:10px; align-items:start; }
+  .how li::before { content:counter(h); background:var(--amber); color:#111216; font-weight:800; border-radius:50%; width:30px; height:30px; display:grid; place-items:center; }
+  label.row { display:grid; gap:6px; font-weight:600; }
+  input[type=date], select { font:inherit; padding:12px; border-radius:8px; border:1px solid var(--line); background:#0d0e12; color:var(--ink); width:100%; }
+  button { font:inherit; font-weight:700; padding:14px 18px; border-radius:10px; border:2px solid var(--line); background:transparent; color:var(--ink); cursor:pointer; min-height:48px; }
+  button.go { background:var(--amber); border-color:var(--amber); color:#111216; }
+  button.sm { padding:10px 14px; min-height:44px; font-size:16px; }
+  button:disabled { opacity:.55; }
+  button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline:3px solid var(--amber); outline-offset:2px; }
+  .days { display:flex; gap:8px; overflow-x:auto; padding:2px 2px 10px; scrollbar-width:thin; }
+  .days button { flex:0 0 auto; min-width:58px; padding:10px 12px; min-height:46px; }
+  .days button[aria-pressed=true] { background:var(--amber); border-color:var(--amber); color:#111216; }
+  .days button.today { border-color:var(--ok); }
+  .days button.done { color:var(--ok); }
+  .banner { border-left:5px solid var(--ok); background:#15251c; border-radius:8px; padding:12px 14px; }
+  .banner.wait { border-color:var(--warn); background:#2a2512; }
+  .post { background:var(--panel); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+  .post header { padding:16px; display:grid; gap:6px; border-bottom:1px solid var(--line); }
+  .post header .t { font-size:24px; font-weight:800; line-height:1.15; }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; }
+  .chip { font:700 14px var(--mono); padding:5px 10px; border-radius:999px; border:1px solid var(--line); }
+  .chip.on { background:#3a2d12; border-color:var(--amber); color:var(--amber); }
+  .chip.off { color:var(--muted); }
+  .preview { padding:16px 16px 0; display:grid; justify-items:center; }
+  .preview video { width:min(100%,260px); aspect-ratio:9/16; background:#000; border-radius:8px; }
+  .strip { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; width:100%; }
+  .strip button { padding:0; min-height:0; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+  .strip img { width:100%; aspect-ratio:4/5; object-fit:cover; display:block; }
+  .steps { list-style:none; margin:0; padding:8px 16px 16px; display:grid; gap:0; counter-reset:s; }
+  .step { counter-increment:s; display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; padding:14px 0; border-top:1px solid var(--line); }
+  .step:first-child { border-top:0; }
+  .step .tick { appearance:none; -webkit-appearance:none; width:40px; height:40px; border:2px solid var(--muted); border-radius:50%; margin:0; cursor:pointer; display:grid; place-items:center; background:transparent; color:#111216; font-weight:800; }
+  .step .tick::before { content:counter(s); color:var(--muted); font-weight:800; }
+  .step .tick:checked { background:var(--ok); border-color:var(--ok); }
+  .step .tick:checked::before { content:"✓"; color:#111216; }
+  .step.is-done .what { color:var(--muted); }
+  .what { font-weight:700; }
+  .how-to { color:var(--muted); font-size:16px; margin-top:4px; }
+  .how-to b { color:var(--ink); }
+  .acts { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:10px; }
+  .status { font-size:15px; color:var(--ok); }
+  pre.cap { white-space:pre-wrap; font:15px/1.5 var(--mono); background:#0d0e12; border:1px solid var(--line); border-radius:8px; padding:12px; margin:10px 0 0; }
+  .stories { padding:0 16px 16px; display:grid; gap:10px; }
+  .progress { height:8px; background:#0d0e12; border-radius:99px; overflow:hidden; }
+  .progress i { display:block; height:100%; background:var(--ok); width:0; transition:width .2s; }
+  details { border:1px solid var(--line); border-radius:10px; background:var(--panel); }
+  details > summary { cursor:pointer; padding:14px 16px; font-weight:700; list-style:none; }
+  details > summary::after { content:"＋"; float:right; color:var(--amber); }
+  details[open] > summary::after { content:"－"; }
+  details .in { padding:0 16px 16px; display:grid; gap:10px; }
+  .filelist { display:grid; gap:10px; }
+  .file { display:grid; gap:8px; padding:12px; border:1px solid var(--line); border-radius:10px; background:#15171c; }
+  .reply { display:grid; gap:6px; }
+  nav.jump { display:flex; gap:8px; flex-wrap:wrap; }
+  nav.jump a { text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:8px 14px; font-weight:600; color:var(--ink); }
+  .toast { position:fixed; left:50%; bottom:18px; transform:translateX(-50%); background:var(--ok); color:#111216; font-weight:800; padding:12px 18px; border-radius:10px; opacity:0; pointer-events:none; transition:opacity .2s; max-width:92vw; text-align:center; }
+  .toast.show { opacity:1; }
+  @media (prefers-reduced-motion: reduce) { .progress i, .toast { transition:none; } }
+</style></head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="label">LOCK IN · daily posting guide</div>
+    <h1>Post today, <span>step by step</span></h1>
+    <p class="muted" style="margin-top:8px">One post per day at <b style="color:var(--ink)">18:05 UK time</b>. Pick the day, then do the numbered steps from the top. Tap each circle when a step is done.</p>
+  </header>
+
+  <section class="box" aria-labelledby="how-h">
+    <h2 id="how-h">How this page works</h2>
+    <ol class="how">
+      <li><span>Choose the day below. Day 1 is the day <b>Four Doors</b> goes live.</span></li>
+      <li><span>Tap <b>Save video</b> and <b>Copy caption</b>. Both work with one tap, no sign-in.</span></li>
+      <li><span>Switch to Instagram and follow the steps in order. Everything you need is written in each step.</span></li>
+      <li><span>Come back here after posting for the reply and Stories steps.</span></li>
+    </ol>
+  </section>
+
+  <section class="box">
+    <label class="row" for="start">The day Day 1 goes live (optional: the page then shows today's post for you)
+      <input type="date" id="start"></label>
+    <div id="todayBanner"></div>
+    <div class="muted" id="clock" style="font-size:16px"></div>
+  </section>
+
+  <section id="daysec" aria-label="Choose the day">
+    <div class="label" style="margin-bottom:6px">Choose the day</div>
+    <div class="days" id="days" role="group" aria-label="Days"></div>
+  </section>
+
+  <div id="dayview" aria-live="polite"></div>
+
+  <nav class="jump" aria-label="More">
+    <a href="#setup">Page setup files</a><a href="#bgs">Story backgrounds</a><a href="#replies">Reply helpers</a><a href="#help">Problems?</a>
+  </nav>
+
+  <section id="setup" class="box">
+    <h2>Page setup files (do once, before Day 1)</h2>
+    <p class="muted">Profile photo and highlight covers, the 4 START HERE intro Stories, and the 6 Day 1 Stories. Each file is a .zip of pictures: unzip it, then post the pictures in number order. Copy text gives the name, bio, link and sticker steps.</p>
+    <div class="filelist" id="setupList"></div>
+  </section>
+
+  <section id="bgs" class="box">
+    <h2>Story backgrounds</h2>
+    <p class="muted">Short moving clips for Stories. Save one, post it as a Story, then add the day's text and sticker on top.</p>
+    <div class="filelist" id="bgList"></div>
+  </section>
+
+  <section id="replies" class="box">
+    <h2>Reply helpers</h2>
+    <p class="muted">Tap Copy, then paste into Instagram. These are the approved words: don't change them.</p>
+    <div id="replyList" style="display:grid;gap:14px"></div>
+  </section>
+
+  <section id="help" style="display:grid;gap:10px">
+    <h2>Something not working?</h2>
+    <details><summary>Save video did nothing</summary><div class="in"><p><b>iPhone:</b> after you tap Save, a menu opens. Tap <b>Save Video</b>. If no menu opens, tap the video above to play it, then press and hold on it and choose Save.</p><p><b>Android:</b> the video goes to your Downloads (Files app). It also shows in your Gallery after a moment.</p><p><b>Computer:</b> it goes to your Downloads folder. Use Instagram on your phone to post, so send the file to your phone (AirDrop, Google Drive or email).</p></div></details>
+    <details><summary>Copy caption did nothing</summary><div class="in"><p>Tap <b>Show the caption</b> under the step, press and hold the text, choose Select all, then Copy.</p></div></details>
+    <details><summary>I can't find the video in Instagram</summary><div class="in"><p>In Instagram tap + → <b>Reel</b>. The gallery opens with your newest video first. If it isn't there, open your phone's Photos or Files app and check Downloads.</p></div></details>
+    <details><summary>The caption looks cut off or has odd gaps</summary><div class="in"><p>Paste again. Make sure you copied the whole caption: it should end with the hashtags. Line breaks are meant to be there.</p></div></details>
+    <details><summary>I forgot the AI label or Trial switch</summary><div class="in"><p>Don't delete the post and don't edit it. Message the owner right away and say which post it was.</p></div></details>
+    <details><summary>I missed the 18:05 time</summary><div class="in"><p>Post as soon as you can the same day, and tell the owner the time you posted. Never post two Reels in one day.</p></div></details>
+    <details><summary>The tracker won't open</summary><div class="in"><p>It needs the owner's invite. Until you have it, message the owner the numbers (views, shares, saves, LOCK comments, follows) and they will enter them.</p></div></details>
+    <details><summary>Anything else</summary><div class="in"><p>Don't guess. Message the owner. Never buy followers, use a second account on our posts, or write "link in bio" or "buy now".</p></div></details>
+  </section>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const D = /*DATA*/null;
+const QUIZ_DM = "Here's the quiz → https://lockin-quiz.netlify.app. Four questions, about a minute. Tell me which door you got.";
+const REPLIES = [
+  ["Reply under a LOCK comment (use all three, rotate)", ["Sent. Check your DMs (and your message requests).", "On its way. Check your DMs, message requests too.", "Just sent it. Look in your DMs or message requests."]],
+  ["The quiz DM (for everyone who comments LOCK)", [QUIZ_DM]],
+  ["Door 1 fix: Bored", ["Bored, door 1. The fix: It's withdrawal. It passes in about ninety seconds. Look at the clock and keep writing."]],
+  ["Door 2 fix: Stuck", ["Stuck, door 2. The fix: The step is too big, not beyond you. Come back with the next line, not the whole problem."]],
+  ["Door 3 fix: Anxious", ["Anxious, door 3. The fix: Fifteen minutes on Sunday, three priorities, then start."]],
+  ["Door 4 fix: Tired", ["Tired, door 4. The fix: You're solving sleep with a screen. Tonight: phone outside the bedroom."]],
+];
+const $ = (s, r = document) => r.querySelector(s);
+const el = (tag, attrs = {}, ...kids) => { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs)) { if (v === null || v === undefined) continue; if (k === "class") e.className = v; else if (k === "html") e.innerHTML = v; else if (k.startsWith("on")) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v); } for (const kid of kids) e.append(kid); return e; };
+const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }, del(k) { try { localStorage.removeItem(k); } catch (e) {} } };
+function toast(m) { const t = $("#toast"); t.textContent = m; t.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("show"), 2200); }
+
+/* ---- saving files (works for anyone, no sign-in) ---- */
+const IS_PHONE = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Mac/.test(navigator.platform));
+function triggerDownload(blob, name) { const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500); }
+async function saveFile(path, st, btn) {
+  const name = path.split("/").pop();
+  if (btn) btn.disabled = true; st.textContent = "Preparing…";
+  try {
+    const blob = await (await fetch(path)).blob();
+    const type = blob.type || (name.endsWith(".mp4") ? "video/mp4" : name.endsWith(".zip") ? "application/zip" : "image/png");
+    const file = new File([blob], name, { type });
+    if (IS_PHONE && navigator.canShare && navigator.canShare({ files: [file] })) {
+      try { await navigator.share({ files: [file] }); st.textContent = name.endsWith(".mp4") ? "Now tap Save Video" : "Now tap Save Image"; }
+      catch (e) { if (e && e.name === "AbortError") st.textContent = "Cancelled. Tap Save to try again."; else { triggerDownload(blob, name); st.textContent = "Saved to Downloads"; } }
+    } else { triggerDownload(blob, name); st.textContent = "Saved to your Downloads folder"; }
+  } catch (e) { st.innerHTML = 'Couldn\'t save. <a href="' + path + '" download>Open the file</a>, then press and hold to save.'; }
+  if (btn) btn.disabled = false;
+}
+async function copyText(text, st, showBox) {
+  try { await navigator.clipboard.writeText(text); st.textContent = "Copied"; toast("Copied"); }
+  catch (e) { if (showBox) { showBox(); } st.textContent = "Couldn't copy automatically: press and hold the text, then Copy"; }
+}
+
+/* ---- dates and times ---- */
+const startEl = $("#start");
+const DAYMS = 86400000;
+function localMidnight(v) { const [y, m, d] = v.split("-").map(Number); return new Date(y, m - 1, d); }
+function todayDay() {
+  const v = store.get("lq_start"); if (!v) return null;
+  const s = localMidnight(v), n = new Date(); n.setHours(0, 0, 0, 0);
+  return Math.round((n - s) / DAYMS) + 1;
+}
+function ukTimes() {
+  const now = new Date(), parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(now);
+  const g = (t) => +parts.find((p) => p.type === t).value;
+  // find the UTC instant when it is 18:05 in London today
+  let utc = Date.UTC(g("year"), g("month") - 1, g("day"), 18, 5);
+  const lon = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date(utc));
+  const off = (+lon.slice(0, 2) * 60 + +lon.slice(3)) - (18 * 60 + 5); utc -= off * 60000;
+  const at = (tz) => new Intl.DateTimeFormat("en-GB", { timeZone: tz, hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date(utc));
+  return `18:05 UK = ${at("Europe/Berlin")} Central Europe · ${at("America/New_York")} US Eastern · ${at("America/Los_Angeles")} US Pacific`;
+}
+$("#clock").textContent = "Post time: " + ukTimes();
+
+/* ---- day model ---- */
+const postsByDay = {};
+for (const p of D.posts) (postsByDay[p.day] = postsByDay[p.day] || []).push(p);
+const DAYS = Array.from({ length: 22 }, (_, i) => i);   // 0..21
+let current = 1;
+const doneKey = (day, n, i) => `lq_d${day}_p${n}_s${i}`;
+function stepList(p) {
+  const car = p.type === "carousel";
+  const saveStep = car
+    ? { id: "save", what: "Save the pictures", html: "<b>Save all slides</b> gives you one .zip file of pictures. On a phone it's easier to tap each picture under the preview to save it as a photo. Save them all.", how: "iPhone: after you tap, choose <b>Save Image</b> for each one. Android: they go to your Downloads. A .zip must be unzipped first (open it in Files).", act: "save" }
+    : { id: "save", what: "Save the video to your phone", how: "iPhone: after you tap Save, choose <b>Save Video</b> in the menu. Android and computer: it goes to your Downloads folder.", act: "save" };
+  const steps = [
+    saveStep,
+    { id: "copy", what: "Copy the caption", how: "Tap the button, then keep this page open: you paste it in step 4.", act: "copy" },
+    car
+      ? { id: "open", what: "Open Instagram and start the post", how: "Tap <b>+</b> at the bottom → <b>Post</b> → tap the <b>multiple-select</b> icon (two squares) → tap the pictures in number order, <b>slide 1 first</b> → <b>Next</b>. Keep the 4:5 shape. Don't add anything else; music is optional and must be quiet." }
+      : { id: "open", what: "Open Instagram and start the Reel", how: "Tap <b>+</b> at the bottom → <b>Reel</b> → pick the video you just saved (the newest one) → <b>Next</b>. <b>Don't add</b> filters, text, stickers or music: the video already has them." },
+    { id: "paste", what: "Paste the caption", how: "Press and hold in the caption box → <b>Paste</b>. Check that the last line is the hashtags." },
+  ];
+  if (!car) steps.push({ id: "cover", what: "Choose the cover picture", how: "Tap <b>Edit cover</b> → drag to the frame where the <b>orange word</b> has fully appeared (about 2 seconds in) → Done." });
+  steps.push({ id: "ai", what: p.ai ? "Turn the AI label ON" : "AI label: leave it OFF", html: p.ai ? "This post uses AI pictures. Tap <b>Advanced settings</b> → switch on <b>Add AI label</b>." : "This post doesn't use AI footage, so don't turn the AI label on.", chip: p.ai });
+  if (!car) steps.push({ id: "trial", what: p.trial ? "Turn Trial ON" : "Trial: leave it OFF", html: p.trial ? "This is a <b>Trial Reel</b>: on the share screen switch on <b>Trial</b>. It shows to non-followers first. After about 24 hours, compare its views with the week 1 median in the tracker. If it did better, open the Reel and choose <b>Share to followers</b>." : "A normal Reel: don't switch Trial on.", chip: p.trial });
+  steps.push(
+    { id: "share", what: "Tap Share at 18:05 UK time", how: "Don't edit the caption or cover afterwards, and never delete the post: that resets how Instagram tests it. One Reel a day only." },
+    { id: "stay", what: "Stay in the app for one hour", how: "Reply to <b>every</b> comment with a real sentence. If someone comments <b>LOCK</b>, send them the quiz message (copy it below) and reply to their comment \"Sent, check your DMs.\"", act: "dm" },
+  );
+  return steps;
+}
+
+function postCard(p) {
+  const card = el("article", { class: "post" });
+  const steps = stepList(p);
+  const chips = el("div", { class: "chips" },
+    el("span", { class: "chip" }, p.kind.split(" · ").filter((x) => !/AI label|^Trial:/i.test(x)).join(" · ")),
+    el("span", { class: "chip " + (p.ai ? "on" : "off") }, "AI label: " + (p.ai ? "ON" : "OFF")),
+    ...(p.type === "carousel" ? [] : [el("span", { class: "chip " + (p.trial ? "on" : "off") }, "Trial: " + (p.trial ? "ON" : "OFF"))]));
+  card.append(el("header", {}, el("div", { class: "label" }, `Post ${String(p.n).padStart(2, "0")} · Day ${p.day}`), el("div", { class: "t" }, p.title), chips));
+  const prev = el("div", { class: "preview" });
+  if (p.type === "carousel") {
+    const strip = el("div", { class: "strip" });
+    const st = el("div", { class: "status", style: "margin-top:8px" });
+    p.slides.forEach((s, i) => strip.append(el("button", { "aria-label": "Save slide " + (i + 1), onclick: () => saveFile(s, st, null) }, el("img", { alt: "Slide " + (i + 1), loading: "lazy", src: s }))));
+    prev.append(strip, st);
+  } else prev.append(el("video", { controls: "", playsinline: "", muted: "", preload: "metadata", src: p.file + "#t=2.4" }));
+  card.append(prev);
+
+  const bar = el("div", { class: "progress", style: "margin:14px 16px 0" }, el("i"));
+  card.append(bar);
+  const ol = el("ol", { class: "steps" });
+  const update = () => {
+    const boxes = ol.querySelectorAll(".tick"); let n = 0;
+    boxes.forEach((b) => { if (b.checked) n++; b.closest(".step").classList.toggle("is-done", b.checked); });
+    bar.firstChild.style.width = (100 * n / boxes.length) + "%";
+    bar.setAttribute("aria-label", n + " of " + boxes.length + " steps done");
+    const btn = document.querySelector(`#days button[data-day="${p.day}"]`);
+    if (btn) { const all = (postsByDay[p.day] || []).every((q) => stepList(q).every((s, i) => store.get(doneKey(q.day, q.n, i)) === "1")); btn.classList.toggle("done", all); }
+  };
+  steps.forEach((s, i) => {
+    const key = doneKey(p.day, p.n, i);
+    const tick = el("input", { type: "checkbox", class: "tick", "aria-label": "Step " + (i + 1) + " done" });
+    tick.checked = store.get(key) === "1";
+    tick.addEventListener("change", () => { store.set(key, tick.checked ? "1" : "0"); update(); });
+    const body = el("div", {}, el("div", { class: "what" }, s.what));
+    if (s.html) body.append(el("div", { class: "how-to", html: s.html })); else if (s.how) body.append(el("div", { class: "how-to", html: s.how }));
+    const st = el("span", { class: "status", role: "status" });
+    const acts = el("div", { class: "acts" });
+    if (s.act === "save") acts.append(el("button", { class: "go", onclick: (e) => saveFile(p.type === "carousel" ? p.zip : p.file, st, e.currentTarget) }, p.type === "carousel" ? "Save all slides (.zip)" : "Save video"), st);
+    if (s.act === "copy") {
+      const pre = el("pre", { class: "cap", hidden: "" }, p.caption);
+      acts.append(el("button", { class: "go", onclick: () => copyText(p.caption, st, () => { pre.hidden = false; }) }, "Copy caption"),
+        el("button", { class: "sm", onclick: () => { pre.hidden = !pre.hidden; } }, "Show the caption"), st);
+      body.append(acts, pre);
+    } else if (s.act === "dm") {
+      acts.append(el("button", { class: "sm go", onclick: () => copyText(QUIZ_DM, st) }, "Copy the quiz message"), st); body.append(acts);
+    } else if (s.act) body.append(acts);
+    if (s.chip !== undefined) { /* chip text already in heading */ }
+    ol.append(el("li", { class: "step" }, tick, body));
+  });
+  card.append(ol);
+  const stText = D.stories[String(p.day)];
+  if (stText) {
+    const box = el("div", { class: "stories" }, el("h3", {}, "Stories today"), el("p", {}, stText));
+    const bgs = D.bgs.filter((b) => b.day === p.day);
+    for (const b of bgs) { const st = el("span", { class: "status" }); box.append(el("div", { class: "acts" }, el("span", {}, "Background clip: " + b.title), el("button", { class: "sm", onclick: (e) => saveFile(b.file, st, e.currentTarget) }, "Save"), st)); }
+    if (p.day === 1) { const z = D.setup.find((s) => s.day === 1); if (z) { const st = el("span", { class: "status" }); box.append(el("div", { class: "acts" }, el("span", {}, "The 6 Day 1 Stories"), el("button", { class: "sm", onclick: (e) => saveFile(z.zip, st, e.currentTarget) }, "Save (.zip)"), st)); } }
+    box.append(el("p", { class: "muted", style: "font-size:16px" }, "How: tap + → Story → pick the picture → tap the sticker icon → add the sticker named above → Your story. Reply to every answer within the hour."));
+    card.append(box);
+  }
+  card.append(el("div", { class: "stories", style: "padding-top:0" }, el("p", { class: "muted", style: "font-size:16px" }, "48 hours after posting: open the post's Insights and note views, shares, saves, LOCK comments and follows. Log them in the tracker, or send them to the owner.")));
+  update();
+  return card;
+}
+
+function dayZero() {
+  const wrap = el("div", { style: "display:grid;gap:14px" });
+  wrap.append(el("div", { class: "box" }, el("h2", {}, "Before Day 1: set up the page"), el("p", {}, "Do the setup files below (the Page setup files section), turn on the LOCK auto-reply, then post the 4 START HERE intro Stories with a Link sticker to the quiz on Story 4. Then save them to a highlight called START HERE."), el("p", { class: "muted" }, D.stories["0"]), el("p", {}, el("a", { href: "#setup" }, "Go to the setup files ↓"))));
+  return wrap;
+}
+
+function show(day) {
+  current = day; store.set("lq_day", String(day));
+  document.querySelectorAll("#days button").forEach((b) => b.setAttribute("aria-pressed", String(+b.dataset.day === day)));
+  const view = $("#dayview"); view.replaceChildren();
+  const td = todayDay();
+  if (day === 0) { view.append(dayZero()); return; }
+  const ps = postsByDay[day] || [];
+  const head = el("div", { class: "box" }, el("h2", {}, "Day " + day + (ps.length > 1 ? ": " + ps.length + " posts, in this order" : "")));
+  if (td === day) head.append(el("div", { class: "banner" }, "This is today's post."));
+  else if (td !== null) head.append(el("div", { class: "banner wait" }, td < day ? "Not yet: today is Day " + Math.max(td, 0) + "." : "Today is Day " + td + ". Only post this if you missed it."));
+  view.append(head);
+  ps.forEach((p, i) => { if (ps.length > 1) view.append(el("div", { class: "label" }, "Post " + (i + 1) + " of " + ps.length + (i ? " (after the first one is done)" : ""))); view.append(postCard(p)); });
+  const nav = el("div", { class: "acts", style: "justify-content:space-between" },
+    el("button", { onclick: () => { show(Math.max(0, day - 1)); scrollTo(0, 0); }, disabled: day <= 0 ? "" : null }, "← Day " + (day - 1)),
+    el("button", { onclick: () => { show(Math.min(21, day + 1)); scrollTo(0, 0); }, disabled: day >= 21 ? "" : null }, "Day " + (day + 1) + " →"));
+  view.append(nav);
+}
+
+function buildDays() {
+  const box = $("#days"); box.replaceChildren();
+  const td = todayDay();
+  for (const d of DAYS) {
+    const b = el("button", { "data-day": String(d), "aria-pressed": "false", onclick: () => show(d) }, d === 0 ? "Setup" : "Day " + d);
+    if (td === d) b.classList.add("today");
+    box.append(b);
+  }
+}
+function banner() {
+  const td = todayDay(), b = $("#todayBanner"); b.replaceChildren();
+  if (td === null) { b.append(el("p", { class: "muted" }, "Don't know the start date yet? Skip this. Just choose the day yourself below.")); return; }
+  if (td < 1) b.append(el("div", { class: "banner wait" }, `Day 1 starts in ${1 - td} day${1 - td === 1 ? "" : "s"}. Do the Setup steps now.`));
+  else if (td > 21) b.append(el("div", { class: "banner wait" }, `The first 21 days are finished (today would be Day ${td}). New days are added to this page as they're made.`));
+  else b.append(el("div", { class: "banner" }, el("b", {}, `Today is Day ${td}. `), el("button", { class: "sm go", style: "margin-left:8px", onclick: () => { show(td); $("#dayview").scrollIntoView({ behavior: "smooth" }); } }, "Open today's post")));
+}
+
+/* ---- files ---- */
+function fileCard(c, kind) {
+  const st = el("span", { class: "status", role: "status" });
+  const pre = el("pre", { class: "cap", hidden: "" }, c.caption || "");
+  const acts = el("div", { class: "acts" });
+  const path = c.zip || c.file;
+  acts.append(el("button", { class: "go sm", onclick: (e) => saveFile(path, st, e.currentTarget) }, c.zip ? "Save (.zip)" : "Save video"));
+  if (c.caption) acts.append(el("button", { class: "sm", onclick: () => copyText(c.caption, st, () => { pre.hidden = false; }) }, "Copy text"), el("button", { class: "sm", onclick: () => { pre.hidden = !pre.hidden; } }, "Show text"));
+  acts.append(st);
+  const card = el("div", { class: "file" }, el("div", { class: "what" }, c.title), el("div", { class: "muted", style: "font-size:15px" }, (c.label ? c.label + " · " : "") + c.kind), acts, pre);
+  if (kind === "bg") card.insertBefore(el("video", { controls: "", playsinline: "", muted: "", preload: "none", style: "width:140px;aspect-ratio:9/16;background:#000;border-radius:6px", src: c.file }), acts);
+  return card;
+}
+D.setup.forEach((c) => $("#setupList").append(fileCard(c, "setup")));
+D.bgs.forEach((c) => $("#bgList").append(fileCard(c, "bg")));
+for (const [title, texts] of REPLIES) {
+  const g = el("div", { class: "reply" }, el("h3", {}, title));
+  texts.forEach((t) => { const st = el("span", { class: "status", role: "status" }); g.append(el("div", { class: "file" }, el("div", {}, t), el("div", { class: "acts" }, el("button", { class: "sm go", onclick: () => copyText(t, st) }, "Copy"), st))); });
+  $("#replyList").append(g);
+}
+
+/* ---- start ---- */
+const savedStart = store.get("lq_start"); if (savedStart) startEl.value = savedStart;
+startEl.addEventListener("change", () => { if (startEl.value) store.set("lq_start", startEl.value); else store.del("lq_start"); buildDays(); banner(); show(current); });
+buildDays(); banner();
+const td0 = todayDay();
+const first = td0 !== null && td0 >= 0 && td0 <= 21 ? Math.max(td0, 0) : (+store.get("lq_day") || 1);
+show(first);
+</script>
+</body></html>
