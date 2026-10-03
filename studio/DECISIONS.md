@@ -14,3 +14,9 @@ Other BRAND.md values to fill in or confirm with the owner:
 - Audience: BRAND.md guesses 15–24; `brands/lock-in.yaml` says about 16–26.
 - Fonts and colours: BRAND.md names Newsreader for body text and slightly different hex values (#0E0F12 / #EDE7DC / #E0A254 / #7A8089 / #24272D). Everything rendered so far uses `brands/lock-in.theme.css` (Spectral, #111216 / #E6E1D5 / #DA9D55). Switch the theme when the owner confirms.
 - **Auto-posting (2026-10-03): the owner wants posts to go out through Postiz.** The connector is installed but needs reconnecting (claude.ai → Settings → Connectors, then a new session). Queue: `outputs/lock-in/postiz/queue.json`. Skill: `skills/postiz-scheduler/`. Approval by number still comes first.
+
+## 2026-10-03: launch status
+- Instagram Day 1 = 1 Oct 2026; TikTok Day 1 = 3 Oct 2026 (#01 Four Doors), same post order, one a day at 18:05 UK.
+- Scheduled in Postiz: Instagram #03–#08, #10, #12, #13. TikTok: #02–#22 except #18 (4–24 Oct).
+- Manual: Instagram #09, #11, #14–#22 (AI label). TikTok #18 on 20 Oct (AI photos). Stories every day.
+- **LOCK auto-reply: not set up.** The owner replies to LOCK comments by hand until they hit a limit, then pays for an automation tool (kit: Drive Doc "02 · LOCK auto-reply setup"). TikTok LOCK comments are always answered by hand.

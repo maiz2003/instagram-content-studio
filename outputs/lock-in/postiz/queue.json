@@ -40,7 +40,16 @@
    "stories_today": "Morning: Question box \"What's the one thing you'll do tonight?\". Evening: reshare the Day 2 Reel.",
    "approved": false,
    "postiz_id": null,
-   "status": "posted manually (before Postiz)"
+   "status": "posted manually (before Postiz)",
+   "postiz_media": [
+    "https://uploads.postiz.com/fTZowLridC.mp4"
+   ],
+   "tiktok": {
+    "date_utc": "2026-10-04T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusbykr800suo40y9cmgo2uy",
+    "ai_label": false
+   }
   },
   {
    "n": 3,
@@ -64,7 +73,13 @@
    ],
    "date_utc": "2026-10-03T17:05:00",
    "postiz_draft_id": "cmusbnws900pto40yrchio51l",
-   "postiz_id": "cmusbrz1e00q4o40yixps1hky"
+   "postiz_id": "cmusbrz1e00q4o40yixps1hky",
+   "tiktok": {
+    "date_utc": "2026-10-05T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc10uc00svo40ytsz6tczk",
+    "ai_label": false
+   }
   },
   {
    "n": 4,
@@ -102,7 +117,13 @@
    ],
    "date_utc": "2026-10-04T17:05:00",
    "postiz_draft_id": "cmusbov4500puo40y6e73qcp8",
-   "postiz_id": "cmusbrz4e00q5o40yolvmlafh"
+   "postiz_id": "cmusbrz4e00q5o40yolvmlafh",
+   "tiktok": {
+    "date_utc": "2026-10-06T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc10wi00swo40yi416hd81",
+    "ai_label": false
+   }
   },
   {
    "n": 5,
@@ -126,7 +147,13 @@
    ],
    "date_utc": "2026-10-05T17:05:00",
    "postiz_draft_id": "cmusbov7100pvo40y0cuw241u",
-   "postiz_id": "cmusbrz6n00q6o40y1wj868pn"
+   "postiz_id": "cmusbrz6n00q6o40y1wj868pn",
+   "tiktok": {
+    "date_utc": "2026-10-07T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc10y200sxo40y2kkgkcke",
+    "ai_label": false
+   }
   },
   {
    "n": 6,
@@ -150,7 +177,13 @@
    ],
    "date_utc": "2026-10-06T17:05:00",
    "postiz_draft_id": "cmusbova100pwo40yw3gnqy04",
-   "postiz_id": "cmusbrz8v00q7o40y88k83g3f"
+   "postiz_id": "cmusbrz8v00q7o40y88k83g3f",
+   "tiktok": {
+    "date_utc": "2026-10-08T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc10zs00syo40y40qd23q0",
+    "ai_label": false
+   }
   },
   {
    "n": 7,
@@ -174,7 +207,13 @@
    ],
    "date_utc": "2026-10-07T17:05:00",
    "postiz_draft_id": "cmusbovbr00pxo40ysnxrlsrm",
-   "postiz_id": "cmusbrzaf00q8o40ytlftzzph"
+   "postiz_id": "cmusbrzaf00q8o40ytlftzzph",
+   "tiktok": {
+    "date_utc": "2026-10-09T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc111w00szo40y8hczqyny",
+    "ai_label": false
+   }
   },
   {
    "n": 8,
@@ -212,7 +251,13 @@
    ],
    "date_utc": "2026-10-08T17:05:00",
    "postiz_draft_id": "cmusbovdk00pyo40y44onzea0",
-   "postiz_id": "cmusbrzbu00q9o40y42w5l4ss"
+   "postiz_id": "cmusbrzbu00q9o40y42w5l4ss",
+   "tiktok": {
+    "date_utc": "2026-10-10T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc113j00t0o40ytzc6e50d",
+    "ai_label": false
+   }
   },
   {
    "n": 9,
@@ -231,7 +276,16 @@
    "stories_today": "Poll \"20 minutes in. Where's your hand?\" (Book / Phone). Reshare the Door 1 Reel.",
    "approved": false,
    "postiz_id": null,
-   "status": "manual (needs AI label)"
+   "status": "manual (needs AI label)",
+   "postiz_media": [
+    "https://uploads.postiz.com/tbmzcAdleL.mp4"
+   ],
+   "tiktok": {
+    "date_utc": "2026-10-11T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc115600t1o40y24hpkk11",
+    "ai_label": true
+   }
   },
   {
    "n": 10,
@@ -255,7 +309,13 @@
    ],
    "date_utc": "2026-10-10T17:05:00",
    "postiz_draft_id": "cmusbovga00pzo40yk67wsr1n",
-   "postiz_id": "cmusbrzdq00qao40ygaqzci4h"
+   "postiz_id": "cmusbrzdq00qao40ygaqzci4h",
+   "tiktok": {
+    "date_utc": "2026-10-12T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc116k00t2o40yz3j52d09",
+    "ai_label": false
+   }
   },
   {
    "n": 11,
@@ -274,7 +334,16 @@
    "stories_today": "Reshare the Door 2 Reel. Quiz sticker \"What makes you stuck most?\" (Maths / Writing / Memorising / Starting).",
    "approved": false,
    "postiz_id": null,
-   "status": "manual (needs AI label)"
+   "status": "manual (needs AI label)",
+   "postiz_media": [
+    "https://uploads.postiz.com/5pPddqgaBM.mp4"
+   ],
+   "tiktok": {
+    "date_utc": "2026-10-13T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc118000t3o40yka2ehwli",
+    "ai_label": true
+   }
   },
   {
    "n": 12,
@@ -310,7 +379,13 @@
    ],
    "date_utc": "2026-10-12T17:05:00",
    "postiz_draft_id": "cmusbovih00q0o40yjgkln80m",
-   "postiz_id": "cmusbrzg300qbo40y2ypnk5yt"
+   "postiz_id": "cmusbrzg300qbo40y2ypnk5yt",
+   "tiktok": {
+    "date_utc": "2026-10-14T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc119g00t4o40yfznveicj",
+    "ai_label": false
+   }
   },
   {
    "n": 13,
@@ -334,7 +409,13 @@
    ],
    "date_utc": "2026-10-12T17:35:00",
    "postiz_draft_id": "cmusbovkt00q1o40ycaa5s93n",
-   "postiz_id": "cmusbrzhi00qco40yac2nphhb"
+   "postiz_id": "cmusbrzhi00qco40yac2nphhb",
+   "tiktok": {
+    "date_utc": "2026-10-15T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc11ax00t5o40ygwf9o1oe",
+    "ai_label": false
+   }
   },
   {
    "n": 14,
@@ -353,7 +434,16 @@
    "stories_today": "Text Story \"Door 3 people, this one's for you\", then reshare the Door 3 Reel. Anonymous Question box \"What are you behind on?\".",
    "approved": false,
    "postiz_id": null,
-   "status": "manual (needs AI label)"
+   "status": "manual (needs AI label)",
+   "postiz_media": [
+    "https://uploads.postiz.com/WYjf9MTf9V.mp4"
+   ],
+   "tiktok": {
+    "date_utc": "2026-10-16T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc11cd00t6o40ylt588gcf",
+    "ai_label": true
+   }
   },
   {
    "n": 15,
@@ -372,7 +462,16 @@
    "stories_today": "Reshare the Door 4 Reel with \"All four doors are out. Which is yours?\" and a Quiz sticker (the 4 doors) plus a Link sticker to the quiz. Night: \"Phone going outside the bedroom now. Who's in?\".",
    "approved": false,
    "postiz_id": null,
-   "status": "manual (needs AI label)"
+   "status": "manual (needs AI label)",
+   "postiz_media": [
+    "https://uploads.postiz.com/IzbKUMwBgz.mp4"
+   ],
+   "tiktok": {
+    "date_utc": "2026-10-17T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc11du00t7o40yvzr2ng2o",
+    "ai_label": true
+   }
   },
   {
    "n": 16,
@@ -391,7 +490,16 @@
    "stories_today": "Poll \"Block 1 tonight. Who's in?\" (In / Tomorrow) on a still from today's Reel. Reshare the Reel.",
    "approved": false,
    "postiz_id": null,
-   "status": "manual (needs AI label)"
+   "status": "manual (needs AI label)",
+   "postiz_media": [
+    "https://uploads.postiz.com/J5jU2fTQUn.mp4"
+   ],
+   "tiktok": {
+    "date_utc": "2026-10-18T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc11fg00t8o40yujxlw1ld",
+    "ai_label": true
+   }
   },
   {
    "n": 17,
@@ -410,7 +518,16 @@
    "stories_today": "Emoji slider \"How many blocker apps have you deleted and reinstalled?\". Only reshare the Trial Reel once it has been shared to followers.",
    "approved": false,
    "postiz_id": null,
-   "status": "manual (needs AI label)"
+   "status": "manual (needs AI label)",
+   "postiz_media": [
+    "https://uploads.postiz.com/FUWllKhMKS.mp4"
+   ],
+   "tiktok": {
+    "date_utc": "2026-10-19T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc11he00t9o40y8m1cp791",
+    "ai_label": true
+   }
   },
   {
    "n": 18,
@@ -436,7 +553,11 @@
    "stories_today": "Share slides 2, 4 and 6 of the carousel as Stories with \"Screenshot step 5\". Link sticker to the quiz.",
    "approved": false,
    "postiz_id": null,
-   "status": "manual (needs AI label)"
+   "status": "manual (needs AI label)",
+   "tiktok": {
+    "date_utc": "2026-10-20T17:05:00",
+    "status": "manual (AI photos: TikTok has no AI label for photo posts)"
+   }
   },
   {
    "n": 19,
@@ -455,7 +576,16 @@
    "stories_today": "Text Story \"Who notices when you stop?\" with a Question box \"Who's your one person?\".",
    "approved": false,
    "postiz_id": null,
-   "status": "manual (needs AI label)"
+   "status": "manual (needs AI label)",
+   "postiz_media": [
+    "https://uploads.postiz.com/mYUbR3byg4.mp4"
+   ],
+   "tiktok": {
+    "date_utc": "2026-10-21T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc11j700tao40yy8vqp7qw",
+    "ai_label": true
+   }
   },
   {
    "n": 20,
@@ -474,7 +604,16 @@
    "stories_today": "\"Guess your door before the quiz\" with a Quiz sticker (the 4 doors) and a Link sticker to the quiz.",
    "approved": false,
    "postiz_id": null,
-   "status": "manual (needs AI label)"
+   "status": "manual (needs AI label)",
+   "postiz_media": [
+    "https://uploads.postiz.com/9zoVMI8XnE.mp4"
+   ],
+   "tiktok": {
+    "date_utc": "2026-10-22T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc11kw00tbo40yvi8mb8aq",
+    "ai_label": true
+   }
   },
   {
    "n": 21,
@@ -493,7 +632,16 @@
    "stories_today": "Morning: \"Morning people?\". Night: \"Night people?\". Use one Poll (Morning / Night) on each.",
    "approved": false,
    "postiz_id": null,
-   "status": "manual (needs AI label)"
+   "status": "manual (needs AI label)",
+   "postiz_media": [
+    "https://uploads.postiz.com/E1IcXTvF2n.mp4"
+   ],
+   "tiktok": {
+    "date_utc": "2026-10-23T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc11mb00tco40yjxcqcfj2",
+    "ai_label": true
+   }
   },
   {
    "n": 22,
@@ -512,8 +660,21 @@
    "stories_today": "Question box \"Your 3 priorities for this week. Go.\" on a still from today's Reel.",
    "approved": false,
    "postiz_id": null,
-   "status": "manual (needs AI label)"
+   "status": "manual (needs AI label)",
+   "postiz_media": [
+    "https://uploads.postiz.com/YlNEVNpZIp.mp4"
+   ],
+   "tiktok": {
+    "date_utc": "2026-10-24T17:05:00",
+    "status": "scheduled (approved 2026-10-03)",
+    "postiz_id": "cmusc11nz00tdo40ys2vmg4mu",
+    "ai_label": true
+   }
   }
  ],
- "tiktok_start_date": "2026-10-03"
+ "tiktok_start_date": "2026-10-03",
+ "channels": {
+  "instagram": "cmus88r3800ualh0y6dotclsl",
+  "tiktok": "cmusaicll01jqlh0yzuj71irr"
+ }
 }

@@ -22,7 +22,8 @@ The owner asked on 2026-10-03 for posts to go out automatically through Postiz. 
 3. **Schedule:** schedule only the approved numbers, then report each one's channel, time and status as Postiz returns it. Update queue.json and commit.
 
 ## What the Postiz Instagram channel supports (checked 2026-10-03)
-- Channel: **"Lock in"**, platform `instagram-standalone`, integration id `cmus88r3800ualh0y6dotclsl`. TikTok and X aren't connected yet.
+- Channels: **Instagram "Lock in"** (`instagram-standalone`, id `cmus88r3800ualh0y6dotclsl`) and **TikTok "Lockin"** (`tiktok-business`, id `cmusaicll01jqlh0yzuj71irr`). X isn't connected.
+- **TikTok** needs `content_posting_method: DIRECT_POST` (UPLOAD only sends a draft to the TikTok inbox), plus privacy, duet, stitch, comment, autoAddMusic and brand toggles. **`video_made_with_ai` works for videos only**: an AI-photo carousel (#18) has to be posted by hand with the label set in the TikTok app. Media must be uploaded to Postiz first (`uploadFromUrlTool`). TikTok runs 2 days behind Instagram: Day 1 was 3 Oct 2026, one post a day at 18:05 UK.
 - Settings: `post_type` (`post` or `story`), `is_trial_reel` with `graduation_strategy` (`MANUAL` or `SS_PERFORMANCE`), collaborators, audio. Caption max 2,200 characters, and at least one attachment.
 - **Trial Reels can be automated**: `is_trial_reel: true` with `graduation_strategy: "MANUAL"`. The owner decides after 24 h whether to share it to followers, as the guide says.
 - **No AI-label setting and no cover setting.**
