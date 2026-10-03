@@ -21,7 +21,13 @@
    "stories_today": "Post the 6 Day 1 Stories (Page setup files), in order. Stickers: Poll on Story 1 (\"Where is your phone?\"), Emoji slider on Story 3, reshare the Four Doors Reel on Story 4, Quiz sticker (Door 1 / 2 / 3 / 4) on Story 5, Link sticker to the quiz on Story 6.",
    "approved": false,
    "postiz_id": null,
-   "status": "posted manually (before Postiz)"
+   "status": "posted manually (before Postiz)",
+   "tiktok": {
+    "date_utc": "2026-10-03T17:05:00",
+    "postiz_id": "cmuscn68l00v6o40yp149kti2",
+    "status": "scheduled (owner asked 2026-10-03: TikTok Day 1 wasn't posted yet)",
+    "ai_label": false
+   }
   },
   {
    "n": 2,

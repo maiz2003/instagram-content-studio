@@ -17,6 +17,6 @@ Other BRAND.md values to fill in or confirm with the owner:
 
 ## 2026-10-03: launch status
 - Instagram Day 1 = 1 Oct 2026; TikTok Day 1 = 3 Oct 2026 (#01 Four Doors), same post order, one a day at 18:05 UK.
-- Scheduled in Postiz: Instagram #03–#08, #10, #12, #13. TikTok: #02–#22 except #18 (4–24 Oct).
+- Scheduled in Postiz: Instagram #03–#08, #10, #12, #13. TikTok: #01–#22 except #18 (3–24 Oct; #01 Four Doors added for today because TikTok Day 1 hadn't actually gone up).
 - Manual: Instagram #09, #11, #14–#22 (AI label). TikTok #18 on 20 Oct (AI photos). Stories every day.
 - **LOCK auto-reply: not set up.** The owner replies to LOCK comments by hand until they hit a limit, then pays for an automation tool (kit: Drive Doc "02 · LOCK auto-reply setup"). TikTok LOCK comments are always answered by hand.
