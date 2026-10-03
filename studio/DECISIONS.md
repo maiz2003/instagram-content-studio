@@ -7,7 +7,7 @@ The owner added `BRAND.md`, `TEAM.md` and `PROJECT-INSTRUCTIONS.md` (copied here
 | Call to action | "link in bio" | **Keep "Comment LOCK"** on Instagram (comment → DM with the quiz → Whop). The Whop link also goes in the bio. X and other link-friendly channels use the direct link. |
 | Schedule | 5 posts a week, 7pm local | **Weeks 1–3 stay daily at 18:05 UK** (already made). **From week 4: 5 posts a week at 19:00 UK.** |
 | Channels | blank | **Instagram, TikTok, X**, plus one more the owner hasn't named yet (ask). |
-| AI imagery | "Graphics are code-drawn. No AI photos." | **Pending.** The owner wants to compare first: https://claude.ai/artifact/MbV4H8aC2W35KwJK3h2e6s shows the 10 AI-footage Reels next to code-drawn versions. Options A–D are on that page. |
+| AI imagery | "Graphics are code-drawn. No AI photos." | **Keep using the AI footage until the library is used up** (AI label on). Then switch to **real filmed footage of the same shots** (`outputs/lock-in/real-footage-shot-list.md`) **or code-drawn graphics** (style: `outputs/lock-in/2026-10-week3/reels-codedrawn/`, comparison https://claude.ai/artifact/MbV4H8aC2W35KwJK3h2e6s). Track what's left with `python3 scripts/footage_usage.py`. No new AI imagery is generated (Higgsfield cancelled). |
 
 Other BRAND.md values to fill in or confirm with the owner:
 - Whop link: `https://whop.com/checkout/plan_NZkzvqwMgKl2f` (already in `brands/lock-in.yaml`).

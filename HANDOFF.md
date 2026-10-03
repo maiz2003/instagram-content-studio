@@ -43,6 +43,7 @@ These IDs also live in `brands/lock-in.yaml` → `workflow:`.
 - **Weekly workflow**: the `weekly-cycle` skill plus the agent team in `agents/`, with an owner-approval checkpoint. The review day is Sunday.
 
 ## Open items
+- **Brand files (2026-10-03).** The owner's `studio/BRAND.md`, `TEAM.md` and `PROJECT-INSTRUCTIONS.md` define the workflow (Scout → Ghostwriter → Hook critic → Repurposer; "plan my week"). Where they clash with what's built, `studio/DECISIONS.md` has the owner's answers: keep Comment LOCK; daily posting for weeks 1–3, then 5 a week at 19:00 UK; channels Instagram, TikTok, X (+1 not named yet); AI footage until the library runs out, then real footage (`outputs/lock-in/real-footage-shot-list.md`) or code-drawn.
 0. **Auto-reply flow (LOCK → quiz DM).** Kit is ready. The owner or account manager connects the tool, builds the 3 automations, runs the 9-point test and goes live before Day 1. Until then, use the Saved reply backup.
 1. **Drive copies of #09, #11, #14, #15** in the posting-queue folder are the old text versions. The owner replaces them with the footage versions from the posting-queue page (agents can't upload video to Drive).
 2. **Game door fixes: live** (deployed 2026-09-29). All four doors show their fix on https://lockin-30.netlify.app.
