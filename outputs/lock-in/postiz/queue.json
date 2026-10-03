@@ -1,7 +1,7 @@
 {
  "brand": "LOCK IN",
  "site": "https://lockin-guide-92d3ef56.netlify.app",
- "start_date": null,
+ "start_date": "2026-10-01",
  "tz": "Europe/London",
  "posts": [
   {
@@ -21,7 +21,7 @@
    "stories_today": "Post the 6 Day 1 Stories (Page setup files), in order. Stickers: Poll on Story 1 (\"Where is your phone?\"), Emoji slider on Story 3, reshare the Four Doors Reel on Story 4, Quiz sticker (Door 1 / 2 / 3 / 4) on Story 5, Link sticker to the quiz on Story 6.",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "posted manually (before Postiz)"
   },
   {
    "n": 2,
@@ -40,7 +40,7 @@
    "stories_today": "Morning: Question box \"What's the one thing you'll do tonight?\". Evening: reshare the Day 2 Reel.",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "posted manually (before Postiz)"
   },
   {
    "n": 3,
@@ -58,8 +58,12 @@
    "trial": false,
    "stories_today": "7 pm: Poll \"You sat down yet?\" (Yes / Not yet). 11:40 pm: Poll \"Still on it?\". Reshare the Day 3 Reel.",
    "approved": false,
-   "postiz_id": null,
-   "status": "not loaded"
+   "postiz_id": "cmusbnws900pto40yrchio51l",
+   "status": "draft",
+   "postiz_media": [
+    "https://uploads.postiz.com/QmTIsT3I7L.mp4"
+   ],
+   "date_utc": "2026-10-03T17:05:00"
   },
   {
    "n": 4,
@@ -84,8 +88,19 @@
    "trial": false,
    "stories_today": "Share 3 slides of the carousel as Stories. Quiz sticker \"Where was your phone today?\" (Hand / Face down / Desk / Another room). Link sticker to the quiz.",
    "approved": false,
-   "postiz_id": null,
-   "status": "not loaded"
+   "postiz_id": "cmusbov4500puo40y6e73qcp8",
+   "status": "draft",
+   "postiz_media": [
+    "https://uploads.postiz.com/Iw9P7Do9Ce.png",
+    "https://uploads.postiz.com/lbslCYHlY0.png",
+    "https://uploads.postiz.com/uYRWW9PIqK.png",
+    "https://uploads.postiz.com/EiF9aBgXet.png",
+    "https://uploads.postiz.com/vUZ5akpKDs.png",
+    "https://uploads.postiz.com/eB1Vi57bVK.png",
+    "https://uploads.postiz.com/cro3MkdI1Q.png",
+    "https://uploads.postiz.com/Qghh9gviOr.png"
+   ],
+   "date_utc": "2026-10-04T17:05:00"
   },
   {
    "n": 5,
@@ -103,8 +118,12 @@
    "trial": false,
    "stories_today": "Run a real 20-minute session: post a Countdown sticker called \"Minute two\" at the start, and a screenshot of the finished timer at the end.",
    "approved": false,
-   "postiz_id": null,
-   "status": "not loaded"
+   "postiz_id": "cmusbov7100pvo40y0cuw241u",
+   "status": "draft",
+   "postiz_media": [
+    "https://uploads.postiz.com/JX38gGOqwX.mp4"
+   ],
+   "date_utc": "2026-10-05T17:05:00"
   },
   {
    "n": 6,
@@ -122,8 +141,12 @@
    "trial": false,
    "stories_today": "Emoji slider \"How many days was your longest streak?\". Reshare the Day 6 Reel. Text Story: \"Never miss twice.\"",
    "approved": false,
-   "postiz_id": null,
-   "status": "not loaded"
+   "postiz_id": "cmusbova100pwo40yw3gnqy04",
+   "status": "draft",
+   "postiz_media": [
+    "https://uploads.postiz.com/lpoeVMikix.mp4"
+   ],
+   "date_utc": "2026-10-06T17:05:00"
   },
   {
    "n": 7,
@@ -141,8 +164,12 @@
    "trial": false,
    "stories_today": "Night: Poll \"Phone going to another room now. Who's in?\". Then a faceless photo of the phone outside the room, with a Link sticker to the quiz.",
    "approved": false,
-   "postiz_id": null,
-   "status": "not loaded"
+   "postiz_id": "cmusbovbr00pxo40ysnxrlsrm",
+   "status": "draft",
+   "postiz_media": [
+    "https://uploads.postiz.com/A5bcVmIZ1w.mp4"
+   ],
+   "date_utc": "2026-10-07T17:05:00"
   },
   {
    "n": 8,
@@ -167,8 +194,19 @@
    "trial": false,
    "stories_today": "Share 3 slides of What's Inside as Stories with the text \"pinned to the top\". Link sticker to the quiz.",
    "approved": false,
-   "postiz_id": null,
-   "status": "not loaded"
+   "postiz_id": "cmusbovdk00pyo40y44onzea0",
+   "status": "draft",
+   "postiz_media": [
+    "https://uploads.postiz.com/HCUfV4fcIh.png",
+    "https://uploads.postiz.com/dvxnu7QRNQ.png",
+    "https://uploads.postiz.com/WS26smY1pj.png",
+    "https://uploads.postiz.com/g82XL9n4nh.png",
+    "https://uploads.postiz.com/4nAun0NZC4.png",
+    "https://uploads.postiz.com/E54amRpbcA.png",
+    "https://uploads.postiz.com/wSAGMXJ9q0.png",
+    "https://uploads.postiz.com/EodzM6vpJH.png"
+   ],
+   "date_utc": "2026-10-08T17:05:00"
   },
   {
    "n": 9,
@@ -187,7 +225,7 @@
    "stories_today": "Poll \"20 minutes in. Where's your hand?\" (Book / Phone). Reshare the Door 1 Reel.",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "manual (needs AI label)"
   },
   {
    "n": 10,
@@ -205,8 +243,12 @@
    "trial": true,
    "stories_today": "Morning: Question box \"What are you starting tonight?\". Evening: a faceless photo of the phone outside the room.",
    "approved": false,
-   "postiz_id": null,
-   "status": "not loaded"
+   "postiz_id": "cmusbovga00pzo40yk67wsr1n",
+   "status": "draft",
+   "postiz_media": [
+    "https://uploads.postiz.com/h4qz5imF6T.mp4"
+   ],
+   "date_utc": "2026-10-10T17:05:00"
   },
   {
    "n": 11,
@@ -225,7 +267,7 @@
    "stories_today": "Reshare the Door 2 Reel. Quiz sticker \"What makes you stuck most?\" (Maths / Writing / Memorising / Starting).",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "manual (needs AI label)"
   },
   {
    "n": 12,
@@ -249,8 +291,18 @@
    "trial": false,
    "stories_today": "Share 3 slides of The 3 Ugly Minutes as Stories. Emoji slider \"How ugly is minute two?\".",
    "approved": false,
-   "postiz_id": null,
-   "status": "not loaded"
+   "postiz_id": "cmusbovih00q0o40yjgkln80m",
+   "status": "draft",
+   "postiz_media": [
+    "https://uploads.postiz.com/dj9GFUMOo3.png",
+    "https://uploads.postiz.com/hEKe3GROwB.png",
+    "https://uploads.postiz.com/riY9UlIFzd.png",
+    "https://uploads.postiz.com/HAgIdIt3JQ.png",
+    "https://uploads.postiz.com/wdK6yDmDpD.png",
+    "https://uploads.postiz.com/iFeqD0gYdK.png",
+    "https://uploads.postiz.com/uoTzh2KsIV.png"
+   ],
+   "date_utc": "2026-10-12T17:05:00"
   },
   {
    "n": 13,
@@ -268,8 +320,12 @@
    "trial": true,
    "stories_today": "Share 3 slides of The 3 Ugly Minutes as Stories. Emoji slider \"How ugly is minute two?\".",
    "approved": false,
-   "postiz_id": null,
-   "status": "not loaded"
+   "postiz_id": "cmusbovkt00q1o40ycaa5s93n",
+   "status": "draft",
+   "postiz_media": [
+    "https://uploads.postiz.com/5DUDzvomuI.mp4"
+   ],
+   "date_utc": "2026-10-12T17:35:00"
   },
   {
    "n": 14,
@@ -288,7 +344,7 @@
    "stories_today": "Text Story \"Door 3 people, this one's for you\", then reshare the Door 3 Reel. Anonymous Question box \"What are you behind on?\".",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "manual (needs AI label)"
   },
   {
    "n": 15,
@@ -307,7 +363,7 @@
    "stories_today": "Reshare the Door 4 Reel with \"All four doors are out. Which is yours?\" and a Quiz sticker (the 4 doors) plus a Link sticker to the quiz. Night: \"Phone going outside the bedroom now. Who's in?\".",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "manual (needs AI label)"
   },
   {
    "n": 16,
@@ -326,7 +382,7 @@
    "stories_today": "Poll \"Block 1 tonight. Who's in?\" (In / Tomorrow) on a still from today's Reel. Reshare the Reel.",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "manual (needs AI label)"
   },
   {
    "n": 17,
@@ -345,7 +401,7 @@
    "stories_today": "Emoji slider \"How many blocker apps have you deleted and reinstalled?\". Only reshare the Trial Reel once it has been shared to followers.",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "manual (needs AI label)"
   },
   {
    "n": 18,
@@ -371,7 +427,7 @@
    "stories_today": "Share slides 2, 4 and 6 of the carousel as Stories with \"Screenshot step 5\". Link sticker to the quiz.",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "manual (needs AI label)"
   },
   {
    "n": 19,
@@ -390,7 +446,7 @@
    "stories_today": "Text Story \"Who notices when you stop?\" with a Question box \"Who's your one person?\".",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "manual (needs AI label)"
   },
   {
    "n": 20,
@@ -409,7 +465,7 @@
    "stories_today": "\"Guess your door before the quiz\" with a Quiz sticker (the 4 doors) and a Link sticker to the quiz.",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "manual (needs AI label)"
   },
   {
    "n": 21,
@@ -428,7 +484,7 @@
    "stories_today": "Morning: \"Morning people?\". Night: \"Night people?\". Use one Poll (Morning / Night) on each.",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "manual (needs AI label)"
   },
   {
    "n": 22,
@@ -447,7 +503,8 @@
    "stories_today": "Question box \"Your 3 priorities for this week. Go.\" on a still from today's Reel.",
    "approved": false,
    "postiz_id": null,
-   "status": "not loaded"
+   "status": "manual (needs AI label)"
   }
- ]
+ ],
+ "tiktok_start_date": "2026-10-03"
 }
