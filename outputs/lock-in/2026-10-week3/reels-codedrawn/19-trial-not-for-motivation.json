@@ -1,0 +1,220 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 10.5,
+ "cards": [
+  {
+   "start": 0,
+   "end": 2.5,
+   "top": 330,
+   "elements": [
+    {
+     "text": "DON'T TAKE",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "THIS QUIZ",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 0.5,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "FOR MOTIVATION.",
+     "style": "head amber",
+     "size": 110,
+     "build": "slam",
+     "at": 1.3,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"450\" viewBox=\"0 0 900 450\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M46,60 H184 A6,6 0 0 1 190,66 V344 A6,6 0 0 1 184,350 H46 A6,6 0 0 1 40,344 V66 A6,6 0 0 1 46,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M156,196.0 A9,9 0 1 1 155.99,196.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"115\" y=\"420\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">BORED</text><path d=\"M261,60 H399 A6,6 0 0 1 405,66 V344 A6,6 0 0 1 399,350 H261 A6,6 0 0 1 255,344 V66 A6,6 0 0 1 261,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M371,196.0 A9,9 0 1 1 370.99,196.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"330\" y=\"420\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">STUCK</text><path d=\"M476,60 H614 A6,6 0 0 1 620,66 V344 A6,6 0 0 1 614,350 H476 A6,6 0 0 1 470,344 V66 A6,6 0 0 1 476,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M586,196.0 A9,9 0 1 1 585.99,196.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"545\" y=\"420\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">ANXIOUS</text><path d=\"M691,60 H829 A6,6 0 0 1 835,66 V344 A6,6 0 0 1 829,350 H691 A6,6 0 0 1 685,344 V66 A6,6 0 0 1 691,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M801,196.0 A9,9 0 1 1 800.99,196.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"760\" y=\"420\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">TIRED</text></svg>",
+     "build": "draw",
+     "at": 0.35,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.3,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 2.5,
+   "end": 5.5,
+   "top": 330,
+   "elements": [
+    {
+     "text": "it won't hype you up.",
+     "style": "serif cream",
+     "size": 64,
+     "build": "type",
+     "at": 2.5,
+     "dur": 0.7,
+     "gap": 40
+    },
+    {
+     "text": "it tells you which door\nyou leave through.",
+     "style": "serif amber",
+     "size": 64,
+     "build": "lines",
+     "at": 3.5,
+     "dur": 1.1,
+     "gap": 30
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"450\" viewBox=\"0 0 900 450\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M46,60 H184 A6,6 0 0 1 190,66 V344 A6,6 0 0 1 184,350 H46 A6,6 0 0 1 40,344 V66 A6,6 0 0 1 46,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M156,196.0 A9,9 0 1 1 155.99,196.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"115\" y=\"420\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">BORED</text><path d=\"M261,60 H399 A6,6 0 0 1 405,66 V344 A6,6 0 0 1 399,350 H261 A6,6 0 0 1 255,344 V66 A6,6 0 0 1 261,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M371,196.0 A9,9 0 1 1 370.99,196.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"330\" y=\"420\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">STUCK</text><path d=\"M476,60 H614 A6,6 0 0 1 620,66 V344 A6,6 0 0 1 614,350 H476 A6,6 0 0 1 470,344 V66 A6,6 0 0 1 476,60 Z\" stroke=\"#DA9D55\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M586,196.0 A9,9 0 1 1 585.99,196.0\" stroke=\"#DA9D55\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M620,60 L690,100 V310 L620,350\" stroke=\"#DA9D55\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"545\" y=\"420\" fill=\"#DA9D55\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">ANXIOUS</text><path d=\"M691,60 H829 A6,6 0 0 1 835,66 V344 A6,6 0 0 1 829,350 H691 A6,6 0 0 1 685,344 V66 A6,6 0 0 1 691,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M801,196.0 A9,9 0 1 1 800.99,196.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"760\" y=\"420\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">TIRED</text></svg>",
+     "build": "draw",
+     "at": 2.85,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ]
+  },
+  {
+   "start": 5.5,
+   "end": 8.0,
+   "top": 330,
+   "elements": [
+    {
+     "text": "4 QUESTIONS.",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 5.5,
+     "dur": 0.5
+    },
+    {
+     "text": "ONE FIX.",
+     "style": "head amber",
+     "size": 160,
+     "build": "slam",
+     "at": 6.1,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"420\" viewBox=\"0 0 900 420\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72,170 H138 A12,12 0 0 1 150,182 V248 A12,12 0 0 1 138,260 H72 A12,12 0 0 1 60,248 V182 A12,12 0 0 1 72,170 Z\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"105\" y=\"232\" fill=\"#8f949c\" font-family=\"Anton\" font-size=\"52\" text-anchor=\"middle\" style=\"opacity:0\">1</text><path d=\"M192,170 H258 A12,12 0 0 1 270,182 V248 A12,12 0 0 1 258,260 H192 A12,12 0 0 1 180,248 V182 A12,12 0 0 1 192,170 Z\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"225\" y=\"232\" fill=\"#8f949c\" font-family=\"Anton\" font-size=\"52\" text-anchor=\"middle\" style=\"opacity:0\">2</text><path d=\"M312,170 H378 A12,12 0 0 1 390,182 V248 A12,12 0 0 1 378,260 H312 A12,12 0 0 1 300,248 V182 A12,12 0 0 1 312,170 Z\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"345\" y=\"232\" fill=\"#8f949c\" font-family=\"Anton\" font-size=\"52\" text-anchor=\"middle\" style=\"opacity:0\">3</text><path d=\"M432,170 H498 A12,12 0 0 1 510,182 V248 A12,12 0 0 1 498,260 H432 A12,12 0 0 1 420,248 V182 A12,12 0 0 1 432,170 Z\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"465\" y=\"232\" fill=\"#8f949c\" font-family=\"Anton\" font-size=\"52\" text-anchor=\"middle\" style=\"opacity:0\">4</text><path d=\"M560,215 H680 M646,189 L680,215 L646,241\" stroke=\"#DA9D55\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M730,140 H840 A20,20 0 0 1 860,160 V270 A20,20 0 0 1 840,290 H730 A20,20 0 0 1 710,270 V160 A20,20 0 0 1 730,140 Z\" stroke=\"#DA9D55\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M752,222 l33.6,33.6 l62.4,-74.39999999999999\" stroke=\"#DA9D55\" stroke-width=\"9\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/></svg>",
+     "build": "draw",
+     "at": 5.85,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ],
+   "punch": [
+    {
+     "at": 6.1,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 8.0,
+   "end": 9.5,
+   "top": 330,
+   "elements": [
+    {
+     "text": "COMMENT",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 8.0,
+     "dur": 0.5
+    },
+    {
+     "text": "LOCK",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 8.4,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "Comment LOCK → I'll DM you the quiz",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 8.9,
+     "dur": 1.0,
+     "gap": 40
+    }
+   ]
+  },
+  {
+   "start": 9.5,
+   "end": 10.5,
+   "top": 330,
+   "elements": [
+    {
+     "text": "DON'T TAKE",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 8.5,
+     "dur": 0.5
+    },
+    {
+     "text": "THIS QUIZ",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 8.5,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "FOR MOTIVATION.",
+     "style": "head amber",
+     "size": 110,
+     "build": "slam",
+     "at": 8.5,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"450\" viewBox=\"0 0 900 450\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M46,60 H184 A6,6 0 0 1 190,66 V344 A6,6 0 0 1 184,350 H46 A6,6 0 0 1 40,344 V66 A6,6 0 0 1 46,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M156,196.0 A9,9 0 1 1 155.99,196.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"115\" y=\"420\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">BORED</text><path d=\"M261,60 H399 A6,6 0 0 1 405,66 V344 A6,6 0 0 1 399,350 H261 A6,6 0 0 1 255,344 V66 A6,6 0 0 1 261,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M371,196.0 A9,9 0 1 1 370.99,196.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"330\" y=\"420\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">STUCK</text><path d=\"M476,60 H614 A6,6 0 0 1 620,66 V344 A6,6 0 0 1 614,350 H476 A6,6 0 0 1 470,344 V66 A6,6 0 0 1 476,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M586,196.0 A9,9 0 1 1 585.99,196.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"545\" y=\"420\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">ANXIOUS</text><path d=\"M691,60 H829 A6,6 0 0 1 835,66 V344 A6,6 0 0 1 829,350 H691 A6,6 0 0 1 685,344 V66 A6,6 0 0 1 691,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M801,196.0 A9,9 0 1 1 800.99,196.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"760\" y=\"420\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"40\" text-anchor=\"middle\" style=\"opacity:0\">TIRED</text></svg>",
+     "build": "draw",
+     "at": 7.5,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 9.5,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}

@@ -23,6 +23,8 @@
 //   "sfx": [ { "t": 0, "type": "vibrate" } ]   // see scripts/render/sound.py for all types
 // }
 // build: words | lines | type | slam | fade (default fade). "\n" in text = line break.
+// Code-drawn graphic (optional element): { "svg": "<svg ...>...</svg>", "build": "draw", "at": 1, "dur": 1.2 }
+//   Shapes with pathLength="1" draw on in document order across "dur"; shapes with class "f" fade in after.
 //
 // Footage (optional, per card): put a filmed clip behind the card's text.
 //   "bg": { "file": "path/to/clip.mov",   // repo-relative or absolute; landscape or portrait, cropped to fill 9:16
@@ -53,7 +55,9 @@ function buildHtml(spec, footage) {
     const els = c.elements.map((e, ei) => {
       const lines = String(e.text).split("\n");
       let inner;
-      if (e.build === "words") {
+      if (e.svg) {
+        inner = e.svg;
+      } else if (e.build === "words") {
         let k = 0;
         inner = lines.map((ln) => ln.split(" ").map((w) => `<span class="u" data-k="${k++}">${esc(w)}</span>`).join(" ")).join("<br>");
       } else if (e.build === "lines") {
@@ -114,6 +118,13 @@ function seek(t) {
       } else if (b === "type") {
         const s = el.querySelector(".typed"), full = s.dataset.full.replace(/\\u2028/g, "\\n");
         s.textContent = full.slice(0, Math.round(full.length * clamp((t - at) / dur)));
+      } else if (b === "draw") {
+        const strokes = el.querySelectorAll("[pathLength],[pathlength]"), n = strokes.length;
+        strokes.forEach((s, k) => {
+          const p = ease((t - (at + (k * dur) / Math.max(1, n))) / Math.max(0.15, dur / Math.max(1, n)));
+          s.style.strokeDasharray = "1"; s.style.strokeDashoffset = String(1 - p);
+        });
+        el.querySelectorAll(".f").forEach((f) => { f.style.opacity = ease((t - at - dur) / 0.3); });
       } else if (b === "slam") {
         const p = ease((t - at) / 0.12);
         el.style.opacity = p; el.style.transform = "scale(" + (1.15 - 0.15 * p).toFixed(3) + ")"; el.style.transformOrigin = "0% 50%";

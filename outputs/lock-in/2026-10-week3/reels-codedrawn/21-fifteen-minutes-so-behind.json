@@ -1,0 +1,271 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 14.0,
+ "cards": [
+  {
+   "start": 0,
+   "end": 2.5,
+   "top": 330,
+   "elements": [
+    {
+     "text": "\"I'M SO",
+     "style": "head cream",
+     "size": 140,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "BEHIND.\"",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 1.0,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"500\" viewBox=\"0 0 900 500\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M450,40 A210,210 0 1 1 449.99,40\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M450,250 V120\" stroke=\"#E6E1D5\" stroke-width=\"9\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M450,250 L560,320\" stroke=\"#DA9D55\" stroke-width=\"9\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M450,240 A10,10 0 1 1 449.99,240\" stroke=\"#DA9D55\" stroke-width=\"8\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/></svg>",
+     "build": "draw",
+     "at": 0.35,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.0,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 2.5,
+   "end": 5.0,
+   "top": 330,
+   "elements": [
+    {
+     "text": "behind on what, exactly?",
+     "style": "serif cream",
+     "size": 60,
+     "build": "type",
+     "at": 2.5,
+     "dur": 0.7,
+     "gap": 40
+    },
+    {
+     "text": "if you can't say,\nthat's the problem.",
+     "style": "serif amber",
+     "size": 62,
+     "build": "lines",
+     "at": 3.5,
+     "dur": 0.9,
+     "gap": 30
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"500\" viewBox=\"0 0 900 500\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M218,40 H682 A18,18 0 0 1 700,58 V442 A18,18 0 0 1 682,460 H218 A18,18 0 0 1 200,442 V58 A18,18 0 0 1 218,40 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M260,140 H640\" stroke=\"#2a2d33\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M260,240 H640\" stroke=\"#2a2d33\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M260,340 H640\" stroke=\"#2a2d33\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"450\" y=\"330\" fill=\"#DA9D55\" font-family=\"Anton\" font-size=\"220\" text-anchor=\"middle\" style=\"opacity:0\">?</text></svg>",
+     "build": "draw",
+     "at": 2.85,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ]
+  },
+  {
+   "start": 5.0,
+   "end": 8.0,
+   "top": 330,
+   "elements": [
+    {
+     "text": "15 MINUTES.",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 5.0,
+     "dur": 0.5
+    },
+    {
+     "text": "3 PRIORITIES.",
+     "style": "head amber",
+     "size": 120,
+     "build": "slam",
+     "at": 5.7,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "written down, before the week starts.",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 6.5,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"500\" viewBox=\"0 0 900 500\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M178,30 H722 A18,18 0 0 1 740,48 V452 A18,18 0 0 1 722,470 H178 A18,18 0 0 1 160,452 V48 A18,18 0 0 1 178,30 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M230,80 H280 A10,10 0 0 1 290,90 V140 A10,10 0 0 1 280,150 H230 A10,10 0 0 1 220,140 V90 A10,10 0 0 1 230,80 Z\" stroke=\"#8f949c\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M330,120 H660\" stroke=\"#E6E1D5\" stroke-width=\"8\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M230,200 H280 A10,10 0 0 1 290,210 V260 A10,10 0 0 1 280,270 H230 A10,10 0 0 1 220,260 V210 A10,10 0 0 1 230,200 Z\" stroke=\"#8f949c\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M330,240 H660\" stroke=\"#E6E1D5\" stroke-width=\"8\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M230,320 H280 A10,10 0 0 1 290,330 V380 A10,10 0 0 1 280,390 H230 A10,10 0 0 1 220,380 V330 A10,10 0 0 1 230,320 Z\" stroke=\"#8f949c\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M330,360 H660\" stroke=\"#E6E1D5\" stroke-width=\"8\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/></svg>",
+     "build": "draw",
+     "at": 5.35,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ],
+   "punch": [
+    {
+     "at": 5.7,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 8.0,
+   "end": 10.5,
+   "top": 330,
+   "elements": [
+    {
+     "text": "THEN",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 8.0,
+     "dur": 0.5
+    },
+    {
+     "text": "START.",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 8.5,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "the list does the worrying for you.",
+     "style": "serif cream",
+     "size": 50,
+     "build": "fade",
+     "at": 9.2,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"500\" viewBox=\"0 0 900 500\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M178,30 H722 A18,18 0 0 1 740,48 V452 A18,18 0 0 1 722,470 H178 A18,18 0 0 1 160,452 V48 A18,18 0 0 1 178,30 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M230,80 H280 A10,10 0 0 1 290,90 V140 A10,10 0 0 1 280,150 H230 A10,10 0 0 1 220,140 V90 A10,10 0 0 1 230,80 Z\" stroke=\"#DA9D55\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M330,120 H660\" stroke=\"#E6E1D5\" stroke-width=\"8\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M232,112 l25.2,25.2 l46.800000000000004,-55.800000000000004\" stroke=\"#DA9D55\" stroke-width=\"9\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M230,200 H280 A10,10 0 0 1 290,210 V260 A10,10 0 0 1 280,270 H230 A10,10 0 0 1 220,260 V210 A10,10 0 0 1 230,200 Z\" stroke=\"#8f949c\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M330,240 H660\" stroke=\"#E6E1D5\" stroke-width=\"8\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M230,320 H280 A10,10 0 0 1 290,330 V380 A10,10 0 0 1 280,390 H230 A10,10 0 0 1 220,380 V330 A10,10 0 0 1 230,320 Z\" stroke=\"#8f949c\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M330,360 H660\" stroke=\"#E6E1D5\" stroke-width=\"8\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/></svg>",
+     "build": "draw",
+     "at": 8.35,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ],
+   "punch": [
+    {
+     "at": 8.5,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 10.5,
+   "end": 13.0,
+   "top": 330,
+   "elements": [
+    {
+     "text": "COMMENT",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 10.5,
+     "dur": 0.5
+    },
+    {
+     "text": "LOCK",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 10.9,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "Comment LOCK → find your door",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 11.4,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "text": "save it for sunday",
+     "style": "serif cream",
+     "size": 40,
+     "build": "fade",
+     "at": 12.0,
+     "dur": 1.0,
+     "gap": 24
+    }
+   ]
+  },
+  {
+   "start": 13.0,
+   "end": 14.0,
+   "top": 330,
+   "elements": [
+    {
+     "text": "\"I'M SO",
+     "style": "head cream",
+     "size": 140,
+     "build": "words",
+     "at": 12.0,
+     "dur": 0.5
+    },
+    {
+     "text": "BEHIND.\"",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 12.0,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"500\" viewBox=\"0 0 900 500\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M450,40 A210,210 0 1 1 449.99,40\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M450,250 V120\" stroke=\"#E6E1D5\" stroke-width=\"9\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M450,250 L560,320\" stroke=\"#DA9D55\" stroke-width=\"9\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M450,240 A10,10 0 1 1 449.99,240\" stroke=\"#DA9D55\" stroke-width=\"8\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/></svg>",
+     "build": "draw",
+     "at": 11.0,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 5.7,
+   "type": "pop",
+   "gain": 0.6
+  },
+  {
+   "t": 13.0,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}
