@@ -21,9 +21,16 @@ The owner asked on 2026-10-03 for posts to go out automatically through Postiz. 
 2. **Approval:** show the owner a numbered table (number, day, date and time, title, format, AI label, Trial). Wait for "approve all" or "approve 1, 2, 5". Set `approved: true` only on those.
 3. **Schedule:** schedule only the approved numbers, then report each one's channel, time and status as Postiz returns it. Update queue.json and commit.
 
-## What Postiz may not be able to do (check, don't assume)
+## What the Postiz Instagram channel supports (checked 2026-10-03)
+- Channel: **"Lock in"**, platform `instagram-standalone`, integration id `cmus88r3800ualh0y6dotclsl`. TikTok and X aren't connected yet.
+- Settings: `post_type` (`post` or `story`), `is_trial_reel` with `graduation_strategy` (`MANUAL` or `SS_PERFORMANCE`), collaborators, audio. Caption max 2,200 characters, and at least one attachment.
+- **Trial Reels can be automated**: `is_trial_reel: true` with `graduation_strategy: "MANUAL"`. The owner decides after 24 h whether to share it to followers, as the guide says.
+- **No AI-label setting and no cover setting.**
+- Posts can't be deleted through the tools. A wrong post is removed by hand in the Postiz app.
+
+## What Postiz can't do
 - **AI label** (11 posts: #09, #11, #14–#22). If Postiz has no AI-label option for Instagram, don't schedule those posts. Leave them as drafts, mark them `manual`, and tell the owner they're posted by hand from the posting page with the label on.
-- **Trial Reels** (#10, #13, #17, #20). Same rule: if there's no Trial option, they stay manual.
+- **Trial Reels** (#10, #13, #17, #20) are supported (see above). #17 and #20 also need the AI label, so they stay manual.
 - **Reel cover:** if a cover can't be picked, Instagram uses the first frame, which is already the hook card. That's fine.
 - **Story stickers** (polls, quiz, link) can't be added through an API. Stories stay manual, and the daily Stories text is in each queue entry.
 
