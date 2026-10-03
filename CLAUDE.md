@@ -5,7 +5,7 @@
 ## Mission
 A permanent, reusable **Instagram growth system built as Claude Code skills**. It turns a brand profile plus a post brief into ready-to-shoot content: hooks, Reel scripts, captions, scorecards and agency briefs. It is **brand-agnostic**: it serves any account, any niche, B2B or B2C, and every format (Reels, carousels, Stories, static posts). Beroia Home is only the first trial profile, not the target.
 
-**Scope: plan + produce + score. No auto-publish.** There is no Instagram/Meta publishing connector in this environment. The human posts or schedules in the Instagram app. Higgsfield (connected) is for generating draft visuals/video in Phase 2. Whop's Meta Business connection can read existing posts (Phase 2, read-only audit use).
+**Scope: plan + produce + score + schedule after approval.** Until 2026-10-03 nothing was published by agents. The owner then asked for auto-posting through the **Postiz** connector (`skills/postiz-scheduler/`). Agents load posts into Postiz as drafts and schedule **only the posts the owner approved by number**. Anything Postiz can't set (AI label, Trial Reels, Story stickers) stays manual. Higgsfield is cancelled. Whop's Meta Business connection is read-only.
 
 ## The 3 source books (Ahmed Shoman, @a7medshoman1)
 The English translations are the source of truth. Do not re-OCR or re-translate. They live in `knowledge/_sources/` once Phase 1 step 2 lands.

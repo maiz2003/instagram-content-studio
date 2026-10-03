@@ -1,0 +1,453 @@
+{
+ "brand": "LOCK IN",
+ "site": "https://lockin-guide-92d3ef56.netlify.app",
+ "start_date": null,
+ "tz": "Europe/London",
+ "posts": [
+  {
+   "n": 1,
+   "day": 1,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "Four Doors",
+   "caption": "Doom scrolling isn't random. You walk through one of four doors, every time:\nBored: the work goes flat\nStuck: you hit something you can't do\nAnxious: you remember how behind you are\nTired: it's late and you're fading\nStuck? The step is too big, not beyond you. Come back with the next line, not the whole problem.\nSave this for the next time your hand goes for the phone. Send it to the friend who's always \"so behind.\"\nComment LOCK and I'll DM you the 4-question quiz. One of the questions will be uncomfortable.\n#doomscrolling #discipline #lockin",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/01_day01_four-doors.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": false,
+   "trial": false,
+   "stories_today": "Post the 6 Day 1 Stories (Page setup files), in order. Stickers: Poll on Story 1 (\"Where is your phone?\"), Emoji slider on Story 3, reshare the Four Doors Reel on Story 4, Quiz sticker (Door 1 / 2 / 3 / 4) on Story 5, Link sticker to the quiz on Story 6.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 2,
+   "day": 2,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "You don't need discipline",
+   "caption": "Discipline isn't your problem. Your phone being in the room is.\nFace down doesn't count. Across the desk doesn't count. Another room does.\nTonight: phone out, 20 minutes, start before you feel ready.\nSend this to the friend who says they have \"no discipline\".\nComment LOCK and I'll DM you the 4-question quiz.\n#discipline #studytips #doomscrolling",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/02_day02_you-dont-need-discipline.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": false,
+   "trial": false,
+   "stories_today": "Morning: Question box \"What's the one thing you'll do tonight?\". Evening: reshare the Day 2 Reel.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 3,
+   "day": 3,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "you sat down at 7",
+   "caption": "Doom scrolling from 7 to 11:40 isn't laziness.\nYou sat down. You meant it. Then four hours went somewhere.\nIt isn't a character flaw. It's a setup problem, and it always comes through one of four doors.\nSave this for the next night it happens.\nComment LOCK and find out which door you walked through.\n#doomscrolling #procrastination #studytips",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/03_day03_you-sat-down-at-7.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": false,
+   "trial": false,
+   "stories_today": "7 pm: Poll \"You sat down yet?\" (Yes / Not yet). 11:40 pm: Poll \"Still on it?\". Reshare the Day 3 Reel.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 4,
+   "day": 4,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "carousel",
+   "title": "Phone Exile",
+   "caption": "Studying with your phone face down isn't discipline. It's still one reach away.\nThere are four places your phone can be while you work:\nIn your hand. Face down. Across the desk. Another room.\nOnly the last one works. Face-down is not distance. Walking is.\nSave this and check it before your next study session. Send it to the friend who \"locks in\" with their phone face down.\nComment LOCK and I'll DM you the 4-question quiz. It shows what's actually pulling you to your phone.\n#discipline #studytips #doomscrolling",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/04_day04_phone-exile/04_day04_phone-exile_slide-01.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/04_day04_phone-exile/04_day04_phone-exile_slide-02.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/04_day04_phone-exile/04_day04_phone-exile_slide-03.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/04_day04_phone-exile/04_day04_phone-exile_slide-04.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/04_day04_phone-exile/04_day04_phone-exile_slide-05.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/04_day04_phone-exile/04_day04_phone-exile_slide-06.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/04_day04_phone-exile/04_day04_phone-exile_slide-07.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/04_day04_phone-exile/04_day04_phone-exile_slide-08.png"
+   ],
+   "cover_hint": "slide 1",
+   "ai_label": false,
+   "trial": false,
+   "stories_today": "Share 3 slides of the carousel as Stories. Quiz sticker \"Where was your phone today?\" (Hand / Face down / Desk / Another room). Link sticker to the quiz.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 5,
+   "day": 5,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "You are in withdrawal",
+   "caption": "Not lazy. In withdrawal from your phone.\nThat's why the first minutes of boring work feel unbearable. It peaks at minute two, then it goes quiet, if you stay.\nSave this for minute two.\nSend it to the friend who calls themselves lazy.\nComment LOCK and I'll DM you the 4-question quiz.\n#discipline #doomscrolling #studytips",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/05_day05_you-are-in-withdrawal.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": false,
+   "trial": false,
+   "stories_today": "Run a real 20-minute session: post a Countdown sticker called \"Minute two\" at the start, and a screenshot of the finished timer at the end.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 6,
+   "day": 6,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "Streaks are why you quit",
+   "caption": "Discipline streaks are why you quit.\nThe streak broke, so you stopped completely. That's the trap.\nOne missed day is a day. Two is the start of quitting. Never miss twice.\nWhat made your last streak break? Tell me in one line.\nComment LOCK for the full system.\n#discipline #habits #lockin",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/06_day06_streaks-are-why-you-quit.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": false,
+   "trial": false,
+   "stories_today": "Emoji slider \"How many days was your longest streak?\". Reshare the Day 6 Reel. Text Story: \"Never miss twice.\"",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 7,
+   "day": 7,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "you're not tired",
+   "caption": "Not tired. Doom scrolling for four hours.\nTired is door 4: you're solving sleep with a screen.\nPut the phone in another room at night and see what \"tired\" turns into.\nSend this to the friend who's \"too tired\" every evening.\nComment LOCK and find your door.\n#doomscrolling #sleep #discipline",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/07_day07_youre-not-tired.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": false,
+   "trial": false,
+   "stories_today": "Night: Poll \"Phone going to another room now. Who's in?\". Then a faceless photo of the phone outside the room, with a Link sticker to the quiz.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 8,
+   "day": 8,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "carousel",
+   "title": "What's inside LOCK IN",
+   "caption": "Discipline playbook: what's actually inside LOCK IN.\n61 pages, seven parts, 13 diagrams. A scored diagnostic for your phone trigger. If-then plans with your own times. Printables. A 30-day challenge and a chat where someone notices when you stop.\nWhat it costs: $15, once, and a more boring life.\nSave this if you're starting Monday. Better: start tonight.\nComment LOCK and I'll DM you the free 4-question quiz first.\n#discipline #studytips #lockin",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-01.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-02.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-03.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-04.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-05.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-06.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-07.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/08_day08_whats-inside-lock-in/08_day08_whats-inside-lock-in_slide-08.png"
+   ],
+   "cover_hint": "slide 1",
+   "ai_label": false,
+   "trial": false,
+   "stories_today": "Share 3 slides of What's Inside as Stories with the text \"pinned to the top\". Link sticker to the quiz.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 9,
+   "day": 9,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "Door 1: BORED",
+   "caption": "Doom scrolling 20 minutes into studying isn't random.\nThe work goes flat, and your hand is on the phone before you decide.\nThat's door 1: bored. There are four.\nThe fix: it's withdrawal. It passes in about ninety seconds. Look at the clock and keep writing.\nWhich door got you today? Comment the number.\nComment LOCK and I'll DM you the 4-question quiz.\n#doomscrolling #studytips #discipline",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/09_day09_door-1-bored.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": true,
+   "trial": false,
+   "stories_today": "Poll \"20 minutes in. Where's your hand?\" (Book / Phone). Reshare the Door 1 Reel.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 10,
+   "day": 10,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "trial_reel",
+   "title": "Don't wait for Monday",
+   "caption": "Discipline doesn't start on Monday. It starts tonight.\nYou said \"Monday\" last Monday.\nTonight: 20 minutes, phone in another room, start before you feel ready.\nSend this to the friend who's starting Monday. Again.\nComment LOCK and find your door.\n#discipline #procrastination #studytips",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/10_day10_dont-wait-for-monday.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": false,
+   "trial": true,
+   "stories_today": "Morning: Question box \"What are you starting tonight?\". Evening: a faceless photo of the phone outside the room.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 11,
+   "day": 11,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "Door 2: STUCK",
+   "caption": "Studying stops when you get stuck, not when you get distracted.\nYou hit something you can't do. \"I'll ask someone tomorrow.\" Then the phone.\nDoor 2: stuck. The fix: the step is too big, not beyond you. Come back with the next line, not the whole problem.\nSave this for the next time you hit the wall.\nComment LOCK and I'll DM you the 4-question quiz.\n#studytips #doomscrolling #discipline",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/11_day11_door-2-stuck.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": true,
+   "trial": false,
+   "stories_today": "Reshare the Door 2 Reel. Quiz sticker \"What makes you stuck most?\" (Maths / Writing / Memorising / Starting).",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 12,
+   "day": 12,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "carousel",
+   "title": "The 3 Ugly Minutes",
+   "caption": "Studying feels unbearable for about three minutes. Then it doesn't.\nThe urge to quit peaks at minute two. Then it goes quiet.\nMost people never find out, because they leave in minute one.\nNext time it hits, say it out loud: \"that is minute two.\"\nSave this for your next study session. Send it to the friend who quits in the first five minutes.\nComment LOCK and I'll DM you the 4-question quiz.\n#studytips #discipline #doomscrolling",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-01.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-02.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-03.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-04.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-05.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-06.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/12_day12_the-3-ugly-minutes/12_day12_the-3-ugly-minutes_slide-07.png"
+   ],
+   "cover_hint": "slide 1",
+   "ai_label": false,
+   "trial": false,
+   "stories_today": "Share 3 slides of The 3 Ugly Minutes as Stories. Emoji slider \"How ugly is minute two?\".",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 13,
+   "day": 12,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "trial_reel",
+   "title": "Fake work",
+   "caption": "Fake work feels like studying. It isn't.\nRewriting the same notes. A timetable instead of starting. 14 tabs of \"research\".\nWhich one is yours? Be honest in the comments.\nComment LOCK and find your door.\n#studytips #procrastination #discipline",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/13_day12_fake-work.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": false,
+   "trial": true,
+   "stories_today": "Share 3 slides of The 3 Ugly Minutes as Stories. Emoji slider \"How ugly is minute two?\".",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 14,
+   "day": 13,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "Door 3: ANXIOUS",
+   "caption": "Doom scrolling when you feel behind is door 3, the one nobody admits.\nYou feel behind before you've even started, so you check. Checking isn't relief. It's the loop.\nThe fix: fifteen minutes on Sunday, three priorities, then start.\nSend this to whoever's always \"so behind\".\nComment LOCK and I'll DM you the 4-question quiz.\n#doomscrolling #studytips #discipline",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/14_day13_door-3-anxious.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": true,
+   "trial": false,
+   "stories_today": "Text Story \"Door 3 people, this one's for you\", then reshare the Door 3 Reel. Anonymous Question box \"What are you behind on?\".",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 15,
+   "day": 14,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "Door 4: TIRED",
+   "caption": "Doom scrolling after 10pm isn't rest. It's door 4.\n\"I'll do it properly in the morning.\" You're fading, so you open the phone.\nYou are solving sleep with a screen. Tonight: phone outside the bedroom.\nThat's all four doors. Which one is yours? Comment LOCK and find out.\n#doomscrolling #sleep #discipline",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/15_day14_door-4-tired.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": true,
+   "trial": false,
+   "stories_today": "Reshare the Door 4 Reel with \"All four doors are out. Which is yours?\" and a Quiz sticker (the 4 doors) plus a Link sticker to the quiz. Night: \"Phone going outside the bedroom now. Who's in?\".",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 16,
+   "day": 15,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "3 blocks: the whole system",
+   "caption": "Study system: 20 minutes, three blocks, that's the whole day.\nPhone in another room. Timer on. Start with the next line.\nTick each block. Miss a day? Fine. Never miss two.\nSave this for tonight's first block.\nComment LOCK and I'll DM you the 4-question quiz.\n#studytips #discipline #lockin",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/16_day15_three-blocks.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": true,
+   "trial": false,
+   "stories_today": "Poll \"Block 1 tonight. Who's in?\" (In / Tomorrow) on a still from today's Reel. Reshare the Reel.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 17,
+   "day": 16,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "trial_reel",
+   "title": "An app that blocks your phone",
+   "caption": "Phone addiction apps still live on your phone.\nIt's still one reach away. It still lights up. You still check it.\nDistance works. Another room, every block.\nSend this to the friend with three blocker apps and a 9-hour screen time.\nComment LOCK and find your door.\n#doomscrolling #screentime #discipline",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/17_day16_app-blocker.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": true,
+   "trial": true,
+   "stories_today": "Emoji slider \"How many blocker apps have you deleted and reinstalled?\". Only reshare the Trial Reel once it has been shared to followers.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 18,
+   "day": 17,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "carousel",
+   "title": "Your 20-minute lock-in",
+   "caption": "Study setup: your 20-minute lock-in, in 6 steps.\nPhone in another room. One task, one tab. Timer on 20. Start with the next line. Name minute two. Tick it.\nThree blocks is the whole day.\nSave this and use it tonight.\nComment LOCK and I'll DM you the 4-question quiz.\n#studytips #discipline #lockin",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/18_day17_setup/18_day17_setup_slide-01.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/18_day17_setup/18_day17_setup_slide-02.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/18_day17_setup/18_day17_setup_slide-03.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/18_day17_setup/18_day17_setup_slide-04.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/18_day17_setup/18_day17_setup_slide-05.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/18_day17_setup/18_day17_setup_slide-06.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/18_day17_setup/18_day17_setup_slide-07.png",
+    "https://lockin-guide-92d3ef56.netlify.app/carousels/18_day17_setup/18_day17_setup_slide-08.png"
+   ],
+   "cover_hint": "slide 1",
+   "ai_label": true,
+   "trial": false,
+   "stories_today": "Share slides 2, 4 and 6 of the carousel as Stories with \"Screenshot step 5\". Link sticker to the quiz.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 19,
+   "day": 18,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "You don't need a study buddy",
+   "caption": "Study accountability isn't a study buddy. It's someone who notices when you stop.\nOne message a day: \"Day 4. You in?\" That's the whole thing.\nSend this to the one person who'd actually notice.\nComment LOCK and I'll DM you the 4-question quiz.\n#studytips #accountability #discipline",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/19_day18_study-buddy.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": true,
+   "trial": false,
+   "stories_today": "Text Story \"Who notices when you stop?\" with a Question box \"Who's your one person?\".",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 20,
+   "day": 19,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "trial_reel",
+   "title": "Don't take this quiz for motivation",
+   "caption": "Discipline quiz, not a motivation quiz.\nIt won't hype you up. 4 questions tell you which door you leave through: bored, stuck, anxious or tired. Then one fix for yours.\nWhich door do you think you are? Guess before you take it.\nComment LOCK and I'll DM you the quiz.\n#discipline #doomscrolling #studytips",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/20_day19_not-for-motivation.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": true,
+   "trial": true,
+   "stories_today": "\"Guess your door before the quiz\" with a Quiz sticker (the 4 doors) and a Link sticker to the quiz.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 21,
+   "day": 20,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "Morning or night? Wrong question.",
+   "caption": "Studying in the morning or at night? Wrong question.\nIt doesn't matter when you study. It matters where your phone is.\nMorning or night person? Tell me below, and where your phone is right now.\nComment LOCK and find your door.\n#studytips #discipline #productivity",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/21_day20_morning-or-night.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": true,
+   "trial": false,
+   "stories_today": "Morning: \"Morning people?\". Night: \"Night people?\". Use one Poll (Morning / Night) on each.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  },
+  {
+   "n": 22,
+   "day": 21,
+   "time_uk": "18:05",
+   "channel": "instagram",
+   "format": "reel",
+   "title": "\"I'm so behind\": the 15-minute plan",
+   "caption": "Feeling behind on studying? Behind on what, exactly?\nIf you can't say it, that's the problem.\n15 minutes before the week starts. 3 priorities, written down. Then start. The list does the worrying for you.\nSave this for Sunday.\nComment LOCK and I'll DM you the 4-question quiz. Door 3 people, this one's yours.\n#studytips #procrastination #discipline",
+   "media": [
+    "https://lockin-guide-92d3ef56.netlify.app/clips/22_day21_so-behind.mp4"
+   ],
+   "cover_hint": "frame where the orange word has fully appeared, about 2 s in",
+   "ai_label": true,
+   "trial": false,
+   "stories_today": "Question box \"Your 3 priorities for this week. Go.\" on a still from today's Reel.",
+   "approved": false,
+   "postiz_id": null,
+   "status": "not loaded"
+  }
+ ]
+}

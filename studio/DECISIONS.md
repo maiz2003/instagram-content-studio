@@ -13,4 +13,4 @@ Other BRAND.md values to fill in or confirm with the owner:
 - Whop link: `https://whop.com/checkout/plan_NZkzvqwMgKl2f` (already in `brands/lock-in.yaml`).
 - Audience: BRAND.md guesses 15–24; `brands/lock-in.yaml` says about 16–26.
 - Fonts and colours: BRAND.md names Newsreader for body text and slightly different hex values (#0E0F12 / #EDE7DC / #E0A254 / #7A8089 / #24272D). Everything rendered so far uses `brands/lock-in.theme.css` (Spectral, #111216 / #E6E1D5 / #DA9D55). Switch the theme when the owner confirms.
-- Postiz connector: not connected, so the weekly routine's "Load" step is manual for now (posting queue page + account manager guide).
+- **Auto-posting (2026-10-03): the owner wants posts to go out through Postiz.** The connector is installed but needs reconnecting (claude.ai → Settings → Connectors, then a new session). Queue: `outputs/lock-in/postiz/queue.json`. Skill: `skills/postiz-scheduler/`. Approval by number still comes first.
