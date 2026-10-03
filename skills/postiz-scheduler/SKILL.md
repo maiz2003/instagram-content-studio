@@ -28,6 +28,8 @@ The owner asked on 2026-10-03 for posts to go out automatically through Postiz. 
 - **No AI-label setting and no cover setting.**
 - Posts can't be deleted through the tools. A wrong post is removed by hand in the Postiz app.
 
+**A draft can't be turned into a scheduled post through the tools, and posts can't be deleted.** So either load straight as `schedule` after the owner approves from the table, or create scheduled copies and ask the owner to delete the leftover drafts in the Postiz app. Drafts never publish on their own.
+
 ## What Postiz can't do
 - **AI label** (11 posts: #09, #11, #14–#22). If Postiz has no AI-label option for Instagram, don't schedule those posts. Leave them as drafts, mark them `manual`, and tell the owner they're posted by hand from the posting page with the label on.
 - **Trial Reels** (#10, #13, #17, #20) are supported (see above). #17 and #20 also need the AI label, so they stay manual.

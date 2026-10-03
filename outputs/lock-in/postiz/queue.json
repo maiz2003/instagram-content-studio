@@ -57,13 +57,14 @@
    "ai_label": false,
    "trial": false,
    "stories_today": "7 pm: Poll \"You sat down yet?\" (Yes / Not yet). 11:40 pm: Poll \"Still on it?\". Reshare the Day 3 Reel.",
-   "approved": false,
-   "postiz_id": "cmusbnws900pto40yrchio51l",
-   "status": "draft",
+   "approved": true,
+   "status": "scheduled (approved 2026-10-03)",
    "postiz_media": [
     "https://uploads.postiz.com/QmTIsT3I7L.mp4"
    ],
-   "date_utc": "2026-10-03T17:05:00"
+   "date_utc": "2026-10-03T17:05:00",
+   "postiz_draft_id": "cmusbnws900pto40yrchio51l",
+   "postiz_id": "cmusbrz1e00q4o40yixps1hky"
   },
   {
    "n": 4,
@@ -87,9 +88,8 @@
    "ai_label": false,
    "trial": false,
    "stories_today": "Share 3 slides of the carousel as Stories. Quiz sticker \"Where was your phone today?\" (Hand / Face down / Desk / Another room). Link sticker to the quiz.",
-   "approved": false,
-   "postiz_id": "cmusbov4500puo40y6e73qcp8",
-   "status": "draft",
+   "approved": true,
+   "status": "scheduled (approved 2026-10-03)",
    "postiz_media": [
     "https://uploads.postiz.com/Iw9P7Do9Ce.png",
     "https://uploads.postiz.com/lbslCYHlY0.png",
@@ -100,7 +100,9 @@
     "https://uploads.postiz.com/cro3MkdI1Q.png",
     "https://uploads.postiz.com/Qghh9gviOr.png"
    ],
-   "date_utc": "2026-10-04T17:05:00"
+   "date_utc": "2026-10-04T17:05:00",
+   "postiz_draft_id": "cmusbov4500puo40y6e73qcp8",
+   "postiz_id": "cmusbrz4e00q5o40yolvmlafh"
   },
   {
    "n": 5,
@@ -117,13 +119,14 @@
    "ai_label": false,
    "trial": false,
    "stories_today": "Run a real 20-minute session: post a Countdown sticker called \"Minute two\" at the start, and a screenshot of the finished timer at the end.",
-   "approved": false,
-   "postiz_id": "cmusbov7100pvo40y0cuw241u",
-   "status": "draft",
+   "approved": true,
+   "status": "scheduled (approved 2026-10-03)",
    "postiz_media": [
     "https://uploads.postiz.com/JX38gGOqwX.mp4"
    ],
-   "date_utc": "2026-10-05T17:05:00"
+   "date_utc": "2026-10-05T17:05:00",
+   "postiz_draft_id": "cmusbov7100pvo40y0cuw241u",
+   "postiz_id": "cmusbrz6n00q6o40y1wj868pn"
   },
   {
    "n": 6,
@@ -140,13 +143,14 @@
    "ai_label": false,
    "trial": false,
    "stories_today": "Emoji slider \"How many days was your longest streak?\". Reshare the Day 6 Reel. Text Story: \"Never miss twice.\"",
-   "approved": false,
-   "postiz_id": "cmusbova100pwo40yw3gnqy04",
-   "status": "draft",
+   "approved": true,
+   "status": "scheduled (approved 2026-10-03)",
    "postiz_media": [
     "https://uploads.postiz.com/lpoeVMikix.mp4"
    ],
-   "date_utc": "2026-10-06T17:05:00"
+   "date_utc": "2026-10-06T17:05:00",
+   "postiz_draft_id": "cmusbova100pwo40yw3gnqy04",
+   "postiz_id": "cmusbrz8v00q7o40y88k83g3f"
   },
   {
    "n": 7,
@@ -163,13 +167,14 @@
    "ai_label": false,
    "trial": false,
    "stories_today": "Night: Poll \"Phone going to another room now. Who's in?\". Then a faceless photo of the phone outside the room, with a Link sticker to the quiz.",
-   "approved": false,
-   "postiz_id": "cmusbovbr00pxo40ysnxrlsrm",
-   "status": "draft",
+   "approved": true,
+   "status": "scheduled (approved 2026-10-03)",
    "postiz_media": [
     "https://uploads.postiz.com/A5bcVmIZ1w.mp4"
    ],
-   "date_utc": "2026-10-07T17:05:00"
+   "date_utc": "2026-10-07T17:05:00",
+   "postiz_draft_id": "cmusbovbr00pxo40ysnxrlsrm",
+   "postiz_id": "cmusbrzaf00q8o40ytlftzzph"
   },
   {
    "n": 8,
@@ -193,9 +198,8 @@
    "ai_label": false,
    "trial": false,
    "stories_today": "Share 3 slides of What's Inside as Stories with the text \"pinned to the top\". Link sticker to the quiz.",
-   "approved": false,
-   "postiz_id": "cmusbovdk00pyo40y44onzea0",
-   "status": "draft",
+   "approved": true,
+   "status": "scheduled (approved 2026-10-03)",
    "postiz_media": [
     "https://uploads.postiz.com/HCUfV4fcIh.png",
     "https://uploads.postiz.com/dvxnu7QRNQ.png",
@@ -206,7 +210,9 @@
     "https://uploads.postiz.com/wSAGMXJ9q0.png",
     "https://uploads.postiz.com/EodzM6vpJH.png"
    ],
-   "date_utc": "2026-10-08T17:05:00"
+   "date_utc": "2026-10-08T17:05:00",
+   "postiz_draft_id": "cmusbovdk00pyo40y44onzea0",
+   "postiz_id": "cmusbrzbu00q9o40y42w5l4ss"
   },
   {
    "n": 9,
@@ -242,13 +248,14 @@
    "ai_label": false,
    "trial": true,
    "stories_today": "Morning: Question box \"What are you starting tonight?\". Evening: a faceless photo of the phone outside the room.",
-   "approved": false,
-   "postiz_id": "cmusbovga00pzo40yk67wsr1n",
-   "status": "draft",
+   "approved": true,
+   "status": "scheduled (approved 2026-10-03)",
    "postiz_media": [
     "https://uploads.postiz.com/h4qz5imF6T.mp4"
    ],
-   "date_utc": "2026-10-10T17:05:00"
+   "date_utc": "2026-10-10T17:05:00",
+   "postiz_draft_id": "cmusbovga00pzo40yk67wsr1n",
+   "postiz_id": "cmusbrzdq00qao40ygaqzci4h"
   },
   {
    "n": 11,
@@ -290,9 +297,8 @@
    "ai_label": false,
    "trial": false,
    "stories_today": "Share 3 slides of The 3 Ugly Minutes as Stories. Emoji slider \"How ugly is minute two?\".",
-   "approved": false,
-   "postiz_id": "cmusbovih00q0o40yjgkln80m",
-   "status": "draft",
+   "approved": true,
+   "status": "scheduled (approved 2026-10-03)",
    "postiz_media": [
     "https://uploads.postiz.com/dj9GFUMOo3.png",
     "https://uploads.postiz.com/hEKe3GROwB.png",
@@ -302,7 +308,9 @@
     "https://uploads.postiz.com/iFeqD0gYdK.png",
     "https://uploads.postiz.com/uoTzh2KsIV.png"
    ],
-   "date_utc": "2026-10-12T17:05:00"
+   "date_utc": "2026-10-12T17:05:00",
+   "postiz_draft_id": "cmusbovih00q0o40yjgkln80m",
+   "postiz_id": "cmusbrzg300qbo40y2ypnk5yt"
   },
   {
    "n": 13,
@@ -319,13 +327,14 @@
    "ai_label": false,
    "trial": true,
    "stories_today": "Share 3 slides of The 3 Ugly Minutes as Stories. Emoji slider \"How ugly is minute two?\".",
-   "approved": false,
-   "postiz_id": "cmusbovkt00q1o40ycaa5s93n",
-   "status": "draft",
+   "approved": true,
+   "status": "scheduled (approved 2026-10-03)",
    "postiz_media": [
     "https://uploads.postiz.com/5DUDzvomuI.mp4"
    ],
-   "date_utc": "2026-10-12T17:35:00"
+   "date_utc": "2026-10-12T17:35:00",
+   "postiz_draft_id": "cmusbovkt00q1o40ycaa5s93n",
+   "postiz_id": "cmusbrzhi00qco40yac2nphhb"
   },
   {
    "n": 14,
