@@ -70,7 +70,7 @@ These IDs also live in `brands/lock-in.yaml` → `workflow:`.
 - Full render instructions: `agents/video-producer.md` and `scripts/render/reel.js`.
 
 ## Daily footage mission
-A routine named "LOCK IN daily footage" runs every day at 08:52 UK. It follows `skills/daily-footage/SKILL.md`:
+**Status (2026-10-03): the daily routine "LOCK IN daily footage" was deleted at the owner's request, because they unsubscribed from Higgsfield. Don't recreate it unless the owner asks. The skill and library stay for later use.** While it ran, it fired every day at 08:52 UK and followed `skills/daily-footage/SKILL.md`:
 - takes the next shots from `assets/footage/lock-in/library/backlog.md`
 - generates, reviews and grades 2-3 POV clips
 - files them in `assets/footage/lock-in/library/` and logs them in `catalog.md`
@@ -79,4 +79,4 @@ A routine named "LOCK IN daily footage" runs every day at 08:52 UK. It follows `
 It spends the whole balance each run: AI clips first, then photos. With **no credits** it switches to "moving photos" instead: free clips made from approved photos with `scripts/render/living_still.py`, which adds camera motion, sway, grade and grain (in `assets/footage/lock-in/library/moving/`). A pay-per-clip video API (fal.ai or Replicate, key in the environment settings) is the option we discussed for real AI motion without Higgsfield credits.
 
 ## Scheduled check-in
-A routine named "PR #1 + Drive check-in" (`trig_018MjPdCRRBSr1oLsoe2Ud7M`) wakes the **cloud** session about hourly. It checks PR #1 and looks in Drive for `clips-week2`. It doesn't follow the work to a local session. Delete it once the local session is the main one, or leave it running as a watcher.
+(Ended: no enabled routines remain as of 2026-10-03.) A routine named "PR #1 + Drive check-in" used to wake the **cloud** session about hourly. It checks PR #1 and looks in Drive for `clips-week2`. It doesn't follow the work to a local session. Delete it once the local session is the main one, or leave it running as a watcher.
