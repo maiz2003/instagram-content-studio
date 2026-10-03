@@ -1,0 +1,12 @@
+{
+  "_about": "LOCK IN sound kit, supplied by the owner (Drive: lockin_sounds, 2026-09-27). Maps sound.py SFX types to files; a list = variants picked in order (e.g. the pop ladder per word). end = trim point in seconds.",
+  "lock":  "01_lock_click.wav",
+  "pop":   ["02_soft_pop_1.wav", "02_soft_pop_2.wav", "02_soft_pop_3.wav", "02_soft_pop_4.wav",
+            "02_soft_pop_5.wav", "02_soft_pop_6.wav", "02_soft_pop_7.wav", "02_soft_pop_8.wav"],
+  "tink":  "03_glass_tink.wav",
+  "tap2":  "04_soft_double_tap.wav",
+  "tap":   {"file": "04_soft_double_tap.wav", "end": 0.1},
+  "air":   "05_air_whoosh.wav",
+  "chime": "06_two_note_chime.wav",
+  "pad":   "07_focus_pad_loop.wav"
+}

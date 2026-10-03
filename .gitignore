@@ -1,0 +1,3 @@
+__pycache__/
+products/lock-in-30/tests/shots-*.png
+.netlify/

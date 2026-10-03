@@ -1,0 +1,232 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 11.0,
+ "trial": true,
+ "cards": [
+  {
+   "start": 0,
+   "end": 3.0,
+   "top": 430,
+   "elements": [
+    {
+     "text": "AN APP THAT",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "BLOCKS YOUR PHONE",
+     "style": "head cream",
+     "size": 110,
+     "build": "words",
+     "at": 0.6,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "IS STILL ON YOUR PHONE.",
+     "style": "head amber",
+     "size": 100,
+     "build": "slam",
+     "at": 1.5,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.5,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_r14_scroll-drawer-open.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 3.0,
+   "end": 6.0,
+   "top": 430,
+   "elements": [
+    {
+     "text": "it's still one reach away.\nit still lights up.",
+     "style": "serif cream",
+     "size": 62,
+     "build": "lines",
+     "at": 3.0,
+     "dur": 1.2,
+     "gap": 40
+    },
+    {
+     "text": "you still check it.",
+     "style": "serif amber",
+     "size": 66,
+     "build": "type",
+     "at": 4.5,
+     "dur": 1.0,
+     "gap": 30
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_r10_phone-in-box.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 6.0,
+   "end": 8.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "DISTANCE",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 6.0,
+     "dur": 0.5
+    },
+    {
+     "text": "WORKS.",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 6.6,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "another room. every block.",
+     "style": "serif cream",
+     "size": 52,
+     "build": "fade",
+     "at": 7.2,
+     "dur": 1.0,
+     "gap": 40
+    }
+   ],
+   "punch": [
+    {
+     "at": 6.6,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_r16_hallway-shelf-charging.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 8.5,
+   "end": 10.0,
+   "top": 430,
+   "elements": [
+    {
+     "text": "COMMENT",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 8.5,
+     "dur": 0.5
+    },
+    {
+     "text": "LOCK",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 8.9,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "Comment LOCK → find your door",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 9.4,
+     "dur": 1.0,
+     "gap": 40
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_story_door-phone-outside.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 10.0,
+   "end": 11.0,
+   "top": 430,
+   "elements": [
+    {
+     "text": "AN APP THAT",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 9.0,
+     "dur": 0.5
+    },
+    {
+     "text": "BLOCKS YOUR PHONE",
+     "style": "head cream",
+     "size": 110,
+     "build": "words",
+     "at": 9.0,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "IS STILL ON YOUR PHONE.",
+     "style": "head amber",
+     "size": 100,
+     "build": "slam",
+     "at": 9.0,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_r14_scroll-drawer-open.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 10.0,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}

@@ -1,0 +1,223 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 10.5,
+ "trial": true,
+ "cards": [
+  {
+   "start": 0,
+   "end": 2.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "DON'T TAKE",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "THIS QUIZ",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 0.5,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "FOR MOTIVATION.",
+     "style": "head amber",
+     "size": 110,
+     "build": "slam",
+     "at": 1.3,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.3,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_four-doors-page.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 2.5,
+   "end": 5.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "it won't hype you up.",
+     "style": "serif cream",
+     "size": 64,
+     "build": "type",
+     "at": 2.5,
+     "dur": 0.7,
+     "gap": 40
+    },
+    {
+     "text": "it tells you which door\nyou leave through.",
+     "style": "serif amber",
+     "size": 64,
+     "build": "lines",
+     "at": 3.5,
+     "dur": 1.1,
+     "gap": 30
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_r06_restless-hands-clock.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 5.5,
+   "end": 8.0,
+   "top": 430,
+   "elements": [
+    {
+     "text": "4 QUESTIONS.",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 5.5,
+     "dur": 0.5
+    },
+    {
+     "text": "ONE FIX.",
+     "style": "head amber",
+     "size": 160,
+     "build": "slam",
+     "at": 6.1,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "punch": [
+    {
+     "at": 6.1,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_four-doors-page.mp4",
+    "in": 1.5,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 8.0,
+   "end": 9.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "COMMENT",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 8.0,
+     "dur": 0.5
+    },
+    {
+     "text": "LOCK",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 8.4,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "Comment LOCK → I'll DM you the quiz",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 8.9,
+     "dur": 1.0,
+     "gap": 40
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_never-miss-twice-page.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 9.5,
+   "end": 10.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "DON'T TAKE",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 8.5,
+     "dur": 0.5
+    },
+    {
+     "text": "THIS QUIZ",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 8.5,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "FOR MOTIVATION.",
+     "style": "head amber",
+     "size": 110,
+     "build": "slam",
+     "at": 8.5,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_four-doors-page.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 9.5,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}

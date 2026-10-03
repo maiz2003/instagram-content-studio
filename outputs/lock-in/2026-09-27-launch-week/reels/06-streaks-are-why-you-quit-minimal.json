@@ -1,0 +1,109 @@
+{
+ "duration": 10.0,
+ "label": "UNPOPULAR OPINION",
+ "cards": [
+  {
+   "start": 0,
+   "end": 3.5,
+   "top": 600,
+   "elements": [
+    {
+     "text": "STREAKS ARE",
+     "style": "head cream",
+     "size": 160,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.4
+    },
+    {
+     "text": "WHY YOU QUIT.",
+     "style": "head amber",
+     "size": 160,
+     "build": "slam",
+     "at": 1.5
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.5,
+     "scale": 1.04
+    }
+   ]
+  },
+  {
+   "start": 3.5,
+   "end": 10.0,
+   "top": 640,
+   "elements": [
+    {
+     "text": "the streak broke,\nso you stopped completely.",
+     "style": "serif cream",
+     "size": 64,
+     "build": "type",
+     "at": 3.55,
+     "dur": 1.2
+    },
+    {
+     "text": "that's the trap.",
+     "style": "serif amber",
+     "size": 64,
+     "gap": 40,
+     "build": "slam",
+     "at": 5.5
+    },
+    {
+     "text": "never miss twice.",
+     "style": "head cream",
+     "size": 110,
+     "gap": 50,
+     "build": "slam",
+     "at": 6.5
+    },
+    {
+     "text": "Comment LOCK → the full system",
+     "style": "serif cream",
+     "size": 44,
+     "gap": 40,
+     "build": "fade",
+     "at": 8.0
+    }
+   ],
+   "punch": [
+    {
+     "at": 6.5,
+     "scale": 1.03
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 3.5,
+   "type": "air",
+   "gain": 0.5
+  }
+ ],
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ],
+   [
+    1.5,
+    "ambient_arp"
+   ]
+  ]
+ },
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal"
+}

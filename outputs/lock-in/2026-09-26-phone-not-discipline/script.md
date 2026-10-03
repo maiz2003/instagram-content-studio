@@ -1,0 +1,68 @@
+# Reel script: lock-in · phone-not-discipline
+Goal: reach (new account) · Buyer: B2C, 16–26 · Target length: **~25 s** (reach band 7–30 s) · Language: English · Faceless · Hook: #10 "Four doors" (H.1 + H.17)
+
+## ★ Recommended: type-only version (matches your existing Lock In clip style, no filming)
+**Rendered:** `video/four-doors.mp4` (21 s, 1080×1920, composed soundtrack: a knock on every door, a clock under Bored, a glitch under Stuck, a heartbeat under Anxious, a record-stop under Tired, the beat returning on the fix) + `video/four-doors-sfx-only.mp4` · cover `video/cover.png` · spec `video/reel-spec.json`. When posting, add a track from Instagram's music library at low volume.
+Rebuild of clip28 "Four doors" in the house style: dark background, cream/amber condensed headline font, serif sub-lines, small "LOCK IN" label. **Every card builds in** (word by word or line by line) with a 3% punch-in when the amber word lands, and a soft "knock" SFX on each door. Low music bed throughout; never silent. Length ~21 s.
+
+| Time | Card (full-screen, upper-middle) | Build / motion | Sound |
+|---|---|---|---|
+| 0.0–1.5 | **YOU NEVER DOOM-SCROLL** (cream) | Words slam in one by one from frame 1 | Phone buzz on frame 1 |
+| 1.5–2.5 | + **AT RANDOM.** (amber) | Punch-in 3% | Hit |
+| 2.5–4.0 | *It's one of four doors.* (serif) | Fade up | Knock ×1 |
+| 4.0–6.0 | **BORED.** (amber) · *the work went flat.* | Headline slams, serif types on | Knock |
+| 6.0–8.0 | **STUCK.** · *you hit something you cannot do.* | Same | Knock |
+| 8.0–9.2 | *door three is the one nobody admits.* | Serif only, small (re-hook) | Music dips |
+| 9.2–11.2 | **ANXIOUS.** · *you remembered how far behind you are.* | Slam + type | Knock |
+| 11.2–13.2 | **TIRED.** · *you are solving sleep with a screen.* | Slam + type | Knock, music drops |
+| 13.2–17.0 | **IF YOU'RE STUCK:** · *the step is too big, not beyond you. come back with the next line, not the whole problem.* | Line by line | Music lifts |
+| 17.0–20.0 | **WHICH DOOR IS YOURS?** · *Comment LOCK → the 4-question quiz* · small: *send it to whoever's always "so behind"* | Headline + two lines | — |
+| 20.0–21.0 | **YOU NEVER DOOM-SCROLL** (same as frame 1) | Hard cut → loop | Buzz |
+
+The door lines use the book's own wording from clip28 ("you are solving sleep with a screen"). Cover: the 0.0 s card with **AT RANDOM.** already visible, so the grid tile reads fully.
+The filmed version below is still valid if you ever want live footage; the caption, CTA and scorecard apply to both.
+
+---
+
+## Filmed version (alternative)
+
+## Shot list
+| Time | Shot / visual (faceless) | On-screen text | Voiceover | Music / SFX | Edit note |
+|---|---|---|---|---|---|
+| 0:00–0:02 | Dark desk, one lamp. A face-down phone lights up and buzzes; a hand starts to reach | **Why you doom-scroll: 4 doors** | "You never doom-scroll at random." | Phone buzz, low drone starts | Hard cut in, no intro. Frame 1 = light + motion |
+| 0:02–0:04 | Hard cut: four doorways/frames flash (or four quick thumbnails of the next scenes) | It's one of four. Every time. | "It's one of four doors — every time." | Door-knock SFX | Quick flash-cuts |
+| 0:04–0:07 | Blinking cursor on a half-empty doc; the hand drifts to the phone | 1 · BORED — the work goes flat | "Bored: the work goes flat…" | Knock 1 | Scene change = interrupt |
+| 0:07–0:10 | A pen stops on a hard maths problem, taps, drops; the hand goes to the phone | 2 · STUCK — you hit a wall | "Stuck: you hit something you can't do…" | Knock 2 | Slow 5–8% as the pen drops |
+| 0:10–0:13 | A long to-do list, a finger scrolls down it; the hand goes to the phone | 3 · ANXIOUS — you feel behind | "Door three is the one nobody admits. Anxious: you remember how behind you are…" | Knock 3 | **Re-hook** ~0:10 ("the one nobody admits") |
+| 0:13–0:16 | The clock reads 23:14, the laptop dims, the phone is picked up in bed | 4 · TIRED — it's late, you're fading | "Tired: it's late and you're fading." | Knock 4, drone drops | Lighting dims (shift) |
+| 0:16–0:21 | Back at the desk: the hand writes ONE line on paper, the phone goes face-up in another room (door closes) | If you're STUCK: the step is too big, not beyond you. | "If you're stuck: the step is too big, not beyond you. Come back with the next line — not the whole problem." | Door closes, drone lifts | Payoff: one real fix (from the quiz's STUCK result) |
+| 0:21–0:24 | Summary card: the 4 doors listed + CTA | Bored · Stuck · Anxious · Tired — **Comment LOCK → find your door** · send it to whoever's always "so behind" | "Comment LOCK — I'll send you the four-question quiz. One of the questions will be uncomfortable." | — | Hold ≥1.5 s (screenshot-worthy) |
+| 0:24–0:25 | The face-down phone lights up and buzzes (same shot as 0:00) | Why you doom-scroll: 4 doors | — | Buzz | **Loop**: last frame = first frame; cut on the buzz |
+
+*Door names match the quiz: Bored · Stuck · Anxious · Tired.*
+
+## Beat map
+Hook (doom-scroll isn't random) → "four doors" promise → Bored → Stuck → re-hook "door three nobody admits" → Anxious → Tired → payoff (the real fix for Stuck) → CTA (comment LOCK → quiz) → loop to the buzzing phone.
+
+## CTA layer
+- **Primary (comment_keyword):** "Comment LOCK — I'll send you the four-question quiz." The DM sends https://lockin-quiz.netlify.app. Never "link in bio".
+- **Send prompt (on screen):** "send it to whoever's always 'so behind'" (door 3 is the recipient).
+- **Save prompt:** caption only, to keep the video to two asks.
+- **DM auto-reply text** (set this up *before* posting):
+  > Here's the quiz → https://lockin-quiz.netlify.app. Four questions, about a minute. Tell me which door you got.
+
+## Cover frame
+The glowing face-down phone on the dark desk (the 0:00 shot). Cover text: **Why you doom-scroll: 4 doors**. One warm accent colour (lamp amber, matching the quiz page's orange). Faceless, so there's no eye contact; the light and the phone carry the attention.
+
+## Production specs
+1080×1920 (9:16) · 25 s · highest-quality export, no watermark · voiceover: **your own voice** (original audio), calm and dry, or text-only with low music if you'd rather not use your voice · text burned in, large, never over the hands' action · a consistent "knock" SFX for each door (becomes a signature) · dark room + one lamp as the recurring look.
+
+## Post-publish checklist (first 60 min)
+- **Before:** DM auto-reply for "LOCK" is live (tool or manual) and tested. Spend 10 minutes commenting properly on study/discipline creators' posts.
+- **Post:** about 15 minutes before your audience's evening peak, at an odd minute (e.g. 9:05 pm in your target time zone). **Don't delete or edit the caption or cover after posting.** The books say a new account is being tested.
+- **Right after:** share to Story with a quiz sticker "Which door is yours? 1 / 2 / 3 / 4".
+- **First hour:** reply to every comment. When someone comments a number, ask what they were doing the last time it happened. Send every LOCK the quiz link fast.
+- **+12 h:** reshare to Story with "Door 3 people, this one's for you."
+
+## Open items
+- Account handle · your voice or text-only?

@@ -1,0 +1,213 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 12.0,
+ "cards": [
+  {
+   "start": 0,
+   "end": 2.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "MORNING OR",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "NIGHT?",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 1.0,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.0,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_r09_kitchen-mug.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 2.5,
+   "end": 4.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "WRONG",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 2.5,
+     "dur": 0.5
+    },
+    {
+     "text": "QUESTION.",
+     "style": "head amber",
+     "size": 150,
+     "build": "slam",
+     "at": 3.1,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "punch": [
+    {
+     "at": 3.1,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_story_night-desk-space.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 4.5,
+   "end": 7.5,
+   "top": 430,
+   "elements": [
+    {
+     "text": "it doesn't matter when you study.",
+     "style": "serif cream",
+     "size": 58,
+     "build": "type",
+     "at": 4.5,
+     "dur": 0.9,
+     "gap": 40
+    },
+    {
+     "text": "it matters where your phone is.",
+     "style": "serif amber",
+     "size": 62,
+     "build": "type",
+     "at": 5.7,
+     "dur": 0.9,
+     "gap": 30
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_phone-into-drawer.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 7.5,
+   "end": 11.0,
+   "top": 430,
+   "elements": [
+    {
+     "text": "WHERE'S",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 7.5,
+     "dur": 0.5
+    },
+    {
+     "text": "YOURS?",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 7.9,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "morning or night person? tell me below.",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 8.4,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "text": "Comment LOCK → find your door",
+     "style": "serif cream",
+     "size": 40,
+     "build": "fade",
+     "at": 9.0,
+     "dur": 1.0,
+     "gap": 24
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_r16_hallway-shelf-alt.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  },
+  {
+   "start": 11.0,
+   "end": 12.0,
+   "top": 430,
+   "elements": [
+    {
+     "text": "MORNING OR",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 10.0,
+     "dur": 0.5
+    },
+    {
+     "text": "NIGHT?",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 10.0,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/library/moving/2026-09-28_r09_kitchen-mug.mp4",
+    "in": 0.0,
+    "push": 0,
+    "dim": 0.62
+   }
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 11.0,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}

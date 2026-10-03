@@ -1,0 +1,32 @@
+/* LOCK IN house style. Colours sampled from the owner's existing Reels (2026-09-26).
+   Used by scripts/render/render.js for profile assets, carousels and text Reels.
+   Fonts are OFL-licensed, vendored in assets/fonts/. */
+@font-face { font-family: "Anton"; src: url("../assets/fonts/Anton-Regular.ttf"); }
+@font-face { font-family: "Spectral"; src: url("../assets/fonts/Spectral-Regular.ttf"); }
+@font-face { font-family: "Spectral"; font-style: italic; src: url("../assets/fonts/Spectral-Italic.ttf"); }
+@font-face { font-family: "JetBrains Mono"; src: url("../assets/fonts/JetBrainsMono-Variable.ttf"); font-weight: 100 800; }
+
+:root {
+  --bg: #111216;
+  --panel: #1a1c21;
+  --cream: #E6E1D5;
+  --amber: #DA9D55;
+  --grey: #8f949c;
+  --rule: #2a2d33;
+  --head: "Anton", "Impact", sans-serif;
+  --serif: "Spectral", Georgia, serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #000; }
+.frame { position: relative; overflow: hidden; background: var(--bg); color: var(--cream); }
+.label { font-family: var(--mono); color: var(--amber); letter-spacing: .28em; text-transform: uppercase; }
+.head { font-family: var(--head); text-transform: uppercase; line-height: .98; letter-spacing: .005em; }
+.amber { color: var(--amber); }
+.cream { color: var(--cream); }
+.serif { font-family: var(--serif); color: var(--grey); line-height: 1.35; }
+.serif.cream { color: var(--cream); }
+.serif.amber { color: var(--amber); }
+.foot { position: absolute; font-family: var(--mono); color: var(--grey); letter-spacing: .28em; text-transform: uppercase; }
+.rule { height: 2px; background: var(--amber); opacity: .6; }
+.panel { background: var(--panel); border: 1px solid var(--rule); }

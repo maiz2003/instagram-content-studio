@@ -1,0 +1,410 @@
+{
+ "duration": 21.0,
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "cards": [
+  {
+   "start": 0.0,
+   "end": 2.5,
+   "top": 600,
+   "elements": [
+    {
+     "text": "YOU NEVER\nDOOM-SCROLL",
+     "style": "head cream",
+     "size": 150,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.9
+    },
+    {
+     "text": "AT RANDOM.",
+     "style": "head amber",
+     "size": 150,
+     "build": "slam",
+     "at": 1.5
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.5,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 2.5,
+   "end": 4.0,
+   "top": 680,
+   "elements": [
+    {
+     "text": "It's one of four doors.",
+     "style": "serif cream",
+     "size": 64,
+     "build": "type",
+     "at": 2.5,
+     "dur": 0.7
+    }
+   ]
+  },
+  {
+   "start": 4.0,
+   "end": 6.0,
+   "top": 640,
+   "elements": [
+    {
+     "text": "BORED.",
+     "style": "head amber",
+     "size": 190,
+     "build": "slam",
+     "at": 4.0
+    },
+    {
+     "text": "the work went flat.",
+     "style": "serif",
+     "size": 58,
+     "gap": 24,
+     "build": "type",
+     "at": 4.35,
+     "dur": 0.6
+    }
+   ],
+   "punch": [
+    {
+     "at": 4.0,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 6.0,
+   "end": 8.0,
+   "top": 640,
+   "elements": [
+    {
+     "text": "STUCK.",
+     "style": "head amber",
+     "size": 190,
+     "build": "slam",
+     "at": 6.0
+    },
+    {
+     "text": "you hit something\nyou cannot do.",
+     "style": "serif",
+     "size": 58,
+     "gap": 24,
+     "build": "type",
+     "at": 6.35,
+     "dur": 0.7
+    }
+   ],
+   "punch": [
+    {
+     "at": 6.0,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 8.0,
+   "end": 9.0,
+   "top": 700,
+   "elements": [
+    {
+     "text": "door three is the one\nnobody admits.",
+     "style": "serif cream",
+     "size": 56,
+     "build": "type",
+     "at": 8.0,
+     "dur": 0.7
+    }
+   ]
+  },
+  {
+   "start": 9.0,
+   "end": 11.0,
+   "top": 640,
+   "elements": [
+    {
+     "text": "ANXIOUS.",
+     "style": "head amber",
+     "size": 190,
+     "build": "slam",
+     "at": 9.0
+    },
+    {
+     "text": "you remembered how far\nbehind you are.",
+     "style": "serif",
+     "size": 58,
+     "gap": 24,
+     "build": "type",
+     "at": 9.35,
+     "dur": 0.7
+    }
+   ],
+   "punch": [
+    {
+     "at": 9.0,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 11.0,
+   "end": 13.0,
+   "top": 640,
+   "elements": [
+    {
+     "text": "TIRED.",
+     "style": "head amber",
+     "size": 190,
+     "build": "slam",
+     "at": 11.0
+    },
+    {
+     "text": "you are solving sleep\nwith a screen.",
+     "style": "serif",
+     "size": 58,
+     "gap": 24,
+     "build": "type",
+     "at": 11.35,
+     "dur": 0.7
+    }
+   ],
+   "punch": [
+    {
+     "at": 11.0,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 13.0,
+   "end": 17.0,
+   "top": 600,
+   "elements": [
+    {
+     "text": "IF YOU'RE\nSTUCK:",
+     "style": "head cream",
+     "size": 140,
+     "build": "words",
+     "at": 13.0,
+     "dur": 0.5
+    },
+    {
+     "text": "the step is too big,\nnot beyond you.\ncome back with the next line,\nnot the whole problem.",
+     "style": "serif cream",
+     "size": 54,
+     "gap": 30,
+     "build": "lines",
+     "at": 13.5,
+     "dur": 2.0
+    }
+   ]
+  },
+  {
+   "start": 17.0,
+   "end": 20.0,
+   "top": 600,
+   "elements": [
+    {
+     "text": "WHICH DOOR\nIS YOURS?",
+     "style": "head cream",
+     "size": 150,
+     "build": "words",
+     "at": 17.0,
+     "dur": 0.6
+    },
+    {
+     "text": "Comment LOCK →\nthe 4-question quiz",
+     "style": "serif amber",
+     "size": 58,
+     "gap": 36,
+     "build": "fade",
+     "at": 18.0
+    },
+    {
+     "text": "send it to whoever's always \"so behind\"",
+     "style": "serif",
+     "size": 44,
+     "gap": 22,
+     "build": "fade",
+     "at": 18.5
+    }
+   ],
+   "punch": [
+    {
+     "at": 18.0,
+     "scale": 1.02
+    }
+   ]
+  },
+  {
+   "start": 20.0,
+   "end": 21.0,
+   "top": 600,
+   "elements": [
+    {
+     "text": "YOU NEVER\nDOOM-SCROLL",
+     "style": "head cream",
+     "size": 150,
+     "build": "fade",
+     "at": 19.7
+    },
+    {
+     "text": "AT RANDOM.",
+     "style": "head amber",
+     "size": 150,
+     "build": "fade",
+     "at": 19.7
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "vibrate",
+   "gain": 0.7
+  },
+  {
+   "t": 1.5,
+   "type": "impact",
+   "gain": 0.8
+  },
+  {
+   "t": 1.5,
+   "type": "subdrop",
+   "gain": 0.5
+  },
+  {
+   "t": 2.5,
+   "type": "knock2",
+   "gain": 0.9
+  },
+  {
+   "t": 4.0,
+   "type": "knock2",
+   "gain": 1.0
+  },
+  {
+   "t": 4.2,
+   "type": "clock",
+   "dur": 1.8,
+   "rate": 2,
+   "gain": 0.45
+  },
+  {
+   "t": 6.0,
+   "type": "knock2",
+   "gain": 1.0
+  },
+  {
+   "t": 6.0,
+   "type": "scratch",
+   "gain": 0.35
+  },
+  {
+   "t": 8.0,
+   "type": "whoosh",
+   "dur": 0.5,
+   "gain": 0.4
+  },
+  {
+   "t": 9.0,
+   "type": "knock2",
+   "gain": 1.0
+  },
+  {
+   "t": 9.0,
+   "type": "heartbeat",
+   "dur": 2.0,
+   "rate": 1.7,
+   "gain": 0.8
+  },
+  {
+   "t": 11.0,
+   "type": "knock2",
+   "gain": 1.0
+  },
+  {
+   "t": 13.0,
+   "type": "riser",
+   "dur": 2.0,
+   "gain": 0.5
+  },
+  {
+   "t": 15.0,
+   "type": "impact",
+   "gain": 0.8
+  },
+  {
+   "t": 17.0,
+   "type": "impact",
+   "gain": 0.6
+  },
+  {
+   "t": 20.0,
+   "type": "vibrate",
+   "gain": 0.6
+  }
+ ],
+ "music": {
+  "bpm": 120,
+  "mood": "dark",
+  "sections": [
+   [
+    0,
+    "intro"
+   ],
+   [
+    1.5,
+    "drop"
+   ],
+   [
+    2.5,
+    "break"
+   ],
+   [
+    4.0,
+    "thin"
+   ],
+   [
+    6.0,
+    "stutter"
+   ],
+   [
+    7.0,
+    "break"
+   ],
+   [
+    8.0,
+    "break"
+   ],
+   [
+    9.0,
+    "tension"
+   ],
+   [
+    11.0,
+    "stop"
+   ],
+   [
+    12.0,
+    "thin"
+   ],
+   [
+    13.0,
+    "build"
+   ],
+   [
+    15.0,
+    "drop"
+   ],
+   [
+    20.0,
+    "intro"
+   ]
+  ]
+ }
+}

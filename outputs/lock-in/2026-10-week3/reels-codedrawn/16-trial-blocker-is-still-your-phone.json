@@ -1,0 +1,229 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 11.0,
+ "cards": [
+  {
+   "start": 0,
+   "end": 3.0,
+   "top": 330,
+   "elements": [
+    {
+     "text": "AN APP THAT",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "BLOCKS YOUR PHONE",
+     "style": "head cream",
+     "size": 110,
+     "build": "words",
+     "at": 0.6,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "IS STILL ON YOUR PHONE.",
+     "style": "head amber",
+     "size": 100,
+     "build": "slam",
+     "at": 1.5,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"420\" viewBox=\"0 0 900 420\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M393,60 H507 A28,28 0 0 1 535,88 V352 A28,28 0 0 1 507,380 H393 A28,28 0 0 1 365,352 V88 A28,28 0 0 1 393,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M428.0,82 h44\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M423,230 H477 A8,8 0 0 1 485,238 V282 A8,8 0 0 1 477,290 H423 A8,8 0 0 1 415,282 V238 A8,8 0 0 1 423,230 Z\" stroke=\"#DA9D55\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M428,230 v-22 a22,22 0 0 1 44,0 v22\" stroke=\"#DA9D55\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/></svg>",
+     "build": "draw",
+     "at": 0.35,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.5,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 3.0,
+   "end": 6.0,
+   "top": 330,
+   "elements": [
+    {
+     "text": "it's still one reach away.\nit still lights up.",
+     "style": "serif cream",
+     "size": 62,
+     "build": "lines",
+     "at": 3.0,
+     "dur": 1.2,
+     "gap": 40
+    },
+    {
+     "text": "you still check it.",
+     "style": "serif amber",
+     "size": 66,
+     "build": "type",
+     "at": 4.5,
+     "dur": 1.0,
+     "gap": 30
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"440\" viewBox=\"0 0 900 440\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M393,80 H507 A28,28 0 0 1 535,108 V372 A28,28 0 0 1 507,400 H393 A28,28 0 0 1 365,372 V108 A28,28 0 0 1 393,80 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M428.0,102 h44\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M330,120 l-60,-40\" stroke=\"#DA9D55\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M310,230 h-80\" stroke=\"#DA9D55\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M330,340 l-60,40\" stroke=\"#DA9D55\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M570,120 l60,-40\" stroke=\"#DA9D55\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M590,230 h80\" stroke=\"#DA9D55\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M570,340 l60,40\" stroke=\"#DA9D55\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/></svg>",
+     "build": "draw",
+     "at": 3.35,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ]
+  },
+  {
+   "start": 6.0,
+   "end": 8.5,
+   "top": 330,
+   "elements": [
+    {
+     "text": "DISTANCE",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 6.0,
+     "dur": 0.5
+    },
+    {
+     "text": "WORKS.",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 6.6,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "another room. every block.",
+     "style": "serif cream",
+     "size": 52,
+     "build": "fade",
+     "at": 7.2,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"480\" viewBox=\"0 0 900 480\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M88,80 H182 A28,28 0 0 1 210,108 V332 A28,28 0 0 1 182,360 H88 A28,28 0 0 1 60,332 V108 A28,28 0 0 1 88,80 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M113.0,102 h44\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M260,220 H600 M566,194 L600,220 L566,246\" stroke=\"#DA9D55\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M656,50 H824 A6,6 0 0 1 830,56 V384 A6,6 0 0 1 824,390 H656 A6,6 0 0 1 650,384 V56 A6,6 0 0 1 656,50 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M796,211.0 A9,9 0 1 1 795.99,211.0\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M830,50 L900,90 V350 L830,390\" stroke=\"#DA9D55\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"430\" y=\"450\" fill=\"#8f949c\" font-family=\"JetBrains Mono\" font-size=\"50\" text-anchor=\"middle\" style=\"opacity:0\">ANOTHER ROOM</text></svg>",
+     "build": "draw",
+     "at": 6.35,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ],
+   "punch": [
+    {
+     "at": 6.6,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 8.5,
+   "end": 10.0,
+   "top": 330,
+   "elements": [
+    {
+     "text": "COMMENT",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 8.5,
+     "dur": 0.5
+    },
+    {
+     "text": "LOCK",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 8.9,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "Comment LOCK → find your door",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 9.4,
+     "dur": 1.0,
+     "gap": 40
+    }
+   ]
+  },
+  {
+   "start": 10.0,
+   "end": 11.0,
+   "top": 330,
+   "elements": [
+    {
+     "text": "AN APP THAT",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 9.0,
+     "dur": 0.5
+    },
+    {
+     "text": "BLOCKS YOUR PHONE",
+     "style": "head cream",
+     "size": 110,
+     "build": "words",
+     "at": 9.0,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "IS STILL ON YOUR PHONE.",
+     "style": "head amber",
+     "size": 100,
+     "build": "slam",
+     "at": 9.0,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"420\" viewBox=\"0 0 900 420\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M393,60 H507 A28,28 0 0 1 535,88 V352 A28,28 0 0 1 507,380 H393 A28,28 0 0 1 365,352 V88 A28,28 0 0 1 393,60 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M428.0,82 h44\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M423,230 H477 A8,8 0 0 1 485,238 V282 A8,8 0 0 1 477,290 H423 A8,8 0 0 1 415,282 V238 A8,8 0 0 1 423,230 Z\" stroke=\"#DA9D55\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M428,230 v-22 a22,22 0 0 1 44,0 v22\" stroke=\"#DA9D55\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/></svg>",
+     "build": "draw",
+     "at": 8.0,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 10.0,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}

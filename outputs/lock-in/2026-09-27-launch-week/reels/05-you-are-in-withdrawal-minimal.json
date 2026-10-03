@@ -1,0 +1,68 @@
+{
+ "duration": 7.0,
+ "label": "LOCK IN",
+ "cards": [
+  {
+   "start": 0,
+   "end": 7.0,
+   "top": 600,
+   "elements": [
+    {
+     "text": "YOU ARE\nNOT LAZY.",
+     "style": "head cream",
+     "size": 160,
+     "build": "words",
+     "at": -0.4,
+     "dur": 0.6
+    },
+    {
+     "text": "YOU ARE IN\nWITHDRAWAL.",
+     "style": "head amber",
+     "size": 160,
+     "gap": 20,
+     "build": "slam",
+     "at": 2.0
+    },
+    {
+     "text": "Comment LOCK → find your door",
+     "style": "serif cream",
+     "size": 44,
+     "gap": 40,
+     "build": "fade",
+     "at": 4.0
+    }
+   ],
+   "punch": [
+    {
+     "at": 2.0,
+     "scale": 1.04
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ],
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ],
+   [
+    2.0,
+    "ambient_arp"
+   ]
+  ]
+ },
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal"
+}

@@ -1,0 +1,220 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 12.5,
+ "cards": [
+  {
+   "start": 0,
+   "end": 2.5,
+   "top": 330,
+   "elements": [
+    {
+     "text": "YOU DON'T NEED",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "A STUDY BUDDY.",
+     "style": "head amber",
+     "size": 120,
+     "build": "slam",
+     "at": 1.2,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"500\" viewBox=\"0 0 900 500\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M90,380 H810\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M160,380 v110 M740,380 v110\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M620,380 v-170 l-60,-40\" stroke=\"#8f949c\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M520,150 l90,-40 l30,60 z\" stroke=\"#DA9D55\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M258,300 H472 A8,8 0 0 1 480,308 V372 A8,8 0 0 1 472,380 H258 A8,8 0 0 1 250,372 V308 A8,8 0 0 1 258,300 Z\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/></svg>",
+     "build": "draw",
+     "at": 0.35,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.2,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 2.5,
+   "end": 5.0,
+   "top": 330,
+   "elements": [
+    {
+     "text": "you need someone",
+     "style": "serif cream",
+     "size": 66,
+     "build": "type",
+     "at": 2.5,
+     "dur": 0.6,
+     "gap": 40
+    },
+    {
+     "text": "who notices when you stop.",
+     "style": "serif amber",
+     "size": 66,
+     "build": "type",
+     "at": 3.3,
+     "dur": 0.9,
+     "gap": 10
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"500\" viewBox=\"0 0 900 500\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M150,250 Q450,20 750,250 Q450,480 150,250 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M450,165 A85,85 0 1 1 449.99,165\" stroke=\"#DA9D55\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M450,225 A25,25 0 1 1 449.99,225\" stroke=\"#DA9D55\" stroke-width=\"9\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/></svg>",
+     "build": "draw",
+     "at": 2.85,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ]
+  },
+  {
+   "start": 5.0,
+   "end": 7.5,
+   "top": 330,
+   "elements": [
+    {
+     "text": "\"DAY 4.",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 5.0,
+     "dur": 0.5
+    },
+    {
+     "text": "YOU IN?\"",
+     "style": "head amber",
+     "size": 150,
+     "build": "slam",
+     "at": 5.6,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "one message. every day.",
+     "style": "serif cream",
+     "size": 52,
+     "build": "fade",
+     "at": 6.3,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"460\" viewBox=\"0 0 900 460\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120,80 H780 a30,30 0 0 1 30,30 V330 a30,30 0 0 1 -30,30 H260 L170,430 L190,360 H120 a30,30 0 0 1 -30,-30 V110 a30,30 0 0 1 30,-30 Z\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><text class=\"f\" x=\"450\" y=\"255\" fill=\"#DA9D55\" font-family=\"Anton\" font-size=\"92\" text-anchor=\"middle\" style=\"opacity:0\">DAY 4. YOU IN?</text></svg>",
+     "build": "draw",
+     "at": 5.35,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ],
+   "punch": [
+    {
+     "at": 5.6,
+     "scale": 1.03
+    }
+   ]
+  },
+  {
+   "start": 7.5,
+   "end": 11.5,
+   "top": 330,
+   "elements": [
+    {
+     "text": "SEND",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": 7.5,
+     "dur": 0.5
+    },
+    {
+     "text": "THIS",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 7.9,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "send this to the one who'd notice",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 8.4,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "text": "then comment LOCK → find your door",
+     "style": "serif cream",
+     "size": 40,
+     "build": "fade",
+     "at": 9.0,
+     "dur": 1.0,
+     "gap": 24
+    }
+   ]
+  },
+  {
+   "start": 11.5,
+   "end": 12.5,
+   "top": 330,
+   "elements": [
+    {
+     "text": "YOU DON'T NEED",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 10.5,
+     "dur": 0.5
+    },
+    {
+     "text": "A STUDY BUDDY.",
+     "style": "head amber",
+     "size": 120,
+     "build": "slam",
+     "at": 10.5,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "svg": "<svg width=\"900\" height=\"500\" viewBox=\"0 0 900 500\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M90,380 H810\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M160,380 v110 M740,380 v110\" stroke=\"#E6E1D5\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M620,380 v-170 l-60,-40\" stroke=\"#8f949c\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M520,150 l90,-40 l30,60 z\" stroke=\"#DA9D55\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/><path d=\"M258,300 H472 A8,8 0 0 1 480,308 V372 A8,8 0 0 1 472,380 H258 A8,8 0 0 1 250,372 V308 A8,8 0 0 1 258,300 Z\" stroke=\"#E6E1D5\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" pathLength=\"1\"/></svg>",
+     "build": "draw",
+     "at": 9.5,
+     "dur": 1.1,
+     "gap": 70
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 11.5,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+../../agents/post-writer.md

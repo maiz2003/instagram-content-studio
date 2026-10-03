@@ -1,0 +1,85 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 8.0,
+ "trial": true,
+ "cards": [
+  {
+   "start": 0,
+   "end": 8.0,
+   "top": 620,
+   "elements": [
+    {
+     "text": "DON'T WAIT",
+     "style": "head cream",
+     "size": 130,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "FOR MONDAY.",
+     "style": "head amber",
+     "size": 130,
+     "build": "slam",
+     "at": 1.2,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "you said that last monday.",
+     "style": "serif cream",
+     "size": 66,
+     "build": "type",
+     "at": 2.5,
+     "dur": 0.9,
+     "gap": 40
+    },
+    {
+     "text": "START TONIGHT.",
+     "style": "head cream",
+     "size": 110,
+     "build": "slam",
+     "at": 4.2,
+     "dur": 0.5,
+     "gap": 50
+    },
+    {
+     "text": "20 minutes. phone in another room.\nComment LOCK → find your door",
+     "style": "serif cream",
+     "size": 46,
+     "build": "fade",
+     "at": 5.4,
+     "dur": 1.0,
+     "gap": 40
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.2,
+     "scale": 1.03
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}

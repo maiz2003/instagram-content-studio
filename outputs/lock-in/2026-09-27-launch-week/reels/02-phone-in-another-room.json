@@ -1,0 +1,81 @@
+{
+ "duration": 8.0,
+ "label": "UNPOPULAR OPINION",
+ "cards": [
+  {
+   "start": 0,
+   "end": 8.0,
+   "top": 560,
+   "elements": [
+    {
+     "text": "YOU DON'T NEED\nDISCIPLINE.",
+     "style": "head cream",
+     "size": 140,
+     "build": "words",
+     "at": -0.5,
+     "dur": 0.7
+    },
+    {
+     "text": "YOU NEED YOUR\nPHONE IN\nANOTHER ROOM.",
+     "style": "head amber",
+     "size": 130,
+     "gap": 30,
+     "build": "slam",
+     "at": 2.0
+    },
+    {
+     "text": "Comment LOCK → find your door",
+     "style": "serif cream",
+     "size": 44,
+     "gap": 40,
+     "build": "fade",
+     "at": 4.5
+    }
+   ],
+   "punch": [
+    {
+     "at": 2.0,
+     "scale": 1.04
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "vibrate",
+   "gain": 0.8
+  },
+  {
+   "t": 2.0,
+   "type": "door_close",
+   "gain": 1.0
+  },
+  {
+   "t": 2.0,
+   "type": "subdrop",
+   "gain": 0.5
+  },
+  {
+   "t": 4.5,
+   "type": "tick",
+   "gain": 0.3
+  }
+ ],
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "music": {
+  "bpm": 120,
+  "mood": "dark",
+  "sections": [
+   [
+    0,
+    "intro"
+   ],
+   [
+    2.0,
+    "drop"
+   ]
+  ]
+ }
+}

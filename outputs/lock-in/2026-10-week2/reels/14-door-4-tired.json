@@ -1,0 +1,196 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 11.0,
+ "cards": [
+  {
+   "start": 0,
+   "end": 2.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "\"I'LL DO IT PROPERLY",
+     "style": "head cream",
+     "size": 110,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "IN THE MORNING.\"",
+     "style": "head amber",
+     "size": 110,
+     "build": "slam",
+     "at": 1.4,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.4,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/04_tired.mov",
+    "in": 0
+   }
+  },
+  {
+   "start": 2.5,
+   "end": 5.0,
+   "top": 620,
+   "elements": [
+    {
+     "text": "it's after 10.\nyou're fading.\nso you open the phone.",
+     "style": "serif cream",
+     "size": 68,
+     "build": "lines",
+     "at": 2.5,
+     "dur": 1.5,
+     "gap": 40
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/04_tired.mov",
+    "in": 2.5
+   }
+  },
+  {
+   "start": 5.0,
+   "end": 7.5,
+   "top": 620,
+   "elements": [
+    {
+     "text": "DOOR 4:",
+     "style": "head cream",
+     "size": 110,
+     "build": "words",
+     "at": 5.0,
+     "dur": 0.5
+    },
+    {
+     "text": "TIRED.",
+     "style": "head amber",
+     "size": 170,
+     "build": "slam",
+     "at": 5.6,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "you are solving sleep with a screen.",
+     "style": "serif cream",
+     "size": 50,
+     "build": "fade",
+     "at": 6.3,
+     "dur": 1.0,
+     "gap": 40
+    }
+   ],
+   "punch": [
+    {
+     "at": 5.6,
+     "scale": 1.03
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/04_tired.mov",
+    "in": 5.0,
+    "rate": 1.0
+   }
+  },
+  {
+   "start": 7.5,
+   "end": 10.0,
+   "top": 620,
+   "elements": [
+    {
+     "text": "WHICH DOOR\nIS YOURS?",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": 7.5,
+     "dur": 0.5
+    },
+    {
+     "text": "Comment LOCK → the 4-question quiz",
+     "style": "serif cream",
+     "size": 48,
+     "build": "fade",
+     "at": 8.5,
+     "dur": 1.0,
+     "gap": 40
+    },
+    {
+     "text": "part 4 of 4",
+     "style": "serif cream",
+     "size": 40,
+     "build": "fade",
+     "at": 9.1,
+     "dur": 1.0,
+     "gap": 24
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/05_lockin_night.mov",
+    "in": 0,
+    "rate": 0.9
+   }
+  },
+  {
+   "start": 10.0,
+   "end": 11.0,
+   "top": 620,
+   "elements": [
+    {
+     "text": "\"I'LL DO IT PROPERLY",
+     "style": "head cream",
+     "size": 110,
+     "build": "words",
+     "at": 9.0,
+     "dur": 0.5
+    },
+    {
+     "text": "IN THE MORNING.\"",
+     "style": "head amber",
+     "size": 110,
+     "build": "slam",
+     "at": 9.0,
+     "dur": 0.5,
+     "gap": 6
+    }
+   ],
+   "bg": {
+    "file": "assets/footage/lock-in/week2/04_tired.mov",
+    "in": 0
+   }
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  },
+  {
+   "t": 10.0,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}

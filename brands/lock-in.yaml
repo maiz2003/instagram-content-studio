@@ -1,0 +1,116 @@
+# LOCK IN: discipline playbook sold on Whop (account "LOCKING 101", biz_mZWif3gl8Pw3u3).
+# Facts below come from the live Whop product and account pages (read 2026-09-26).
+# TODO = unconfirmed. Skills must ask about the ones that matter for a post, never invent them (E-5).
+
+brand_name: LOCK IN
+handle: "@TODO (new account, not created yet)"
+niche: "Discipline and focus for people who doom-scroll: a no-motivation setup for studying, training and building"
+
+buyer_type: B2C
+
+content_pillars:
+  - "Phone and doom-scroll setup: triggers, phone in another room, one desk, one task, one tab"
+  - "Lock-in sessions: 20-minute timers, three blocks a day, boring work done anyway"
+  - "The 30-day lock-in: day counts, accountability, the rule for the day you do nothing"
+
+products:
+  - name: "LOCK IN (discipline playbook, ebook)"
+    key_attributes:
+      - "61 pages, seven-part system"
+      - "13 diagrams that carry the method"
+      - "Scored diagnostic: which of four triggers owns your phone habit"
+      - "If-then plans filled in with your own times and room"
+      - "Printables: daily sheet, weekly plan, trigger tracker, 30-day checklist"
+      - "30-day challenge staged so you don't quit in week one"
+      - "The Lock In chat: post your day count; someone notices when you stop"
+    price_tier: budget                # $15 one-time on Whop
+    proof_points:
+      - "61 pages · 13 diagrams · 7 parts · 4 trigger types · 30-day challenge (product facts)"
+      - "Price: $15 one-time"
+      - "Free quiz, 'Which door is yours?' (lockin-quiz.netlify.app): 4 questions → one of four doors + a fix. Quiz copy: 'You never reach for your phone at random. It is one of four doors, every time. Four questions. One of them will be uncomfortable.'"
+      - "Four doors by pattern: (1) work goes flat/slow, ~20 min in, restless; (2) STUCK: hit something you can't do, 'I'll ask someone tomorrow'; (3) feeling behind, before you've started, anxious; (4) late and fading, after 10pm, 'I'll do it properly in the morning'. Door names: (1) BORED, (2) STUCK, (3) ANXIOUS, (4) TIRED (confirmed by owner)."
+      # No sales, reviews or member results yet (0 members, 0 reviews on 2026-09-26).
+      # Do NOT imply testimonials or results until real ones exist.
+    b2b_terms: ""
+
+audience:
+  who: "People aged 16–26 who doom-scroll and struggle with discipline"
+  role_context: "Students, people training, people trying to build something. They've tried to 'lock in' many times and quit by Wednesday."
+  pains:
+    - "Phone habit eats the day; face-down phone doesn't work"
+    - "Waiting to feel motivated, then not starting"
+    - "Restarting every Monday and stopping by Wednesday"
+    - "Knowing exactly what to do and still not doing it"
+  desires:
+    - "A setup that works on days they don't feel like it"
+    - "Proof to themselves that they can keep a streak"
+    - "Getting real study/training/building hours done"
+  buying_triggers:
+    - "Exam season / new semester"
+    - "Start of a month or year; 'this time for real' moments"
+    - "Seeing their screen-time report"
+  occasions: ["exam seasons", "New Year", "back-to-school", "Ramadan (if audience is Egypt/MENA)"]
+
+tone: "Blunt, second person, no motivation and no hype. Calm, slightly dry. Tells the truth about the cost ('it will make your life more boring'). Never preachy, never guru."
+
+language_mix:
+  lead: English
+  dialect: ""
+  secondary: ""
+  mix_rule: "Voiceover, on-screen text and caption in the lead language."
+
+geo:
+  country: "Europe + US (owner, 2026-09-27). Store registered in Egypt; not targeting Arab/MENA. Posting time: start 18:05 UK (19:05 CET, 13:05 ET), then move to the Insights peak after week 1."
+  cities: []
+  location_tag: ""                    # usually none for a digital product
+
+visual_identity:
+  colors: {bg: "#111216", cream: "#E6E1D5", amber: "#DA9D55", grey: "#8f949c"}   # sampled from the owner's clips
+  fonts: ["Anton (headlines)", "Spectral (serif lines)", "JetBrains Mono (labels)"]   # OFL, in assets/fonts/
+  look: "Dark background, cream condensed headlines with one amber key word, lowercase serif call-outs, small spaced 'LOCK IN' label"
+  theme_css: brands/lock-in.theme.css
+  sound: "minimal focus: original clean UI-style sounds (pop per word, glass tink on the amber word, soft double tap, chime on the CTA, air whooshes) over a soft focus pad; a lock click is the brand's signature sound (first frame + loop). Render with sound_style: minimal, mood: focus, sound_kit: assets/sounds/lock-in (the owner's own kit, uploaded 2026-09-27: lock click, 8-step pop ladder, glass tink, double tap, air whoosh, two-note chime, 24 s focus pad). Owner prefers this to beats; approved the kit sound on 2026-09-27 (\"The sound is good now\")."
+
+cta_mechanism:
+  type: comment_keyword
+  value: "https://lockin-quiz.netlify.app"   # quiz funnel that redirects to the Whop checkout ($15)
+  keyword: "LOCK"                     # confirmed: comment LOCK → DM with the quiz link (auto-reply tool or manual replies)
+  funnel: "Comment LOCK → DM with quiz link → 'Which door is yours?' trigger diagnostic (4 questions) → result card (your door + one practical fix) → GET LOCK IN button → Whop checkout ($15). Offer the quiz honestly as the free 4-question diagnostic; the DM carries the link, captions never say 'link in bio' (E-3)."
+
+goals_allowed: [reach, trust, sale, lead]
+
+banned_words_claims:
+  - "Invented testimonials, results or member counts (none exist yet)"
+  - "Fake scarcity (unlimited stock; no real deadline)"
+  - "Motivation-speak and hype ('grind', 'unstoppable', 'change your life forever')"
+
+assets_available:
+  on_camera_person: "none: faceless (hands, desk, phone, timer, screen recordings, voiceover or text-only)"
+  locations: ["TODO: desk / room"]
+  footage_types:
+    - "Desk setup, phone going into another room, timer starting"
+    - "Screen recordings: screen time, timer"
+    - "Pages and diagrams from the playbook (13 diagrams available)"
+    - "Screen recording of the quiz and its result card"
+  constraints: "TODO"
+
+agency:
+  name: ""                            # in-house unless you say otherwise
+  contact: ""
+  approver: "Owner"
+
+notes_new_account:
+  - "Brand-new account: the book claims new accounts get a short test boost; don't delete or re-edit posts, post a consistent pattern from day one [F3.16]."
+  - "Small accounts (under 10k) reportedly get higher reach rates [U.31]; lean on short reach Reels + Trial Reels [U.3]."
+  - "Profile setup (name-field keyword, bio, highlights, pinned posts) is Phase 2 (profile-auditor); see knowledge/_sources until then."
+
+workflow:                             # used by the weekly-cycle skill and its agents
+  tracker_url: "https://claude.ai/artifact/ELpGTnN5BdEksgu9QQSoLY"
+  objectives: "outputs/lock-in/objectives-30d.md"
+  game_url: "https://lockin-30.netlify.app"   # LOCK IN 30 buyers' game (products/lock-in-30/); Netlify site id f33d47c7-13e3-47f5-a40d-09f80a96b16e
+  drive_folder_id: "1fisrKvLQlmEJiZnBW5lGU6rG3uUxg7vH"   # footage uploads (e.g. clips-week2), shared by link
+  posting_queue_folder_id: "1aymnlDOmVajd6opoJArAWJ14VzP_SFnr"   # Drive: "LOCK IN posting queue (weeks 1-2)" (Clips/ + posting-order doc); the owner uploads finished files here
+  posting_queue_page: "https://claude.ai/artifact/M5LcUCfMyBPWQwYfG9Ynig"
+  whop_company: "biz_mZWif3gl8Pw3u3"
+  whop_product: "prod_7BAVlob3INIFe"
+  review_day: "Sunday"

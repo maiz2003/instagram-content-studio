@@ -1,0 +1,85 @@
+{
+ "fps": 30,
+ "theme": "brands/lock-in.theme.css",
+ "label": "LOCK IN",
+ "sound_kit": "assets/sounds/lock-in",
+ "sound_style": "minimal",
+ "music": {
+  "bpm": 120,
+  "mood": "focus",
+  "sections": [
+   [
+    0,
+    "ambient"
+   ]
+  ]
+ },
+ "duration": 10.0,
+ "trial": true,
+ "cards": [
+  {
+   "start": 0,
+   "end": 10.0,
+   "top": 620,
+   "elements": [
+    {
+     "text": "NO ONE TELLS YOU",
+     "style": "head cream",
+     "size": 120,
+     "build": "words",
+     "at": -0.12,
+     "dur": 0.5
+    },
+    {
+     "text": "ABOUT FAKE WORK.",
+     "style": "head amber",
+     "size": 120,
+     "build": "slam",
+     "at": 1.3,
+     "dur": 0.5,
+     "gap": 6
+    },
+    {
+     "text": "rewriting the same notes.\nmaking a timetable\ninstead of starting.\nopening 14 tabs to \"research\".",
+     "style": "serif cream",
+     "size": 54,
+     "build": "lines",
+     "at": 2.6,
+     "dur": 2.4,
+     "gap": 50
+    },
+    {
+     "text": "it feels like work. it isn't.",
+     "style": "serif cream",
+     "size": 62,
+     "build": "type",
+     "at": 6.0,
+     "dur": 0.9,
+     "gap": 50
+    },
+    {
+     "text": "Comment LOCK → find your door",
+     "style": "serif cream",
+     "size": 46,
+     "build": "fade",
+     "at": 7.6,
+     "dur": 1.0,
+     "gap": 40
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.3,
+     "scale": 1.03
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "type": "lock",
+   "gain": 0.9
+  }
+ ]
+}
